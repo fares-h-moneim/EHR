@@ -456,5 +456,14 @@ namespace WindowsFormsApp1
                 submiterror.SetError(Submit, "");
             }
         }
+
+        private void SignIn_Click(object sender, EventArgs e)
+        {
+            SignIn myForm = new SignIn();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+
+        }
     }
 }

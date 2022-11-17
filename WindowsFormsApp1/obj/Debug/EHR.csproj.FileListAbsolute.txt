@@ -25,3 +25,4 @@ E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignIn.resources

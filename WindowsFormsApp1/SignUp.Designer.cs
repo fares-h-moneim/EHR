@@ -438,6 +438,7 @@ namespace WindowsFormsApp1
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.SignIn.TabIndex = 18;
             this.SignIn.Values.Text = "Already Have an Account? Sign In Here.";
+            this.SignIn.Click += new System.EventHandler(this.SignIn_Click);
             // 
             // SignUp
             // 
