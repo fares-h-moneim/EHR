@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); //mody on da code
+            Application.Run(new Form1());
+            //darwish on da code
         }
     }
 }
