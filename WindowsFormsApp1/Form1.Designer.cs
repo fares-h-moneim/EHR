@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.First_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Last_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -43,9 +44,11 @@
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.Blood_type = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.firstnameerror = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).BeginInit();
             this.SuspendLayout();
             // 
             // First_Name
@@ -64,6 +67,7 @@
             this.First_Name.Text = "First Name";
             this.First_Name.Enter += new System.EventHandler(this.First_Name_Enter);
             this.First_Name.Leave += new System.EventHandler(this.First_Name_Leave);
+            this.First_Name.Validating += new System.ComponentModel.CancelEventHandler(this.First_Name_Validating);
             // 
             // Last_Name
             // 
@@ -121,6 +125,7 @@
             this.Phone.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Phone.TabIndex = 7;
             this.Phone.Text = "Phone Number (+20 XXX XXX XXXX)";
+            this.Phone.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             this.Phone.Enter += new System.EventHandler(this.Phone_Enter);
             this.Phone.Leave += new System.EventHandler(this.Phone_Leave);
             // 
@@ -284,6 +289,11 @@
             this.kryptonComboBox2.TabIndex = 17;
             this.kryptonComboBox2.Text = "kryptonComboBox2";
             // 
+            // firstnameerror
+            // 
+            this.firstnameerror.ContainerControl = this;
+            this.firstnameerror.Icon = ((System.Drawing.Icon)(resources.GetObject("firstnameerror.Icon")));
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,12 +315,14 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.Last_Name);
             this.Controls.Add(this.First_Name);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,6 +344,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox Blood_type;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
+        private System.Windows.Forms.ErrorProvider firstnameerror;
     }
 }
 

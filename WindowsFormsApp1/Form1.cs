@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
 
         private void Emergency_Contact_Enter(object sender, EventArgs e)
         {
-            if (Emergency_Contact.Text == "Emergency_Contact (+20 XXX XXX XXXX)")
+            if (Emergency_Contact.Text == "Emergency Contact (+20 XXX XXX XXXX)")
             {
                 Emergency_Contact.Text = "";
                 Emergency_Contact.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
         {
             if (Emergency_Contact.Text == "")
             {
-                Emergency_Contact.Text = "Emergency_Contact (+20 XXX XXX XXXX)";
+                Emergency_Contact.Text = "Emergency Contact (+20 XXX XXX XXXX)";
                 Emergency_Contact.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
 
         private void Chronic_Enter(object sender, EventArgs e)
         {
-            if (Chronic.Text == "Chronic (Comma Separated)")
+            if (Chronic.Text == "Chronic Diseases (Comma Separated)")
             {
                 Chronic.Text = "";
                 Chronic.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
         {
             if (Chronic.Text == "")
             {
-                Chronic.Text = "Chronic (Comma Separated)";
+                Chronic.Text = "Chronic Diseases (Comma Separated)";
                 Chronic.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -263,6 +263,23 @@ namespace WindowsFormsApp1
         private void First_Name_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Phone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void First_Name_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(First_Name.Text) || First_Name.Text == "First Name")
+            {
+                firstnameerror.SetError(First_Name, "Name should not be left blank!");
+            }
+            else
+            {
+                firstnameerror.SetError(First_Name, "");
+            }
         }
     }
 }
