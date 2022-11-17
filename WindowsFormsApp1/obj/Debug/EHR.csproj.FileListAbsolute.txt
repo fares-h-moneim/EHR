@@ -4,7 +4,6 @@ C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\WindowsFormsApp
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.AssemblyReference.cache
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.SuggestedBindingRedirects.cache
-C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.GenerateResource.cache
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CoreCompileInputs.cache
@@ -25,3 +24,4 @@ E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CopyComplete
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
