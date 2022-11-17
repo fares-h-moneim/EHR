@@ -1,0 +1,13 @@
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.AssemblyReference.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.GenerateResource.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CopyComplete
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
