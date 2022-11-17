@@ -1,6 +1,8 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Drawing;
+
+namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.First_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Last_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -40,15 +42,38 @@
             this.Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Pass2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.Submit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Gender = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.Blood_type = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.firstnameerror = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            this.lastnameerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.iderror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.phoneerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.emergencyerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chronicerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.emailerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.passerror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pass2error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gendererror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.blooderror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.submiterror = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SignIn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            ((System.ComponentModel.ISupportInitialize)(this.Gender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastnameerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iderror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emergencyerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chronicerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passerror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pass2error)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendererror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blooderror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.submiterror)).BeginInit();
             this.SuspendLayout();
             // 
             // First_Name
@@ -85,6 +110,7 @@
             this.Last_Name.Text = "Last Name";
             this.Last_Name.Enter += new System.EventHandler(this.Last_Name_Enter);
             this.Last_Name.Leave += new System.EventHandler(this.Last_Name_Leave);
+            this.Last_Name.Validated += new System.EventHandler(this.Last_Name_Validated);
             // 
             // ID
             // 
@@ -103,6 +129,7 @@
             this.ID.TextChanged += new System.EventHandler(this.kryptonTextBox2_TextChanged);
             this.ID.Enter += new System.EventHandler(this.ID_Enter);
             this.ID.Leave += new System.EventHandler(this.ID_Leave);
+            this.ID.Validating += new System.ComponentModel.CancelEventHandler(this.ID_Validating);
             // 
             // Birth_day
             // 
@@ -128,6 +155,7 @@
             this.Phone.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             this.Phone.Enter += new System.EventHandler(this.Phone_Enter);
             this.Phone.Leave += new System.EventHandler(this.Phone_Leave);
+            this.Phone.Validated += new System.EventHandler(this.Phone_Validated);
             // 
             // Emergency_Contact
             // 
@@ -146,6 +174,7 @@
             this.Emergency_Contact.TextChanged += new System.EventHandler(this.kryptonTextBox4_TextChanged);
             this.Emergency_Contact.Enter += new System.EventHandler(this.Emergency_Contact_Enter);
             this.Emergency_Contact.Leave += new System.EventHandler(this.Emergency_Contact_Leave);
+            this.Emergency_Contact.Validated += new System.EventHandler(this.Emergency_Contact_Validated);
             // 
             // Chronic
             // 
@@ -180,6 +209,7 @@
             this.Email.Text = "Email (example@email.com)";
             this.Email.Enter += new System.EventHandler(this.Email_Enter);
             this.Email.Leave += new System.EventHandler(this.Email_Leave);
+            this.Email.Validated += new System.EventHandler(this.Email_Validated);
             // 
             // Pass
             // 
@@ -197,6 +227,7 @@
             this.Pass.Text = "Password";
             this.Pass.Enter += new System.EventHandler(this.Pass_Enter);
             this.Pass.Leave += new System.EventHandler(this.Pass_Leave);
+            this.Pass.Validated += new System.EventHandler(this.Pass_Validated);
             // 
             // Pass2
             // 
@@ -214,57 +245,61 @@
             this.Pass2.Text = "Re-enter Password";
             this.Pass2.Enter += new System.EventHandler(this.Pass2_Enter);
             this.Pass2.Leave += new System.EventHandler(this.Pass2_Leave);
+            this.Pass2.Validated += new System.EventHandler(this.Pass2_Validated);
             // 
-            // kryptonButton1
+            // Submit
             // 
-            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton1.Location = new System.Drawing.Point(697, 605);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(157, 42);
-            this.kryptonButton1.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.kryptonButton1.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Submit.Location = new System.Drawing.Point(697, 600);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(157, 42);
+            this.Submit.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
+            this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.Submit.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateDisabled.Border.Rounding = 25;
-            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StateNormal.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Submit.StateDisabled.Border.Rounding = 25;
+            this.Submit.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StateNormal.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
+            this.Submit.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateNormal.Border.Rounding = 25;
-            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StatePressed.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Submit.StateNormal.Border.Rounding = 25;
+            this.Submit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StatePressed.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
+            this.Submit.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Submit.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StatePressed.Border.Rounding = 25;
-            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Submit.StatePressed.Border.Rounding = 25;
+            this.Submit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateTracking.Border.Rounding = 25;
-            this.kryptonButton1.TabIndex = 14;
-            this.kryptonButton1.Values.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.kryptonButton1.Values.Text = "";
+            this.Submit.StateTracking.Border.Rounding = 25;
+            this.Submit.TabIndex = 14;
+            this.Submit.Values.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
+            this.Submit.Values.Text = "";
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            this.Submit.Validating += new System.ComponentModel.CancelEventHandler(this.Submit_Validating);
             // 
-            // kryptonComboBox1
+            // Gender
             // 
-            this.kryptonComboBox1.DropDownWidth = 24;
-            this.kryptonComboBox1.Items.AddRange(new object[] {
+            this.Gender.DropDownWidth = 24;
+            this.Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(629, 284);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(72, 21);
-            this.kryptonComboBox1.TabIndex = 15;
-            this.kryptonComboBox1.Text = "Gender";
+            this.Gender.Location = new System.Drawing.Point(629, 284);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(72, 21);
+            this.Gender.TabIndex = 15;
+            this.Gender.Text = "Gender";
+            this.Gender.Validating += new System.ComponentModel.CancelEventHandler(this.Gender_Validating);
             // 
             // Blood_type
             // 
@@ -279,6 +314,7 @@
             this.Blood_type.Size = new System.Drawing.Size(85, 21);
             this.Blood_type.TabIndex = 16;
             this.Blood_type.Text = "Blood Type";
+            this.Blood_type.Validated += new System.EventHandler(this.Blood_type_Validated);
             // 
             // kryptonComboBox2
             // 
@@ -291,20 +327,130 @@
             // 
             // firstnameerror
             // 
+            this.firstnameerror.BlinkRate = 0;
+            this.firstnameerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.firstnameerror.ContainerControl = this;
             this.firstnameerror.Icon = ((System.Drawing.Icon)(resources.GetObject("firstnameerror.Icon")));
             // 
-            // Form1
+            // lastnameerror
+            // 
+            this.lastnameerror.BlinkRate = 0;
+            this.lastnameerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.lastnameerror.ContainerControl = this;
+            this.lastnameerror.Icon = ((System.Drawing.Icon)(resources.GetObject("lastnameerror.Icon")));
+            // 
+            // iderror
+            // 
+            this.iderror.BlinkRate = 0;
+            this.iderror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.iderror.ContainerControl = this;
+            this.iderror.Icon = ((System.Drawing.Icon)(resources.GetObject("iderror.Icon")));
+            // 
+            // phoneerror
+            // 
+            this.phoneerror.BlinkRate = 0;
+            this.phoneerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.phoneerror.ContainerControl = this;
+            this.phoneerror.Icon = ((System.Drawing.Icon)(resources.GetObject("phoneerror.Icon")));
+            // 
+            // emergencyerror
+            // 
+            this.emergencyerror.BlinkRate = 0;
+            this.emergencyerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.emergencyerror.ContainerControl = this;
+            this.emergencyerror.Icon = ((System.Drawing.Icon)(resources.GetObject("emergencyerror.Icon")));
+            // 
+            // chronicerror
+            // 
+            this.chronicerror.BlinkRate = 0;
+            this.chronicerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.chronicerror.ContainerControl = this;
+            this.chronicerror.Icon = ((System.Drawing.Icon)(resources.GetObject("chronicerror.Icon")));
+            // 
+            // emailerror
+            // 
+            this.emailerror.BlinkRate = 0;
+            this.emailerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.emailerror.ContainerControl = this;
+            this.emailerror.Icon = ((System.Drawing.Icon)(resources.GetObject("emailerror.Icon")));
+            // 
+            // passerror
+            // 
+            this.passerror.BlinkRate = 0;
+            this.passerror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.passerror.ContainerControl = this;
+            this.passerror.Icon = ((System.Drawing.Icon)(resources.GetObject("passerror.Icon")));
+            // 
+            // pass2error
+            // 
+            this.pass2error.BlinkRate = 0;
+            this.pass2error.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.pass2error.ContainerControl = this;
+            this.pass2error.Icon = ((System.Drawing.Icon)(resources.GetObject("pass2error.Icon")));
+            // 
+            // gendererror
+            // 
+            this.gendererror.BlinkRate = 0;
+            this.gendererror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.gendererror.ContainerControl = this;
+            this.gendererror.Icon = ((System.Drawing.Icon)(resources.GetObject("gendererror.Icon")));
+            // 
+            // blooderror
+            // 
+            this.blooderror.BlinkRate = 0;
+            this.blooderror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.blooderror.ContainerControl = this;
+            // 
+            // submiterror
+            // 
+            this.submiterror.BlinkRate = 0;
+            this.submiterror.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.submiterror.ContainerControl = this;
+            this.submiterror.Icon = ((System.Drawing.Icon)(resources.GetObject("submiterror.Icon")));
+            // 
+            // SignIn
+            // 
+            this.SignIn.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.SignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SignIn.Location = new System.Drawing.Point(666, 644);
+            this.SignIn.Name = "SignIn";
+            this.SignIn.Size = new System.Drawing.Size(228, 29);
+            this.SignIn.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.SignIn.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.SignIn.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.SignIn.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.SignIn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignIn.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.SignIn.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.SignIn.StateNormal.Border.Color1 = System.Drawing.Color.White;
+            this.SignIn.StateNormal.Border.Color2 = System.Drawing.Color.White;
+            this.SignIn.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignIn.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.SignIn.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.SignIn.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.SignIn.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.SignIn.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.SignIn.TabIndex = 18;
+            this.SignIn.Values.Text = "Already Have an Account? Sign In Here.";
+            // 
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.SignIn);
             this.Controls.Add(this.kryptonComboBox2);
             this.Controls.Add(this.Blood_type);
-            this.Controls.Add(this.kryptonComboBox1);
-            this.Controls.Add(this.kryptonButton1);
+            this.Controls.Add(this.Gender);
+            this.Controls.Add(this.Submit);
             this.Controls.Add(this.Pass2);
             this.Controls.Add(this.Pass);
             this.Controls.Add(this.Email);
@@ -315,14 +461,27 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.Last_Name);
             this.Controls.Add(this.First_Name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "SignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Electronic Healthcare Records";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastnameerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iderror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emergencyerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chronicerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passerror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pass2error)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gendererror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blooderror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.submiterror)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,11 +499,23 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Email;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Pass;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Pass2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Submit;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox Gender;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox Blood_type;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
         private System.Windows.Forms.ErrorProvider firstnameerror;
+        private System.Windows.Forms.ErrorProvider lastnameerror;
+        private System.Windows.Forms.ErrorProvider iderror;
+        private System.Windows.Forms.ErrorProvider phoneerror;
+        private System.Windows.Forms.ErrorProvider emergencyerror;
+        private System.Windows.Forms.ErrorProvider chronicerror;
+        private System.Windows.Forms.ErrorProvider emailerror;
+        private System.Windows.Forms.ErrorProvider passerror;
+        private System.Windows.Forms.ErrorProvider pass2error;
+        private System.Windows.Forms.ErrorProvider gendererror;
+        private System.Windows.Forms.ErrorProvider blooderror;
+        private System.Windows.Forms.ErrorProvider submiterror;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton SignIn;
     }
 }
 

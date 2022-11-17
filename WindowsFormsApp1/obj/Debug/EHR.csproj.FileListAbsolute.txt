@@ -18,10 +18,10 @@ E:\Database\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 E:\Database\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.AssemblyReference.cache
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.SuggestedBindingRedirects.cache
-E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.GenerateResource.cache
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CoreCompileInputs.cache
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\EHR.csproj.CopyComplete
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources

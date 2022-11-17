@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using System.CodeDom;
+using System.Collections.Specialized;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class SignUp : Form
     {
-        public Form1()
+        int count_error;
+        bool[] check = new bool[] { false, false, false, false, false, false, false, false, false };
+        public SignUp()
         {
             InitializeComponent();
+            count_error = 10;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -274,12 +280,181 @@ namespace WindowsFormsApp1
         {
             if (string.IsNullOrWhiteSpace(First_Name.Text) || First_Name.Text == "First Name")
             {
-                firstnameerror.SetError(First_Name, "Name should not be left blank!");
+                count_error += Convert.ToInt16(check[0]);
+                check[0] = true;
+                firstnameerror.SetError(First_Name, "First Name should not be left blank!");
             }
             else
             {
                 firstnameerror.SetError(First_Name, "");
+                count_error--;
             }
+        }
+
+        private void Last_Name_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Last_Name.Text) || Last_Name.Text == "Last Name")
+            {
+                count_error += Convert.ToInt16(check[1]);
+                check[1] = true;
+                lastnameerror.SetError(Last_Name, "Last Name should not be left blank!");
+            }
+            else
+            {
+                lastnameerror.SetError(Last_Name, "");
+                count_error--;
+            }
+        }
+
+        private void ID_Validating(object sender, CancelEventArgs e)
+        {
+            if (ID.Text.Length != 16)
+            {
+                count_error += Convert.ToInt16(check[2]);
+                check[2] = true;
+                iderror.SetError(ID, "ID Must be 16 digits!");
+            }
+            else
+            {
+                iderror.SetError(ID, "");
+                count_error--;
+            }
+        }
+
+        private void Phone_Validated(object sender, EventArgs e)
+        {
+            Regex expression = new Regex("^01[0-2]\\d{8}$");
+
+            if (!expression.IsMatch(Phone.Text))
+            {
+                count_error += Convert.ToInt16(check[3]);
+                check[3] = true;
+                phoneerror.SetError(Phone, "Enter a Correct Phone Number");
+            }
+            else
+            {
+                phoneerror.SetError(Phone, "");
+                count_error--;
+            }
+        }
+
+        private void Emergency_Contact_Validated(object sender, EventArgs e)
+        {
+            Regex expression = new Regex("^01[0-2]\\d{8}$");
+
+            if (!expression.IsMatch(Emergency_Contact.Text))
+            {
+                count_error += Convert.ToInt16(check[4]);
+                check[4] = true;
+                emergencyerror.SetError(Emergency_Contact, "Enter a Correct Phone Number");
+            }
+            else
+            {
+                emergencyerror.SetError(Emergency_Contact, "");
+                count_error--;
+            }
+        }
+
+        private void Email_Validated(object sender, EventArgs e)
+        {
+            Regex expression = new Regex("^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$");
+
+            if (!expression.IsMatch(Email.Text))
+            {
+                count_error += Convert.ToInt16(check[5]);
+                check[5] = true;
+                emailerror.SetError(Email, "Enter a Correct Email");
+            }
+            else
+            {
+                emailerror.SetError(Email, "");
+                count_error--;
+            }
+        }
+
+        private void Pass_Validated(object sender, EventArgs e)
+        {
+            string password = Pass.Text;
+            if (!(password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit) && Pass.Text.Length > 8))
+            {
+                count_error += Convert.ToInt16(check[6]);
+                check[6] = true;
+                passerror.SetError(Pass, "Make sure your password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
+            }
+            else
+            {
+                passerror.SetError(Pass, "");
+                count_error--;
+            }
+
+        }
+
+        private void Pass2_Validated(object sender, EventArgs e)
+        {
+            if (Pass2.Text != Pass.Text)
+            {
+                count_error += Convert.ToInt16(check[7]);
+                check[7] = true;
+                pass2error.SetError(Pass2, "Make sure Both Passwords Match!");
+            }
+            else
+            {
+                pass2error.SetError(Pass2, "");
+                count_error--;
+            }
+        }
+
+        private void Gender_Validating(object sender, CancelEventArgs e)
+        {
+            if(Gender.SelectedIndex == -1)
+            {
+                count_error += Convert.ToInt16(check[8]);
+                check[8] = true;
+                gendererror.SetError(Gender, "Pick a Gender!");
+            }
+            else
+            {
+                gendererror.SetError(Gender, "");
+                count_error--;
+            }
+        }
+
+        private void Blood_type_Validated(object sender, EventArgs e)
+        {
+            if (Blood_type.SelectedIndex == -1)
+            {
+                count_error += Convert.ToInt16(check[9]);
+                check[9] = true;
+                blooderror.SetError(Blood_type, "Pick a Blood Type!");
+            }
+            else
+            {
+                blooderror.SetError(Blood_type, "");
+                count_error--;
+            }
+        }
+
+        private void Submit_Validating(object sender, CancelEventArgs e)
+        {
+            int sum = 0;
+            foreach (bool i in check)
+            {
+                sum += Convert.ToInt16(i);
+            }
+
+            if (sum != 0)
+            {
+                submiterror.SetError(Submit, "Fix the Errors Above!");
+            }
+            else
+            {
+                submiterror.SetError(Submit, "");
+            }
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
