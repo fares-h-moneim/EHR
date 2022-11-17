@@ -26,3 +26,6 @@ E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
 C:\Users\Mohamed\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignIn.resources
+E:\Database\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+E:\Database\EHR\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Patient.resources

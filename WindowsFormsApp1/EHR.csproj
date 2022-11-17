@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>C:\Users\Fares Hesham\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>C:\Users\Fares Hesham\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
@@ -50,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +122,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Login_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Desktop - 1Patient_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\default_avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\33777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\78524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\pharmacy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\2770519.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Kidneys_and_liver_icons.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

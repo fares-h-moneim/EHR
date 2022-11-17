@@ -20,7 +20,10 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-
+            Patient myForm = new Patient();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)

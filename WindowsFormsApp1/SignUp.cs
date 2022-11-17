@@ -463,7 +463,6 @@ namespace WindowsFormsApp1
             this.Hide();
             myForm.ShowDialog();
             this.Close();
-
         }
     }
 }
