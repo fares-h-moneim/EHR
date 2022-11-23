@@ -15,12 +15,10 @@ namespace WindowsFormsApp1
 {
     public partial class SignUp : Form
     {
-        int count_error;
         bool[] check = new bool[] { false, false, false, false, false, false, false, false, false,false };
         public SignUp()
         {
             InitializeComponent();
-            count_error = 10;
         }
 
         private void Form1_Load(object sender, EventArgs e)

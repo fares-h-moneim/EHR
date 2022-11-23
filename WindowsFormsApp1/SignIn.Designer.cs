@@ -52,6 +52,7 @@
             this.Email.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Email.TabIndex = 11;
             this.Email.Text = "Email (example@email.com)";
+            this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             this.Email.Enter += new System.EventHandler(this.Email_Enter);
             this.Email.Leave += new System.EventHandler(this.Email_Leave);
             this.Email.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);
@@ -70,6 +71,7 @@
             this.Pass.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Pass.TabIndex = 13;
             this.Pass.Text = "Password";
+            this.Pass.TextChanged += new System.EventHandler(this.Pass_TextChanged);
             this.Pass.Enter += new System.EventHandler(this.Pass_Enter);
             this.Pass.Leave += new System.EventHandler(this.Pass_Leave);
             // 

@@ -93,5 +93,15 @@ namespace WindowsFormsApp1
                 emailerror.SetError(Email, "");
             }
         }
+
+        private void Email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
