@@ -16,9 +16,12 @@ namespace WindowsFormsApp1
     public partial class SignUp : Form
     {
         bool[] check = new bool[] { false, false, false, false, false, false, false, false, false,false };
+        Controller ctrl;
         public SignUp()
         {
             InitializeComponent();
+            ctrl = new Controller();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -439,6 +442,7 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            //hona yogad query
             bool submitvalid = true;
             for (int i = 0; i < 10; i++)
             {
@@ -452,6 +456,10 @@ namespace WindowsFormsApp1
             else
             {
                 submiterror.SetError(Submit, "");
+                //hena aho add patient
+
+                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, Gender.Text, "20", Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                
             }
         }
 
@@ -461,6 +469,11 @@ namespace WindowsFormsApp1
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void First_Name_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
