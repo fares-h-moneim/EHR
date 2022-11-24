@@ -457,9 +457,11 @@ namespace WindowsFormsApp1
             {
                 submiterror.SetError(Submit, "");
                 //hena aho add patient
-
                 int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, Gender.Text, "20", Blood_type.Text, Phone.Text, Emergency_Contact.Text);
-                
+                Patient myForm = new Patient(Email.Text, Pass.Text);
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
             }
         }
 

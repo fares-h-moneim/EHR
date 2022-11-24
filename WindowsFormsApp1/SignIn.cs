@@ -16,11 +16,12 @@ namespace WindowsFormsApp1
         public SignIn()
         {
             InitializeComponent();
+
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Patient myForm = new Patient();
+            Patient myForm = new Patient(Email.Text, Pass.Text);
             this.Hide();
             myForm.ShowDialog();
             this.Close();
@@ -100,6 +101,11 @@ namespace WindowsFormsApp1
         }
 
         private void Pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
         {
 
         }

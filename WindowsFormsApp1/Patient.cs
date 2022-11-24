@@ -13,9 +13,19 @@ namespace WindowsFormsApp1
 {
     public partial class Patient : Form
     {
-        public Patient()
+        public Patient(string email, string password)
         {
             InitializeComponent();
+            Controller controller = new Controller();
+            DataTable patient = controller.GetPatient(email, password);
+            DataRowCollection dataRow = patient.Rows;
+
+            Hello.Text = "Hello " + dataRow[0][1].ToString() + " " + dataRow[0][2].ToString() + "!";
+            Email.Text = "Email: " + dataRow[0][3].ToString();
+            Phone.Text = "Phone #: " + dataRow[0][5].ToString();
+            Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
+            Gender.Text = "Gender: " + dataRow[0][6].ToString();
+            EditUserDetails.Location = new System.Drawing.Point(Hello.Size.Width + Hello.Location.X + Hello.Margin.Right + 75, 36);
         }
 
         private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
@@ -35,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void Patient_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
@@ -127,6 +137,11 @@ namespace WindowsFormsApp1
             Labs.StateNormal.Border.Width = 0;
             Pharmacy.StateNormal.Border.Width = 0;
             Family.StateNormal.Border.Width = 0;
+        }
+
+        private void Hello_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

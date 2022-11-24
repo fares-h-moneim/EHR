@@ -165,6 +165,7 @@
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sign In";
+            this.Load += new System.EventHandler(this.SignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.emailerror)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

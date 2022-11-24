@@ -32,10 +32,10 @@
             this.Avatar = new System.Windows.Forms.PictureBox();
             this.Hello = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Gender = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Birthday = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Blood = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Email = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Phone = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Hospital = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Labs = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Pharmacy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -69,6 +69,7 @@
             this.Hello.StateCommon.ShortText.Font = new System.Drawing.Font("Inter ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hello.TabIndex = 1;
             this.Hello.Values.Text = "Hello UserName!";
+            this.Hello.Paint += new System.Windows.Forms.PaintEventHandler(this.Hello_Paint);
             // 
             // Gender
             // 
@@ -82,50 +83,50 @@
             this.Gender.Values.Text = "Gender: Male";
             this.Gender.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel1_Paint);
             // 
-            // kryptonLabel1
+            // Birthday
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(224, 112);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(234, 31);
-            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.TabIndex = 3;
-            this.kryptonLabel1.Values.Text = "Birthday: 29/04/2002";
+            this.Birthday.Location = new System.Drawing.Point(224, 112);
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Size = new System.Drawing.Size(234, 31);
+            this.Birthday.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.Birthday.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.Birthday.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Birthday.TabIndex = 3;
+            this.Birthday.Values.Text = "Birthday: 29/04/2002";
             // 
-            // kryptonLabel2
+            // Blood
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(224, 139);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(156, 31);
-            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 4;
-            this.kryptonLabel2.Values.Text = "Blood Type: A";
+            this.Blood.Location = new System.Drawing.Point(224, 139);
+            this.Blood.Name = "Blood";
+            this.Blood.Size = new System.Drawing.Size(156, 31);
+            this.Blood.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.Blood.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.Blood.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Blood.TabIndex = 4;
+            this.Blood.Values.Text = "Blood Type: A";
             // 
-            // kryptonLabel3
+            // Email
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(484, 112);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(362, 31);
-            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel3.TabIndex = 6;
-            this.kryptonLabel3.Values.Text = "Email: fares.h.moneim@gmail.com";
+            this.Email.Location = new System.Drawing.Point(484, 112);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(362, 31);
+            this.Email.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.Email.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.Email.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.TabIndex = 6;
+            this.Email.Values.Text = "Email: fares.h.moneim@gmail.com";
             // 
-            // kryptonLabel4
+            // Phone
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(484, 87);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(245, 31);
-            this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel4.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.TabIndex = 5;
-            this.kryptonLabel4.Values.Text = "Phone #: 01117997474";
-            this.kryptonLabel4.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel4_Paint);
+            this.Phone.Location = new System.Drawing.Point(484, 87);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(245, 31);
+            this.Phone.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.Phone.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.Phone.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone.TabIndex = 5;
+            this.Phone.Values.Text = "Phone #: 01117997474";
+            this.Phone.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel4_Paint);
             // 
             // Hospital
             // 
@@ -371,10 +372,10 @@
             this.Controls.Add(this.Pharmacy);
             this.Controls.Add(this.Labs);
             this.Controls.Add(this.Hospital);
-            this.Controls.Add(this.kryptonLabel3);
-            this.Controls.Add(this.kryptonLabel4);
-            this.Controls.Add(this.kryptonLabel2);
-            this.Controls.Add(this.kryptonLabel1);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Phone);
+            this.Controls.Add(this.Blood);
+            this.Controls.Add(this.Birthday);
             this.Controls.Add(this.Gender);
             this.Controls.Add(this.Hello);
             this.Controls.Add(this.Avatar);
@@ -394,10 +395,10 @@
         private System.Windows.Forms.PictureBox Avatar;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel Hello;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel Gender;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Birthday;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Blood;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Email;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Phone;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Hospital;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Labs;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Pharmacy;

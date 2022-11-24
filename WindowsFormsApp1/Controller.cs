@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -27,6 +29,13 @@ namespace WindowsFormsApp1
             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
                             "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + gender + "'," + Int32.Parse(age) + ",'" + blood + "','" + phone + "','" + emerg + "');";
            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable GetPatient(string email, string password)
+        {
+            string query = "SELECT * " +
+                "From Patient " +
+                "Where Email = '" + email + "' AND Password = '" + password + "';";
+            return dbMan.ExecuteReader(query);
         }
         //public int DeleteSupplier(string snum)
         //{
