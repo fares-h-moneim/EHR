@@ -6,6 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Collections;
 using System.Xml.Linq;
+using System.Reflection;
 
 namespace WindowsFormsApp1
 {
@@ -26,10 +27,22 @@ namespace WindowsFormsApp1
         //}
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
+            gender = (gender == "Male") ? "0" : "1";
+
             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
-                            "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + gender + "'," + Int32.Parse(age) + ",'" + blood + "','" + phone + "','" + emerg + "');";
+                            "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
            return dbMan.ExecuteNonQuery(query);
         }
+
+        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
+            gender = (gender == "Male") ? "0" : "1";
+
+            string query = "UPDATE Patient " + 
+                "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
+                " WHERE NationalID = '" + nationalid_prev +"'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public DataTable GetPatient(string email, string password)
         {
             string query = "SELECT * " +

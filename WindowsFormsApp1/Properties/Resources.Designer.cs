@@ -213,6 +213,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ok {
+            get {
+                object obj = ResourceManager.GetObject("Ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap organs {
             get {
                 object obj = ResourceManager.GetObject("organs", resourceCulture);
@@ -296,6 +306,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap View_Details {
             get {
                 object obj = ResourceManager.GetObject("View_Details", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_Box_Bg {
+            get {
+                object obj = ResourceManager.GetObject("Warning Box Bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

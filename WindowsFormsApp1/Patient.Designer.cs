@@ -69,7 +69,6 @@
             this.Hello.StateCommon.ShortText.Font = new System.Drawing.Font("Inter ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hello.TabIndex = 1;
             this.Hello.Values.Text = "Hello UserName!";
-            this.Hello.Paint += new System.Windows.Forms.PaintEventHandler(this.Hello_Paint);
             // 
             // Gender
             // 
@@ -81,7 +80,6 @@
             this.Gender.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gender.TabIndex = 2;
             this.Gender.Values.Text = "Gender: Male";
-            this.Gender.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel1_Paint);
             // 
             // Birthday
             // 
@@ -126,7 +124,6 @@
             this.Phone.StateCommon.ShortText.Font = new System.Drawing.Font("Inter", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Phone.TabIndex = 5;
             this.Phone.Values.Text = "Phone #: 01117997474";
-            this.Phone.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel4_Paint);
             // 
             // Hospital
             // 
@@ -335,6 +332,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.EditUserDetails.StateCommon.Border.Width = 0;
+            this.EditUserDetails.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.EditUserDetails.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
             this.EditUserDetails.StateNormal.Back.Image = global::WindowsFormsApp1.Properties.Resources.edit;
             this.EditUserDetails.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
             this.EditUserDetails.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -347,6 +346,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.EditUserDetails.StatePressed.Border.Width = 0;
+            this.EditUserDetails.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.EditUserDetails.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
             this.EditUserDetails.StateTracking.Back.Image = global::WindowsFormsApp1.Properties.Resources.edit;
             this.EditUserDetails.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
             this.EditUserDetails.TabIndex = 13;
@@ -383,7 +384,6 @@
             this.Name = "Patient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient";
-            this.Load += new System.EventHandler(this.Patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -13,53 +13,47 @@ namespace WindowsFormsApp1
 {
     public partial class Patient : Form
     {
+        string user, pass;
         public Patient(string email, string password)
         {
             InitializeComponent();
+            user = email;
+            pass = password;
             Controller controller = new Controller();
             DataTable patient = controller.GetPatient(email, password);
-            DataRowCollection dataRow = patient.Rows;
 
-            Hello.Text = "Hello " + dataRow[0][1].ToString() + " " + dataRow[0][2].ToString() + "!";
-            Email.Text = "Email: " + dataRow[0][3].ToString();
-            Phone.Text = "Phone #: " + dataRow[0][5].ToString();
-            Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
-            Gender.Text = "Gender: " + dataRow[0][6].ToString();
-            EditUserDetails.Location = new System.Drawing.Point(Hello.Size.Width + Hello.Location.X + Hello.Margin.Right + 75, 36);
+            object sender = null;
+            EventArgs e = new EventArgs();
+            Hospital_Click(sender, e);
+            if (patient!= null)
+            {
+                DataRowCollection dataRow = patient.Rows;
+
+                Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
+                Email.Text = "Email: " + dataRow[0][3].ToString();
+                Phone.Text = "Phone #: " + dataRow[0][5].ToString();
+                Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
+                string gender;
+                if (dataRow[0][6].ToString() == "0")
+                {
+                    gender = "Male";
+                }
+                else {
+                    gender = "Female";
+                }
+                Gender.Text = "Gender: " + gender;
+                
+            }
         }
 
-        private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
+        public void RefreshOnSave(object sender, EventArgs e)
         {
-
+            this.Refresh();
         }
-
-        private void kryptonLabel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Patient_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-                    }
 
         private void EditUserDetails_Click(object sender, EventArgs e)
         {
-            EditInfo myForm = new EditInfo();
+            EditInfo myForm = new EditInfo(user, pass, this);
             myForm.ShowDialog();
         }
 
@@ -137,11 +131,6 @@ namespace WindowsFormsApp1
             Labs.StateNormal.Border.Width = 0;
             Pharmacy.StateNormal.Border.Width = 0;
             Family.StateNormal.Border.Width = 0;
-        }
-
-        private void Hello_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

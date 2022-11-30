@@ -29,16 +29,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void kryptonGroupBox1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonGroupBox1_Panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void First_Name_Enter(object sender, EventArgs e)
         {
             if (First_Name.Text == "First Name")
@@ -240,41 +230,6 @@ namespace WindowsFormsApp1
             {
                 Pass2.StateActive.Content.Color1 = System.Drawing.Color.Black;
             }
-        }
-
-        private void kryptonTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonDropButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonNumericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void First_Name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Phone_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void First_Name_Validating(object sender, CancelEventArgs e)

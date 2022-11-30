@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
                 // just for illustration when the database is opened, 
                 // this should NOT be shown in GUI to the user in the final application
                 // but we show it here only to make sure that the database is working
+                
                 MessageBox.Show("Successfully connected to the database!");
             }
             catch (Exception e)
