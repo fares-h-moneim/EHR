@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
         bool[] check = new bool[] { false, false, false, false, false, false, false, false, false, false };
         Controller ctrl = new Controller();
         string user;
+        string prevemail;
         Patient parent;
         public EditInfo(string user, string pass, Patient form)
         {
@@ -35,6 +36,7 @@ namespace WindowsFormsApp1
                 First_Name.Text = dataRow[0][1].ToString();
                 Last_Name.Text = dataRow[0][2].ToString();
                 Email.Text = user;
+                this.prevemail = user;
                 Pass.Text = pass;
                 Pass2.Text = pass;
                 ID.Text = dataRow[0][0].ToString();
@@ -125,6 +127,13 @@ namespace WindowsFormsApp1
                 check[2] = false;
                 iderror.SetError(ID, "ID Must be 16 digits!");
             }
+
+            else if (ctrl.IDExist(ID.Text) != 0 && ID.Text != user)
+            {
+                check[2] = false;
+                iderror.SetError(ID, "ID Already exists");
+            }
+
             else
             {
                 iderror.SetError(ID, "");
@@ -175,6 +184,11 @@ namespace WindowsFormsApp1
 
                 check[5] = false;
                 emailerror.SetError(Email, "Enter a Correct Email");
+            }
+            else if (ctrl.EmailExist(Email.Text) != 0 && Email.Text != prevemail)
+            {
+                check[5] = false;
+                emailerror.SetError(Email, "Email already exists");
             }
             else
             {

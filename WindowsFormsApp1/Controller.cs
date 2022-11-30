@@ -50,6 +50,18 @@ namespace WindowsFormsApp1
                 "Where Email = '" + email + "' AND Password = '" + password + "';";
             return dbMan.ExecuteReader(query);
         }
+
+        public int IDExist(string id)
+        {
+            string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int EmailExist(string email)
+        {
+            string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
         //public int DeleteSupplier(string snum)
         //{
         //    string query = "DELETE FROM S WHERE S#='" + snum + "';";
