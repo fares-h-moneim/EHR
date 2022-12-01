@@ -62,8 +62,13 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            string gender = (Gender.Text == "Male") ? "0" : "1"; 
-            int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, "20", Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+            string gender = (Gender.Text == "Male") ? "0" : "1";
+            DateTime now = DateTime.Now;
+            string Today = now.Year.ToString();
+            string B_Year = Birth_day.Value.Year.ToString();
+
+            string Age = (Convert.ToInt32(Today) - Convert.ToInt32(B_Year)).ToString();
+            int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
 
             bool submitvalid = true;
             for (int i = 0; i < 10; i++)
@@ -257,16 +262,6 @@ namespace WindowsFormsApp1
                 blooderror.SetError(Blood_type, "");
                 check[9] = true;
             }
-        }
-
-        private void First_Name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EditInfo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

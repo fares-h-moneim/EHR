@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
         //                    "Values ('" + snum + "','" + sname + "','" + city + "'," + status + ");";
         //    return dbMan.ExecuteNonQuery(query);
         //}
+
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
             gender = (gender == "Male") ? "0" : "1";

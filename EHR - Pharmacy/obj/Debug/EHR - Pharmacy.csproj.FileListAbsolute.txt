@@ -1,0 +1,14 @@
+E:\Database\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.exe.config
+E:\Database\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.exe
+E:\Database\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.pdb
+E:\Database\EHR\EHR - Pharmacy\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+E:\Database\EHR\EHR - Pharmacy\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.AssemblyReference.cache
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.SuggestedBindingRedirects.cache
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Form1.resources
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Properties.Resources.resources
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.GenerateResource.cache
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CoreCompileInputs.cache
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CopyComplete
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.exe
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.pdb

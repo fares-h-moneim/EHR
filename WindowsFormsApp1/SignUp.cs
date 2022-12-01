@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.CodeDom;
 using System.Collections.Specialized;
+using Microsoft.VisualBasic;
 
 namespace WindowsFormsApp1
 {
@@ -412,8 +413,13 @@ namespace WindowsFormsApp1
             {
                 submiterror.SetError(Submit, "");
                 //hena aho add patient
+                DateTime now = DateTime.Now;
+                string Today = now.Year.ToString();
+                string B_Year = Birth_day.Value.Year.ToString();
+
+                string Age = (Convert.ToInt32(Today) - Convert.ToInt32(B_Year)).ToString();
                 string gender = (Gender.Text == "Male") ? "0" : "1";
-                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, "20", Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 Patient myForm = new Patient(Email.Text, Pass.Text);
                 this.Hide();
                 myForm.ShowDialog();
@@ -429,9 +435,5 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void First_Name_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

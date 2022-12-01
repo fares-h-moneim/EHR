@@ -90,7 +90,6 @@ namespace WindowsFormsApp1
             this.First_Name.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.First_Name.TabIndex = 0;
             this.First_Name.Text = "First Name";
-            this.First_Name.TextChanged += new System.EventHandler(this.First_Name_TextChanged_1);
             this.First_Name.Enter += new System.EventHandler(this.First_Name_Enter);
             this.First_Name.Leave += new System.EventHandler(this.First_Name_Leave);
             this.First_Name.Validating += new System.ComponentModel.CancelEventHandler(this.First_Name_Validating);

@@ -82,5 +82,10 @@ namespace EHR___Pharmacy
         {
 
         }
+
+        private void Email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
