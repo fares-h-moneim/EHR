@@ -57,6 +57,7 @@
             this.Avatar.Size = new System.Drawing.Size(145, 145);
             this.Avatar.TabIndex = 0;
             this.Avatar.TabStop = false;
+            this.Avatar.Click += new System.EventHandler(this.Avatar_Click);
             // 
             // Hello
             // 
@@ -69,6 +70,7 @@
             this.Hello.StateCommon.ShortText.Font = new System.Drawing.Font("Inter ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hello.TabIndex = 1;
             this.Hello.Values.Text = "Hello UserName!";
+            this.Hello.Paint += new System.Windows.Forms.PaintEventHandler(this.Hello_Paint);
             // 
             // Gender
             // 

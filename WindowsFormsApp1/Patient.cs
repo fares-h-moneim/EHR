@@ -118,6 +118,16 @@ namespace WindowsFormsApp1
             Organs.StateNormal.Border.Width = 0;
         }
 
+        private void Avatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hello_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Organs_Click(object sender, EventArgs e)
         {
             Color color = Color.FromArgb(255, 87, 139, 255);
