@@ -29,17 +29,37 @@ namespace EHR_Admin
 
         private void Pharmacy_Click(object sender, EventArgs e)
         {
-            Name.Text = "Pharmacy Name";
+            Label_Name.Text = "Pharmacy Name";
+            Phar.Text = "";
+            Hos.Text = "Add Hospital";
+            Lab.Text = "Add Laboratory";
+            Sta.Text = "Show Statistics";
         }
 
         private void Hospital_Click(object sender, EventArgs e)
         {
-            Name.Text = "Hospital Name";
+            Label_Name.Text = "Hospital Name";
+            Hos.Text = "";
+            Phar.Text = "Add Pharmacy";
+            Lab.Text = "Add Laboratory";
+            Sta.Text = "Show Statistics";
         }
 
         private void Labs_Click(object sender, EventArgs e)
         {
-            Name.Text = "Lab Name";
+            Label_Name.Text = "Lab Name";
+            Lab.Text = "";
+            Phar.Text = "Add Pharmacy";
+            Hos.Text = "Add Hospital";
+            Sta.Text = "Show Statistics";
+        }
+
+        private void Statistics_Click(object sender, EventArgs e)
+        {
+            Sta.Text = "";
+            Phar.Text = "Add Pharmacy";
+            Hos.Text = "Add Hospital";
+            Lab.Text = "Add Laboratory";
         }
     }
 }

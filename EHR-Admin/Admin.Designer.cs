@@ -51,7 +51,7 @@
             this.H_Pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.H_User = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.Label_Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.H_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -63,8 +63,11 @@
             this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Hos = new System.Windows.Forms.Label();
+            this.Phar = new System.Windows.Forms.Label();
+            this.Lab = new System.Windows.Forms.Label();
+            this.Sta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital.Panel)).BeginInit();
@@ -249,6 +252,7 @@
             this.Statistics.TabIndex = 9;
             this.Statistics.TabStop = false;
             this.Statistics.Values.Text = "";
+            this.Statistics.Click += new System.EventHandler(this.Statistics_Click);
             // 
             // Add_Hospital
             // 
@@ -276,7 +280,7 @@
             this.Add_Hospital.Panel.Controls.Add(this.H_Pass);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel2);
             this.Add_Hospital.Panel.Controls.Add(this.H_User);
-            this.Add_Hospital.Panel.Controls.Add(this.Name);
+            this.Add_Hospital.Panel.Controls.Add(this.Label_Name);
             this.Add_Hospital.Panel.Controls.Add(this.H_Name);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel7);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox1);
@@ -288,7 +292,6 @@
             this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox5);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel11);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox6);
-            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel12);
             this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox7);
             this.Add_Hospital.Size = new System.Drawing.Size(820, 350);
             this.Add_Hospital.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
@@ -492,13 +495,13 @@
             this.H_User.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.H_User.TabIndex = 2;
             // 
-            // Name
+            // Label_Name
             // 
-            this.Name.Location = new System.Drawing.Point(28, 21);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(92, 20);
-            this.Name.TabIndex = 1;
-            this.Name.Values.Text = "Hospital Name";
+            this.Label_Name.Location = new System.Drawing.Point(28, 21);
+            this.Label_Name.Name = "Label_Name";
+            this.Label_Name.Size = new System.Drawing.Size(92, 20);
+            this.Label_Name.TabIndex = 1;
+            this.Label_Name.Values.Text = "Hospital Name";
             // 
             // H_Name
             // 
@@ -600,14 +603,6 @@
             this.kryptonTextBox6.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox6.TabIndex = 2;
             // 
-            // kryptonLabel12
-            // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(28, 21);
-            this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(92, 20);
-            this.kryptonLabel12.TabIndex = 1;
-            this.kryptonLabel12.Values.Text = "Hospital Name";
-            // 
             // kryptonTextBox7
             // 
             this.kryptonTextBox7.Location = new System.Drawing.Point(28, 47);
@@ -618,12 +613,64 @@
             this.kryptonTextBox7.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox7.TabIndex = 0;
             // 
+            // Hos
+            // 
+            this.Hos.AutoSize = true;
+            this.Hos.BackColor = System.Drawing.Color.Transparent;
+            this.Hos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Hos.Location = new System.Drawing.Point(111, 335);
+            this.Hos.Name = "Hos";
+            this.Hos.Size = new System.Drawing.Size(112, 20);
+            this.Hos.TabIndex = 11;
+            this.Hos.Text = "Add Hospital";
+            // 
+            // Phar
+            // 
+            this.Phar.AutoSize = true;
+            this.Phar.BackColor = System.Drawing.Color.Transparent;
+            this.Phar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Phar.Location = new System.Drawing.Point(350, 334);
+            this.Phar.Name = "Phar";
+            this.Phar.Size = new System.Drawing.Size(124, 20);
+            this.Phar.TabIndex = 12;
+            this.Phar.Text = "Add Pharmacy";
+            // 
+            // Lab
+            // 
+            this.Lab.AutoSize = true;
+            this.Lab.BackColor = System.Drawing.Color.Transparent;
+            this.Lab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Lab.Location = new System.Drawing.Point(585, 332);
+            this.Lab.Name = "Lab";
+            this.Lab.Size = new System.Drawing.Size(132, 20);
+            this.Lab.TabIndex = 13;
+            this.Lab.Text = "Add Laboratory";
+            // 
+            // Sta
+            // 
+            this.Sta.AutoSize = true;
+            this.Sta.BackColor = System.Drawing.Color.Transparent;
+            this.Sta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.Sta.Location = new System.Drawing.Point(800, 332);
+            this.Sta.Name = "Sta";
+            this.Sta.Size = new System.Drawing.Size(133, 20);
+            this.Sta.TabIndex = 14;
+            this.Sta.Text = "Show Statistics";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Admin.Properties.Resources.Desktop___1Patient_Bg;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.Sta);
+            this.Controls.Add(this.Lab);
+            this.Controls.Add(this.Phar);
+            this.Controls.Add(this.Hos);
             this.Controls.Add(this.Add_Hospital);
             this.Controls.Add(this.Statistics);
             this.Controls.Add(this.Pharmacy);
@@ -631,7 +678,7 @@
             this.Controls.Add(this.Hospital);
             this.Controls.Add(this.Hello);
             this.Controls.Add(this.Avatar);
-            this.Name.Name = "Admin";
+            this.Name = "Admin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
@@ -658,7 +705,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Pass;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_User;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Label_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
@@ -682,7 +729,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel12;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox7;
+        private System.Windows.Forms.Label Hos;
+        private System.Windows.Forms.Label Phar;
+        private System.Windows.Forms.Label Lab;
+        private System.Windows.Forms.Label Sta;
     }
 }
