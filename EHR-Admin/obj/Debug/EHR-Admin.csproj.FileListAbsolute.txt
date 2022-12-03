@@ -1,0 +1,15 @@
+E:\Database\EHR\EHR-Admin\bin\Debug\EHR-Admin.exe.config
+E:\Database\EHR\EHR-Admin\bin\Debug\EHR-Admin.exe
+E:\Database\EHR\EHR-Admin\bin\Debug\EHR-Admin.pdb
+E:\Database\EHR\EHR-Admin\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+E:\Database\EHR\EHR-Admin\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.AssemblyReference.cache
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.SuggestedBindingRedirects.cache
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR_Admin.Admin.resources
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR_Admin.SignIn.resources
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR_Admin.Properties.Resources.resources
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.GenerateResource.cache
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CoreCompileInputs.cache
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CopyComplete
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.exe
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR-Admin.pdb

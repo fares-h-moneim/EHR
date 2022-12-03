@@ -95,6 +95,11 @@ namespace EHR_Admin
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            Admin myForm = new Admin();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+
 
         }
     }

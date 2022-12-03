@@ -34,7 +34,42 @@
             this.Labs = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Pharmacy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Statistics = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Add_Hospital = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox9 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox10 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox8 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.H_Street = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.H_Pass2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.H_Pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.H_User = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.H_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital.Panel)).BeginInit();
+            this.Add_Hospital.Panel.SuspendLayout();
+            this.Add_Hospital.SuspendLayout();
             this.SuspendLayout();
             // 
             // Avatar
@@ -104,6 +139,7 @@
             this.Hospital.TabIndex = 7;
             this.Hospital.TabStop = false;
             this.Hospital.Values.Text = "";
+            this.Hospital.Click += new System.EventHandler(this.Hospital_Click);
             // 
             // Labs
             // 
@@ -140,6 +176,7 @@
             this.Labs.TabIndex = 8;
             this.Labs.TabStop = false;
             this.Labs.Values.Text = "";
+            this.Labs.Click += new System.EventHandler(this.Labs_Click);
             // 
             // Pharmacy
             // 
@@ -176,6 +213,7 @@
             this.Pharmacy.TabIndex = 9;
             this.Pharmacy.TabStop = false;
             this.Pharmacy.Values.Text = "";
+            this.Pharmacy.Click += new System.EventHandler(this.Pharmacy_Click);
             // 
             // Statistics
             // 
@@ -212,12 +250,381 @@
             this.Statistics.TabStop = false;
             this.Statistics.Values.Text = "";
             // 
+            // Add_Hospital
+            // 
+            this.Add_Hospital.CaptionVisible = false;
+            this.Add_Hospital.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonLowProfile;
+            this.Add_Hospital.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonLowProfile;
+            this.Add_Hospital.Location = new System.Drawing.Point(102, 368);
+            this.Add_Hospital.Name = "Add_Hospital";
+            // 
+            // Add_Hospital.Panel
+            // 
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonButton1);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel13);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox9);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel14);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox10);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel5);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox8);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox2);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel6);
+            this.Add_Hospital.Panel.Controls.Add(this.H_Street);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel4);
+            this.Add_Hospital.Panel.Controls.Add(this.H_Pass2);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel3);
+            this.Add_Hospital.Panel.Controls.Add(this.H_Pass);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel2);
+            this.Add_Hospital.Panel.Controls.Add(this.H_User);
+            this.Add_Hospital.Panel.Controls.Add(this.Name);
+            this.Add_Hospital.Panel.Controls.Add(this.H_Name);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel7);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox1);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel8);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox3);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel9);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox4);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel10);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox5);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel11);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox6);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonLabel12);
+            this.Add_Hospital.Panel.Controls.Add(this.kryptonTextBox7);
+            this.Add_Hospital.Size = new System.Drawing.Size(820, 350);
+            this.Add_Hospital.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.Add_Hospital.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.Add_Hospital.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Add_Hospital.StateCommon.Border.Width = 0;
+            this.Add_Hospital.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.Add_Hospital.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.Add_Hospital.StateNormal.Border.Color1 = System.Drawing.Color.Transparent;
+            this.Add_Hospital.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Add_Hospital.StateNormal.Border.Width = 0;
+            this.Add_Hospital.TabIndex = 10;
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(318, 295);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(177, 45);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 25;
+            this.kryptonButton1.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateDisabled.Border.Rounding = 25;
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Border.Rounding = 25;
+            this.kryptonButton1.StateNormal.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
+            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StatePressed.Border.Rounding = 25;
+            this.kryptonButton1.StatePressed.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateTracking.Border.Rounding = 25;
+            this.kryptonButton1.TabIndex = 16;
+            this.kryptonButton1.Values.Text = "SUBMIT";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Location = new System.Drawing.Point(414, 232);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabel13.TabIndex = 15;
+            this.kryptonLabel13.Values.Text = "Zip Code";
+            // 
+            // kryptonTextBox9
+            // 
+            this.kryptonTextBox9.Location = new System.Drawing.Point(414, 258);
+            this.kryptonTextBox9.Name = "kryptonTextBox9";
+            this.kryptonTextBox9.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox9.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox9.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox9.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox9.TabIndex = 14;
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(28, 232);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(146, 20);
+            this.kryptonLabel14.TabIndex = 13;
+            this.kryptonLabel14.Values.Text = "State / Province / Region";
+            // 
+            // kryptonTextBox10
+            // 
+            this.kryptonTextBox10.Location = new System.Drawing.Point(28, 258);
+            this.kryptonTextBox10.Name = "kryptonTextBox10";
+            this.kryptonTextBox10.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox10.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox10.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox10.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox10.TabIndex = 12;
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(414, 153);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(31, 20);
+            this.kryptonLabel5.TabIndex = 11;
+            this.kryptonLabel5.Values.Text = "City";
+            // 
+            // kryptonTextBox8
+            // 
+            this.kryptonTextBox8.Location = new System.Drawing.Point(414, 179);
+            this.kryptonTextBox8.Name = "kryptonTextBox8";
+            this.kryptonTextBox8.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox8.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox8.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox8.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox8.TabIndex = 10;
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(414, 179);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox2.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox2.TabIndex = 10;
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(28, 153);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel6.TabIndex = 9;
+            this.kryptonLabel6.Values.Text = "Street Address";
+            // 
+            // H_Street
+            // 
+            this.H_Street.Location = new System.Drawing.Point(28, 179);
+            this.H_Street.Name = "H_Street";
+            this.H_Street.Size = new System.Drawing.Size(370, 22);
+            this.H_Street.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Street.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Street.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Street.TabIndex = 8;
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(414, 88);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(113, 20);
+            this.kryptonLabel4.TabIndex = 7;
+            this.kryptonLabel4.Values.Text = "Re-enter Password";
+            // 
+            // H_Pass2
+            // 
+            this.H_Pass2.Location = new System.Drawing.Point(414, 114);
+            this.H_Pass2.Name = "H_Pass2";
+            this.H_Pass2.Size = new System.Drawing.Size(370, 22);
+            this.H_Pass2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass2.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass2.TabIndex = 6;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(28, 88);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(62, 20);
+            this.kryptonLabel3.TabIndex = 5;
+            this.kryptonLabel3.Values.Text = "Password";
+            // 
+            // H_Pass
+            // 
+            this.H_Pass.Location = new System.Drawing.Point(28, 114);
+            this.H_Pass.Name = "H_Pass";
+            this.H_Pass.Size = new System.Drawing.Size(370, 22);
+            this.H_Pass.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Pass.TabIndex = 4;
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(414, 21);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(65, 20);
+            this.kryptonLabel2.TabIndex = 3;
+            this.kryptonLabel2.Values.Text = "Username";
+            this.kryptonLabel2.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel2_Paint);
+            // 
+            // H_User
+            // 
+            this.H_User.Location = new System.Drawing.Point(414, 47);
+            this.H_User.Name = "H_User";
+            this.H_User.Size = new System.Drawing.Size(370, 22);
+            this.H_User.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_User.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_User.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_User.TabIndex = 2;
+            // 
+            // Name
+            // 
+            this.Name.Location = new System.Drawing.Point(28, 21);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(92, 20);
+            this.Name.TabIndex = 1;
+            this.Name.Values.Text = "Hospital Name";
+            // 
+            // H_Name
+            // 
+            this.H_Name.Location = new System.Drawing.Point(28, 47);
+            this.H_Name.Name = "H_Name";
+            this.H_Name.Size = new System.Drawing.Size(370, 22);
+            this.H_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.TabIndex = 0;
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(414, 153);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(31, 20);
+            this.kryptonLabel7.TabIndex = 11;
+            this.kryptonLabel7.Values.Text = "City";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(414, 179);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox1.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox1.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox1.TabIndex = 10;
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(28, 153);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(90, 20);
+            this.kryptonLabel8.TabIndex = 9;
+            this.kryptonLabel8.Values.Text = "Street Address";
+            // 
+            // kryptonTextBox3
+            // 
+            this.kryptonTextBox3.Location = new System.Drawing.Point(28, 179);
+            this.kryptonTextBox3.Name = "kryptonTextBox3";
+            this.kryptonTextBox3.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox3.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox3.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox3.TabIndex = 8;
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(414, 88);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(113, 20);
+            this.kryptonLabel9.TabIndex = 7;
+            this.kryptonLabel9.Values.Text = "Re-enter Password";
+            // 
+            // kryptonTextBox4
+            // 
+            this.kryptonTextBox4.Location = new System.Drawing.Point(414, 114);
+            this.kryptonTextBox4.Name = "kryptonTextBox4";
+            this.kryptonTextBox4.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox4.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox4.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox4.TabIndex = 6;
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(28, 88);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(62, 20);
+            this.kryptonLabel10.TabIndex = 5;
+            this.kryptonLabel10.Values.Text = "Password";
+            // 
+            // kryptonTextBox5
+            // 
+            this.kryptonTextBox5.Location = new System.Drawing.Point(28, 114);
+            this.kryptonTextBox5.Name = "kryptonTextBox5";
+            this.kryptonTextBox5.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox5.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox5.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox5.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox5.TabIndex = 4;
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(414, 21);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(65, 20);
+            this.kryptonLabel11.TabIndex = 3;
+            this.kryptonLabel11.Values.Text = "Username";
+            // 
+            // kryptonTextBox6
+            // 
+            this.kryptonTextBox6.Location = new System.Drawing.Point(414, 47);
+            this.kryptonTextBox6.Name = "kryptonTextBox6";
+            this.kryptonTextBox6.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox6.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox6.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox6.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox6.TabIndex = 2;
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(28, 21);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(92, 20);
+            this.kryptonLabel12.TabIndex = 1;
+            this.kryptonLabel12.Values.Text = "Hospital Name";
+            // 
+            // kryptonTextBox7
+            // 
+            this.kryptonTextBox7.Location = new System.Drawing.Point(28, 47);
+            this.kryptonTextBox7.Name = "kryptonTextBox7";
+            this.kryptonTextBox7.Size = new System.Drawing.Size(370, 22);
+            this.kryptonTextBox7.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox7.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox7.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.kryptonTextBox7.TabIndex = 0;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Admin.Properties.Resources.Desktop___1Patient_Bg;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.Add_Hospital);
             this.Controls.Add(this.Statistics);
             this.Controls.Add(this.Pharmacy);
             this.Controls.Add(this.Labs);
@@ -228,6 +635,11 @@
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital.Panel)).EndInit();
+            this.Add_Hospital.Panel.ResumeLayout(false);
+            this.Add_Hospital.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital)).EndInit();
+            this.Add_Hospital.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +653,36 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton Labs;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Pharmacy;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Statistics;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox Add_Hospital;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Pass;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_User;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Street;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Pass2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox9;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox10;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox8;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel9;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel10;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox7;
     }
 }

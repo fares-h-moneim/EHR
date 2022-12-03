@@ -21,5 +21,25 @@ namespace EHR_Admin
         {
 
         }
+
+        private void kryptonLabel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Pharmacy_Click(object sender, EventArgs e)
+        {
+            Name.Text = "Pharmacy Name";
+        }
+
+        private void Hospital_Click(object sender, EventArgs e)
+        {
+            Name.Text = "Hospital Name";
+        }
+
+        private void Labs_Click(object sender, EventArgs e)
+        {
+            Name.Text = "Lab Name";
+        }
     }
 }
