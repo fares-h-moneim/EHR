@@ -631,7 +631,7 @@
             this.Controls.Add(this.Hospital);
             this.Controls.Add(this.Hello);
             this.Controls.Add(this.Avatar);
-            this.Name = "Admin";
+            this.Name.Name = "Admin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
