@@ -11,6 +11,8 @@ using System.Text.RegularExpressions;
 using System.CodeDom;
 using System.Collections.Specialized;
 using Microsoft.VisualBasic;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Threading;
 
 namespace WindowsFormsApp1
 {
@@ -400,6 +402,32 @@ namespace WindowsFormsApp1
         {
             //hona yogad query
             bool submitvalid = true;
+            int count = 0;
+
+            foreach (char w in Chronic.Text.ToString()) { 
+                if(w == ',')
+                {
+                    count++;
+                }
+            }
+            count++;
+
+            string[] chronic = new string[count];
+            count = 0;
+            for(int i = 0; i<Chronic.Text.ToString().Length; i++)
+            {
+                string ch = Chronic.Text.ToString();
+                string w = "";
+                while ((ch[i] >= 97 && ch[i]<=122) || (ch[i]>=65 && ch[i]<=90))
+                {
+                    w += ch[i];
+                    i++;
+                }
+                
+                chronic[count] = w;
+                count++;
+            }
+
             for (int i = 0; i < 10; i++)
             {
                 submitvalid = submitvalid && check[i];
