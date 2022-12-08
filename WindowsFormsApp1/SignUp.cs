@@ -13,6 +13,7 @@ using System.Collections.Specialized;
 using Microsoft.VisualBasic;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -414,16 +415,16 @@ namespace WindowsFormsApp1
 
             string[] chronic = new string[count];
             count = 0;
-            for(int i = 0; i<Chronic.Text.ToString().Length; i++)
+            for (int i = 0; i < Chronic.Text.ToString().Length; i++)
             {
                 string ch = Chronic.Text.ToString();
                 string w = "";
-                while ((ch[i] >= 97 && ch[i]<=122) || (ch[i]>=65 && ch[i]<=90))
+                while ((ch[i] >= 97 && ch[i] <= 122) || (ch[i] >= 65 && ch[i] <= 90))
                 {
                     w += ch[i];
                     i++;
                 }
-                
+
                 chronic[count] = w;
                 count++;
             }
@@ -447,7 +448,14 @@ namespace WindowsFormsApp1
 
                 string Age = (Convert.ToInt32(Today) - Convert.ToInt32(B_Year)).ToString();
                 string gender = (Gender.Text == "Male") ? "0" : "1";
-                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                var bytes = new UTF8Encoding().GetBytes(Pass.Text);
+                byte[] hashBytes;
+                using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+                {
+                    hashBytes = algorithm.ComputeHash(bytes);
+                }
+                string savedPasswordHash =  Convert.ToBase64String(hashBytes);
+                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 Patient myForm = new Patient(Email.Text, Pass.Text);
                 this.Hide();
                 myForm.ShowDialog();
@@ -463,5 +471,9 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
