@@ -475,7 +475,7 @@ namespace WindowsFormsApp1
                 {
                     int x = ctrl.InsertChronicDisease(ch[i], ID.Text.ToString());
                 }
-                Patient myForm = new Patient(Email.Text, Pass.Text);
+                Patient myForm = new Patient(Email.Text, savedPasswordHash);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();

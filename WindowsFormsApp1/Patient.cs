@@ -22,7 +22,31 @@ namespace WindowsFormsApp1
             user = email;
             pass = password;
             ctrl = new Controller();
-            
+            DataTable patient = ctrl.GetPatient(user, pass);
+
+
+            if (patient != null)
+            {
+                DataRowCollection dataRow = patient.Rows;
+
+                Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
+                Email.Text = "Email: " + dataRow[0][3].ToString();
+                Phone.Text = "Phone #: " + dataRow[0][5].ToString();
+                Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
+                Birthday.Text = "Age: " + dataRow[0][9];
+                string gender;
+                if (dataRow[0][6].ToString() == "0")
+                {
+                    gender = "Male";
+                }
+                else
+                {
+                    gender = "Female";
+                }
+                Gender.Text = "Gender: " + gender;
+
+            }
+
         }
 
         public void RefreshOnSave(object sender, EventArgs e)
@@ -109,29 +133,7 @@ namespace WindowsFormsApp1
 
         private void Patient_Load(object sender, EventArgs e)
         {
-            DataTable patient = ctrl.GetPatient(user, pass);
-
-
-            if (patient != null)
-            {
-                DataRowCollection dataRow = patient.Rows;
-
-                Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
-                Email.Text = "Email: " + dataRow[0][3].ToString();
-                Phone.Text = "Phone #: " + dataRow[0][5].ToString();
-                Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
-                string gender;
-                if (dataRow[0][6].ToString() == "0")
-                {
-                    gender = "Male";
-                }
-                else
-                {
-                    gender = "Female";
-                }
-                Gender.Text = "Gender: " + gender;
-
-            }
+            
         }
 
         private void Organs_Click(object sender, EventArgs e)
