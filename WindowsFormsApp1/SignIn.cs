@@ -21,7 +21,14 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Patient myForm = new Patient(Email.Text, Pass.Text);
+            var bytes = new UTF8Encoding().GetBytes(Pass.Text);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            Patient myForm = new Patient(Email.Text, savedPasswordHash);
             this.Hide();
             myForm.ShowDialog();
             this.Close();
