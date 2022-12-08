@@ -8,42 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WindowsFormsApp1
 {
     public partial class Patient : Form
     {
         string user, pass;
+        Controller ctrl;
         public Patient(string email, string password)
         {
             InitializeComponent();
             user = email;
             pass = password;
-            Controller controller = new Controller();
-            DataTable patient = controller.GetPatient(email, password);
-
-            object sender = null;
-            EventArgs e = new EventArgs();
-            Hospital_Click(sender, e);
-            if (patient!= null)
-            {
-                DataRowCollection dataRow = patient.Rows;
-
-                Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
-                Email.Text = "Email: " + dataRow[0][3].ToString();
-                Phone.Text = "Phone #: " + dataRow[0][5].ToString();
-                Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
-                string gender;
-                if (dataRow[0][6].ToString() == "0")
-                {
-                    gender = "Male";
-                }
-                else {
-                    gender = "Female";
-                }
-                Gender.Text = "Gender: " + gender;
-                
-            }
+            ctrl = new Controller();
+            
         }
 
         public void RefreshOnSave(object sender, EventArgs e)
@@ -126,6 +105,33 @@ namespace WindowsFormsApp1
         private void Hello_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Patient_Load(object sender, EventArgs e)
+        {
+            DataTable patient = ctrl.GetPatient(user, pass);
+
+
+            if (patient != null)
+            {
+                DataRowCollection dataRow = patient.Rows;
+
+                Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
+                Email.Text = "Email: " + dataRow[0][3].ToString();
+                Phone.Text = "Phone #: " + dataRow[0][5].ToString();
+                Blood.Text = "Blood Type: " + dataRow[0][7].ToString();
+                string gender;
+                if (dataRow[0][6].ToString() == "0")
+                {
+                    gender = "Male";
+                }
+                else
+                {
+                    gender = "Female";
+                }
+                Gender.Text = "Gender: " + gender;
+
+            }
         }
 
         private void Organs_Click(object sender, EventArgs e)
