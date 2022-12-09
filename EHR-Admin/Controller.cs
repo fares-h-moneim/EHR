@@ -51,6 +51,13 @@ namespace WindowsFormsApp1
                 "Where Email = '" + email + "' AND Password = '" + password + "';";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable GetHospital(string username)
+        {
+            string query = "SELECT Hospital_ID " +
+                "From Hospital " +
+                "Where Username = '" + username + "';";
+            return dbMan.ExecuteReader(query);
+        }
 
         public int IDExist(string id)
         {
@@ -64,10 +71,27 @@ namespace WindowsFormsApp1
             return (int)dbMan.ExecuteScalar(query);
         }
 
-        //public int InsertHospital(string )
-        //{
+        public int InsertHospital(string name,  string username, string password, string address)
+        {
+            string query = "INSERT INTO Hospital VALUES ('" + name + "','" + username + "','" + password + "','" + address + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
-        //}
+        public int InsertPharmacy(string name, string username, string password, string address, string phoneno)
+        {
+            string query = "INSERT INTO Pharmacy VALUES ('" + name + "','" + username + "','" + password + "','" + address + "','" + phoneno + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertLaboratory(string name, string username, string password, string address, string phoneno)
+        {
+            string query = "INSERT INTO Laboratory VALUES ('" + name + "','" + username + "','" + password + "','" + address + "','" + phoneno + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertPhonenumbers(string no, int id)
+        {
+            string query = "INSERT INTO PhoneNumbers VALUES ('" + no + "'," + id + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
         //public int DeleteSupplier(string snum)
         //{
