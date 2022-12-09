@@ -8,14 +8,17 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace EHR_Hospital
 {
     public partial class Hospital_Login : Form
     {
+        Controller ctrl;
         public Hospital_Login()
         {
             InitializeComponent();
+            ctrl = new Controller();
         }
 
         private void Email_Enter(object sender, EventArgs e)
@@ -91,6 +94,23 @@ namespace EHR_Hospital
         private void Hospital_Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            var bytes = new UTF8Encoding().GetBytes(Password.Text);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable dt = ctrl.GetHospital(Email.Text, savedPasswordHash);
+            if(dt == null)
+            {
+                MessageBox.Show("Email or password inserted incorrectly");
+                return;
+            }
         }
     }
 }

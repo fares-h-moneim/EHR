@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,11 +12,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class SignIn : Form
     {
+        Controller ctrl;
         public SignIn()
         {
             InitializeComponent();
+            ctrl = new Controller();
 
         }
 
@@ -28,6 +32,12 @@ namespace WindowsFormsApp1
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable dt = ctrl.GetPatient(Email.Text,savedPasswordHash);
+            if(dt == null)
+            {
+                MessageBox.Show("Incorrect email or password");
+                return;
+            }
             Patient myForm = new Patient(Email.Text, savedPasswordHash);
             this.Hide();
             myForm.ShowDialog();
