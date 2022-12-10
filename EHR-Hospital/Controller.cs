@@ -8,7 +8,7 @@ using System.Collections;
 using System.Xml.Linq;
 using System.Reflection;
 
-namespace WindowsFormsApp1
+namespace EHR_Hospital
 {
     public class Controller
     {
@@ -47,7 +47,49 @@ namespace WindowsFormsApp1
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID)
+        {
+            if (Prescription_ID == -1)
+            {
+                string query = "INSERT INTO Diagnosis Values (" + HospitalID + ",'" + PatientID + "','" + Date + "','" + Symptoms + "','" + Diagnosis + "', NULL);";
+                return dbMan.ExecuteNonQuery(query);
+            }
+            else
+            {
+                string query = "INSERT INTO Diagnosis Values (" + HospitalID + ",'" + PatientID + "','" + Date + "','" + Symptoms + "','" + Diagnosis + "'," + Prescription_ID + ");";
+                return dbMan.ExecuteNonQuery(query);
+            }
+        }
+
+        public int InsertPrescription(string Date)
+        {
+            string query = "INSERT INTO Prescription(Date_Time) VALUES ('" + Date + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         
+
+        public DataTable GetPrescriptionID(string Date)
+        {
+            string query = "Select Prescription_ID FROM Prescription WHERE Date_Time = '" + Date + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int InsertMedications(int PresID, string Medication)
+        {
+            string query = "Insert INTO Medications Values ("+PresID+",'"+Medication+"');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetHospital(string username)
+        {
+            string query = "SELECT Hospital_ID " +
+                "From Hospital " +
+                "Where Username = '" + username + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+
 
         //public int DeleteSupplier(string snum)
         //{

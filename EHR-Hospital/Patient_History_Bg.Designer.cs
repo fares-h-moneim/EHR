@@ -40,16 +40,19 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(58, 115);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(77, 142);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(604, 266);
+            this.kryptonDataGridView1.RowHeadersWidth = 51;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(805, 327);
             this.kryptonDataGridView1.TabIndex = 0;
             // 
             // Label_Name
             // 
-            this.Label_Name.Location = new System.Drawing.Point(74, 43);
+            this.Label_Name.Location = new System.Drawing.Point(99, 53);
+            this.Label_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(87, 23);
+            this.Label_Name.Size = new System.Drawing.Size(107, 28);
             this.Label_Name.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Label_Name.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Label_Name.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -61,9 +64,10 @@
             // 
             // H_Name
             // 
-            this.H_Name.Location = new System.Drawing.Point(74, 69);
+            this.H_Name.Location = new System.Drawing.Point(99, 85);
+            this.H_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.H_Name.Name = "H_Name";
-            this.H_Name.Size = new System.Drawing.Size(186, 22);
+            this.H_Name.Size = new System.Drawing.Size(248, 26);
             this.H_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.H_Name.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.H_Name.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -72,17 +76,19 @@
             // kryptonComboBox1
             // 
             this.kryptonComboBox1.DropDownWidth = 153;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(293, 69);
+            this.kryptonComboBox1.Location = new System.Drawing.Point(391, 85);
+            this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(153, 21);
+            this.kryptonComboBox1.Size = new System.Drawing.Size(204, 25);
             this.kryptonComboBox1.TabIndex = 23;
             this.kryptonComboBox1.Text = "kryptonComboBox1";
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(514, 53);
+            this.kryptonButton1.Location = new System.Drawing.Point(685, 65);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(148, 38);
+            this.kryptonButton1.Size = new System.Drawing.Size(197, 47);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -126,19 +132,21 @@
             this.kryptonButton1.StateTracking.Border.Rounding = 25;
             this.kryptonButton1.TabIndex = 24;
             this.kryptonButton1.Values.Text = "SEARCH";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // Patient_History_Bg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Patient_History_Bg;
-            this.ClientSize = new System.Drawing.Size(704, 405);
+            this.ClientSize = new System.Drawing.Size(939, 498);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonComboBox1);
             this.Controls.Add(this.Label_Name);
             this.Controls.Add(this.H_Name);
             this.Controls.Add(this.kryptonDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Patient_History_Bg";
             this.Text = "Patient_History_Bg";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();

@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1;
+using EHR_Hospital;
 
 namespace EHR_Hospital
 {
@@ -113,7 +113,7 @@ namespace EHR_Hospital
             }
             else
             {
-                Hospital myForm = new Hospital();
+                Hospital myForm = new Hospital(Convert.ToInt32(dt.Rows[0][1]));
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();

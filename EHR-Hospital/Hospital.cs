@@ -12,18 +12,37 @@ namespace EHR_Hospital
 {
     public partial class Hospital : Form
     {
-        public Hospital()
+        int HospitalID;
+        public Hospital(int x)
         {
             InitializeComponent();
+            HospitalID = x;
         }
 
         private void img1_Click(object sender, EventArgs e)
         {
-            Hospital_Diagnosis myForm = new Hospital_Diagnosis();
+            Hospital_Diagnosis myForm = new Hospital_Diagnosis(HospitalID);
             myForm.ShowDialog();
         }
 
         private void Hospital_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            Patient_History_Bg MyForm = new Patient_History_Bg();
+            MyForm.ShowDialog();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Surery_Request MyForm = new Surery_Request();
+            MyForm = new Surery_Request();
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
         {
 
         }

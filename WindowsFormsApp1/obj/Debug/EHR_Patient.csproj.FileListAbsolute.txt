@@ -320,3 +320,5 @@ D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsA
 D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resources
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resources

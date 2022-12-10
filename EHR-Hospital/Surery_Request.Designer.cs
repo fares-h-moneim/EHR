@@ -32,13 +32,15 @@
             // 
             // Surery_Request
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Surgery_Bg;
-            this.ClientSize = new System.Drawing.Size(704, 366);
+            this.ClientSize = new System.Drawing.Size(939, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Surery_Request";
             this.Text = "Surery_Request";
+            this.Load += new System.EventHandler(this.Surery_Request_Load);
             this.ResumeLayout(false);
 
         }

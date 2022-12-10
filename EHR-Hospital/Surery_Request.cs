@@ -16,5 +16,10 @@ namespace EHR_Hospital
         {
             InitializeComponent();
         }
+
+        private void Surery_Request_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
