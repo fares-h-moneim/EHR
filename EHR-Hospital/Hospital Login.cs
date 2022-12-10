@@ -111,6 +111,14 @@ namespace EHR_Hospital
                 MessageBox.Show("Email or password inserted incorrectly");
                 return;
             }
+            else
+            {
+                Hospital myForm = new Hospital();
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+
+            }
         }
     }
 }

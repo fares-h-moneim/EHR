@@ -52,16 +52,49 @@
   <ItemGroup>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="Hospital_Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital_Diagnosis.Designer.cs">
+      <DependentUpon>Hospital_Diagnosis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hospital Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Hospital Login.Designer.cs">
       <DependentUpon>Hospital Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital.Designer.cs">
+      <DependentUpon>Hospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_History_Bg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient_History_Bg.Designer.cs">
+      <DependentUpon>Patient_History_Bg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Surery_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surery_Request.Designer.cs">
+      <DependentUpon>Surery_Request.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Hospital_Diagnosis.resx">
+      <DependentUpon>Hospital_Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hospital Login.resx">
       <DependentUpon>Hospital Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital.resx">
+      <DependentUpon>Hospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient_History_Bg.resx">
+      <DependentUpon>Patient_History_Bg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +106,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Surery_Request.resx">
+      <DependentUpon>Surery_Request.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +130,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hospital_Patient_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hospital_View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagnosis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surgery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\organs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surgery1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagnosis_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagnosis_Bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surgery_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient_History_Bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

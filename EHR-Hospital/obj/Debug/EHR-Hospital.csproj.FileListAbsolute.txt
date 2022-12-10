@@ -12,3 +12,5 @@ E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CoreCompileInputs.cac
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital_Diagnosis.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital.resources

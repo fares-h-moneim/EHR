@@ -52,8 +52,6 @@
             this.H_Pass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.H_User = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Label_Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.H_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -67,6 +65,8 @@
             this.Phar = new System.Windows.Forms.Label();
             this.Lab = new System.Windows.Forms.Label();
             this.Sta = new System.Windows.Forms.Label();
+            this.H_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.Label_Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add_Hospital.Panel)).BeginInit();
@@ -503,24 +503,6 @@
             this.H_User.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.H_User.TabIndex = 2;
             // 
-            // Label_Name
-            // 
-            this.Label_Name.Location = new System.Drawing.Point(28, 21);
-            this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(92, 20);
-            this.Label_Name.TabIndex = 1;
-            this.Label_Name.Values.Text = "Hospital Name";
-            // 
-            // H_Name
-            // 
-            this.H_Name.Location = new System.Drawing.Point(28, 47);
-            this.H_Name.Name = "H_Name";
-            this.H_Name.Size = new System.Drawing.Size(370, 22);
-            this.H_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.H_Name.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.H_Name.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.H_Name.TabIndex = 0;
-            // 
             // kryptonLabel7
             // 
             this.kryptonLabel7.Location = new System.Drawing.Point(414, 153);
@@ -651,6 +633,24 @@
             this.Sta.TabIndex = 14;
             this.Sta.Text = "Show Statistics";
             // 
+            // H_Name
+            // 
+            this.H_Name.Location = new System.Drawing.Point(28, 47);
+            this.H_Name.Name = "H_Name";
+            this.H_Name.Size = new System.Drawing.Size(370, 22);
+            this.H_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.H_Name.TabIndex = 0;
+            // 
+            // Label_Name
+            // 
+            this.Label_Name.Location = new System.Drawing.Point(28, 21);
+            this.Label_Name.Name = "Label_Name";
+            this.Label_Name.Size = new System.Drawing.Size(92, 20);
+            this.Label_Name.TabIndex = 1;
+            this.Label_Name.Values.Text = "Hospital Name";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,8 +695,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Pass;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_User;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel Label_Name;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
@@ -723,5 +721,7 @@
         private System.Windows.Forms.Label Sta;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel Label_Name;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox H_Name;
     }
 }
