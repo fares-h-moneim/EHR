@@ -318,3 +318,5 @@ D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\EHR_Patient.c
 D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\EHR_Patient.csproj.CopyComplete
 D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources

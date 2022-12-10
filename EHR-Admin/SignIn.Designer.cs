@@ -31,6 +31,7 @@
             this.Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Password = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Submit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.SuspendLayout();
             // 
             // Email
@@ -104,12 +105,25 @@
             this.Submit.Values.Text = "";
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(687, 500);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(174, 20);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabel1.StateNormal.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabel1.TabIndex = 17;
+            this.kryptonLabel1.Values.Text = "Invalid Username or Password";
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Admin.Properties.Resources.Admin_SignIn;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
@@ -127,6 +141,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Email;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Password;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Submit;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }
 

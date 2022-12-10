@@ -8,14 +8,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace EHR_Admin
 {
     public partial class SignIn : Form
     {
+        Controller ctrl;
         public SignIn()
         {
             InitializeComponent();
+            ctrl = new Controller();
+            kryptonLabel1.Visible = false;
         }
 
         private void SignIn_Load(object sender, EventArgs e)
@@ -95,12 +99,21 @@ namespace EHR_Admin
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Admin myForm = new Admin(Email.Text);
-            this.Hide();
-            myForm.ShowDialog();
-            this.Close();
+            DataTable dt = ctrl.GetAdmin(Email.Text.ToString(), Password.Text.ToString());
 
-
+            if(dt != null)
+            {
+                Admin myForm = new Admin(Email.Text);
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+                kryptonLabel1.Visible = false;
+            }
+            else
+            {
+                kryptonLabel1.Visible = true;
+                kryptonLabel1.Text = "Invalid Username or Password";
+            }
         }
     }
 }

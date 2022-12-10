@@ -51,6 +51,15 @@ namespace WindowsFormsApp1
                 "Where Email = '" + email + "' AND Password = '" + password + "';";
             return dbMan.ExecuteReader(query);
         }
+
+        public DataTable GetAdmin(string user, string password)
+        {
+            string query = "SELECT * " +
+                "From Admins " +
+                "Where Username = '" + user + "' AND Password = '" + password + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetHospital(string username)
         {
             string query = "SELECT Hospital_ID " +
