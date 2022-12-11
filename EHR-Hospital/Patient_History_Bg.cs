@@ -12,6 +12,7 @@ namespace EHR_Hospital
 {
     public partial class Patient_History_Bg : Form
     {
+        Controller ctrl = new Controller();
         public Patient_History_Bg()
         {
             InitializeComponent();
@@ -19,6 +20,30 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            DataTable dt = null;
+            if (Request.Text == "Chronic Disease")
+            {
+                dt = ctrl.GetChronic(PatientID.Text);
+            }
+            else if (Request.Text == "Diagnosis")
+            {
+                dt = ctrl.GetDiagnosis(PatientID.Text);
+            }
+            else if (Request.Text == "Prescriptions")
+            {
+                dt = ctrl.GetPrescriptions(PatientID.Text);
+            }
+            else if (Request.Text == "Surguries")
+            {
+                dt = ctrl.GetSurgeries(PatientID.Text);
+            }
+            else
+            {
+                dt = ctrl.GetLabs(PatientID.Text);
+            }
+
+            kryptonDataGridView1.DataSource = dt;
+            kryptonDataGridView1.Refresh();
 
         }
 
@@ -30,6 +55,21 @@ namespace EHR_Hospital
         private void Back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Request_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PatientID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -89,6 +89,43 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public int InsertOrganWaiting(string organ, string patientid, int priority)
+        {
+            string query = "INSERT INTO Organ_Waiting_List('" + organ + "','" + patientid + "'," + priority + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetChronic(string PatientID)
+        {
+            string query = "Select Disease FROM ChronicDiseases WHERE PatientID = '"+PatientID+"';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDiagnosis(string PatientID)
+        {
+            string query = "Select Date_Time, Diagnosis, Symptoms FROM Diagnosis WHERE PatientID = '" + PatientID + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetPrescriptions(string PatientID)
+        {
+            string query = "Select Prescription.Date_Time, Medications.Medication, Prescription.Given_or_not FROM Prescription, Diagnosis, Medications WHERE PatientID = '" + PatientID + " AND Diagnosis.Prescription_ID = Prescription.Prescription_ID AND Prescription.Prescription_ID = Medications.Prescription_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeries(string PatientID)
+        {
+            string query = "Select Date_Time, Type_of_Surgery, Surgery_Report FROM Surgery WHERE PatientID = '" + PatientID + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabs(string PatientID)
+        {
+            string query = "Select Date_Time, Test_Result FROM Lab_Results WHERE PatientID = '" + PatientID + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+
 
 
         //public int DeleteSupplier(string snum)

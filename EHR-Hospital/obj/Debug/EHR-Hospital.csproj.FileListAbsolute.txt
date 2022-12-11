@@ -34,3 +34,5 @@ C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospita
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Patient_History_Bg.resources
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Surery_Request.resources
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organ_Request.resources
