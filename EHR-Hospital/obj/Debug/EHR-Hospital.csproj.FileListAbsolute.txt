@@ -31,3 +31,6 @@ C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospita
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Patient_History_Bg.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Surery_Request.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources

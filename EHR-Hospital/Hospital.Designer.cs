@@ -45,10 +45,9 @@
             // img1
             // 
             this.img1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img1.Location = new System.Drawing.Point(236, 362);
-            this.img1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.img1.Location = new System.Drawing.Point(177, 294);
             this.img1.Name = "img1";
-            this.img1.Size = new System.Drawing.Size(172, 159);
+            this.img1.Size = new System.Drawing.Size(129, 129);
             this.img1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img1.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Diagnosis;
@@ -95,10 +94,9 @@
             this.Diagnosis.BackColor = System.Drawing.Color.Transparent;
             this.Diagnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Diagnosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Diagnosis.Location = new System.Drawing.Point(224, 522);
-            this.Diagnosis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Diagnosis.Location = new System.Drawing.Point(168, 424);
             this.Diagnosis.Name = "Diagnosis";
-            this.Diagnosis.Size = new System.Drawing.Size(165, 25);
+            this.Diagnosis.Size = new System.Drawing.Size(137, 20);
             this.Diagnosis.TabIndex = 15;
             this.Diagnosis.Text = "Issue Diagnosis";
             // 
@@ -108,20 +106,18 @@
             this.Surgery.BackColor = System.Drawing.Color.Transparent;
             this.Surgery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Surgery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Surgery.Location = new System.Drawing.Point(957, 522);
-            this.Surgery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Surgery.Location = new System.Drawing.Point(718, 424);
             this.Surgery.Name = "Surgery";
-            this.Surgery.Size = new System.Drawing.Size(173, 25);
+            this.Surgery.Size = new System.Drawing.Size(144, 20);
             this.Surgery.TabIndex = 17;
             this.Surgery.Text = "Surgery Request";
             // 
             // kryptonButton1
             // 
             this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton1.Location = new System.Drawing.Point(959, 362);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton1.Location = new System.Drawing.Point(719, 294);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(172, 159);
+            this.kryptonButton1.Size = new System.Drawing.Size(129, 129);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton1.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Surgery;
@@ -168,20 +164,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.label1.Location = new System.Drawing.Point(219, 834);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(164, 678);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Issue Death Report";
             // 
             // kryptonButton2
             // 
             this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton2.Location = new System.Drawing.Point(235, 672);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton2.Location = new System.Drawing.Point(176, 546);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(172, 159);
+            this.kryptonButton2.Size = new System.Drawing.Size(129, 129);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton2.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Dead;
@@ -228,20 +222,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.label2.Location = new System.Drawing.Point(963, 834);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(722, 678);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 25);
+            this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 21;
             this.label2.Text = "Organ Request";
             // 
             // kryptonButton3
             // 
             this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton3.Location = new System.Drawing.Point(965, 672);
-            this.kryptonButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton3.Location = new System.Drawing.Point(724, 546);
             this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(172, 159);
+            this.kryptonButton3.Size = new System.Drawing.Size(129, 129);
             this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton3.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.organs;
@@ -280,6 +272,7 @@
             this.kryptonButton3.TabIndex = 20;
             this.kryptonButton3.TabStop = false;
             this.kryptonButton3.Values.Text = "";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // label3
             // 
@@ -287,20 +280,18 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.label3.Location = new System.Drawing.Point(584, 522);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(438, 424);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 25);
+            this.label3.Size = new System.Drawing.Size(170, 20);
             this.label3.TabIndex = 23;
             this.label3.Text = "View Patient History";
             // 
             // kryptonButton4
             // 
             this.kryptonButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton4.Location = new System.Drawing.Point(609, 362);
-            this.kryptonButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton4.Location = new System.Drawing.Point(457, 294);
             this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(172, 159);
+            this.kryptonButton4.Size = new System.Drawing.Size(129, 129);
             this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton4.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton4.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.History;
@@ -347,20 +338,18 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.label4.Location = new System.Drawing.Point(593, 834);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(445, 678);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 25);
+            this.label4.Size = new System.Drawing.Size(161, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Lab Tests Request";
             // 
             // kryptonButton5
             // 
             this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton5.Location = new System.Drawing.Point(609, 672);
-            this.kryptonButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton5.Location = new System.Drawing.Point(457, 546);
             this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Size = new System.Drawing.Size(172, 159);
+            this.kryptonButton5.Size = new System.Drawing.Size(129, 129);
             this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton5.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Lab1;
@@ -402,10 +391,10 @@
             // 
             // Hospital
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Hospital_View;
-            this.ClientSize = new System.Drawing.Size(1022, 721);
+            this.ClientSize = new System.Drawing.Size(1023, 729);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kryptonButton5);
             this.Controls.Add(this.label3);
@@ -419,7 +408,6 @@
             this.Controls.Add(this.Diagnosis);
             this.Controls.Add(this.img1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Hospital";
             this.Text = "Hospital";
             this.Load += new System.EventHandler(this.Hospital_Load);

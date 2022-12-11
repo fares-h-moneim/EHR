@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace EHR_Hospital
 {
-    public partial class Apply_Organ : Form
+    public partial class Organ_Request : Form
     {
-        public Apply_Organ()
+        public Organ_Request()
         {
             InitializeComponent();
-        }
-
-        private void Oragn_Dono_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Back_Click(object sender, EventArgs e)

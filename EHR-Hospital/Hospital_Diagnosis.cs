@@ -65,5 +65,10 @@ namespace EHR_Hospital
         {
    
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

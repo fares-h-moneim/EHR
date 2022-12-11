@@ -21,5 +21,15 @@ namespace EHR_Hospital
         {
 
         }
+
+        private void Patient_History_Bg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

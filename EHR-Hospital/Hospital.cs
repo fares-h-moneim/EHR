@@ -39,12 +39,20 @@ namespace EHR_Hospital
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             Surery_Request MyForm = new Surery_Request();
-            MyForm = new Surery_Request();
+            MyForm.ShowDialog();
+
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
+            Death_Report MyForm = new Death_Report();
+            MyForm.ShowDialog();
+        }
 
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            Organ_Request MyForm = new Organ_Request();
+            MyForm.ShowDialog();
         }
     }
 }

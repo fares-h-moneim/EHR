@@ -78,6 +78,7 @@
             this.Back.StateTracking.Border.Rounding = 25;
             this.Back.TabIndex = 1;
             this.Back.Values.Text = "";
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // kryptonCheckedListBox1
             // 

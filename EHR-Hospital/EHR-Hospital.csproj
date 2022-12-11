@@ -52,6 +52,18 @@
   <ItemGroup>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="Death_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Death_Report.Designer.cs">
+      <DependentUpon>Death_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organ_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organ_Request.Designer.cs">
+      <DependentUpon>Organ_Request.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hospital_Diagnosis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     <Compile Include="Surery_Request.Designer.cs">
       <DependentUpon>Surery_Request.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Death_Report.resx">
+      <DependentUpon>Death_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organ_Request.resx">
+      <DependentUpon>Organ_Request.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hospital_Diagnosis.resx">
       <DependentUpon>Hospital_Diagnosis.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +193,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Patient_History_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death_Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organ_Request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organ_Dono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
