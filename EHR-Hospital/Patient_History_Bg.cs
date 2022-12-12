@@ -33,7 +33,7 @@ namespace EHR_Hospital
             {
                 dt = ctrl.GetPrescriptions(PatientID.Text);
             }
-            else if (Request.Text == "Surguries")
+            else if (Request.Text == "Surgeries")
             {
                 dt = ctrl.GetSurgeries(PatientID.Text);
             }
