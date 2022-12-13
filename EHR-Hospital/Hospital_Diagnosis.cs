@@ -30,22 +30,30 @@ namespace EHR_Hospital
             }
             else
             {
-                int x = ctrl.InsertPrescription(DateTime.Now.ToString());
+                string format = "yyyy-MM-dd HH:mm:ss";
+                int x = ctrl.InsertPrescription(DateTime.Now.ToString(format));
                 if (x != 0)
                 {
-                    DataTable dt = ctrl.GetPrescriptionID(DateTime.Now.ToString());
+                    DataTable dt = ctrl.GetPrescriptionID(DateTime.Now.ToString(format));
                     PrescriptionID = Convert.ToInt32(dt.Rows[0][0]);
                 }
 
 
-                ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(), Diagnosis.Text, Symptoms.Text, PrescriptionID);
+                int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), Diagnosis.Text, Symptoms.Text, PrescriptionID);
 
-                if (PrescriptionID != -1)
+                if (res == 0)
                 {
-                    string[] ch = Prescription.Text.Split(',');
-                    for (int i = 0; i < ch.Length; i++)
+                    MessageBox.Show("Error!");
+                }
+                else
+                {
+                    if (PrescriptionID != -1)
                     {
-                        int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
+                        string[] ch = Prescription.Text.Split(',');
+                        for (int i = 0; i < ch.Length; i++)
+                        {
+                            int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
+                        }
                     }
                 }
             }
@@ -69,6 +77,14 @@ namespace EHR_Hospital
         private void Back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PatientID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PatientID.Text.ToString().Length >= 16)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

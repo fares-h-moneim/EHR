@@ -409,6 +409,7 @@
             this.Controls.Add(this.img1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Hospital";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hospital";
             this.Load += new System.EventHandler(this.Hospital_Load);
             this.ResumeLayout(false);

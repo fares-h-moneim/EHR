@@ -36,3 +36,4 @@ E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Surery_Request.resources
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organ_Request.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organ_Request.resources
