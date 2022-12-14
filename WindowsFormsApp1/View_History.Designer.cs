@@ -40,9 +40,8 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.ColumnHeadersVisible = false;
             this.kryptonDataGridView1.Location = new System.Drawing.Point(160, 142);
-            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersVisible = false;
@@ -54,7 +53,7 @@
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.Location = new System.Drawing.Point(20, 15);
-            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Back.Margin = new System.Windows.Forms.Padding(4);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.Back;
@@ -104,7 +103,7 @@
             // kryptonDateTimePicker1
             // 
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(160, 79);
-            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(165, 25);
@@ -113,7 +112,7 @@
             // kryptonDateTimePicker2
             // 
             this.kryptonDateTimePicker2.Location = new System.Drawing.Point(399, 79);
-            this.kryptonDateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonDateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDateTimePicker2.Name = "kryptonDateTimePicker2";
             this.kryptonDateTimePicker2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.kryptonDateTimePicker2.Size = new System.Drawing.Size(165, 25);
@@ -122,7 +121,7 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(344, 65);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(34, 53);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
@@ -141,7 +140,7 @@
             // kryptonButton1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(603, 70);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(197, 47);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
@@ -222,7 +221,7 @@
             this.Controls.Add(this.Back);
             this.Controls.Add(this.kryptonDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "View_History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View_History";

@@ -33,7 +33,8 @@ namespace WindowsFormsApp1
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.viewmedicalhistory(kryptonDateTimePicker1.Value.ToShortTimeString(), kryptonDateTimePicker2.Value.ToString(), id);
+            string format = "yyyy-MM-dd";
+            DataTable dt = ctrl.viewmedicalhistory(kryptonDateTimePicker1.Value.ToString(format), kryptonDateTimePicker2.Value.ToString(format), id);
             kryptonDataGridView1.DataSource = dt;
         }
     }
