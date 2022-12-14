@@ -54,6 +54,7 @@ namespace EHR_Hospital
                         {
                             int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
                         }
+                        MessageBox.Show("Success!");
                     }
                 }
             }
