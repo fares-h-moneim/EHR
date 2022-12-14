@@ -160,7 +160,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.First_Name.StateNormal.Border.Width = 2;
             this.First_Name.StateNormal.Content.Color1 = System.Drawing.Color.Black;
-            this.First_Name.TextChanged += new System.EventHandler(this.First_Name_TextChanged);
             this.First_Name.Validating += new System.ComponentModel.CancelEventHandler(this.First_Name_Validating);
             // 
             // Last_Name
@@ -401,7 +400,6 @@
             this.Name = "EditInfo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.EditInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Gender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).EndInit();

@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.CodeDom;
 using System.Collections.Specialized;
+using Microsoft.VisualBasic;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Threading;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -79,6 +83,7 @@ namespace WindowsFormsApp1
                 ID.Text = "";
                 ID.StateActive.Content.Color1 = System.Drawing.Color.Black;
             }
+
         }
 
         private void ID_Leave(object sender, EventArgs e)
@@ -399,6 +404,37 @@ namespace WindowsFormsApp1
         {
             //hona yogad query
             bool submitvalid = true;
+            int count = 0;
+            string gendere;
+
+            //foreach (char w in Chronic.Text.ToString()) { 
+            //    if(w == ',')
+            //    {
+            //        count++;
+            //    }
+            //}
+            //count++;
+
+            //string[] chronic = new string[count];
+            //count = 0;
+
+
+            
+            
+            //for (int i = 0; i < Chronic.Text.ToString().Length; i++)
+            //{
+            //    string ch = Chronic.Text.ToString();
+            //    string w = "";
+            //    while ((ch[i] >= 97 && ch[i] <= 122) || (ch[i] >= 65 && ch[i] <= 90) && (i < Chronic.Text.ToString().Length))
+            //    {
+            //        w += ch[i];
+            //        i++;
+            //    }
+
+            //    chronic[count] = w;
+            //    count++;
+            //}
+
             for (int i = 0; i < 10; i++)
             {
                 submitvalid = submitvalid && check[i];
@@ -412,9 +448,34 @@ namespace WindowsFormsApp1
             {
                 submiterror.SetError(Submit, "");
                 //hena aho add patient
-                string gender = (Gender.Text == "Male") ? "0" : "1";
-                int i=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, "20", Blood_type.Text, Phone.Text, Emergency_Contact.Text);
-                Patient myForm = new Patient(Email.Text, Pass.Text);
+                DateTime now = DateTime.Now;
+                string Today = now.Year.ToString();
+                string B_Year = Birth_day.Value.Year.ToString();
+
+                string Age = (Convert.ToInt32(Today) - Convert.ToInt32(B_Year)).ToString();
+                if (Gender.Text.ToString() == "Male")
+                {
+                    gendere = "0";
+                }
+                else
+                {
+                    gendere = "1";
+                }
+                var bytes = new UTF8Encoding().GetBytes(Pass.Text);
+                byte[] hashBytes;
+                using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+                {
+                    hashBytes = algorithm.ComputeHash(bytes);
+                }
+                string savedPasswordHash =  Convert.ToBase64String(hashBytes);
+                
+                int ij=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gendere, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                string[] ch = Chronic.Text.Split(',');
+                for (int i = 0; i < ch.Length; i++)
+                {
+                    int x = ctrl.InsertChronicDisease(ch[i], ID.Text.ToString());
+                }
+                Patient myForm = new Patient(Email.Text, savedPasswordHash);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();
@@ -429,7 +490,20 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void First_Name_TextChanged_1(object sender, EventArgs e)
+        private void ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (ID.Text.ToString().Length >= 16)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Gender_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

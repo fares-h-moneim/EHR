@@ -78,9 +78,10 @@ namespace WindowsFormsApp1
             // 
             // First_Name
             // 
-            this.First_Name.Location = new System.Drawing.Point(629, 157);
+            this.First_Name.Location = new System.Drawing.Point(839, 193);
+            this.First_Name.Margin = new System.Windows.Forms.Padding(4);
             this.First_Name.Name = "First_Name";
-            this.First_Name.Size = new System.Drawing.Size(135, 22);
+            this.First_Name.Size = new System.Drawing.Size(180, 26);
             this.First_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.First_Name.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.First_Name.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -90,16 +91,16 @@ namespace WindowsFormsApp1
             this.First_Name.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.First_Name.TabIndex = 0;
             this.First_Name.Text = "First Name";
-            this.First_Name.TextChanged += new System.EventHandler(this.First_Name_TextChanged_1);
             this.First_Name.Enter += new System.EventHandler(this.First_Name_Enter);
             this.First_Name.Leave += new System.EventHandler(this.First_Name_Leave);
             this.First_Name.Validating += new System.ComponentModel.CancelEventHandler(this.First_Name_Validating);
             // 
             // Last_Name
             // 
-            this.Last_Name.Location = new System.Drawing.Point(786, 155);
+            this.Last_Name.Location = new System.Drawing.Point(1048, 191);
+            this.Last_Name.Margin = new System.Windows.Forms.Padding(4);
             this.Last_Name.Name = "Last_Name";
-            this.Last_Name.Size = new System.Drawing.Size(139, 22);
+            this.Last_Name.Size = new System.Drawing.Size(185, 26);
             this.Last_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Last_Name.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Last_Name.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -115,9 +116,10 @@ namespace WindowsFormsApp1
             // 
             // ID
             // 
-            this.ID.Location = new System.Drawing.Point(629, 219);
+            this.ID.Location = new System.Drawing.Point(839, 270);
+            this.ID.Margin = new System.Windows.Forms.Padding(4);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(296, 22);
+            this.ID.Size = new System.Drawing.Size(395, 26);
             this.ID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.ID.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.ID.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -127,22 +129,26 @@ namespace WindowsFormsApp1
             this.ID.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.ID.TabIndex = 2;
             this.ID.Text = "ID (16 Numbers)";
+            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             this.ID.Enter += new System.EventHandler(this.ID_Enter);
+            this.ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             this.ID.Leave += new System.EventHandler(this.ID_Leave);
             this.ID.Validating += new System.ComponentModel.CancelEventHandler(this.ID_Validating);
             // 
             // Birth_day
             // 
-            this.Birth_day.Location = new System.Drawing.Point(737, 284);
+            this.Birth_day.Location = new System.Drawing.Point(983, 350);
+            this.Birth_day.Margin = new System.Windows.Forms.Padding(4);
             this.Birth_day.Name = "Birth_day";
-            this.Birth_day.Size = new System.Drawing.Size(75, 21);
+            this.Birth_day.Size = new System.Drawing.Size(100, 25);
             this.Birth_day.TabIndex = 5;
             // 
             // Phone
             // 
-            this.Phone.Location = new System.Drawing.Point(629, 344);
+            this.Phone.Location = new System.Drawing.Point(839, 423);
+            this.Phone.Margin = new System.Windows.Forms.Padding(4);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(296, 22);
+            this.Phone.Size = new System.Drawing.Size(395, 26);
             this.Phone.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Phone.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Phone.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -158,9 +164,10 @@ namespace WindowsFormsApp1
             // 
             // Emergency_Contact
             // 
-            this.Emergency_Contact.Location = new System.Drawing.Point(629, 382);
+            this.Emergency_Contact.Location = new System.Drawing.Point(839, 470);
+            this.Emergency_Contact.Margin = new System.Windows.Forms.Padding(4);
             this.Emergency_Contact.Name = "Emergency_Contact";
-            this.Emergency_Contact.Size = new System.Drawing.Size(296, 22);
+            this.Emergency_Contact.Size = new System.Drawing.Size(395, 26);
             this.Emergency_Contact.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Emergency_Contact.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Emergency_Contact.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -176,9 +183,10 @@ namespace WindowsFormsApp1
             // 
             // Chronic
             // 
-            this.Chronic.Location = new System.Drawing.Point(629, 445);
+            this.Chronic.Location = new System.Drawing.Point(839, 548);
+            this.Chronic.Margin = new System.Windows.Forms.Padding(4);
             this.Chronic.Name = "Chronic";
-            this.Chronic.Size = new System.Drawing.Size(296, 22);
+            this.Chronic.Size = new System.Drawing.Size(395, 26);
             this.Chronic.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Chronic.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Chronic.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -193,9 +201,10 @@ namespace WindowsFormsApp1
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(629, 510);
+            this.Email.Location = new System.Drawing.Point(839, 628);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(296, 22);
+            this.Email.Size = new System.Drawing.Size(395, 26);
             this.Email.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -211,9 +220,10 @@ namespace WindowsFormsApp1
             // 
             // Pass
             // 
-            this.Pass.Location = new System.Drawing.Point(629, 538);
+            this.Pass.Location = new System.Drawing.Point(839, 662);
+            this.Pass.Margin = new System.Windows.Forms.Padding(4);
             this.Pass.Name = "Pass";
-            this.Pass.Size = new System.Drawing.Size(296, 22);
+            this.Pass.Size = new System.Drawing.Size(395, 26);
             this.Pass.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Pass.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Pass.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -229,9 +239,10 @@ namespace WindowsFormsApp1
             // 
             // Pass2
             // 
-            this.Pass2.Location = new System.Drawing.Point(629, 566);
+            this.Pass2.Location = new System.Drawing.Point(839, 697);
+            this.Pass2.Margin = new System.Windows.Forms.Padding(4);
             this.Pass2.Name = "Pass2";
-            this.Pass2.Size = new System.Drawing.Size(296, 22);
+            this.Pass2.Size = new System.Drawing.Size(395, 26);
             this.Pass2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Pass2.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Pass2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -248,9 +259,10 @@ namespace WindowsFormsApp1
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(697, 600);
+            this.Submit.Location = new System.Drawing.Point(929, 738);
+            this.Submit.Margin = new System.Windows.Forms.Padding(4);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(157, 42);
+            this.Submit.Size = new System.Drawing.Size(209, 52);
             this.Submit.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
             this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -292,11 +304,13 @@ namespace WindowsFormsApp1
             this.Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.Gender.Location = new System.Drawing.Point(629, 284);
+            this.Gender.Location = new System.Drawing.Point(839, 350);
+            this.Gender.Margin = new System.Windows.Forms.Padding(4);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(72, 21);
+            this.Gender.Size = new System.Drawing.Size(96, 25);
             this.Gender.TabIndex = 15;
             this.Gender.Text = "Gender";
+            this.Gender.SelectedIndexChanged += new System.EventHandler(this.Gender_SelectedIndexChanged);
             this.Gender.Validating += new System.ComponentModel.CancelEventHandler(this.Gender_Validating);
             // 
             // Blood_type
@@ -307,9 +321,10 @@ namespace WindowsFormsApp1
             "B",
             "AB",
             "O"});
-            this.Blood_type.Location = new System.Drawing.Point(840, 284);
+            this.Blood_type.Location = new System.Drawing.Point(1120, 350);
+            this.Blood_type.Margin = new System.Windows.Forms.Padding(4);
             this.Blood_type.Name = "Blood_type";
-            this.Blood_type.Size = new System.Drawing.Size(85, 21);
+            this.Blood_type.Size = new System.Drawing.Size(113, 25);
             this.Blood_type.TabIndex = 16;
             this.Blood_type.Text = "Blood Type";
             this.Blood_type.Validated += new System.EventHandler(this.Blood_type_Validated);
@@ -317,9 +332,10 @@ namespace WindowsFormsApp1
             // kryptonComboBox2
             // 
             this.kryptonComboBox2.DropDownWidth = 121;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(1556, 738);
+            this.kryptonComboBox2.Location = new System.Drawing.Point(2075, 908);
+            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.kryptonComboBox2.Size = new System.Drawing.Size(161, 25);
             this.kryptonComboBox2.TabIndex = 17;
             this.kryptonComboBox2.Text = "kryptonComboBox2";
             // 
@@ -410,9 +426,10 @@ namespace WindowsFormsApp1
             // 
             this.SignIn.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.SignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SignIn.Location = new System.Drawing.Point(666, 644);
+            this.SignIn.Location = new System.Drawing.Point(888, 793);
+            this.SignIn.Margin = new System.Windows.Forms.Padding(4);
             this.SignIn.Name = "SignIn";
-            this.SignIn.Size = new System.Drawing.Size(228, 29);
+            this.SignIn.Size = new System.Drawing.Size(304, 36);
             this.SignIn.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.SignIn.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.SignIn.StateCommon.Border.Color1 = System.Drawing.Color.White;
@@ -440,11 +457,11 @@ namespace WindowsFormsApp1
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(this.SignIn);
             this.Controls.Add(this.kryptonComboBox2);
             this.Controls.Add(this.Blood_type);
@@ -462,6 +479,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.First_Name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Electronic Healthcare Records";

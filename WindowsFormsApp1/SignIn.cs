@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,17 +12,33 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class SignIn : Form
     {
+        Controller ctrl;
         public SignIn()
         {
             InitializeComponent();
+            ctrl = new Controller();
 
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Patient myForm = new Patient(Email.Text, Pass.Text);
+            var bytes = new UTF8Encoding().GetBytes(Pass.Text);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable dt = ctrl.GetPatient(Email.Text,savedPasswordHash);
+            if(dt == null)
+            {
+                MessageBox.Show("Incorrect email or password");
+                return;
+            }
+            Patient myForm = new Patient(Email.Text, savedPasswordHash);
             this.Hide();
             myForm.ShowDialog();
             this.Close();

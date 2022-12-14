@@ -25,13 +25,19 @@ namespace WindowsFormsApp1
         //                    "Values ('" + snum + "','" + sname + "','" + city + "'," + status + ");";
         //    return dbMan.ExecuteNonQuery(query);
         //}
+
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
-            gender = (gender == "Male") ? "0" : "1";
 
             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
                             "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertChronicDisease(string Disease, string nationalid)
+        {
+        
+            string query = "INSERT INTO ChronicDiseases Values ('" + Disease + "','" + nationalid + "');";
+            return dbMan.ExecuteNonQuery(query);
         }
 
         public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {

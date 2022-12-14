@@ -1,0 +1,39 @@
+E:\Database\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.exe.config
+E:\Database\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.exe
+E:\Database\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+E:\Database\EHR\EHR-Hospital\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.AssemblyReference.cache
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.SuggestedBindingRedirects.cache
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital_Login.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Properties.Resources.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.GenerateResource.cache
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CoreCompileInputs.cache
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital_Diagnosis.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.exe.config
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.exe
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\bin\Debug\EHR-Hospital.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.AssemblyReference.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.SuggestedBindingRedirects.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital_Diagnosis.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital_Login.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Hospital.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Patient_History_Bg.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Properties.Resources.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Surery_Request.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.GenerateResource.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Patient_History_Bg.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Surery_Request.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Death_Report.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organ_Request.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organ_Request.resources

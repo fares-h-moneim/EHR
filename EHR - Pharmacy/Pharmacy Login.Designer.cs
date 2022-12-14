@@ -50,6 +50,7 @@
             this.Email.StateNormal.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.TabIndex = 0;
             this.Email.Text = "Email (example@email.com)";
+            this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             this.Email.Enter += new System.EventHandler(this.Email_Enter);
             this.Email.Leave += new System.EventHandler(this.Email_Leave);
             this.Email.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);

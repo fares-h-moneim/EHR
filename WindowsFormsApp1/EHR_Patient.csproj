@@ -338,6 +338,18 @@
     <Compile Include="EditInfo.Designer.cs">
       <DependentUpon>EditInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apply_Organ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apply_Organ.Designer.cs">
+      <DependentUpon>Apply_Organ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_History.Designer.cs">
+      <DependentUpon>View_History.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +372,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EditInfo.resx">
       <DependentUpon>EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apply_Organ.resx">
+      <DependentUpon>Apply_Organ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_History.resx">
+      <DependentUpon>View_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>
@@ -469,6 +487,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\View_History.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Surgery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Organ_Dono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
