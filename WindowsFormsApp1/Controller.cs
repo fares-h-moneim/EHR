@@ -80,7 +80,11 @@ namespace WindowsFormsApp1
                             "Values ('" + name + "','" + pharmacy_id + "','" + phonenumber + ");";
             return dbMan.ExecuteNonQuery(query);
         }
-        
+        public DataTable viewmedicalhistory(string datetime1, string datetime2, string pid)
+        {
+            string query = "SELECT Hospital.Name, Diagnosis.Date_Time, Diagnosis.Symptoms, Diagnosis.Diagnosis FROM Hospital, Diagnosis, Patient WHERE Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + pid + "' AND Diagnosis.Patient_ID=Patient.NationalID;"; 
+            return dbMan.ExecuteReader(query);
+        }
 
         //public int DeleteSupplier(string snum)
         //{
