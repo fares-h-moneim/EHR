@@ -81,8 +81,10 @@ namespace WindowsFormsApp1
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
+            DataTable patient = ctrl.GetPatient(user, pass);
+            DataRowCollection dataRow = patient.Rows;
 
-            View_History myForm = new View_History();
+            View_History myForm = new View_History(dataRow[0][0].ToString());
             myForm.ShowDialog();
 
         }

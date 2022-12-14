@@ -68,7 +68,23 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
-
+        public int InsertHospital(string name, string hospital_id, string username, string password)
+        {
+            string query = "INSERT INTO Hospital (Name, Hospital_ID, Username, Password, Address " +
+                            "Values ('" + name + "','" + hospital_id + "','" + username + "','" + password + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertPharmacy(string name, string pharmacy_id, string phonenumber)
+        {
+            string query = "INSERT INTO Pharmacy (Name, Pharmacy_ID, PhoneNUmber " +
+                            "Values ('" + name + "','" + pharmacy_id + "','" + phonenumber + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable viewmedicalhistory(string datetime1, string datetime2, string pid)
+        {
+            string query = "SELECT Hospital.Name, Diagnosis.Date_Time, Diagnosis.Symptoms, Diagnosis.Diagnosis FROM Hospital, Diagnosis, Patient WHERE Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + pid + "' AND Diagnosis.Patient_ID=Patient.NationalID;"; 
+            return dbMan.ExecuteReader(query);
+        }
 
         //public int DeleteSupplier(string snum)
         //{
