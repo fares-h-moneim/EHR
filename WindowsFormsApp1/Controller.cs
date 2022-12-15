@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
         }
 
         public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
-            gender = (gender == "Male") ? "0" : "1";
+            
 
             string query = "UPDATE Patient " + 
                 "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
