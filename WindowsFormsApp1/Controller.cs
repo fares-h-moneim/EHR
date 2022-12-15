@@ -110,6 +110,11 @@ namespace WindowsFormsApp1
             return dbMan.ExecuteReader(query);
         }
 
+        public int InsertRelative(string id, string rid)
+        {
+            string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
         //public int DeleteSupplier(string snum)
         //{
         //    string query = "DELETE FROM S WHERE S#='" + snum + "';";

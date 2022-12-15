@@ -162,6 +162,11 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
+            DataTable patient = ctrl.GetPatient(user, pass);
+            DataRowCollection dataRow = patient.Rows;
+
+            AddFamilyMembers myForm = new AddFamilyMembers(dataRow[0][0].ToString());
+            myForm.ShowDialog();
         }
 
         private void Avatar_Click(object sender, EventArgs e)
@@ -210,7 +215,6 @@ namespace WindowsFormsApp1
             DataRowCollection dataRow = patient.Rows;
 
 
-
             View_Surgeries myForm = new View_Surgeries(dataRow[0][0].ToString());
             myForm.ShowDialog();
         }
@@ -218,7 +222,7 @@ namespace WindowsFormsApp1
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             SignIn SI = new SignIn();
-            
+
             this.Close();
             SI.ShowDialog();
 
