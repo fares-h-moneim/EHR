@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Xml.Linq;
 using System.Reflection;
+using System.Security.Permissions;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -93,6 +95,18 @@ namespace WindowsFormsApp1
         public DataTable GetOrgan_Donor(string organ, string id)
         {
             string query = "SELECT * FROM Organ_Donor WHERE Organ_Type='" + organ + "' AND Donor_ID='" + id + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetPrescriptions(string datetime1, string datetime2, string id)
+        {
+            string query = "SELECT Hospital.Name, Prescription.Date_Time, Prescription.Given_or_not, Medications.Medication FROM Hospital, Diagnosis, Patient, Medications, Prescription WHERE Prescription.Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + id + "' AND Diagnosis.Patient_ID=Patient.NationalID AND Medications.Prescription_ID=Prescription.Prescription_ID AND Diagnosis.Prescription_ID=Prescription.Prescription_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeries(string datetime1, string datetime2, string id)
+        {
+            string query = "SELECT Hospital.Name, Date_Time, Surgery_Report, Type_of_Surgery FROM Hospital, Surgery WHERE Surgery.Date_Time Between '" + datetime1 + "' AND '" + datetime2 + "' and Surgery.Hospital_ID=Hospital.Hospital_ID;";
             return dbMan.ExecuteReader(query);
         }
 

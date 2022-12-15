@@ -133,6 +133,12 @@ namespace WindowsFormsApp1
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
+
+            DataTable patient = ctrl.GetPatient(user, pass);
+            DataRowCollection dataRow = patient.Rows;
+
+            View_Prescriptions myForm = new View_Prescriptions(dataRow[0][0].ToString());
+            myForm.ShowDialog();
         }
 
         private void Family_Click(object sender, EventArgs e)
@@ -199,6 +205,23 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
+
+            DataTable patient = ctrl.GetPatient(user, pass);
+            DataRowCollection dataRow = patient.Rows;
+
+
+
+            View_Surgeries myForm = new View_Surgeries(dataRow[0][0].ToString());
+            myForm.ShowDialog();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            SignIn SI = new SignIn();
+            
+            this.Close();
+            SI.ShowDialog();
+
         }
 
         private void Organs_Click(object sender, EventArgs e)

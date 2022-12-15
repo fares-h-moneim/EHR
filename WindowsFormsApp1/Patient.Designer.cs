@@ -50,6 +50,7 @@
             this.Organs = new System.Windows.Forms.Label();
             this.Surgery = new System.Windows.Forms.Label();
             this.img6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,9 +60,10 @@
             this.Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Avatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Avatar.InitialImage = global::WindowsFormsApp1.Properties.Resources.default_avatar;
-            this.Avatar.Location = new System.Drawing.Point(68, 32);
+            this.Avatar.Location = new System.Drawing.Point(91, 39);
+            this.Avatar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Avatar.Name = "Avatar";
-            this.Avatar.Size = new System.Drawing.Size(145, 145);
+            this.Avatar.Size = new System.Drawing.Size(193, 178);
             this.Avatar.TabIndex = 0;
             this.Avatar.TabStop = false;
             this.Avatar.Click += new System.EventHandler(this.Avatar_Click);
@@ -69,9 +71,10 @@
             // Hello
             // 
             this.Hello.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.Hello.Location = new System.Drawing.Point(219, 32);
+            this.Hello.Location = new System.Drawing.Point(292, 39);
+            this.Hello.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Hello.Name = "Hello";
-            this.Hello.Size = new System.Drawing.Size(413, 63);
+            this.Hello.Size = new System.Drawing.Size(514, 78);
             this.Hello.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Hello.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Hello.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,9 +84,10 @@
             // 
             // Gender
             // 
-            this.Gender.Location = new System.Drawing.Point(224, 87);
+            this.Gender.Location = new System.Drawing.Point(299, 107);
+            this.Gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(144, 29);
+            this.Gender.Size = new System.Drawing.Size(179, 35);
             this.Gender.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Gender.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Gender.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,9 +96,10 @@
             // 
             // Birthday
             // 
-            this.Birthday.Location = new System.Drawing.Point(224, 112);
+            this.Birthday.Location = new System.Drawing.Point(299, 138);
+            this.Birthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Birthday.Name = "Birthday";
-            this.Birthday.Size = new System.Drawing.Size(213, 29);
+            this.Birthday.Size = new System.Drawing.Size(265, 35);
             this.Birthday.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Birthday.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Birthday.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,9 +108,10 @@
             // 
             // Blood
             // 
-            this.Blood.Location = new System.Drawing.Point(224, 139);
+            this.Blood.Location = new System.Drawing.Point(299, 171);
+            this.Blood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Blood.Name = "Blood";
-            this.Blood.Size = new System.Drawing.Size(149, 29);
+            this.Blood.Size = new System.Drawing.Size(185, 35);
             this.Blood.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Blood.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Blood.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,9 +120,10 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(484, 112);
+            this.Email.Location = new System.Drawing.Point(645, 138);
+            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(350, 29);
+            this.Email.Size = new System.Drawing.Size(435, 35);
             this.Email.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Email.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Email.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,9 +132,10 @@
             // 
             // Phone
             // 
-            this.Phone.Location = new System.Drawing.Point(484, 87);
+            this.Phone.Location = new System.Drawing.Point(645, 107);
+            this.Phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(238, 29);
+            this.Phone.Size = new System.Drawing.Size(296, 35);
             this.Phone.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Phone.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Phone.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,9 +145,10 @@
             // img1
             // 
             this.img1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img1.Location = new System.Drawing.Point(177, 294);
+            this.img1.Location = new System.Drawing.Point(236, 362);
+            this.img1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img1.Name = "img1";
-            this.img1.Size = new System.Drawing.Size(129, 129);
+            this.img1.Size = new System.Drawing.Size(172, 159);
             this.img1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img1.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources._33777;
@@ -183,9 +192,10 @@
             // img2
             // 
             this.img2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img2.Location = new System.Drawing.Point(448, 294);
+            this.img2.Location = new System.Drawing.Point(597, 362);
+            this.img2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img2.Name = "img2";
-            this.img2.Size = new System.Drawing.Size(115, 115);
+            this.img2.Size = new System.Drawing.Size(153, 142);
             this.img2.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img2.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img2.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.Lab;
@@ -220,9 +230,10 @@
             // img3
             // 
             this.img3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img3.Location = new System.Drawing.Point(719, 294);
+            this.img3.Location = new System.Drawing.Point(959, 362);
+            this.img3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img3.Name = "img3";
-            this.img3.Size = new System.Drawing.Size(115, 115);
+            this.img3.Size = new System.Drawing.Size(153, 142);
             this.img3.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img3.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img3.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.pharma;
@@ -257,9 +268,10 @@
             // img4
             // 
             this.img4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img4.Location = new System.Drawing.Point(188, 546);
+            this.img4.Location = new System.Drawing.Point(251, 672);
+            this.img4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img4.Name = "img4";
-            this.img4.Size = new System.Drawing.Size(115, 115);
+            this.img4.Size = new System.Drawing.Size(153, 142);
             this.img4.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img4.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img4.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources._2770519;
@@ -294,9 +306,10 @@
             // img5
             // 
             this.img5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img5.Location = new System.Drawing.Point(448, 546);
+            this.img5.Location = new System.Drawing.Point(597, 672);
+            this.img5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img5.Name = "img5";
-            this.img5.Size = new System.Drawing.Size(115, 98);
+            this.img5.Size = new System.Drawing.Size(153, 121);
             this.img5.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img5.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img5.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.organs;
@@ -331,9 +344,10 @@
             // EditUserDetails
             // 
             this.EditUserDetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditUserDetails.Location = new System.Drawing.Point(628, 36);
+            this.EditUserDetails.Location = new System.Drawing.Point(837, 44);
+            this.EditUserDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditUserDetails.Name = "EditUserDetails";
-            this.EditUserDetails.Size = new System.Drawing.Size(50, 50);
+            this.EditUserDetails.Size = new System.Drawing.Size(67, 62);
             this.EditUserDetails.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.EditUserDetails.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.EditUserDetails.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.edit;
@@ -376,9 +390,10 @@
             this.Hospital.BackColor = System.Drawing.Color.Transparent;
             this.Hospital.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hospital.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Hospital.Location = new System.Drawing.Point(158, 413);
+            this.Hospital.Location = new System.Drawing.Point(211, 508);
+            this.Hospital.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Hospital.Name = "Hospital";
-            this.Hospital.Size = new System.Drawing.Size(174, 20);
+            this.Hospital.Size = new System.Drawing.Size(213, 25);
             this.Hospital.TabIndex = 14;
             this.Hospital.Text = "View Medical History";
             // 
@@ -388,9 +403,10 @@
             this.Labs.BackColor = System.Drawing.Color.Transparent;
             this.Labs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Labs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Labs.Location = new System.Drawing.Point(432, 412);
+            this.Labs.Location = new System.Drawing.Point(576, 507);
+            this.Labs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Labs.Name = "Labs";
-            this.Labs.Size = new System.Drawing.Size(148, 20);
+            this.Labs.Size = new System.Drawing.Size(178, 25);
             this.Labs.TabIndex = 15;
             this.Labs.Text = "View Lab Results";
             // 
@@ -400,9 +416,10 @@
             this.Pharmacy.BackColor = System.Drawing.Color.Transparent;
             this.Pharmacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pharmacy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Pharmacy.Location = new System.Drawing.Point(704, 412);
+            this.Pharmacy.Location = new System.Drawing.Point(939, 507);
+            this.Pharmacy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Pharmacy.Name = "Pharmacy";
-            this.Pharmacy.Size = new System.Drawing.Size(156, 20);
+            this.Pharmacy.Size = new System.Drawing.Size(190, 25);
             this.Pharmacy.TabIndex = 16;
             this.Pharmacy.Text = "View Prescriptions";
             // 
@@ -412,9 +429,10 @@
             this.Family.BackColor = System.Drawing.Color.Transparent;
             this.Family.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Family.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Family.Location = new System.Drawing.Point(158, 664);
+            this.Family.Location = new System.Drawing.Point(211, 817);
+            this.Family.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Family.Name = "Family";
-            this.Family.Size = new System.Drawing.Size(175, 20);
+            this.Family.Size = new System.Drawing.Size(215, 25);
             this.Family.TabIndex = 17;
             this.Family.Text = "Add Family Members";
             // 
@@ -424,9 +442,10 @@
             this.Organs.BackColor = System.Drawing.Color.Transparent;
             this.Organs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Organs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Organs.Location = new System.Drawing.Point(404, 664);
+            this.Organs.Location = new System.Drawing.Point(539, 817);
+            this.Organs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Organs.Name = "Organs";
-            this.Organs.Size = new System.Drawing.Size(212, 20);
+            this.Organs.Size = new System.Drawing.Size(256, 25);
             this.Organs.TabIndex = 18;
             this.Organs.Text = "Apply for Organ Donation";
             // 
@@ -436,18 +455,20 @@
             this.Surgery.BackColor = System.Drawing.Color.Transparent;
             this.Surgery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Surgery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
-            this.Surgery.Location = new System.Drawing.Point(717, 664);
+            this.Surgery.Location = new System.Drawing.Point(956, 817);
+            this.Surgery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Surgery.Name = "Surgery";
-            this.Surgery.Size = new System.Drawing.Size(129, 20);
+            this.Surgery.Size = new System.Drawing.Size(158, 25);
             this.Surgery.TabIndex = 20;
             this.Surgery.Text = "View Surgeries";
             // 
             // img6
             // 
             this.img6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.img6.Location = new System.Drawing.Point(718, 546);
+            this.img6.Location = new System.Drawing.Point(957, 672);
+            this.img6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.img6.Name = "img6";
-            this.img6.Size = new System.Drawing.Size(115, 115);
+            this.img6.Size = new System.Drawing.Size(153, 142);
             this.img6.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.img6.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.img6.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.Surgery;
@@ -479,12 +500,46 @@
             this.img6.Values.Text = "";
             this.img6.Click += new System.EventHandler(this.img6_Click);
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Location = new System.Drawing.Point(961, 260);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(304, 36);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.TabIndex = 21;
+            this.kryptonButton1.Values.Text = "Sign out";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
             // Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Desktop___1Patient_Bg;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.Surgery);
             this.Controls.Add(this.img6);
             this.Controls.Add(this.Organs);
@@ -506,6 +561,7 @@
             this.Controls.Add(this.Hello);
             this.Controls.Add(this.Avatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Patient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patient";
@@ -539,5 +595,6 @@
         private System.Windows.Forms.Label Organs;
         private System.Windows.Forms.Label Surgery;
         private ComponentFactory.Krypton.Toolkit.KryptonButton img6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
