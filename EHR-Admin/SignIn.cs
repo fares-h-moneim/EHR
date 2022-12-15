@@ -99,7 +99,14 @@ namespace EHR_Admin
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.GetAdmin(Email.Text.ToString(), Password.Text.ToString());
+            var bytes = new UTF8Encoding().GetBytes(Password.Text);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable dt = ctrl.GetAdmin(Email.Text.ToString(), savedPasswordHash);
 
             if(dt != null)
             {

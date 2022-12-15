@@ -28,7 +28,6 @@ namespace WindowsFormsApp1
 
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
-            gender = (gender == "Male") ? "0" : "1";
 
             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
                             "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
@@ -36,7 +35,7 @@ namespace WindowsFormsApp1
         }
 
         public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
-            gender = (gender == "Male") ? "0" : "1";
+            
 
             string query = "UPDATE Patient " + 
                 "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
@@ -99,6 +98,11 @@ namespace WindowsFormsApp1
         public int InsertPhonenumbers(string no, int id)
         {
             string query = "INSERT INTO PhoneNumbers VALUES ('" + no + "'," + id + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertAdmin(string fname, string lname, string user, string pass)
+        {
+            string query = "INSERT INTO Admins VALUES ('" + fname + "','" + lname + "','" + user + "','" + pass + "');";
             return dbMan.ExecuteNonQuery(query);
         }
 
