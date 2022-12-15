@@ -43,9 +43,10 @@
             // Back
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Location = new System.Drawing.Point(16, 15);
+            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(38, 38);
+            this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Back;
             this.Back.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Back.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -82,25 +83,28 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(309, 108);
+            this.kryptonLabel2.Location = new System.Drawing.Point(412, 133);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(141, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(174, 24);
             this.kryptonLabel2.TabIndex = 41;
             this.kryptonLabel2.Values.Text = "Date and Time of Death";
             // 
             // Label_Name
             // 
-            this.Label_Name.Location = new System.Drawing.Point(60, 108);
+            this.Label_Name.Location = new System.Drawing.Point(80, 133);
+            this.Label_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(64, 20);
+            this.Label_Name.Size = new System.Drawing.Size(78, 24);
             this.Label_Name.TabIndex = 39;
             this.Label_Name.Values.Text = "Patient ID";
             // 
             // PatientID
             // 
-            this.PatientID.Location = new System.Drawing.Point(65, 134);
+            this.PatientID.Location = new System.Drawing.Point(87, 165);
+            this.PatientID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PatientID.Name = "PatientID";
-            this.PatientID.Size = new System.Drawing.Size(186, 22);
+            this.PatientID.Size = new System.Drawing.Size(248, 26);
             this.PatientID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -108,17 +112,19 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(60, 195);
+            this.kryptonLabel1.Location = new System.Drawing.Point(80, 240);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(89, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(110, 24);
             this.kryptonLabel1.TabIndex = 43;
             this.kryptonLabel1.Values.Text = "Place of Death";
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(66, 221);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(88, 272);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(186, 22);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(248, 26);
             this.kryptonTextBox1.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox1.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -126,17 +132,19 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(309, 195);
+            this.kryptonLabel3.Location = new System.Drawing.Point(412, 240);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(94, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(115, 24);
             this.kryptonLabel3.TabIndex = 45;
             this.kryptonLabel3.Values.Text = "Cause of Death";
             // 
             // kryptonTextBox2
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(314, 221);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(419, 272);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(332, 22);
+            this.kryptonTextBox2.Size = new System.Drawing.Size(443, 26);
             this.kryptonTextBox2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.kryptonTextBox2.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -144,9 +152,10 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(273, 308);
+            this.kryptonButton1.Location = new System.Drawing.Point(364, 379);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(177, 45);
+            this.kryptonButton1.Size = new System.Drawing.Size(236, 55);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -190,20 +199,22 @@
             this.kryptonButton1.StateTracking.Border.Rounding = 25;
             this.kryptonButton1.TabIndex = 46;
             this.kryptonButton1.Values.Text = "SUBMIT";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // kryptonDateTimePicker1
             // 
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(309, 135);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(412, 166);
+            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(141, 21);
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(188, 25);
             this.kryptonDateTimePicker1.TabIndex = 47;
             // 
             // Death_Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Death_Report;
-            this.ClientSize = new System.Drawing.Size(719, 405);
+            this.ClientSize = new System.Drawing.Size(959, 498);
             this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonLabel3);
@@ -215,6 +226,7 @@
             this.Controls.Add(this.PatientID);
             this.Controls.Add(this.Back);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Death_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "v";

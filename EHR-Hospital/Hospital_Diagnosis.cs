@@ -23,6 +23,7 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            string format = "yyyy-MM-dd HH:mm:ss";
 
             if (Prescription.Text == "")
             {
@@ -30,32 +31,29 @@ namespace EHR_Hospital
             }
             else
             {
-                string format = "yyyy-MM-dd HH:mm:ss";
                 int x = ctrl.InsertPrescription(DateTime.Now.ToString(format));
                 if (x != 0)
                 {
                     DataTable dt = ctrl.GetPrescriptionID(DateTime.Now.ToString(format));
                     PrescriptionID = Convert.ToInt32(dt.Rows[0][0]);
                 }
-
-
-                int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), Diagnosis.Text, Symptoms.Text, PrescriptionID);
-
-                if (res == 0)
-                {
-                    MessageBox.Show("Error!");
                 }
-                else
+            int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), Diagnosis.Text, Symptoms.Text, PrescriptionID);
+
+            if (res == 0)
+            {
+                MessageBox.Show("Error!");
+            }
+            else
+            {
+                if (PrescriptionID != -1)
                 {
-                    if (PrescriptionID != -1)
+                    string[] ch = Prescription.Text.Split(',');
+                    for (int i = 0; i < ch.Length; i++)
                     {
-                        string[] ch = Prescription.Text.Split(',');
-                        for (int i = 0; i < ch.Length; i++)
-                        {
-                            int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
-                        }
-                        MessageBox.Show("Success!");
+                        int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
                     }
+                    MessageBox.Show("Success!");
                 }
             }
         }
