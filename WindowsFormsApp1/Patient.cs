@@ -222,8 +222,12 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Family.Text = "Add Family Members";
             Surgery.Text = "View Surgeries";
+            DataTable patient = ctrl.GetPatient(user, pass);
+            DataRowCollection dataRow = patient.Rows;
 
-            Apply_Organ myForm = new Apply_Organ();
+            
+
+            Apply_Organ myForm = new Apply_Organ(dataRow[0][0].ToString());
             myForm.ShowDialog();
         }
     }
