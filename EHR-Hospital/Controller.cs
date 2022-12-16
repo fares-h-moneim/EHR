@@ -145,7 +145,7 @@ namespace EHR_Hospital
 
         public int InsertIntoSurgery(string PatientID, int HospitalID, string Report, string Date, string Type)
         {
-            string query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"'," + Date + ",'" + Type + "');";
+            string query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"','" + Date + "','" + Type + "');";
             return dbMan.ExecuteNonQuery(query);
         }
 
