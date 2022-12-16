@@ -115,6 +115,14 @@ namespace WindowsFormsApp1
             string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "');";
             return dbMan.ExecuteNonQuery(query);
         }
+
+        public int OrganDonorUponDeath(string patientID)
+        {
+            string query = "UPDATE Patient SET Organ_Donor_Upon_Death = 1 WHERE NationalID = '"+patientID+"';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        
+
         //public int DeleteSupplier(string snum)
         //{
         //    string query = "DELETE FROM S WHERE S#='" + snum + "';";

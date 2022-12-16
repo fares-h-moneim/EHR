@@ -85,5 +85,10 @@ namespace EHR_Hospital
                 e.Handled = true;
             }
         }
+
+        private void Hospital_Diagnosis_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

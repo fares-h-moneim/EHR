@@ -37,32 +37,7 @@ namespace WindowsFormsApp1
             
             if(kryptonCheckBox6.Checked == true)
             {
-                DataTable dt2 = ctrl.GetOrgan_Donor("Liver", id);
-                if(dt2 != null)
-                {
-                    MessageBox.Show("You have already chose to donate all your organs");
-                    return;
-                }
-                if (ctrl.GetOrgan_Donor(Kidney.Text, id) == null)
-                {
-                    ctrl.InsertOrganDonor(Kidney.Text, id, 1);
-                }
-                if (ctrl.GetOrgan_Donor(kryptonCheckBox1.Text, id) == null)
-                {
-                    ctrl.InsertOrganDonor(kryptonCheckBox1.Text, id, 1);
-                }
-                if (ctrl.GetOrgan_Donor(kryptonCheckBox2.Text, id) == null)
-                {
-                    ctrl.InsertOrganDonor(kryptonCheckBox2.Text, id, 1);
-                }
-                if (ctrl.GetOrgan_Donor(Lung.Text, id) == null)
-                {
-                    ctrl.InsertOrganDonor(Lung.Text, id, 1);
-                }
-
-                ctrl.InsertOrganDonor("Liver", id, 1);
-                ctrl.InsertOrganDonor("Pancreas", id, 1);
-                ctrl.InsertOrganDonor("Intestine", id, 1);
+                ctrl.OrganDonorUponDeath(id);
                 MessageBox.Show("Thank you for your contribution");
             }
             if (Kidney.Checked == true)

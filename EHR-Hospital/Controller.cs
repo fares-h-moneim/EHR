@@ -125,6 +125,29 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable getifDonor(string patientID)
+        {
+            string query = "SELECT Organ_Donor_Upon_Death FROM Patient WHERE NationalID = '" + patientID + "'";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int InsertOrganDonor(string organ, string pid, int status)
+        {
+            string query = "INSERT INTO Organ_Donor VALUES ('" + organ + "','" + pid + "'," + status + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int DeleteFromOrganDonor(string patientID)
+        {
+            string query = "DELETE FROM Organ_Donor WHERE Donor_ID = '" + patientID + "'";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int InsertIntoSurgery(string PatientID, int HospitalID, string Report, string Date, string Type)
+        {
+            string query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"'," + Date + ",'" + Type + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
 
 

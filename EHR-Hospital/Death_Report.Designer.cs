@@ -44,7 +44,7 @@
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.Location = new System.Drawing.Point(16, 15);
-            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Back.Margin = new System.Windows.Forms.Padding(4);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Back;
@@ -84,7 +84,7 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(412, 133);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(174, 24);
             this.kryptonLabel2.TabIndex = 41;
@@ -93,7 +93,7 @@
             // Label_Name
             // 
             this.Label_Name.Location = new System.Drawing.Point(80, 133);
-            this.Label_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Label_Name.Margin = new System.Windows.Forms.Padding(4);
             this.Label_Name.Name = "Label_Name";
             this.Label_Name.Size = new System.Drawing.Size(78, 24);
             this.Label_Name.TabIndex = 39;
@@ -102,18 +102,19 @@
             // PatientID
             // 
             this.PatientID.Location = new System.Drawing.Point(87, 165);
-            this.PatientID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PatientID.Margin = new System.Windows.Forms.Padding(4);
             this.PatientID.Name = "PatientID";
             this.PatientID.Size = new System.Drawing.Size(248, 26);
             this.PatientID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.TabIndex = 38;
+            this.PatientID.TextChanged += new System.EventHandler(this.PatientID_TextChanged);
             // 
             // kryptonLabel1
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(80, 240);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(110, 24);
             this.kryptonLabel1.TabIndex = 43;
@@ -122,7 +123,7 @@
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Location = new System.Drawing.Point(88, 272);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(248, 26);
             this.kryptonTextBox1.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -133,7 +134,7 @@
             // kryptonLabel3
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(412, 240);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(115, 24);
             this.kryptonLabel3.TabIndex = 45;
@@ -142,7 +143,7 @@
             // kryptonTextBox2
             // 
             this.kryptonTextBox2.Location = new System.Drawing.Point(419, 272);
-            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Size = new System.Drawing.Size(443, 26);
             this.kryptonTextBox2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -153,7 +154,7 @@
             // kryptonButton1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(364, 379);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(236, 55);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
@@ -204,7 +205,7 @@
             // kryptonDateTimePicker1
             // 
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(412, 166);
-            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(188, 25);
             this.kryptonDateTimePicker1.TabIndex = 47;
@@ -226,7 +227,7 @@
             this.Controls.Add(this.PatientID);
             this.Controls.Add(this.Back);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Death_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "v";
