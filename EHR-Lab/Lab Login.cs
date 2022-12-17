@@ -89,5 +89,12 @@ namespace EHR_Lab
 
         }
 
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            Lab myForm = new Lab();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -26,6 +26,13 @@ namespace WindowsFormsApp1
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
+
+        public int InsertLabResult(string PatientID, byte[] Image, string Lab_ID)
+        {
+            string query = "Update Lab_Results Set Test_Result = '"+Image+"' where Patient_ID = '"+PatientID+"' and Lab_ID = '"+ Lab_ID +"' and Test_Result IS NULL";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
         
 
         public DataTable GetLaboratory(string email, string password)

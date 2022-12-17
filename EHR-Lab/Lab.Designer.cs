@@ -81,6 +81,7 @@
             this.kryptonButton1.StateTracking.Border.Rounding = 25;
             this.kryptonButton1.TabIndex = 39;
             this.kryptonButton1.Values.Text = "VIEW DETAILS";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // Label_Name
             // 

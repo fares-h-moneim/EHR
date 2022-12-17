@@ -16,5 +16,13 @@ namespace EHR_Lab
         {
             InitializeComponent();
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Lab_Results myForm = new Lab_Results();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
     }
 }

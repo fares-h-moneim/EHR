@@ -1,0 +1,16 @@
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.AssemblyReference.cache
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.SuggestedBindingRedirects.cache
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR_Lab.Lab_Login.resources
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR_Lab.Lab.resources
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR_Lab.Lab_Results.resources
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR_Lab.Properties.Resources.resources
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.GenerateResource.cache
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.CoreCompileInputs.cache
+E:\Database\EHR\EHR-Lab\bin\Debug\EHR-Lab.exe.config
+E:\Database\EHR\EHR-Lab\bin\Debug\EHR-Lab.exe
+E:\Database\EHR\EHR-Lab\bin\Debug\EHR-Lab.pdb
+E:\Database\EHR\EHR-Lab\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+E:\Database\EHR\EHR-Lab\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.CopyComplete
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.exe
+E:\Database\EHR\EHR-Lab\obj\Debug\EHR-Lab.pdb
