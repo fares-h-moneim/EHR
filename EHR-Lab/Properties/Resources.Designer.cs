@@ -63,6 +63,26 @@ namespace EHR_Lab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lab_Results {
+            get {
+                object obj = ResourceManager.GetObject("Lab_Results", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Labs {
+            get {
+                object obj = ResourceManager.GetObject("Labs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Labs_Sign_In {
             get {
                 object obj = ResourceManager.GetObject("Labs Sign In", resourceCulture);

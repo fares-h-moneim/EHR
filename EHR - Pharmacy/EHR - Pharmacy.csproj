@@ -56,10 +56,25 @@
     <Compile Include="Pharmacy Login.Designer.cs">
       <DependentUpon>Pharmacy Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pharmacy.Designer.cs">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View_Precriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Precriptions.Designer.cs">
+      <DependentUpon>View_Precriptions.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pharmacy Login.resx">
       <DependentUpon>Pharmacy Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pharmacy.resx">
+      <DependentUpon>Pharmacy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +86,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View_Precriptions.resx">
+      <DependentUpon>View_Precriptions.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login_Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharmacy_View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medications.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

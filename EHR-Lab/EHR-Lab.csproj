@@ -58,10 +58,28 @@
     <Compile Include="Lab Login.Designer.cs">
       <DependentUpon>Lab Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab.Designer.cs">
+      <DependentUpon>Lab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Results.Designer.cs">
+      <DependentUpon>Lab_Results.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lab Login.resx">
       <DependentUpon>Lab Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab.resx">
+      <DependentUpon>Lab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Results.resx">
+      <DependentUpon>Lab_Results.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Labs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab_Results.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

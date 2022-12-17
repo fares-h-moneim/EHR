@@ -83,6 +83,16 @@ namespace EHR___Pharmacy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Medications {
+            get {
+                object obj = ResourceManager.GetObject("Medications", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pharmacy_Signin {
             get {
                 object obj = ResourceManager.GetObject("Pharmacy Signin", resourceCulture);
@@ -96,6 +106,16 @@ namespace EHR___Pharmacy.Properties {
         internal static System.Drawing.Bitmap Pharmacy_Signin1 {
             get {
                 object obj = ResourceManager.GetObject("Pharmacy Signin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pharmacy_View {
+            get {
+                object obj = ResourceManager.GetObject("Pharmacy_View", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

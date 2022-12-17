@@ -113,6 +113,7 @@
             this.Submit.StateTracking.Border.Rounding = 25;
             this.Submit.TabIndex = 16;
             this.Submit.Values.Text = "";
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // passerror
             // 

@@ -87,5 +87,14 @@ namespace EHR___Pharmacy
         {
 
         }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            Pharmacy myForm = new Pharmacy();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+
+        }
     }
 }

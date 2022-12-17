@@ -12,3 +12,5 @@ E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CoreCompileInputs
 E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CopyComplete
 E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.exe
 E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.pdb
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Pharmacy.resources
+E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.View_Precriptions.resources
