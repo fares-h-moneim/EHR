@@ -8,14 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace EHR_Lab
 {
     public partial class Lab_Results : Form
     {
-        public Lab_Results()
+        string id;
+        int idlab;
+        Controller ctrl;
+        public Lab_Results(int idl, string idt)
         {
             InitializeComponent();
+            id = idt;
+            idlab = idl;
+            ctrl = new Controller();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -46,6 +53,22 @@ namespace EHR_Lab
             }
         }
 
+        private void Lab_Results_Load(object sender, EventArgs e)
+        {
+            DataTable dt = ctrl.getResults(idlab, id);
+            kryptonDataGridView1.DataSource = dt;
+        }
 
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            DataTable dt = ctrl.getResults(idlab, id);
+            DataRowCollection dt2 = dt.Rows;
+            int x = ctrl.InsertLabResult(Convert.ToInt32(dt2[0][0]), ConvertImageToBytes(pictureBox1.Image));
+        }
+
+        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

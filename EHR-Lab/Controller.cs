@@ -27,14 +27,18 @@ namespace WindowsFormsApp1
         //}
 
 
-        public int InsertLabResult(string PatientID, byte[] Image, string Lab_ID)
+        public int InsertLabResult(int Lab_ResultID, byte[] Image)
         {
-            string query = "Update Lab_Results Set Test_Result = '"+Image+"' where Patient_ID = '"+PatientID+"' and Lab_ID = '"+ Lab_ID +"' and Test_Result IS NULL";
+            string query = "Update Lab_Results Set Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
 
             return dbMan.ExecuteNonQuery(query);
         }
         
-
+        public DataTable GetLab(string user, string pass)
+        {
+            string query = "SELECT * FROM Laboratory WHERE Username='" + user + "' and Password='" + pass + "';";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable GetLaboratory(string email, string password)
         {
             string query = "SELECT * " +
@@ -48,7 +52,12 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
-
+        public DataTable getResults(int idl, string id)
+        {
+            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "' and Lab_ID='" + idl + "';";
+            return dbMan.ExecuteReader(query);
+        }
+        
         public int EmailExist(string email)
         {
             string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";

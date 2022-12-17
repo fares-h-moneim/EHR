@@ -25,6 +25,7 @@ namespace EHR_Admin
         private void Form1_Load(object sender, EventArgs e)
         {
             Hello.Text = "Hello " + user;
+            
         }
 
         private void kryptonLabel2_Paint(object sender, PaintEventArgs e)
@@ -173,6 +174,16 @@ namespace EHR_Admin
         private void Hello_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void H_Pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void H_Pass_Enter(object sender, EventArgs e)
+        {
+            H_Pass.PasswordChar = '*';
         }
     }
 }
