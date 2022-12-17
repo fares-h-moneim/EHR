@@ -40,20 +40,22 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.ColumnHeadersVisible = false;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(120, 115);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(160, 142);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersVisible = false;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(480, 270);
-            this.kryptonDataGridView1.TabIndex = 0;
+            this.kryptonDataGridView1.RowHeadersWidth = 51;
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(640, 332);
+            this.kryptonDataGridView1.TabIndex = 19;
             // 
             // Back
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(15, 12);
+            this.Back.Location = new System.Drawing.Point(20, 15);
+            this.Back.Margin = new System.Windows.Forms.Padding(4);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(38, 38);
+            this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.Back;
             this.Back.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Back.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -91,23 +93,26 @@
             // 
             // kryptonDateTimePicker1
             // 
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(120, 64);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(160, 79);
+            this.kryptonDateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(124, 21);
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(165, 25);
             this.kryptonDateTimePicker1.TabIndex = 1;
             // 
             // kryptonDateTimePicker2
             // 
-            this.kryptonDateTimePicker2.Location = new System.Drawing.Point(299, 64);
+            this.kryptonDateTimePicker2.Location = new System.Drawing.Point(399, 79);
+            this.kryptonDateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDateTimePicker2.Name = "kryptonDateTimePicker2";
-            this.kryptonDateTimePicker2.Size = new System.Drawing.Size(124, 21);
+            this.kryptonDateTimePicker2.Size = new System.Drawing.Size(165, 25);
             this.kryptonDateTimePicker2.TabIndex = 2;
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(258, 53);
+            this.kryptonLabel1.Location = new System.Drawing.Point(344, 65);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(28, 43);
+            this.kryptonLabel1.Size = new System.Drawing.Size(34, 53);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,9 +124,10 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(452, 57);
+            this.kryptonButton1.Location = new System.Drawing.Point(603, 70);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(148, 38);
+            this.kryptonButton1.Size = new System.Drawing.Size(197, 47);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -165,13 +171,14 @@
             this.kryptonButton1.StateTracking.Border.Rounding = 25;
             this.kryptonButton1.TabIndex = 17;
             this.kryptonButton1.Values.Text = "SEARCH";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // View_History
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.View_History;
-            this.ClientSize = new System.Drawing.Size(720, 405);
+            this.ClientSize = new System.Drawing.Size(960, 498);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.kryptonDateTimePicker2);
@@ -179,6 +186,7 @@
             this.Controls.Add(this.Back);
             this.Controls.Add(this.kryptonDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "View_History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View_History";

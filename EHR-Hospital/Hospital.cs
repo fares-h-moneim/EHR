@@ -38,7 +38,7 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            Surery_Request MyForm = new Surery_Request();
+            Surery_Request MyForm = new Surery_Request(HospitalID);
             MyForm.ShowDialog();
 
         }

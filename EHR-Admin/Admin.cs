@@ -24,7 +24,7 @@ namespace EHR_Admin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Hello.Text = "Hello " + user;
         }
 
         private void kryptonLabel2_Paint(object sender, PaintEventArgs e)
@@ -160,6 +160,17 @@ namespace EHR_Admin
         }
 
         private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            AddAdmin AA = new AddAdmin();
+            AA.Show();
+        }
+
+        private void Hello_Paint(object sender, PaintEventArgs e)
         {
 
         }

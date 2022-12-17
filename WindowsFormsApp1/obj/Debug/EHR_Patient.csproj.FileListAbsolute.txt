@@ -322,3 +322,8 @@ E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resourc
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resources
+D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Apply_Organ.resources
+D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_History.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddFamilyMembers.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Prescriptions.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Surgeries.resources

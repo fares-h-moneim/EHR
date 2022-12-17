@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Xml.Linq;
 using System.Reflection;
+using System.Security.Permissions;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -41,7 +43,7 @@ namespace WindowsFormsApp1
         }
 
         public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
-            gender = (gender == "Male") ? "0" : "1";
+            
 
             string query = "UPDATE Patient " + 
                 "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
@@ -68,7 +70,58 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
+        public int InsertHospital(string name, string hospital_id, string username, string password)
+        {
+            string query = "INSERT INTO Hospital (Name, Hospital_ID, Username, Password, Address " +
+                            "Values ('" + name + "','" + hospital_id + "','" + username + "','" + password + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertPharmacy(string name, string pharmacy_id, string phonenumber)
+        {
+            string query = "INSERT INTO Pharmacy (Name, Pharmacy_ID, PhoneNUmber " +
+                            "Values ('" + name + "','" + pharmacy_id + "','" + phonenumber + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable viewmedicalhistory(string datetime1, string datetime2, string pid)
+        {
+            string query = "SELECT Hospital.Name, Diagnosis.Date_Time, Diagnosis.Symptoms, Diagnosis.Diagnosis FROM Hospital, Diagnosis, Patient WHERE Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + pid + "' AND Diagnosis.Patient_ID=Patient.NationalID;"; 
+            return dbMan.ExecuteReader(query);
+        }
+        public int InsertOrganDonor(string organ, string pid, int status)
+        {
+            string query = "INSERT INTO Organ_Donor VALUES ('" + organ + "','" + pid + "'," + status + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable GetOrgan_Donor(string organ, string id)
+        {
+            string query = "SELECT * FROM Organ_Donor WHERE Organ_Type='" + organ + "' AND Donor_ID='" + id + "';";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public DataTable GetPrescriptions(string datetime1, string datetime2, string id)
+        {
+            string query = "SELECT Hospital.Name, Prescription.Date_Time, Prescription.Given_or_not, Medications.Medication FROM Hospital, Diagnosis, Patient, Medications, Prescription WHERE Prescription.Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + id + "' AND Diagnosis.Patient_ID=Patient.NationalID AND Medications.Prescription_ID=Prescription.Prescription_ID AND Diagnosis.Prescription_ID=Prescription.Prescription_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeries(string datetime1, string datetime2, string id)
+        {
+            string query = "SELECT Hospital.Name, Date_Time, Surgery_Report, Type_of_Surgery FROM Hospital, Surgery WHERE Surgery.Date_Time Between '" + datetime1 + "' AND '" + datetime2 + "' and Surgery.Hospital_ID=Hospital.Hospital_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int InsertRelative(string id, string rid)
+        {
+            string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int OrganDonorUponDeath(string patientID)
+        {
+            string query = "UPDATE Patient SET Organ_Donor_Upon_Death = 1 WHERE NationalID = '"+patientID+"';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        
 
         //public int DeleteSupplier(string snum)
         //{

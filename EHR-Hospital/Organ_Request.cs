@@ -25,7 +25,25 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, Convert.ToInt32(Priority.Text));
+            int prio = 0;
+            if(Priority.Text == "Extreme")
+            {
+                prio = 5;
+            }    
+            else if (Priority.Text == "High")
+            {
+                prio = 4;
+            }
+            else if (Priority.Text == "Medium")
+            {
+                prio = 3;
+            }
+            else if (Priority.Text == "Low")
+            {
+                prio = 2;
+            }
+            else { prio = 1; }  
+            ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, prio);
         }
 
         private void PatientID_TextChanged(object sender, EventArgs e)
