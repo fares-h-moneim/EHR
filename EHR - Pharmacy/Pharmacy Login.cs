@@ -13,6 +13,7 @@ namespace EHR___Pharmacy
 {
     public partial class Form1 : Form
     {
+        Controller ctrl = new Controller();
         public Form1()
         {
             InitializeComponent();
@@ -90,10 +91,27 @@ namespace EHR___Pharmacy
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Pharmacy myForm = new Pharmacy();
-            this.Hide();
-            myForm.ShowDialog();
-            this.Close();
+           var bytes = new UTF8Encoding().GetBytes(Password.Text);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable dt = ctrl.GetPharmacy(Email.Text, savedPasswordHash);
+            if (dt == null)
+            {
+                MessageBox.Show("Email or password inserted incorrectly");
+                return;
+            }
+            else
+            {
+
+                Pharmacy myForm = new Pharmacy();
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+            }
 
         }
     }

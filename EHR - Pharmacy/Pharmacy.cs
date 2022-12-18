@@ -12,6 +12,7 @@ namespace EHR___Pharmacy
 {
     public partial class Pharmacy : Form
     {
+        Controller ctrl = new Controller();
         public Pharmacy()
         {
             InitializeComponent();
@@ -27,10 +28,24 @@ namespace EHR___Pharmacy
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            View_Precriptions myForm = new View_Precriptions();
-            this.Hide();
-            myForm.ShowDialog();
-            this.Close();
+            DataTable dt = null;
+            dt = ctrl.RealPatient(PatientID.Text);
+            if (dt != null)
+            {
+                View_Precriptions myForm = new View_Precriptions(PatientID.Text);
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PatientID is Incorrect");
+            }    
+        }
+
+        private void PatientID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

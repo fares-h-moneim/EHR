@@ -167,8 +167,8 @@ namespace EHR_Admin
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            AddAdmin AA = new AddAdmin();
-            AA.Show();
+             //AddAdmin AA = new AddAdmin();
+               //   AA.Show();
         }
 
         private void Hello_Paint(object sender, PaintEventArgs e)

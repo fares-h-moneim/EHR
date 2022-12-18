@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller.cs" />
+    <Compile Include="DBManager.cs" />
     <Compile Include="Pharmacy Login.cs">
       <SubType>Form</SubType>
     </Compile>

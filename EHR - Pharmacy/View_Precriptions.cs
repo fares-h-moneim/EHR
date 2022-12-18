@@ -12,47 +12,35 @@ namespace EHR___Pharmacy
 {
     public partial class View_Precriptions : Form
     {
-        public View_Precriptions()
+        string pID;
+        Controller ctrl = new Controller();
+        public View_Precriptions(string ID)
         {
+            pID = ID;
             InitializeComponent();
-
-            kryptonLabel1.Visible = false;
-            kryptonLabel2.Visible = false;
-            kryptonLabel6.Visible = false;
-            kryptonLabel7.Visible = false;
-            kryptonLabel8.Visible = false;
-            kryptonLabel9.Visible = false;
-            kryptonLabel10.Visible = false;
-            kryptonLabel11.Visible = false;
-            kryptonLabel12.Visible = false;
-            kryptonLabel13.Visible = false;
-            kryptonLabel14.Visible = false;
-            kryptonLabel15.Visible = false;
-
-            kryptonCheckBox3.Visible = false;
-            kryptonCheckBox4.Visible = false;
-            kryptonCheckBox2.Visible = false;
-            kryptonCheckBox1.Visible = false;
-            kryptonCheckBox5.Visible = false;
-            kryptonCheckBox6.Visible = false;
+            DataTable dt = null;
+            dt = ctrl.GetMedications(pID);
+            dataGridView3.DataSource = dt;
+            comboBox1.DataSource = dt;
+            comboBox1.DisplayMember = "Prescription_ID";
         }
 
-        private void kryptonLabel2_Paint(object sender, PaintEventArgs e)
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            ctrl.MedicationsGiven(Convert.ToInt32(comboBox1.Text));
+            DataTable dt = ctrl.GetMedications(pID);
+            dataGridView3.DataSource = dt;
+            comboBox1.DataSource = dt;
+            dataGridView3.Refresh();
+            comboBox1.Refresh();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void kryptonLabel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void View_Precriptions_Load(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

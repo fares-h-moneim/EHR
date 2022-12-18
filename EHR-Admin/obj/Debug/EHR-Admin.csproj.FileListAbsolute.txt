@@ -27,3 +27,17 @@ D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.Cor
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CopyComplete
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR-Admin.exe
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR-Admin.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.AssemblyReference.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.SuggestedBindingRedirects.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.Admin.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.SignIn.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.Properties.Resources.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.GenerateResource.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CoreCompileInputs.cache
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.exe
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\bin\Debug\EHR-Admin.exe.config
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\bin\Debug\EHR-Admin.exe
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\bin\Debug\EHR-Admin.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CopyComplete
