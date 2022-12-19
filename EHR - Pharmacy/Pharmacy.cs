@@ -12,9 +12,11 @@ namespace EHR___Pharmacy
 {
     public partial class Pharmacy : Form
     {
+        int pharmaid;
         Controller ctrl = new Controller();
-        public Pharmacy()
+        public Pharmacy(int x)
         {
+            pharmaid = x;   
             InitializeComponent();
         }
 
@@ -32,7 +34,7 @@ namespace EHR___Pharmacy
             dt = ctrl.RealPatient(PatientID.Text);
             if (dt != null)
             {
-                View_Precriptions myForm = new View_Precriptions(PatientID.Text);
+                View_Precriptions myForm = new View_Precriptions(PatientID.Text, pharmaid);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();

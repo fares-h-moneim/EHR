@@ -13,9 +13,11 @@ namespace EHR___Pharmacy
     public partial class View_Precriptions : Form
     {
         string pID;
+        int pharmaid;
         Controller ctrl = new Controller();
-        public View_Precriptions(string ID)
+        public View_Precriptions(string ID, int x)
         {
+            pharmaid = x;
             pID = ID;
             InitializeComponent();
             DataTable dt = null;
@@ -27,7 +29,7 @@ namespace EHR___Pharmacy
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            ctrl.MedicationsGiven(Convert.ToInt32(comboBox1.Text));
+            ctrl.MedicationsGiven(Convert.ToInt32(comboBox1.Text), pharmaid);
             DataTable dt = ctrl.GetMedications(pID);
             dataGridView3.DataSource = dt;
             comboBox1.DataSource = dt;

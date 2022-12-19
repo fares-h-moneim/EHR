@@ -43,16 +43,6 @@ namespace EHR___Pharmacy
 
         private void Email_Validating(object sender, CancelEventArgs e)
         {
-            Regex expression = new Regex("^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$");
-
-            if (!expression.IsMatch(Email.Text))
-            {
-                emailerror.SetError(Email, "Enter a Correct Email");
-            }
-            else
-            {
-                emailerror.SetError(Email, "");
-            }
         }
 
         private void Password_Enter(object sender, EventArgs e)
@@ -106,8 +96,9 @@ namespace EHR___Pharmacy
             }
             else
             {
-
-                Pharmacy myForm = new Pharmacy();
+                DataTable ds = ctrl.GetPharmacyID(Email.Text);
+                int x = Convert.ToInt32(ds.Rows[0][0]);
+                Pharmacy myForm = new Pharmacy(x);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();

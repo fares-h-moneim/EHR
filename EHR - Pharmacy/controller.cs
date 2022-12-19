@@ -21,8 +21,16 @@ namespace EHR___Pharmacy
         public DataTable GetPharmacy(string username, string password)
         {
             string query = "SELECT * " +
-                "From Hospital " +
+                "From Pharmacy " +
                 "Where Username = '" + username + "' and Password = '" + password + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetPharmacyID(string username)
+        {
+            string query = "SELECT Pharmacy_ID " +
+                "From Pharmacy " +
+                "Where Username = '" + username + "';";
             return dbMan.ExecuteReader(query);
         }
 
@@ -38,9 +46,9 @@ namespace EHR___Pharmacy
             return dbMan.ExecuteReader(query);
         }
 
-        public int MedicationsGiven(int PID)
+        public int MedicationsGiven(int PID, int Pharm)
         {
-            string query = "UPDATE Prescription SET Given_or_not = 'given' WHERE Prescription_ID = " + PID + ";";
+            string query = "UPDATE Prescription SET Given_or_not = "+Pharm+" WHERE Prescription_ID = " + PID + ";";
             return dbMan.ExecuteNonQuery(query);
         }
 

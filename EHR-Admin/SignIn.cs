@@ -99,7 +99,7 @@ namespace EHR_Admin
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            var bytes = new UTF8Encoding().GetBytes(Password.Text);
+          /*  var bytes = new UTF8Encoding().GetBytes(Password.Text);
             byte[] hashBytes;
             using (var algorithm = new System.Security.Cryptography.SHA512Managed())
             {
@@ -110,17 +110,20 @@ namespace EHR_Admin
 
             if(dt != null)
             {
-                Admin myForm = new Admin(Email.Text);
+            */    Admin myForm = new Admin(Email.Text);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();
                 kryptonLabel1.Visible = false;
+            /*
             }
             else
             {
+          
                 kryptonLabel1.Visible = true;
                 kryptonLabel1.Text = "Invalid Username or Password";
             }
+          */
         }
     }
 }
