@@ -49,5 +49,23 @@ namespace EHR___Pharmacy
         {
 
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Form1 myForm = new Form1();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
+
+        private void Pharmacy_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logout_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(Logout, "Logout");
+        }
     }
 }

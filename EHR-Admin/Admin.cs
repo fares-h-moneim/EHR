@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EHR_Admin
 {
@@ -185,5 +186,11 @@ namespace EHR_Admin
         {
             H_Pass.PasswordChar = '*';
         }
+
+        private void Back_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(Add_Admin, "Add Admin");
+        }
+
     }
 }

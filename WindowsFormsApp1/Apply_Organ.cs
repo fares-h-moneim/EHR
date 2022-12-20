@@ -165,5 +165,10 @@ namespace WindowsFormsApp1
         {
             
         }
+
+        private void kryptonCheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

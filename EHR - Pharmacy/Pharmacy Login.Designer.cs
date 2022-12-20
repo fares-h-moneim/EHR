@@ -39,10 +39,9 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(837, 420);
-            this.Email.Margin = new System.Windows.Forms.Padding(4);
+            this.Email.Location = new System.Drawing.Point(628, 341);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(400, 26);
+            this.Email.Size = new System.Drawing.Size(300, 22);
             this.Email.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -56,10 +55,9 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(837, 466);
-            this.Password.Margin = new System.Windows.Forms.Padding(4);
+            this.Password.Location = new System.Drawing.Point(628, 379);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(400, 26);
+            this.Password.Size = new System.Drawing.Size(300, 22);
             this.Password.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Password.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Password.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -73,10 +71,9 @@
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(933, 515);
-            this.Submit.Margin = new System.Windows.Forms.Padding(4);
+            this.Submit.Location = new System.Drawing.Point(700, 418);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(209, 52);
+            this.Submit.Size = new System.Drawing.Size(157, 42);
             this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
             this.Submit.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -118,16 +115,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR___Pharmacy.Properties.Resources.Pharmacy_Signin1;
-            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.passerror)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

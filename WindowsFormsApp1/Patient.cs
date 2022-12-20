@@ -224,12 +224,17 @@ namespace WindowsFormsApp1
             myForm.ShowDialog();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void Logout_MouseMove(object sender, MouseEventArgs e)
         {
-            SignIn SI = new SignIn();
+            toolTip1.SetToolTip(Logout, "Logout");
+        }
 
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            SignIn myForm = new SignIn();
+            this.Hide();
+            myForm.ShowDialog();
             this.Close();
-            SI.ShowDialog();
 
         }
 

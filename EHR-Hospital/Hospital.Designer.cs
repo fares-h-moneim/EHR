@@ -40,6 +40,7 @@
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label4 = new System.Windows.Forms.Label();
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Logout = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // img1
@@ -390,12 +391,54 @@
             this.kryptonButton5.Values.Text = "";
             this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
+            // Logout
+            // 
+            this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Logout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Logout.Location = new System.Drawing.Point(968, 12);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(43, 42);
+            this.Logout.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Logout;
+            this.Logout.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.Logout.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.Logout.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Logout.StateDisabled.Border.Rounding = 25;
+            this.Logout.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StateNormal.Back.Image = global::EHR_Hospital.Properties.Resources.Logout;
+            this.Logout.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.Logout.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Logout.StateNormal.Border.Rounding = 25;
+            this.Logout.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StatePressed.Back.Image = global::EHR_Hospital.Properties.Resources.Logout;
+            this.Logout.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.Logout.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Logout.StatePressed.Border.Rounding = 25;
+            this.Logout.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Logout.StateTracking.Border.Rounding = 25;
+            this.Logout.TabIndex = 38;
+            this.Logout.Values.Text = "";
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Hospital_View;
             this.ClientSize = new System.Drawing.Size(1023, 729);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kryptonButton5);
             this.Controls.Add(this.label3);
@@ -432,5 +475,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private System.Windows.Forms.Label label4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Logout;
     }
 }

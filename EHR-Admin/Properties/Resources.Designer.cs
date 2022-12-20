@@ -73,6 +73,16 @@ namespace EHR_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Admin {
+            get {
+                object obj = ResourceManager.GetObject("Add_Admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Admin_SignIn {
             get {
                 object obj = ResourceManager.GetObject("Admin SignIn", resourceCulture);

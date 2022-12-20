@@ -60,5 +60,13 @@ namespace EHR_Hospital
             Lab_Request MyForm = new Lab_Request();
             MyForm.ShowDialog();
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Hospital_Login myForm = new Hospital_Login();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
     }
 }

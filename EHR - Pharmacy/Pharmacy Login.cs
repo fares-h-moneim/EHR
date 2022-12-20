@@ -105,5 +105,10 @@ namespace EHR___Pharmacy
             }
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,5 +35,18 @@ namespace EHR_Lab
             myForm.ShowDialog();
             this.Close();
         }
+
+        private void Lab_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Lab_Login myForm = new Lab_Login();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
     }
 }
