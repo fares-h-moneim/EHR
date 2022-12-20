@@ -140,7 +140,7 @@ namespace EHR_Hospital
         public int InsertOrganDonor(string organ, string pid, int status)
         {
             string query = "INSERT INTO Organ_Donor VALUES ('" + organ + "','" + pid + "'," + status + ");";
-            return dbMan.ExecuteNonQuery(query);
+            return dbMan.ExecuteNonQuery(query); 
         }
 
         public int DeleteFromOrganDonor(string patientID)
