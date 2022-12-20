@@ -220,6 +220,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Lab_Results";
             this.Text = "Lab_Results";
+            this.Load += new System.EventHandler(this.Lab_Results_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
