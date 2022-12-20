@@ -53,7 +53,7 @@ namespace EHR_Hospital
             return (int)dbMan.ExecuteScalar(query);
         }
 
-        public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID)
+        public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID) //complex query
         {
             if (Prescription_ID == -1)
             {
@@ -113,7 +113,7 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable GetPrescriptions(string PatientID)
+        public DataTable GetPrescriptions(string PatientID) //complex query
         {
             string query = "Select Prescription.Date_Time, Medications.Medication, Prescription.Given_or_not FROM Prescription, Diagnosis, Medications WHERE Patient_ID = '" + PatientID + "' AND Diagnosis.Prescription_ID = Prescription.Prescription_ID AND Prescription.Prescription_ID = Medications.Prescription_ID;";
             return dbMan.ExecuteReader(query);

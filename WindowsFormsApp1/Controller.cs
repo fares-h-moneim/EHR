@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
-using System.Collections;
-using System.Xml.Linq;
-using System.Reflection;
-using System.Security.Permissions;
-using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -31,10 +22,41 @@ namespace WindowsFormsApp1
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
 
-            string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
-                            "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
-           return dbMan.ExecuteNonQuery(query);
+            string StoredProcedureName = StoredProcedures.InsertPatient;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@NationalID", nationalid);
+            Parameters.Add("@Fname", fname);
+            Parameters.Add("@Lname", lname);
+            Parameters.Add("@Username", username);
+            Parameters.Add("@Password", password);
+            Parameters.Add("@Phone", phone);
+            Parameters.Add("@Gender", gender);
+            Parameters.Add("@Blood", blood);
+            Parameters.Add("@Emerg", emerg);
+            Parameters.Add("@Age", age);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+
         }
+
+        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
+        {
+            string StoredProcedureName = StoredProcedures.UpdatePatient;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@NationalID", nationalid);
+            Parameters.Add("@Fname", fname);
+            Parameters.Add("@Lname", lname);
+            Parameters.Add("@Username", username);
+            Parameters.Add("@Password", password);
+            Parameters.Add("@Phone", phone);
+            Parameters.Add("@Gender", gender);
+            Parameters.Add("@Blood", blood);
+            Parameters.Add("@Emerg", emerg);
+            Parameters.Add("@Age", age);
+            Parameters.Add("@NationalIDPREV", nationalid_prev);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+
+        }
+
 
         public DataTable SelectDescriptions(string id)
         {
@@ -58,15 +80,6 @@ namespace WindowsFormsApp1
         {
         
             string query = "INSERT INTO ChronicDiseases Values ('" + Disease + "','" + nationalid + "');";
-            return dbMan.ExecuteNonQuery(query);
-        }
-
-        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
-            
-
-            string query = "UPDATE Patient " + 
-                "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
-                " WHERE NationalID = '" + nationalid_prev +"'";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -101,7 +114,7 @@ namespace WindowsFormsApp1
                             "Values ('" + name + "','" + pharmacy_id + "','" + phonenumber + "');";
             return dbMan.ExecuteNonQuery(query);
         }
-        public DataTable viewmedicalhistory(string datetime1, string datetime2, string pid)
+        public DataTable viewmedicalhistory(string datetime1, string datetime2, string pid) //complex query
         {
             string query = "SELECT Hospital.Name, Diagnosis.Date_Time, Diagnosis.Symptoms, Diagnosis.Diagnosis FROM Hospital, Diagnosis, Patient WHERE Date_Time BETWEEN '" + datetime1 + "' AND '" + datetime2 + "' AND Diagnosis.Hospital_ID=Hospital.Hospital_ID AND Diagnosis.Patient_ID = '" + pid + "' AND Diagnosis.Patient_ID=Patient.NationalID;"; 
             return dbMan.ExecuteReader(query);
@@ -123,7 +136,7 @@ namespace WindowsFormsApp1
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable GetSurgeries(string datetime1, string datetime2, string id)
+        public DataTable GetSurgeries(string datetime1, string datetime2, string id) //complex query
         {
             string query = "SELECT Hospital.Name, Date_Time, Surgery_Report, Type_of_Surgery FROM Hospital, Surgery WHERE Surgery.Date_Time Between '" + datetime1 + "' AND '" + datetime2 + "' and Surgery.Hospital_ID=Hospital.Hospital_ID;";
             return dbMan.ExecuteReader(query);

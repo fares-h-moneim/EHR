@@ -20,10 +20,11 @@ namespace EHR___Pharmacy
         }
         public DataTable GetPharmacy(string username, string password)
         {
-            string query = "SELECT * " +
-                "From Pharmacy " +
-                "Where Username = '" + username + "' and Password = '" + password + "';";
-            return dbMan.ExecuteReader(query);
+            string StoredProcedureNames = StoredProcedures.GetPharmacy;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Username", username);
+            Parameters.Add("@Password", password);
+            return dbMan.ExecuteReader(StoredProcedureNames, Parameters);
         }
 
         public DataTable GetPharmacyID(string username)
@@ -40,10 +41,12 @@ namespace EHR___Pharmacy
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable GetMedications(string PatientID)
+        public DataTable GetMedications(string PatientID) //complex query
         {
-            string query = "Select Medications.Prescription_ID, Medication, Quantity FROM Medications, Prescription, Diagnosis WHERE Patient_ID = '"+PatientID+ "' AND Diagnosis.Prescription_ID = Prescription.Prescription_ID AND Prescription.Prescription_ID = Medications.Prescription_ID AND Prescription.Given_or_not IS NULL";
-            return dbMan.ExecuteReader(query);
+            string StoredProcureNames = StoredProcedures.GetMedications;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PatientID", PatientID);
+            return dbMan.ExecuteReader(StoredProcureNames, Parameters);
         }
 
         public int MedicationsGiven(int PID, int Pharm)

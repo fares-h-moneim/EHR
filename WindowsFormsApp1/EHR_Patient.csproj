@@ -350,6 +350,7 @@
     <Compile Include="Apply_Organ.Designer.cs">
       <DependentUpon>Apply_Organ.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoredProcedures.cs" />
     <Compile Include="View_History.cs">
       <SubType>Form</SubType>
     </Compile>

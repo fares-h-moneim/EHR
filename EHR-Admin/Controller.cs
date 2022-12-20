@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
-        public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
+       /* public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
 
             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
                 "Where Email = '" + email + "' AND Password = '" + password + "';";
             return dbMan.ExecuteReader(query);
         }
+       */
 
         public DataTable GetAdmin(string user, string password)
         {
@@ -81,14 +82,23 @@ namespace WindowsFormsApp1
 
         public int InsertHospital(string name,  string username, string password, string address)
         {
-            string query = "INSERT INTO Hospital VALUES ('" + name + "','" + username + "','" + password + "','" + address + "');";
-            return dbMan.ExecuteNonQuery(query);
+            string StoredProcedureNames = StoredProcedures.InsertHospital;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Name", name);
+            Parameters.Add("@Username", username);
+            Parameters.Add("@Address", address);
+            return dbMan.ExecuteNonQuery(StoredProcedureNames, Parameters);
         }
 
         public int InsertPharmacy(string name, string username, string password, string address, string phoneno)
         {
-            string query = "INSERT INTO Pharmacy VALUES ('" + name + "','" + username + "','" + password + "','" + address + "','" + phoneno + "');";
-            return dbMan.ExecuteNonQuery(query);
+            string StoredProcedureNames = StoredProcedures.InsertPharmacy;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Name", name);
+            Parameters.Add("@Username", username);
+            Parameters.Add("@Address", address);
+            Parameters.Add("@Phoneno", phoneno);
+            return dbMan.ExecuteNonQuery(StoredProcedureNames, Parameters);
         }
         public int InsertLaboratory(string name, string username, string password, string address, string phoneno)
         {
