@@ -327,3 +327,7 @@ D:\CCEC Fall 22\Database Management\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsA
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddFamilyMembers.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Prescriptions.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Surgeries.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddFamilyMembers.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Prescriptions.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Surgeries.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Test_Res.resources

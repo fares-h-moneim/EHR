@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Patient : Form
     {
-        string user, pass;
+        string user, pass, id;
         Controller ctrl;
         public Patient(string email, string password)
         {
@@ -28,6 +28,8 @@ namespace WindowsFormsApp1
             if (patient != null)
             {
                 DataRowCollection dataRow = patient.Rows;
+
+                id = dataRow[0][0].ToString();
 
                 Hello.Text = "Hello " + dataRow[0][1].ToString() + "!";
                 Email.Text = "Email: " + dataRow[0][3].ToString();
@@ -110,6 +112,9 @@ namespace WindowsFormsApp1
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
+
+            View_Test_Res myForm = new View_Test_Res(id);
+            myForm.ShowDialog();
         }
 
         private void Pharmacy_Click(object sender, EventArgs e)

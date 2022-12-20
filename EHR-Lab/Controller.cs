@@ -7,16 +7,22 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Xml.Linq;
 using System.Reflection;
+using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
     public class Controller
     {
         DBManager dbMan;
-
+        static string DB_Connection_String = @"Server=tcp:ehrcce25.database.windows.net,1433;Initial Catalog=EHR;Persist Security Info=False;User ID=EHR_Team6_Database;Password=3lo2Cce@da7i7a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        SqlConnection myConnection;
         public Controller()
         {
             dbMan = new DBManager();
+            myConnection = new SqlConnection(DB_Connection_String);
+
+            myConnection.Open();
         }
 
         //public int InsertSupplier(string snum, string sname, string city, int status)
@@ -29,9 +35,17 @@ namespace WindowsFormsApp1
 
         public int InsertLabResult(int Lab_ResultID, byte[] Image, int labid)
         {
-            string query = "Update Lab_Results Set Lab_ID = '"+labid+"', Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
+            /*string query = "Update Lab_Results Set Lab_ID = '"+labid+"', Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
 
-            return dbMan.ExecuteNonQuery(query);
+            return dbMan.ExecuteNonQuery(query);*/
+            using (SqlCommand cmd = new SqlCommand("Update Lab_Results Set Lab_ID = @labid, Test_Result = @image where ID = @Lab_ResultID;", myConnection))
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@labid", labid.ToString());
+                cmd.Parameters.AddWithValue("@image", Image);
+                cmd.Parameters.AddWithValue("@Lab_ResultID", Lab_ResultID.ToString());
+                return cmd.ExecuteNonQuery();
+            }
         }
         
         public DataTable GetLab(string user, string pass)

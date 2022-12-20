@@ -35,6 +35,25 @@ namespace WindowsFormsApp1
                             "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
            return dbMan.ExecuteNonQuery(query);
         }
+
+        public DataTable SelectDescriptions(string id)
+        {
+            string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '"+id+"';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectLabDates(string id, string desc)
+        {
+            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '"+desc+"';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetResult(string id, string desc, string test_id)
+        {
+            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '" + desc + "' and ID = '"+ test_id + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
         public int InsertChronicDisease(string Disease, string nationalid)
         {
         
