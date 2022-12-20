@@ -38,13 +38,13 @@ namespace WindowsFormsApp1
 
         public DataTable SelectDescriptions(string id)
         {
-            string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '"+id+"';";
+            string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '"+id+"' and Test_Result IS NOT NULL;";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable SelectLabDates(string id, string desc)
         {
-            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '"+desc+"';";
+            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '"+desc+"' and Test_Result IS NOT NULL;";
             return dbMan.ExecuteReader(query);
         }
 

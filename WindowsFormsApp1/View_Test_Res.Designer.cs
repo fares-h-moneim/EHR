@@ -128,9 +128,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(613, 229);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 225);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(355, 488);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 495);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
@@ -183,6 +183,7 @@
             this.kryptonButton2.StateTracking.Border.Rounding = 25;
             this.kryptonButton2.TabIndex = 51;
             this.kryptonButton2.Values.Text = "Download";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton3
             // 
@@ -232,6 +233,7 @@
             this.kryptonButton3.StateTracking.Border.Rounding = 25;
             this.kryptonButton3.TabIndex = 52;
             this.kryptonButton3.Values.Text = "Print";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // View_Test_Res
             // 
@@ -251,7 +253,6 @@
             this.Name = "View_Test_Res";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View_Test_Res";
-            this.Load += new System.EventHandler(this.View_Test_Res_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

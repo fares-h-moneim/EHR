@@ -47,7 +47,20 @@ namespace WindowsFormsApp1
                 return cmd.ExecuteNonQuery();
             }
         }
-        
+
+        public DataTable SelectDescriptions(string id)
+        {
+            string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '" + id + "' and Test_Result IS NULL;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectLabDates(string id, string desc)
+        {
+            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '" + desc + "' and Test_Result IS NULL;";
+            return dbMan.ExecuteReader(query);
+        }
+
+
         public DataTable GetLab(string user, string pass)
         {
             string query = "SELECT * FROM Laboratory WHERE Username='" + user + "' and Password='" + pass + "';";
