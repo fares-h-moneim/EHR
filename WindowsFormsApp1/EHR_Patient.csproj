@@ -388,6 +388,12 @@
     <Compile Include="View_Surgeries.Designer.cs">
       <DependentUpon>View_Surgeries.cs</DependentUpon>
     </Compile>
+    <Compile Include="View_Test_Res.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Test_Res.Designer.cs">
+      <DependentUpon>View_Test_Res.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFamilyMembers.resx">
       <DependentUpon>AddFamilyMembers.cs</DependentUpon>
     </EmbeddedResource>
@@ -419,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View_Surgeries.resx">
       <DependentUpon>View_Surgeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Test_Res.resx">
+      <DependentUpon>View_Test_Res.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App1.config" />
     <None Include="packages.config" />

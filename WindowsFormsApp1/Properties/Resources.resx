@@ -130,17 +130,23 @@
   <data name="Login_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Login_Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Edit Form Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Edit Form Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hospital_SignIn_Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Hospital_SignIn_Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SignIn Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\SignIn Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2770519" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\2770519.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Desktop - 1Patient_Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Desktop - 1Patient_Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pharmacy-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\pharmacy-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Organ_Dono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Organ_Dono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warning Box Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Warning Box Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,9 +184,6 @@
   <data name="Lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Lab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SUBMIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\SUBMIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pharmacy-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\pharmacy-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,8 +196,8 @@
   <data name="Cancel Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Cancel Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2770519" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\2770519.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SignIn Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\SignIn Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="organs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\organs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,10 +205,10 @@
   <data name="edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit Form Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Edit Form Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SUBMIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\SUBMIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Organ_Dono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Organ_Dono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Desktop - 1Patient_Bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Desktop - 1Patient_Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -173,6 +173,16 @@ namespace EHR_Hospital.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lab_Request {
+            get {
+                object obj = ResourceManager.GetObject("Lab_Request", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lab1 {
             get {
                 object obj = ResourceManager.GetObject("Lab1", resourceCulture);
@@ -266,6 +276,16 @@ namespace EHR_Hospital.Properties {
         internal static System.Drawing.Bitmap Surgery_Bg {
             get {
                 object obj = ResourceManager.GetObject("Surgery_Bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Surgery_Bg1 {
+            get {
+                object obj = ResourceManager.GetObject("Surgery_Bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

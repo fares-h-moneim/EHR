@@ -54,5 +54,11 @@ namespace EHR_Hospital
             Organ_Request MyForm = new Organ_Request();
             MyForm.ShowDialog();
         }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            Lab_Request MyForm = new Lab_Request();
+            MyForm.ShowDialog();
+        }
     }
 }

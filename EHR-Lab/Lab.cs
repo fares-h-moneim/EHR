@@ -24,7 +24,7 @@ namespace EHR_Lab
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.getResults(id, PatientID.Text);
+            DataTable dt = ctrl.getResults(PatientID.Text);
             if (dt == null)
             {
                 MessageBox.Show("Patient has no test results history pending");

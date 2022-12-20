@@ -55,15 +55,15 @@ namespace EHR_Lab
 
         private void Lab_Results_Load(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.getResults(idlab, id);
+            DataTable dt = ctrl.getResults(id);
             kryptonDataGridView1.DataSource = dt;
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.getResults(idlab, id);
+            DataTable dt = ctrl.getResults(id);
             DataRowCollection dt2 = dt.Rows;
-            int x = ctrl.InsertLabResult(Convert.ToInt32(dt2[0][0]), ConvertImageToBytes(pictureBox1.Image));
+            int x = ctrl.InsertLabResult(Convert.ToInt32(dt2[0][0]), ConvertImageToBytes(pictureBox1.Image), idlab);
         }
 
         private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

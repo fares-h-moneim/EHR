@@ -56,3 +56,4 @@ D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.cspr
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources

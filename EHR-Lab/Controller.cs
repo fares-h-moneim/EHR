@@ -27,9 +27,9 @@ namespace WindowsFormsApp1
         //}
 
 
-        public int InsertLabResult(int Lab_ResultID, byte[] Image)
+        public int InsertLabResult(int Lab_ResultID, byte[] Image, int labid)
         {
-            string query = "Update Lab_Results Set Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
+            string query = "Update Lab_Results Set Lab_ID = '"+labid+"', Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
 
             return dbMan.ExecuteNonQuery(query);
         }
@@ -52,9 +52,9 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
-        public DataTable getResults(int idl, string id)
+        public DataTable getResults(/*int idl,*/ string id)
         {
-            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "' and Lab_ID='" + idl + "';";
+            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "';" /*"and Lab_ID='" + idl + "';"*/;
             return dbMan.ExecuteReader(query);
         }
         

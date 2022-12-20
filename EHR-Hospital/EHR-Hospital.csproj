@@ -58,6 +58,12 @@
     <Compile Include="Death_Report.Designer.cs">
       <DependentUpon>Death_Report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Request.Designer.cs">
+      <DependentUpon>Lab_Request.cs</DependentUpon>
+    </Compile>
     <Compile Include="Organ_Request.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Death_Report.resx">
       <DependentUpon>Death_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Request.resx">
+      <DependentUpon>Lab_Request.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Organ_Request.resx">
       <DependentUpon>Organ_Request.cs</DependentUpon>
@@ -205,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Organ_Dono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Surgery_Bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab_Request.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

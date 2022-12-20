@@ -388,6 +388,7 @@
             this.kryptonButton5.TabIndex = 24;
             this.kryptonButton5.TabStop = false;
             this.kryptonButton5.Values.Text = "";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // Hospital
             // 

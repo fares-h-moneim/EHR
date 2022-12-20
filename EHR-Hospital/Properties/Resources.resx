@@ -148,6 +148,9 @@
   <data name="Patient_History_Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Patient_History_Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Organ_Dono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Organ_Dono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hospital_Patient_Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hospital_Patient_Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +159,9 @@
   </data>
   <data name="Diagnosis_Bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diagnosis_Bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Surgery_Bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Surgery_Bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="History" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +187,7 @@
   <data name="Organ_Request" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Organ_Request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Organ_Dono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Organ_Dono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lab_Request" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lab_Request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

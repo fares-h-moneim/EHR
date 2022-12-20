@@ -35,6 +35,12 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public int InsertLabTest(string patient_id, string date, string description)
+        {
+            string query = "Insert into Lab_Results(Patient_ID, Date_Time, Description) values ('" + patient_id + "', '" +date+ "', '"+description+"')";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public int IDExist(string id)
         {
             string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
