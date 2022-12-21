@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
+        
+
         public int DeleteChronic(string nationalid)
         {
             string query = "DELETE FROM ChronicDiseases Where PatientID = '" + nationalid + "';";
@@ -51,6 +53,13 @@ namespace WindowsFormsApp1
             query = "Delete from Relatives Where Patient_ID = '" + relid + "' and Relative_ID = '" + nationalid + "';";
             int y = dbMan.ExecuteNonQuery(query);
             return x + y;
+        }
+
+        public DataTable CheckforReletiveRequest(string nationalid, string relid)
+        {
+            string query = "Select * from Relatives where Patient_ID = '"+nationalid+ "' and Relative_ID = '" + relid + "';";
+
+            return dbMan.ExecuteReader(query);
         }
 
         public DataTable GetChronic(string nationalid)

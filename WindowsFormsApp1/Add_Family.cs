@@ -25,15 +25,23 @@ namespace WindowsFormsApp1
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             //add family
-            int res = ctrl.InsertRelative(id, Relative.Text);
-
-            if(res == 0)
+            DataTable Check = ctrl.CheckforReletiveRequest(id, Relative.Text);
+            if (Check == null)
             {
-                MessageBox.Show("ID doesn't exist");
+                int res = ctrl.InsertRelative(id, Relative.Text);
+
+                if (res == 0)
+                {
+                    MessageBox.Show("ID doesn't exist");
+                }
+                else
+                {
+                    MessageBox.Show("Sent!");
+                }
             }
             else
             {
-                MessageBox.Show("Sent!");
+                ctrl.AcceptRelative(id, Relative.Text);
             }
         }
 
