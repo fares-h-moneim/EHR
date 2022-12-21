@@ -17,28 +17,32 @@ namespace WindowsFormsApp1
 
     public partial class EditInfo : Form
     {
-        bool[] check = new bool[] { false, false, false, false, false, false, false, false, false, false };
+        bool[] check = new bool[] { false, false, false, false, false, false, false, false};
         Controller ctrl = new Controller();
         string user;
         string prevemail;
+        string id;
+        string password;
         Patient parent;
         public EditInfo(string user, string pass, Patient form)
         {
             InitializeComponent();
             DataTable patient = ctrl.GetPatient(user, pass);
             parent = form;
+            password = pass;
             object sender = null;
             EventArgs e = new EventArgs();
             if (patient != null)
             {
                 DataRowCollection dataRow = patient.Rows;
-
+                DataTable dt = ctrl.GetChronic(dataRow[0][0].ToString());
+                id = dataRow[0][0].ToString();
                 First_Name.Text = dataRow[0][1].ToString();
                 Last_Name.Text = dataRow[0][2].ToString();
                 Email.Text = user;
                 this.prevemail = user;
-                Pass.Text = pass;
-                Pass2.Text = pass;
+                Pass.Text = "";
+                Pass2.Text = "";
                 ID.Text = dataRow[0][0].ToString();
                 this.user = dataRow[0][0].ToString();
                 string gender;
@@ -55,6 +59,22 @@ namespace WindowsFormsApp1
                 Phone.Text = dataRow[0][5].ToString();
                 Blood_type.Text = dataRow[0][7].ToString();
 
+                if (dt != null)
+                {
+
+                    string chronic = "";
+                    Chronic.Text = "";
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        chronic += row[0].ToString();
+                        chronic += ", ";
+                    }
+                    for (int i = 0; i < chronic.Length - 2; i++)
+                    {
+                        Chronic.Text += chronic[i];
+                    }
+                }
+
             }
         }
 
@@ -68,10 +88,13 @@ namespace WindowsFormsApp1
             string B_Year = Birth_day.Value.Year.ToString();
 
             string Age = (Convert.ToInt32(Today) - Convert.ToInt32(B_Year)).ToString();
-            int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, Pass.Text, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+
+
+            string[] ch = Chronic.Text.Split(',');
+
 
             bool submitvalid = true;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                 submitvalid = submitvalid && check[i];
             }
@@ -83,16 +106,69 @@ namespace WindowsFormsApp1
             }
             else
             {
-                parent.Refresh();
+                if (Pass.Text == "" && Pass2.Text == "")
+                {
+
+                    ctrl.DeleteChronic(id);
+                    foreach (string disease in ch)
+                    {
+                        ctrl.InsertChronicDisease(disease, id);
+                    }
+                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, password, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                }
+                else
+                {
+                    ctrl.DeleteChronic(id);
+                    foreach (string disease in ch)
+                    {
+                        ctrl.InsertChronicDisease(disease, id);
+                    }
+                    var bytes = new UTF8Encoding().GetBytes(Pass.Text);
+                    byte[] hashBytes;
+                    using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+                    {
+                        hashBytes = algorithm.ComputeHash(bytes);
+                    }
+                    string savedPasswordHash = Convert.ToBase64String(hashBytes);
+                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                }
                 submiterror.SetError(Submit, "");
-                this.Hide();
-                this.Close();
+                if (Pass.Text == "")
+                {
+                    Patient myForm = new Patient(Email.Text, password);
+                    this.Hide();
+                    myForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    Patient myForm = new Patient(Email.Text, Pass.Text);
+                    this.Hide();
+                    myForm.ShowDialog();
+                    this.Close();
+                }
+
             }
+
+            
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Pass.Text == "")
+            {
+                Patient myForm = new Patient(Email.Text, password);
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Patient myForm = new Patient(Email.Text, Pass.Text);
+                this.Hide();
+                myForm.ShowDialog();
+                this.Close();
+            }
         }
 
         private void First_Name_Validating(object sender, CancelEventArgs e)
@@ -208,13 +284,11 @@ namespace WindowsFormsApp1
             if (!(password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit) && Pass.Text.Length > 8))
             {
 
-                check[6] = false;
                 passerror.SetError(Pass, "Make sure your password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
             }
             else
             {
                 passerror.SetError(Pass, "");
-                check[6] = true;
             }
 
         }
@@ -224,13 +298,11 @@ namespace WindowsFormsApp1
             if (Pass2.Text != Pass.Text)
             {
 
-                check[7] = false;
                 pass2error.SetError(Pass2, "Make sure Both Passwords Match!");
             }
             else
             {
                 pass2error.SetError(Pass2, "");
-                check[7] = true;
             }
         }
 
@@ -239,13 +311,13 @@ namespace WindowsFormsApp1
             if (Gender.SelectedIndex == -1)
             {
 
-                check[8] = false;
+                check[6] = false;
                 gendererror.SetError(Gender, "Pick a Gender!");
             }
             else
             {
                 gendererror.SetError(Gender, "");
-                check[8] = true;
+                check[6] = true;
             }
         }
 
@@ -254,14 +326,19 @@ namespace WindowsFormsApp1
             if (Blood_type.SelectedIndex == -1)
             {
 
-                check[9] = false;
+                check[7] = false;
                 blooderror.SetError(Blood_type, "Pick a Blood Type!");
             }
             else
             {
                 blooderror.SetError(Blood_type, "");
-                check[9] = true;
+                check[7] = true;
             }
+        }
+
+        private void EditInfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

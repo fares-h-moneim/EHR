@@ -400,6 +400,7 @@
             this.Name = "EditInfo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.EditInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Gender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Blood_type)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firstnameerror)).EndInit();

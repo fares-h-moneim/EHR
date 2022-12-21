@@ -332,3 +332,6 @@ E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Prescriptions.r
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Surgeries.resources
 E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Test_Res.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Test_Res.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Add_Family.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Check_Family.resources
+E:\Database\EHR\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View_Family.resources

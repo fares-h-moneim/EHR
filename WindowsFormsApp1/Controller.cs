@@ -19,6 +19,35 @@ namespace WindowsFormsApp1
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
+        public int DeleteChronic(string nationalid)
+        {
+            string query = "DELETE FROM ChronicDiseases Where PatientID = '" + nationalid + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetRelativeRequests(string nationalid)
+        {
+            string query = "SELECT Fname, Lname, PhoneNumber, Relative_ID, Patient_ID from Patient, Relatives Where Relatives.Relative_ID = '" + nationalid + "' and Relatives.Patient_ID = Patient.NationalID and Accepted = 0";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int AcceptRelative(string nationalid, string relid)
+        {
+            string query = "UPDATE Relatives SET Accepted = 1 Where Relative_ID = '" + nationalid + "' and Patient_ID = '" + relid + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int RejectRelative(string nationalid, string relid)
+        {
+            string query = "Delete from Relatives Where Patient_ID = '" + nationalid + "' and Relative_ID = '" + relid + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetChronic(string nationalid)
+        {
+            string query = "SELECT * from ChronicDiseases WHERE PatientID = '" + nationalid + "';";
+            return dbMan.ExecuteReader(query);
+        }
         public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
         {
 
@@ -57,6 +86,11 @@ namespace WindowsFormsApp1
 
         }
 
+        public DataTable GetRelatives(string id)
+        {
+            string query = "SELECT Fname, Lname, PhoneNumber from Patient, Relatives Where Relatives.Patient_ID = '" + id + "' and Relatives.Relative_ID = Patient.NationalID and Accepted = 1";
+            return dbMan.ExecuteReader(query);
+        }
 
         public DataTable SelectDescriptions(string id)
         {
@@ -154,7 +188,7 @@ namespace WindowsFormsApp1
 
         public int InsertRelative(string id, string rid)
         {
-            string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "');";
+            string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "', 0);";
             return dbMan.ExecuteNonQuery(query);
         }
 

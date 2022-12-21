@@ -336,6 +336,18 @@
     <Compile Include="AddFamilyMembers.Designer.cs">
       <DependentUpon>AddFamilyMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_Family.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Family.Designer.cs">
+      <DependentUpon>Add_Family.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check_Family.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check_Family.Designer.cs">
+      <DependentUpon>Check_Family.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="EditInfo.cs">
@@ -351,6 +363,12 @@
       <DependentUpon>Apply_Organ.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
+    <Compile Include="View_Family.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Family.Designer.cs">
+      <DependentUpon>View_Family.cs</DependentUpon>
+    </Compile>
     <Compile Include="View_History.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,11 +416,20 @@
     <EmbeddedResource Include="AddFamilyMembers.resx">
       <DependentUpon>AddFamilyMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add_Family.resx">
+      <DependentUpon>Add_Family.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check_Family.resx">
+      <DependentUpon>Check_Family.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditInfo.resx">
       <DependentUpon>EditInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apply_Organ.resx">
       <DependentUpon>Apply_Organ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Family.resx">
+      <DependentUpon>View_Family.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View_History.resx">
       <DependentUpon>View_History.cs</DependentUpon>
@@ -539,6 +566,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\View_mem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Add_mem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\View_Req.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Family_Mems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Accept.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

@@ -59,7 +59,9 @@ namespace WindowsFormsApp1
         private void EditUserDetails_Click(object sender, EventArgs e)
         {
             EditInfo myForm = new EditInfo(user, pass, this);
+            this.Hide();
             myForm.ShowDialog();
+            this.Close();
         }
 
         private void Hospital_Click(object sender, EventArgs e)
