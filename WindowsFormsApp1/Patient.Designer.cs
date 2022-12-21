@@ -545,7 +545,7 @@
             this.Controls.Add(this.Avatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Patient";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Patient";
             this.Load += new System.EventHandler(this.Patient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
