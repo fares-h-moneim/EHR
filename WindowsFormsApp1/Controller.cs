@@ -63,7 +63,12 @@ namespace WindowsFormsApp1
             string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '"+id+"' and Test_Result IS NOT NULL;";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable getpatientstatusupondeath(string id)
+        {
+            string query = "SELECT Organ_Donor_Upon_Death FROM Patient WHERE NationalID='" + id + "';";
+            return dbMan.ExecuteReader(query);
 
+        }
         public DataTable SelectLabDates(string id, string desc)
         {
             string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '"+desc+"' and Test_Result IS NOT NULL;";
@@ -127,6 +132,11 @@ namespace WindowsFormsApp1
         public DataTable GetOrgan_Donor(string organ, string id)
         {
             string query = "SELECT * FROM Organ_Donor WHERE Organ_Type='" + organ + "' AND Donor_ID='" + id + "';";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetOrgan_Donor_1(string id)
+        {
+            string query = "SELECT * FROM Organ_Donor WHERE Donor_ID='" + id + "';";
             return dbMan.ExecuteReader(query);
         }
 

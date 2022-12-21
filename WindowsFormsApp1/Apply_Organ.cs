@@ -20,11 +20,52 @@ namespace WindowsFormsApp1
             InitializeComponent();
             id = idt;
             ctrl = new Controller();
+           DataTable dt = ctrl.GetOrgan_Donor_1(id);
+            if (dt == null)
+            {
+                return;
+            }
+            DataRowCollection dr1 = dt.Rows;
+            foreach (DataRow i in dr1)
+            {
+                if (Convert.ToString(i[0]) == "Part of Intestine")
+                {
+                    Intestine.Checked = true;
+                    Intestine.Enabled = false;
+                }
+                if (Convert.ToString(i[0]) == "Part of Liver")
+                {
+                    Liver.Checked = true;
+                    Liver.Enabled = false;
+                }
+                if (Convert.ToString(i[0]) == "Part of Pancreas")
+                {
+                    Pancreas.Checked = true;
+                    Pancreas.Enabled = false;
+                }
+                if (Convert.ToString(i[0]) == "Lung")
+                {
+                    Lung.Checked = true;
+                    Lung.Enabled = false;
+                }
+                if (Convert.ToString(i[0]) == "Kidney")
+                {
+                    Kidney.Checked = true;
+                    Kidney.Enabled = false;
+                }
+            }
+            DataTable dt1 = ctrl.getpatientstatusupondeath(id);
+            DataRowCollection dr2 = dt1.Rows;
+            if(Convert.ToBoolean(dr2[0][0]) == true)
+            {
+                kryptonCheckBox6.Checked = true;
+                kryptonCheckBox6.Enabled = false;
+            }
         }
 
         private void Oragn_Dono_Load(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -34,121 +75,66 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            
-            if(kryptonCheckBox6.Checked == true)
+
+            if (kryptonCheckBox6.Checked == true && kryptonCheckBox6.Enabled == true)
             {
                 ctrl.OrganDonorUponDeath(id);
-                MessageBox.Show("Thank you for your contribution");
+                
             }
-            if (Kidney.Checked == true)
+            if (Kidney.Checked == true && Kidney.Enabled == true)
             {
                 DataTable dt = ctrl.GetOrgan_Donor(Kidney.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(Kidney.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
+                ctrl.InsertOrganDonor(Kidney.Text.ToString(), id, 1);
+                
             }
-            if (kryptonCheckBox1.Checked == true)
+            
+            if (Intestine.Checked == true && Intestine.Enabled == true)
             {
-                DataTable dt = ctrl.GetOrgan_Donor(kryptonCheckBox1.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(kryptonCheckBox1.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
+                ctrl.InsertOrganDonor(Intestine.Text.ToString(), id, 1);
+                
             }
-            if (Intestine.Checked == true)
+            if (Pancreas.Checked == true && Pancreas.Enabled == true)
             {
-                DataTable dt = ctrl.GetOrgan_Donor(Intestine.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(Intestine.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
+                ctrl.InsertOrganDonor(Pancreas.Text.ToString(), id, 1);
             }
-            if (Pancreas.Checked == true)
+            if (Liver.Checked == true && Liver.Enabled == true)
             {
-                DataTable dt = ctrl.GetOrgan_Donor(Pancreas.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(Pancreas.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
+                ctrl.InsertOrganDonor(Liver.Text.ToString(), id, 1);
+                
             }
-            if (Liver.Checked == true)
+            if (Lung.Checked == true && Lung.Enabled == true)
             {
-                DataTable dt = ctrl.GetOrgan_Donor(Liver.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(Liver.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
+                ctrl.InsertOrganDonor(Lung.Text.ToString(), id, 1);
+                
             }
-            if (Lung.Checked == true)
-            {
-                DataTable dt = ctrl.GetOrgan_Donor(Lung.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(Lung.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
-            }
-            if (kryptonCheckBox2.Checked == true)
-            {
-                DataTable dt = ctrl.GetOrgan_Donor(kryptonCheckBox2.Text, id);
-                if (dt != null)
-                {
-                    MessageBox.Show("You have already signed up this organ");
-                    return;
-                }
-                ctrl.InsertOrganDonor(kryptonCheckBox2.Text, id, 1);
-                MessageBox.Show("Thank you for your contribution");
-            }
+            MessageBox.Show("Thank you for your contribution");
+            this.Close();
         }
 
         private void kryptonCheckBox6_CheckedChanged(object sender, EventArgs e)
         {
-            kryptonCheckBox1.Checked = false;
-            kryptonCheckBox2.Checked = false;
-            Liver.Checked = false;
-            Lung.Checked = false;
-            Kidney.Checked = false;
-            Pancreas.Checked = false;
-            Intestine.Checked = false;
+            
         }
 
         private void Kidney_CheckedChanged(object sender, EventArgs e)
         {
-            kryptonCheckBox6.Checked = false;
+           
 
         }
 
         private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            kryptonCheckBox6.Checked = false;
+            
         }
 
         private void kryptonCheckBox2_CheckedChanged(object sender, EventArgs e)
         {
-            kryptonCheckBox6.Checked = false;
+            
         }
 
         private void Lung_CheckedChanged(object sender, EventArgs e)
         {
-            kryptonCheckBox6.Checked = false;
+            
         }
 
         private void Liver_CheckedChanged(object sender, EventArgs e)

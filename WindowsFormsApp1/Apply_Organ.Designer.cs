@@ -37,16 +37,15 @@
             this.Intestine = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.Submit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonCheckBox6 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.SuspendLayout();
             // 
             // Back
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Location = new System.Drawing.Point(16, 15);
+            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(38, 38);
+            this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.Back;
             this.Back.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Back.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -84,9 +83,10 @@
             // 
             // kryptonCheckedListBox1
             // 
-            this.kryptonCheckedListBox1.Location = new System.Drawing.Point(166, 141);
+            this.kryptonCheckedListBox1.Location = new System.Drawing.Point(221, 174);
+            this.kryptonCheckedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonCheckedListBox1.Name = "kryptonCheckedListBox1";
-            this.kryptonCheckedListBox1.Size = new System.Drawing.Size(377, 135);
+            this.kryptonCheckedListBox1.Size = new System.Drawing.Size(503, 166);
             this.kryptonCheckedListBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -104,45 +104,50 @@
             // 
             // Kidney
             // 
-            this.Kidney.Location = new System.Drawing.Point(140, 150);
+            this.Kidney.Location = new System.Drawing.Point(187, 185);
+            this.Kidney.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Kidney.Name = "Kidney";
-            this.Kidney.Size = new System.Drawing.Size(66, 20);
+            this.Kidney.Size = new System.Drawing.Size(71, 24);
             this.Kidney.TabIndex = 3;
-            this.Kidney.Values.Text = "LKidney";
+            this.Kidney.Values.Text = "Kidney";
             this.Kidney.CheckedChanged += new System.EventHandler(this.Kidney_CheckedChanged);
             // 
             // Liver
             // 
-            this.Liver.Location = new System.Drawing.Point(140, 189);
+            this.Liver.Location = new System.Drawing.Point(187, 233);
+            this.Liver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Liver.Name = "Liver";
-            this.Liver.Size = new System.Drawing.Size(89, 20);
+            this.Liver.Size = new System.Drawing.Size(106, 24);
             this.Liver.TabIndex = 4;
             this.Liver.Values.Text = "Part of Liver";
             this.Liver.CheckedChanged += new System.EventHandler(this.Liver_CheckedChanged);
             // 
             // Lung
             // 
-            this.Lung.Location = new System.Drawing.Point(371, 150);
+            this.Lung.Location = new System.Drawing.Point(495, 185);
+            this.Lung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lung.Name = "Lung";
-            this.Lung.Size = new System.Drawing.Size(56, 20);
+            this.Lung.Size = new System.Drawing.Size(58, 24);
             this.Lung.TabIndex = 5;
-            this.Lung.Values.Text = "LLung";
+            this.Lung.Values.Text = "Lung";
             this.Lung.CheckedChanged += new System.EventHandler(this.Lung_CheckedChanged);
             // 
             // Pancreas
             // 
-            this.Pancreas.Location = new System.Drawing.Point(237, 189);
+            this.Pancreas.Location = new System.Drawing.Point(316, 233);
+            this.Pancreas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pancreas.Name = "Pancreas";
-            this.Pancreas.Size = new System.Drawing.Size(111, 20);
+            this.Pancreas.Size = new System.Drawing.Size(134, 24);
             this.Pancreas.TabIndex = 6;
             this.Pancreas.Values.Text = "Part of Pancreas";
             this.Pancreas.CheckedChanged += new System.EventHandler(this.Pancreas_CheckedChanged);
             // 
             // Intestine
             // 
-            this.Intestine.Location = new System.Drawing.Point(371, 189);
+            this.Intestine.Location = new System.Drawing.Point(495, 233);
+            this.Intestine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Intestine.Name = "Intestine";
-            this.Intestine.Size = new System.Drawing.Size(110, 20);
+            this.Intestine.Size = new System.Drawing.Size(132, 24);
             this.Intestine.TabIndex = 7;
             this.Intestine.Values.Text = "Part of Intestine";
             this.Intestine.CheckedChanged += new System.EventHandler(this.Intestine_CheckedChanged);
@@ -150,9 +155,10 @@
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(270, 256);
+            this.Submit.Location = new System.Drawing.Point(360, 315);
+            this.Submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(157, 41);
+            this.Submit.Size = new System.Drawing.Size(209, 50);
             this.Submit.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
             this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -189,47 +195,29 @@
             // 
             // kryptonCheckBox6
             // 
-            this.kryptonCheckBox6.Location = new System.Drawing.Point(129, 227);
+            this.kryptonCheckBox6.Location = new System.Drawing.Point(172, 279);
+            this.kryptonCheckBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonCheckBox6.Name = "kryptonCheckBox6";
-            this.kryptonCheckBox6.Size = new System.Drawing.Size(381, 23);
+            this.kryptonCheckBox6.Size = new System.Drawing.Size(472, 28);
             this.kryptonCheckBox6.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.kryptonCheckBox6.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
             this.kryptonCheckBox6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonCheckBox6.StateDisabled.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.kryptonCheckBox6.StateDisabled.ShortText.Color2 = System.Drawing.Color.Gray;
             this.kryptonCheckBox6.StateNormal.ShortText.Color1 = System.Drawing.Color.Red;
             this.kryptonCheckBox6.StateNormal.ShortText.Color2 = System.Drawing.Color.Red;
             this.kryptonCheckBox6.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCheckBox6.TabIndex = 16;
-            this.kryptonCheckBox6.UseWaitCursor = true;
             this.kryptonCheckBox6.Values.Text = "I would like to donate all vital organs when I die";
             this.kryptonCheckBox6.CheckedChanged += new System.EventHandler(this.kryptonCheckBox6_CheckedChanged);
             // 
-            // kryptonCheckBox1
-            // 
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(237, 150);
-            this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(68, 20);
-            this.kryptonCheckBox1.TabIndex = 17;
-            this.kryptonCheckBox1.Values.Text = "RKidney";
-            this.kryptonCheckBox1.CheckedChanged += new System.EventHandler(this.kryptonCheckBox1_CheckedChanged);
-            // 
-            // kryptonCheckBox2
-            // 
-            this.kryptonCheckBox2.Location = new System.Drawing.Point(303, 150);
-            this.kryptonCheckBox2.Name = "kryptonCheckBox2";
-            this.kryptonCheckBox2.Size = new System.Drawing.Size(58, 20);
-            this.kryptonCheckBox2.TabIndex = 18;
-            this.kryptonCheckBox2.Values.Text = "RLung";
-            this.kryptonCheckBox2.CheckedChanged += new System.EventHandler(this.kryptonCheckBox2_CheckedChanged);
-            // 
             // Apply_Organ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Organ_Dono;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 405);
-            this.Controls.Add(this.kryptonCheckBox2);
-            this.Controls.Add(this.kryptonCheckBox1);
+            this.ClientSize = new System.Drawing.Size(960, 498);
             this.Controls.Add(this.kryptonCheckBox6);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Intestine);
@@ -241,6 +229,7 @@
             this.Controls.Add(this.Back);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Apply_Organ";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Oragn_Dono";
@@ -261,7 +250,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox Intestine;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Submit;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox6;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
     }
 }
