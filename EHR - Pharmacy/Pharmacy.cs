@@ -24,7 +24,10 @@ namespace EHR___Pharmacy
         {
             if (PatientID.Text.ToString().Length >= 16)
             {
-                e.Handled = true;
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
             }
         }
 

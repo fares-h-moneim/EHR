@@ -36,5 +36,21 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Sent!");
             }
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Relative_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Relative.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
     }
 }

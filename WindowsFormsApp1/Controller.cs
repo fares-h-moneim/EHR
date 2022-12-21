@@ -34,13 +34,23 @@ namespace WindowsFormsApp1
         public int AcceptRelative(string nationalid, string relid)
         {
             string query = "UPDATE Relatives SET Accepted = 1 Where Relative_ID = '" + nationalid + "' and Patient_ID = '" + relid + "';";
-            return dbMan.ExecuteNonQuery(query);
+            
+            int x = dbMan.ExecuteNonQuery(query);
+
+            query = "UPDATE Relatives SET Accepted = 1 Where Relative_ID = '" + relid + "' and Patient_ID = '" + nationalid + "';";
+
+            int y = dbMan.ExecuteNonQuery(query);
+
+            return x+y;
         }
 
         public int RejectRelative(string nationalid, string relid)
         {
             string query = "Delete from Relatives Where Patient_ID = '" + nationalid + "' and Relative_ID = '" + relid + "';";
-            return dbMan.ExecuteNonQuery(query);
+            int x = dbMan.ExecuteNonQuery(query);
+            query = "Delete from Relatives Where Patient_ID = '" + relid + "' and Relative_ID = '" + nationalid + "';";
+            int y = dbMan.ExecuteNonQuery(query);
+            return x + y;
         }
 
         public DataTable GetChronic(string nationalid)
@@ -189,7 +199,10 @@ namespace WindowsFormsApp1
         public int InsertRelative(string id, string rid)
         {
             string query = "INSERT INTO Relatives VALUES ('" + id + "','" + rid + "', 0);";
-            return dbMan.ExecuteNonQuery(query);
+            int x = dbMan.ExecuteNonQuery(query);
+            query = "INSERT INTO Relatives VALUES ('" + rid + "','" + id + "', 0);";
+            int y = dbMan.ExecuteNonQuery(query);
+            return x + y;
         }
 
         public int OrganDonorUponDeath(string patientID)

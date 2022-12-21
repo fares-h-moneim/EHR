@@ -89,7 +89,10 @@ namespace EHR_Hospital
         {
             if (PatientID.Text.ToString().Length >= 16)
             {
-                e.Handled = false;
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
             }
         }
 

@@ -186,6 +186,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ID.StateNormal.Border.Width = 2;
             this.ID.StateNormal.Content.Color1 = System.Drawing.Color.Black;
+            this.ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             this.ID.Validating += new System.ComponentModel.CancelEventHandler(this.ID_Validating);
             // 
             // Gender
@@ -226,6 +227,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Phone.StateNormal.Border.Width = 2;
             this.Phone.StateNormal.Content.Color1 = System.Drawing.Color.Black;
+            this.Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Phone_KeyPress);
             this.Phone.Validated += new System.EventHandler(this.Phone_Validated);
             // 
             // Emergency_Contact
@@ -239,6 +241,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Emergency_Contact.StateNormal.Border.Width = 2;
             this.Emergency_Contact.StateNormal.Content.Color1 = System.Drawing.Color.Black;
+            this.Emergency_Contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Emergency_Contact_KeyPress);
             this.Emergency_Contact.Validated += new System.EventHandler(this.Emergency_Contact_Validated);
             // 
             // Chronic

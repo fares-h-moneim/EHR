@@ -340,5 +340,38 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (ID.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Phone.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void Emergency_Contact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Emergency_Contact.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
     }
 }

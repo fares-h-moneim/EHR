@@ -43,6 +43,7 @@
             this.Relative.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Relative.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Relative.TabIndex = 1;
+            this.Relative.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Relative_KeyPress);
             // 
             // kryptonLabel1
             // 
@@ -141,6 +142,7 @@
             this.Back.StateTracking.Border.Rounding = 25;
             this.Back.TabIndex = 51;
             this.Back.Values.Text = "";
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Add_Family
             // 

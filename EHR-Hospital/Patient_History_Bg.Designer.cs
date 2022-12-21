@@ -72,6 +72,7 @@
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.TabIndex = 21;
             this.PatientID.TextChanged += new System.EventHandler(this.PatientID_TextChanged);
+            this.PatientID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientID_KeyPress);
             // 
             // Request
             // 

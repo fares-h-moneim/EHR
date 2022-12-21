@@ -48,5 +48,16 @@ namespace EHR_Lab
             myForm.ShowDialog();
             this.Close();
         }
+
+        private void PatientID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (PatientID.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
     }
 }

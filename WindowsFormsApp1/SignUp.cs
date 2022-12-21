@@ -14,6 +14,8 @@ using Microsoft.VisualBasic;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Threading;
 using System.Security.Cryptography;
+using ComponentFactory.Krypton.Toolkit;
+using RestSharp.Extensions;
 
 namespace WindowsFormsApp1
 {
@@ -499,13 +501,38 @@ namespace WindowsFormsApp1
         {
             if (ID.Text.ToString().Length >= 16)
             {
-                e.Handled = true;
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
             }
         }
 
         private void Gender_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Phone.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void Emergency_Contact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Emergency_Contact.Text.ToString().Length >= 16)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }
