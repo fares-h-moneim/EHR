@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            //add family
             int res = ctrl.InsertRelative(id, Relative.Text);
 
             if(res == 0)
