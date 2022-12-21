@@ -55,16 +55,16 @@ namespace EHR_Hospital
 
         public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID) //complex query
         {
-            if (Prescription_ID == -1)
-            {
-                string query = "INSERT INTO Diagnosis Values (" + HospitalID + ",'" + PatientID + "','" + Date + "','" + Symptoms + "','" + Diagnosis + "', NULL);";
-                return dbMan.ExecuteNonQuery(query);
-            }
-            else
-            {
-                string query = "INSERT INTO Diagnosis Values (" + HospitalID + ",'" + PatientID + "','" + Date + "','" + Symptoms + "','" + Diagnosis + "'," + Prescription_ID + ");";
-                return dbMan.ExecuteNonQuery(query);
-            }
+            string storedprocedurenames = StoredProcedures.InsertDiag;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@HosID", HospitalID);
+            Parameters.Add("@patID", PatientID);
+            Parameters.Add("@Date", Date);
+            Parameters.Add("@Diag", Diagnosis);
+            Parameters.Add("@symp", Symptoms);
+            Parameters.Add("@presID", Prescription_ID);
+            return dbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
+
         }
 
         public int InsertPrescription(string Date)
@@ -145,8 +145,10 @@ namespace EHR_Hospital
 
         public int DeleteFromOrganDonor(string patientID)
         {
-            string query = "DELETE FROM Organ_Donor WHERE Donor_ID = '" + patientID + "'";
-            return dbMan.ExecuteNonQuery(query);
+            string storedprocedurenames = StoredProcedures.DELETEORGAN;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@patID", patientID);
+            return dbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
         }
 
         public int InsertIntoSurgery(string PatientID, int HospitalID, string Report, string Date, string Type)

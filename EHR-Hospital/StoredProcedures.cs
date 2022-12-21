@@ -8,7 +8,8 @@ namespace EHR_Hospital
 {
     public class StoredProcedures
     {
-        public static string InsertPatient = "InsertPatient";
+        public static string DELETEORGAN = "DeleteFromOrganDonor";
+        public static string InsertDiag = "InsertDiagnosis";
 
     }
 }

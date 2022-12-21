@@ -8,7 +8,8 @@ namespace WindowsFormsApp1
 {
     public class StoredProcedures
     {
-        public static string InsertPatient = "InsertPatient";
+        public static string SelectLabDates = "SELECTLABDATES";
+        public static string IDEXIST = "IDExist";
 
     }
 }

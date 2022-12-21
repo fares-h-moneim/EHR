@@ -56,8 +56,11 @@ namespace WindowsFormsApp1
 
         public DataTable SelectLabDates(string id, string desc)
         {
-            string query = "SELECT * From Lab_Results where Patient_ID = '" + id + "' and Description = '" + desc + "' and Test_Result IS NULL;";
-            return dbMan.ExecuteReader(query);
+            string storedprocedurenames = StoredProcedures.SelectLabDates;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@patID", id);
+            Parameters.Add("@desc", desc);
+            return dbMan.ExecuteReader(storedprocedurenames, Parameters);
         }
 
 
@@ -76,8 +79,10 @@ namespace WindowsFormsApp1
 
         public int IDExist(string id)
         {
-            string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
-            return (int)dbMan.ExecuteScalar(query);
+            string storedprocedurenames = StoredProcedures.IDEXIST;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@patID", id);
+            return (int)dbMan.ExecuteScalar(storedprocedurenames, Parameters);
         }
         public DataTable getResults(/*int idl,*/ string id)
         {
