@@ -81,9 +81,9 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
-        public int InsertMedications(int PresID, string Medication)
+        public int InsertMedications(int PresID, string Medication, int qnty)
         {
-            string query = "Insert INTO Medications Values ("+PresID+",'"+Medication+"');";
+            string query = "Insert INTO Medications Values ("+PresID+",'"+Medication+"',"+qnty+");";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -155,6 +155,12 @@ namespace EHR_Hospital
         {
             string query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"','" + Date + "','" + Type + "');";
             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable getMedicationList()
+        {
+            string query = "SELECT * FROM Drugs ORDER BY Trade_Name ASC";
+            return dbMan.ExecuteReader(query);
         }
 
 

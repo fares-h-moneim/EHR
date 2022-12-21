@@ -14,11 +14,19 @@ namespace EHR_Hospital
     {
         int HospitalID;
         int PrescriptionID;
+        int[] qnty = new int[20];
+        string[] meds = new string[20];
+        int x = 0;
         Controller ctrl = new Controller();
         public Hospital_Diagnosis(int x)
         {
             InitializeComponent();
             HospitalID = x;
+            DataTable dt = null;
+            dt = ctrl.getMedicationList();
+            comboBox1.DataSource = dt;
+            comboBox1.DisplayMember = "Trade_Name";
+            comboBox1.ValueMember = "Trade_Name";
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -48,12 +56,11 @@ namespace EHR_Hospital
             {
                 if (PrescriptionID != -1)
                 {
-                    string[] ch = Prescription.Text.Split(',');
-                    for (int i = 0; i < ch.Length; i++)
+                    for (int i = 0; i < x; i++)
                     {
-                        int y = ctrl.InsertMedications(PrescriptionID, ch[i]);
+                        ctrl.InsertMedications(PrescriptionID, meds[i], qnty[i]);
                     }
-                    MessageBox.Show("Success!");
+                   
                 }
             }
         }
@@ -82,13 +89,33 @@ namespace EHR_Hospital
         {
             if (PatientID.Text.ToString().Length >= 16)
             {
-                e.Handled = true;
+                e.Handled = false;
             }
         }
 
         private void Hospital_Diagnosis_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            if (Prescription.Text.ToString() == "")
+            {
+                Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text + ", ";
+            }
+            else
+            {
+                Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text;
+            }
+            qnty[x] = Convert.ToInt32(qty.Text);
+            meds[x] = comboBox1.Text;
+            x++;
         }
     }
 }
