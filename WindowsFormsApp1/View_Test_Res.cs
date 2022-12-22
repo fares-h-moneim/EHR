@@ -33,7 +33,8 @@ namespace WindowsFormsApp1
                 kryptonComboBox1.DisplayMember = "Description";
             }
 
-            DataTable dt = ctrl.SelectLabDates(PatientID, kryptonComboBox1.SelectedValue.ToString());
+            DataTable dt = null;
+            dt = ctrl.SelectLabDates(PatientID, kryptonComboBox1.SelectedValue.ToString());
             if (dt != null)
             {
                 kryptonComboBox2.DataSource = dt;

@@ -193,7 +193,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Change_Pass";
             this.Text = "Change_Pass";
             this.Load += new System.EventHandler(this.Change_Pass_Load);
             this.ResumeLayout(false);

@@ -40,7 +40,7 @@ namespace EHR___Pharmacy
                     hashBytes = algorithm.ComputeHash(bytes);
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                ctrl.ChangePass(base.Name.Text, savedPasswordHash);
+                ctrl.ChangePass(Name.Text, savedPasswordHash);
             }
             else
             {
