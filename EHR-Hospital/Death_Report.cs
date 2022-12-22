@@ -43,5 +43,10 @@ namespace EHR_Hospital
         {
 
         }
+
+        private void Death_Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

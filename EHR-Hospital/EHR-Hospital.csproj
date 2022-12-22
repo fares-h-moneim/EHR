@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Change_Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_Pass.Designer.cs">
+      <DependentUpon>Change_Pass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="Death_Report.cs">
@@ -103,6 +109,9 @@
     <Compile Include="Surery_Request.Designer.cs">
       <DependentUpon>Surery_Request.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Change_Pass.resx">
+      <DependentUpon>Change_Pass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Death_Report.resx">
       <DependentUpon>Death_Report.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +233,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save ButtonSUBMIT.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,7 +21,7 @@ namespace EHR___Pharmacy
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "Email (example@email.com)")
+            if (Email.Text == "Username")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -32,7 +32,7 @@ namespace EHR___Pharmacy
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email (example@email.com)";
+                Email.Text = "Username";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -109,6 +109,12 @@ namespace EHR___Pharmacy
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Change_Pass myForm = new Change_Pass();
+            myForm.ShowDialog();
         }
     }
 }

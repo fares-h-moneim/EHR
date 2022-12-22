@@ -73,6 +73,26 @@ namespace EHR_Hospital.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_Button {
+            get {
+                object obj = ResourceManager.GetObject("Cancel Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_Pass {
+            get {
+                object obj = ResourceManager.GetObject("Change_Pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dead {
             get {
                 object obj = ResourceManager.GetObject("Dead", resourceCulture);
@@ -256,6 +276,16 @@ namespace EHR_Hospital.Properties {
         internal static System.Drawing.Bitmap pharma {
             get {
                 object obj = ResourceManager.GetObject("pharma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_ButtonSUBMIT {
+            get {
+                object obj = ResourceManager.GetObject("Save ButtonSUBMIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

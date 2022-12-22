@@ -63,6 +63,46 @@ namespace EHR___Pharmacy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_Button {
+            get {
+                object obj = ResourceManager.GetObject("Cancel Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_Pass {
+            get {
+                object obj = ResourceManager.GetObject("Change_Pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_Pass1 {
+            get {
+                object obj = ResourceManager.GetObject("Change_Pass1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_Pass2 {
+            get {
+                object obj = ResourceManager.GetObject("Change_Pass2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Login_Button {
             get {
                 object obj = ResourceManager.GetObject("Login_Button", resourceCulture);
@@ -126,6 +166,16 @@ namespace EHR___Pharmacy.Properties {
         internal static System.Drawing.Bitmap Pharmacy_View {
             get {
                 object obj = ResourceManager.GetObject("Pharmacy_View", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_ButtonSUBMIT {
+            get {
+                object obj = ResourceManager.GetObject("Save ButtonSUBMIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

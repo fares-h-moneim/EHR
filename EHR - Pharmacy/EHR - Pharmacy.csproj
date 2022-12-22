@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Change_Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_Pass.Designer.cs">
+      <DependentUpon>Change_Pass.cs</DependentUpon>
+    </Compile>
     <Compile Include="controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="Pharmacy Login.cs">
@@ -73,6 +79,9 @@
     <Compile Include="View_Precriptions.Designer.cs">
       <DependentUpon>View_Precriptions.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Change_Pass.resx">
+      <DependentUpon>Change_Pass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pharmacy Login.resx">
       <DependentUpon>Pharmacy Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +134,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save ButtonSUBMIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Pass2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
