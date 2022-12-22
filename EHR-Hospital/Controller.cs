@@ -163,6 +163,12 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public int ChangePass(string id, string pass)
+        {
+            string query = "UPDATE Hospital SET Password = '" + pass + "' WHERE Name = '" + id + "' ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
 
         //public int DeleteSupplier(string snum)
