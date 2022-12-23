@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Xml.Linq;
 using System.Reflection;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -26,32 +28,37 @@ namespace WindowsFormsApp1
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
-       /* public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
-        {
+        /* public int InsertPatient(string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
+         {
 
-            string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
-                            "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
-           return dbMan.ExecuteNonQuery(query);
-        }
-
-        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
-            
-
-            string query = "UPDATE Patient " + 
-                "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
-                " WHERE NationalID = '" + nationalid_prev +"'";
+             string query = "INSERT INTO Patient (NationalID, Fname, Lname, Email, Password, PhoneNumber, Gender, BloodType, EmergencyContact, Age) " +
+                             "Values ('" + nationalid + "','" + fname + "','" + lname + "','" + username + "','" + password + "','" + phone + "','" + gender + "','" + blood + "','" + emerg + "', " + Int32.Parse(age) + ");";
             return dbMan.ExecuteNonQuery(query);
-        }
+         }
 
-        public DataTable GetPatient(string email, string password)
+         public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg) {
+
+
+             string query = "UPDATE Patient " + 
+                 "SET NationalID = '" + nationalid + "', Fname = '" + fname + "', Lname = '" + lname +"', Email = '" + username +"', Password = '" + password +"', PhoneNumber = '" + phone +"', Gender = " + gender + ", BloodType = '" + blood + "', Age = " + Convert.ToInt32(age) +  
+                 " WHERE NationalID = '" + nationalid_prev +"'";
+             return dbMan.ExecuteNonQuery(query);
+         }
+
+         public DataTable GetPatient(string email, string password)
+         {
+             string query = "SELECT * " +
+                 "From Patient " +
+                 "Where Email = '" + email + "' AND Password = '" + password + "';";
+             return dbMan.ExecuteReader(query);
+         }
+        */
+
+        public DataTable GetDiagnosisCount()
         {
-            string query = "SELECT * " +
-                "From Patient " +
-                "Where Email = '" + email + "' AND Password = '" + password + "';";
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases WHERE Diagnosis.Diagnosis = Diseases GROUP BY Diseases ORDER BY 2 DESC";
             return dbMan.ExecuteReader(query);
         }
-       */
-
         public DataTable GetAdmin(string user, string password)
         {
             string query = "SELECT * " +

@@ -94,6 +94,9 @@ namespace EHR_Admin
             Phar.Text = "Add Pharmacy";
             Hos.Text = "Add Hospital";
             Lab.Text = "Add Laboratory";
+
+            Report myForm = new Report();
+            myForm.ShowDialog();
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
