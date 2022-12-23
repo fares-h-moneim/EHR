@@ -27,6 +27,11 @@ namespace EHR_Hospital
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember = "Trade_Name";
             comboBox1.ValueMember = "Trade_Name";
+            DataTable dt2 = ctrl.getdiseases();
+            comboBox2.DataSource = dt2;
+            comboBox2.DisplayMember = "Diseases";
+            comboBox2.ValueMember = "Diseases";
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -39,14 +44,12 @@ namespace EHR_Hospital
             }
             else
             {
-                int x = ctrl.InsertPrescription(DateTime.Now.ToString(format));
-                if (x != 0)
-                {
-                    DataTable dt = ctrl.GetPrescriptionID(DateTime.Now.ToString(format));
-                    PrescriptionID = Convert.ToInt32(dt.Rows[0][0]);
+                DataTable x = ctrl.InsertPrescription(DateTime.Now.ToString(format));
+                    
+                    PrescriptionID = Convert.ToInt32(x.Rows[0][0]);
+                
                 }
-                }
-            int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), Diagnosis.Text, Symptoms.Text, PrescriptionID);
+            int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), comboBox2.Text, Symptoms.Text, PrescriptionID);
 
             if (res == 0)
             {
@@ -119,6 +122,11 @@ namespace EHR_Hospital
             qnty[x] = Convert.ToInt32(qty.Text);
             meds[x] = comboBox1.Text;
             x++;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

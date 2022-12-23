@@ -86,6 +86,7 @@ namespace WindowsFormsApp1
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Name", name);
             Parameters.Add("@Username", username);
+            Parameters.Add("@Password", password);
             Parameters.Add("@Address", address);
             return dbMan.ExecuteNonQuery(StoredProcedureNames, Parameters);
         }

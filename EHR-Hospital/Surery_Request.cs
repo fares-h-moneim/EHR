@@ -12,12 +12,17 @@ namespace EHR_Hospital
 {
     public partial class Surery_Request : Form
     {
-        Controller ctrl = new Controller();
+        Controller ctrl;
         int HospitalID;
         public Surery_Request(int x)
         {
             HospitalID = x;
             InitializeComponent();
+            ctrl = new Controller();
+            DataTable dt = ctrl.getsurgeriestypes();
+            comboBox2.DataSource = dt;
+            comboBox2.DisplayMember = "Surgery";
+            comboBox2.ValueMember = "Surgery";
         }
 
         private void Surery_Request_Load(object sender, EventArgs e)
@@ -33,7 +38,7 @@ namespace EHR_Hospital
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string format = "yyyy-MM-dd HH:mm:ss";
-            ctrl.InsertIntoSurgery(PatientID.Text, HospitalID, kryptonTextBox1.Text, kryptonDateTimePicker1.Value.ToString(format), SurgeryType.Text);
+            ctrl.InsertIntoSurgery(PatientID.Text, HospitalID, kryptonTextBox1.Text, kryptonDateTimePicker1.Value.ToString(format), comboBox2.Text);
 
         }
 

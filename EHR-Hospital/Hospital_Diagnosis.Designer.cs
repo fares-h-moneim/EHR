@@ -35,13 +35,13 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Back = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.Diagnosis = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Prescription = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Symptoms = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.qty = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // kryptonLabel2
@@ -170,21 +170,11 @@
             this.kryptonLabel3.TabIndex = 24;
             this.kryptonLabel3.Values.Text = "Diagnosis";
             // 
-            // Diagnosis
-            // 
-            this.Diagnosis.Location = new System.Drawing.Point(93, 186);
-            this.Diagnosis.Name = "Diagnosis";
-            this.Diagnosis.Size = new System.Drawing.Size(185, 26);
-            this.Diagnosis.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Diagnosis.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Diagnosis.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Diagnosis.TabIndex = 23;
-            this.Diagnosis.TextChanged += new System.EventHandler(this.Diagnosis_TextChanged);
-            // 
             // Prescription
             // 
             this.Prescription.Location = new System.Drawing.Point(402, 186);
             this.Prescription.Name = "Prescription";
+            this.Prescription.ReadOnly = true;
             this.Prescription.Size = new System.Drawing.Size(350, 26);
             this.Prescription.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Prescription.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -282,12 +272,23 @@
             this.kryptonButton2.Values.Text = "Insert Medication";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(96, 206);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(182, 24);
+            this.comboBox2.TabIndex = 40;
+            this.comboBox2.Text = "Choose Diagnosis";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // Hospital_Diagnosis
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Diagnosis_Bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 493);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.qty);
             this.Controls.Add(this.comboBox1);
@@ -296,7 +297,6 @@
             this.Controls.Add(this.Prescription);
             this.Controls.Add(this.kryptonLabel4);
             this.Controls.Add(this.kryptonLabel3);
-            this.Controls.Add(this.Diagnosis);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.Symptoms);
             this.Controls.Add(this.Label_Name);
@@ -320,12 +320,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Back;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox Diagnosis;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Prescription;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Symptoms;
         private System.Windows.Forms.ComboBox comboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox qty;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

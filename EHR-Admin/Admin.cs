@@ -112,6 +112,7 @@ namespace EHR_Admin
                 int x = ctrl.InsertHospital(H_Name.Text, H_User.Text, savedPasswordHash, addressj);
                 string[] ch = kryptonTextBox4.Text.Split(',');
                 DataTable dt = ctrl.GetHospital(H_User.Text);
+                DataRowCollection dtr = dt.Rows;
                 if (x == 1)
                 {
                     H_Name.Text = "";
@@ -125,7 +126,7 @@ namespace EHR_Admin
                 }
                 for (int i = 0; i < ch.Length; i++)
                 {
-                    int y = ctrl.InsertPhonenumbers(ch[i], Convert.ToInt32(dt.Rows[0][0]));
+                    int y = ctrl.InsertPhonenumbers(ch[i], Convert.ToInt32(dtr[0][0]));
                 }
 
             }

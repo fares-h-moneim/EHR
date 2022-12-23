@@ -17,14 +17,18 @@ namespace EHR_Hospital
         {
             InitializeComponent();
             ctrl = new Controller();
+            DataTable dt = ctrl.getlabtests();
+            comboBox2.DataSource = dt;
+            comboBox2.DisplayMember = "Lab_Tests";
+            comboBox2.ValueMember = "Lab_Tests";
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string format = "yyyy-MM-dd HH:mm:ss";
-            if (PatientID.Text != "" && Description.Text != "")
+            if (PatientID.Text != "" && comboBox2.Text != "")
             {
-                int res = ctrl.InsertLabTest(PatientID.Text, DateTime.Now.ToString(format), Description.Text);
+                int res = ctrl.InsertLabTest(PatientID.Text, DateTime.Now.ToString(format), comboBox2.Text);
 
                 if(res == 0)
                 {
