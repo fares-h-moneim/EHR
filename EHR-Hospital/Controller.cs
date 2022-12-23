@@ -66,11 +66,22 @@ namespace EHR_Hospital
             return dbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
 
         }
-
-        public int InsertPrescription(string Date)
+        public DataTable getlabtests()
         {
-            string query = "INSERT INTO Prescription(Date_Time) VALUES ('" + Date + "');";
-            return dbMan.ExecuteNonQuery(query);
+            string query = "SELECT * FROM Lab_Tests";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable getsurgeriestypes()
+        {
+            string query = "SELECT * FROM Surguries";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable InsertPrescription(string Date)
+        {
+            string query = "INSERT INTO Prescription(Date_Time) VALUES ('" + Date + "')" +
+                " Select @@IDENTITY AS [@@IDENTITY];";
+            return dbMan.ExecuteReader(query);
         }
 
         
@@ -163,7 +174,17 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public int ChangePass(string id, string pass)
+        {
+            string query = "UPDATE Hospital SET Password = '" + pass + "' WHERE Name = '" + id + "' ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
+        public DataTable getdiseases()
+        {
+            string query = "SELECT * FROM Diseases";
+            return dbMan.ExecuteReader(query);
+        }
 
         //public int DeleteSupplier(string snum)
         //{

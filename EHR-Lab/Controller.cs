@@ -95,6 +95,12 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
+
+        public int ChangePass(string id, string pass)
+        {
+            string query = "UPDATE Laboratory SET Password = '" + pass + "' WHERE Name = '" + id + "' ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
         //public int DeleteSupplier(string snum)
         //{
         //    string query = "DELETE FROM S WHERE S#='" + snum + "';";

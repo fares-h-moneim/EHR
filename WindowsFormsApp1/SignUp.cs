@@ -21,13 +21,13 @@ namespace WindowsFormsApp1
 {
     public partial class SignUp : Form
     {
-        bool[] check = new bool[] { false, false, false, false, false, false, false, false, false,false };
+        bool[] check = new bool[] { false, false, false, false, false, false, false, false, false, false };
         Controller ctrl;
         public SignUp()
         {
             InitializeComponent();
             ctrl = new Controller();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
 
         private void First_Name_Leave(object sender, EventArgs e)
         {
-            if(First_Name.Text == "")
+            if (First_Name.Text == "")
             {
                 First_Name.Text = "First Name";
                 First_Name.StateActive.Content.Color1 = System.Drawing.Color.Silver;
@@ -206,7 +206,7 @@ namespace WindowsFormsApp1
             {
                 Pass.Text = "Password";
                 Pass.StateActive.Content.Color1 = System.Drawing.Color.Silver;
-                Pass.PasswordChar  = First_Name.PasswordChar; 
+                Pass.PasswordChar = First_Name.PasswordChar;
             }
             else
             {
@@ -257,7 +257,7 @@ namespace WindowsFormsApp1
         {
             if (string.IsNullOrWhiteSpace(Last_Name.Text) || Last_Name.Text == "Last Name")
             {
-                
+
                 check[1] = false;
                 lastnameerror.SetError(Last_Name, "Last Name should not be left blank!");
             }
@@ -272,7 +272,7 @@ namespace WindowsFormsApp1
         {
             if (ID.Text.Length != 16)
             {
-               
+
                 check[2] = false;
                 iderror.SetError(ID, "ID Must be 16 digits!");
             }
@@ -289,7 +289,7 @@ namespace WindowsFormsApp1
 
             if (!expression.IsMatch(Phone.Text))
             {
-                
+
                 check[3] = false;
                 phoneerror.SetError(Phone, "Enter a Correct Phone Number");
             }
@@ -306,7 +306,7 @@ namespace WindowsFormsApp1
 
             if (!expression.IsMatch(Emergency_Contact.Text))
             {
-              
+
                 check[4] = false;
                 emergencyerror.SetError(Emergency_Contact, "Enter a Correct Phone Number");
             }
@@ -323,7 +323,7 @@ namespace WindowsFormsApp1
 
             if (!expression.IsMatch(Email.Text))
             {
-                
+
                 check[5] = false;
                 emailerror.SetError(Email, "Enter a Correct Email");
             }
@@ -339,7 +339,7 @@ namespace WindowsFormsApp1
             string password = Pass.Text;
             if (!(password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit) && Pass.Text.Length > 8))
             {
-               
+
                 check[6] = false;
                 passerror.SetError(Pass, "Make sure your password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
             }
@@ -355,7 +355,7 @@ namespace WindowsFormsApp1
         {
             if (Pass2.Text != Pass.Text)
             {
-                
+
                 check[7] = false;
                 pass2error.SetError(Pass2, "Make sure Both Passwords Match!");
             }
@@ -368,9 +368,9 @@ namespace WindowsFormsApp1
 
         private void Gender_Validating(object sender, CancelEventArgs e)
         {
-            if(Gender.SelectedIndex == -1)
+            if (Gender.SelectedIndex == -1)
             {
-              
+
                 check[8] = false;
                 gendererror.SetError(Gender, "Pick a Gender!");
             }
@@ -385,7 +385,7 @@ namespace WindowsFormsApp1
         {
             if (Blood_type.SelectedIndex == -1)
             {
-                
+
                 check[9] = false;
                 blooderror.SetError(Blood_type, "Pick a Blood Type!");
             }
@@ -398,7 +398,7 @@ namespace WindowsFormsApp1
 
         private void Submit_Validating(object sender, CancelEventArgs e)
         {
-           
+
 
         }
 
@@ -421,8 +421,8 @@ namespace WindowsFormsApp1
             //count = 0;
 
 
-            
-            
+
+
             //for (int i = 0; i < Chronic.Text.ToString().Length; i++)
             //{
             //    string ch = Chronic.Text.ToString();
@@ -469,9 +469,9 @@ namespace WindowsFormsApp1
                 {
                     hashBytes = algorithm.ComputeHash(bytes);
                 }
-                string savedPasswordHash =  Convert.ToBase64String(hashBytes);
-                
-                int ij=ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gendere, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                string savedPasswordHash = Convert.ToBase64String(hashBytes);
+
+                int ij = ctrl.InsertPatient(ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gendere, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 string[] ch = Chronic.Text.Split(',');
                 for (int i = 0; i < ch.Length; i++)
                 {
@@ -506,6 +506,10 @@ namespace WindowsFormsApp1
                     e.Handled = true;
                 }
             }
+            else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
 
         private void Gender_SelectedIndexChanged(object sender, EventArgs e)
@@ -515,24 +519,43 @@ namespace WindowsFormsApp1
 
         private void Phone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Phone.Text.ToString().Length >= 16)
+            if (Phone.Text.ToString().Length >= 11)
             {
                 if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+            else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        
+        }
+
+        private void Emergency_Contact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Emergency_Contact.Text.ToString().Length >= 11)
+            {
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+                else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
                 {
                     e.Handled = true;
                 }
             }
         }
 
-        private void Emergency_Contact_KeyPress(object sender, KeyPressEventArgs e)
+        private void Phone_TextChanged(object sender, EventArgs e)
         {
-            if (Emergency_Contact.Text.ToString().Length >= 16)
-            {
-                if (!char.IsControl(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
+
+        }
+
+        private void Emergency_Contact_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

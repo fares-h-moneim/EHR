@@ -58,3 +58,5 @@ D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
 E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
+D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Change_Pass.resources
+D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
