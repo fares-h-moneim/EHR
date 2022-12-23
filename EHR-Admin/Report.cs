@@ -18,27 +18,101 @@ namespace EHR_Admin
         {
             InitializeComponent();
             ctrl = new Controller();
-
+            Start.Enabled = false;
+            End.Enabled = false;
         }
 
         private void Report_Load(object sender, EventArgs e)
         {
-            DataTable dt = ctrl.GetDiagnosisCount();
-
-            if (dt != null)
-            {
-                foreach(DataRow i in dt.Rows)
-                {
-                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
-                }
-            }
             
-
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            foreach (var series in chart.Series)
+            {
+                series.Points.Clear();
+            }
+            if (selector.Text == "")
+            {
+                MessageBox.Show("Error Please Pick a Statistic to Show");
+            }
+            else
+            {
+                if(selector.Text == "Diagnosis")
+                {
+                    if (!kryptonCheckBox1.Checked)
+                    {
+                        DataTable dt = ctrl.GetDiagnosisCount();
 
+                        if (dt != null)
+                        {
+                            foreach(DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string format = "yyyy-MM-dd HH:mm:ss";
+                        DataTable dt = ctrl.GetDiagnosisCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                }
+                /*else if(selector.Text == "Medications")
+                {
+                    if (!kryptonCheckBox1.Checked)
+                    {
+                        DataTable dt = ctrl.GetMedicationsCount();
+
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string format = "yyyy-MM-dd HH:mm:ss";
+                        DataTable dt = ctrl.GetMedicationsCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                }*/
+            }
+        }
+
+        private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (kryptonCheckBox1.Checked)
+            {
+                Start.Enabled = true;
+                End.Enabled = true;
+            }
+            else
+            {
+                Start.Enabled = false;
+                End.Enabled = false;
+            }
+        }
+
+        private void kryptonComboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

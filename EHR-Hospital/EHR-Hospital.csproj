@@ -70,6 +70,12 @@
     <Compile Include="Lab_Request.Designer.cs">
       <DependentUpon>Lab_Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="Organs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organs.Designer.cs">
+      <DependentUpon>Organs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Organ_Request.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     <Compile Include="Surery_Request.Designer.cs">
       <DependentUpon>Surery_Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="View_Pending_Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Pending_Requests.Designer.cs">
+      <DependentUpon>View_Pending_Requests.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Change_Pass.resx">
       <DependentUpon>Change_Pass.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab_Request.resx">
       <DependentUpon>Lab_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organs.resx">
+      <DependentUpon>Organs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Organ_Request.resx">
       <DependentUpon>Organ_Request.cs</DependentUpon>
@@ -145,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="Surery_Request.resx">
       <DependentUpon>Surery_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Pending_Requests.resx">
+      <DependentUpon>View_Pending_Requests.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -242,6 +260,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save ButtonSUBMIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organ_Request1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organ_Request2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

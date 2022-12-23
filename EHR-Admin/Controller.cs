@@ -59,6 +59,12 @@ namespace WindowsFormsApp1
             string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases WHERE Diagnosis.Diagnosis = Diseases GROUP BY Diseases ORDER BY 2 DESC";
             return dbMan.ExecuteReader(query);
         }
+
+        public DataTable GetDiagnosisCountBetween(string start, string end)
+        {
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases WHERE Diagnosis.Diagnosis = Diseases AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable GetAdmin(string user, string password)
         {
             string query = "SELECT * " +

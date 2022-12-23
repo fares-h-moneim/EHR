@@ -253,6 +253,26 @@ namespace EHR_Hospital.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Organ_Request1 {
+            get {
+                object obj = ResourceManager.GetObject("Organ_Request1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Organ_Request2 {
+            get {
+                object obj = ResourceManager.GetObject("Organ_Request2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap organs {
             get {
                 object obj = ResourceManager.GetObject("organs", resourceCulture);
