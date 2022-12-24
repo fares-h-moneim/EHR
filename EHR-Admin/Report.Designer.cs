@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.Test1 = new EHR_Admin.Test();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataSet1 = new EHR_Admin.DataSet1();
             this.diagnosisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new EHR_Admin.DataSet1();
             this.diagnosisTableAdapter = new EHR_Admin.DataSet1TableAdapters.DiagnosisTableAdapter();
             this.btnLoad = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.selector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -44,40 +44,42 @@
             this.Start = new System.Windows.Forms.DateTimePicker();
             this.End = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selector)).BeginInit();
             this.SuspendLayout();
             // 
             // chart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea1);
             this.chart.DataSource = this.diagnosisBindingSource;
-            legend2.Name = "Legend1";
-            this.chart.Legends.Add(legend2);
-            this.chart.Location = new System.Drawing.Point(178, 240);
+            legend1.Name = "Legend1";
+            this.chart.Legends.Add(legend1);
+            this.chart.Location = new System.Drawing.Point(237, 295);
+            this.chart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart.Name = "chart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Count";
-            this.chart.Series.Add(series2);
-            this.chart.Size = new System.Drawing.Size(659, 352);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Count";
+            this.chart.Series.Add(series1);
+            this.chart.Size = new System.Drawing.Size(879, 433);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
-            title2.Name = "Diagnosis";
-            title2.Text = "Diagnosis";
-            this.chart.Titles.Add(title2);
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            title1.Name = "Diagnosis";
+            title1.Text = "Diagnosis";
+            this.chart.Titles.Add(title1);
+            this.chart.Click += new System.EventHandler(this.chart_Click);
             // 
             // diagnosisBindingSource
             // 
             this.diagnosisBindingSource.DataMember = "Diagnosis";
             this.diagnosisBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // diagnosisTableAdapter
             // 
@@ -85,9 +87,10 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(411, 670);
+            this.btnLoad.Location = new System.Drawing.Point(548, 825);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(171, 25);
+            this.btnLoad.Size = new System.Drawing.Size(228, 31);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Values.Text = "Load";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
@@ -100,52 +103,57 @@
             "Medications",
             "Lab Tests",
             "Surgeries"});
-            this.selector.Location = new System.Drawing.Point(392, 113);
+            this.selector.Location = new System.Drawing.Point(523, 139);
+            this.selector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selector.Name = "selector";
-            this.selector.Size = new System.Drawing.Size(217, 21);
+            this.selector.Size = new System.Drawing.Size(289, 25);
             this.selector.TabIndex = 2;
             this.selector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonComboBox1_KeyPress);
             // 
             // kryptonCheckBox1
             // 
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(755, 163);
+            this.kryptonCheckBox1.Location = new System.Drawing.Point(1007, 201);
+            this.kryptonCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(112, 20);
+            this.kryptonCheckBox1.Size = new System.Drawing.Size(135, 24);
             this.kryptonCheckBox1.TabIndex = 3;
             this.kryptonCheckBox1.Values.Text = "Pick Date Range";
             this.kryptonCheckBox1.CheckedChanged += new System.EventHandler(this.kryptonCheckBox1_CheckedChanged);
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(252, 163);
+            this.Start.Location = new System.Drawing.Point(336, 201);
+            this.Start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(200, 20);
+            this.Start.Size = new System.Drawing.Size(265, 22);
             this.Start.TabIndex = 4;
             // 
             // End
             // 
-            this.End.Location = new System.Drawing.Point(509, 163);
+            this.End.Location = new System.Drawing.Point(679, 201);
+            this.End.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.End.Name = "End";
-            this.End.Size = new System.Drawing.Size(200, 20);
+            this.End.Size = new System.Drawing.Size(265, 22);
             this.End.TabIndex = 5;
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.kryptonCheckBox1);
             this.Controls.Add(this.selector);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.chart);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -65,6 +65,45 @@ namespace WindowsFormsApp1
             string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases WHERE Diagnosis.Diagnosis = Diseases AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
             return dbMan.ExecuteReader(query);
         }
+
+        public DataTable GetMedicationCount()
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMedicationCountBetween(string start, string end)
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Date_Time Between '"+start+"' AND '"+end+"'Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabsCount()
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results WHERE Lab_Results.Description = Lab_Tests Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabsCountBetween(string start, string end)
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results WHERE Lab_Results.Description = Lab_Tests AND Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesCount()
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery WHERE Surgery.Type_of_Surgery = Surgeries GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesCountBetween(string start, string end)
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery WHERE Surgery.Type_of_Surgery = Surgeries AND Date_Time BETWEEN '" + start + "' AND '" + end + "'GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+
         public DataTable GetAdmin(string user, string password)
         {
             string query = "SELECT * " +

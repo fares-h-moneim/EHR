@@ -84,7 +84,18 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
-        
+        public DataTable GetWaiting()
+        {
+            string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority desc"; //assuming 0 means status
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDonate()
+        {
+            string query = "SELECT * FROM Organ_Donor"; //assuming 0 means status
+            return dbMan.ExecuteReader(query);
+        }
+
 
         public DataTable GetPrescriptionID(string Date)
         {
@@ -106,9 +117,9 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
-        public int InsertOrganWaiting(string organ, string patientid, int priority)
+        public int InsertOrganWaiting(string organ, string patientid, int priority, int HospitalID, int status, string date)
         {
-            string query = "INSERT INTO Organ_Waiting_List VALUES ('" + organ + "','" + patientid + "'," + priority + ");";
+            string query = "INSERT INTO Organ_Waiting_List VALUES ('" + organ + "','" + patientid + "'," + priority + ", "+HospitalID+","+status+",'"+date+"');";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -185,6 +196,14 @@ namespace EHR_Hospital
             string query = "SELECT * FROM Diseases";
             return dbMan.ExecuteReader(query);
         }
+
+        public int UpdateStatus(string pid, string organ)
+        {
+            string query = "UPDATE Organ_Waiting_List SET Status = 1 WHERE Organ_Required = '" + organ + "' AND Patient_ID = '" + pid + "' AND Status = 0;";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
 
         //public int DeleteSupplier(string snum)
         //{

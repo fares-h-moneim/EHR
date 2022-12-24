@@ -172,8 +172,7 @@ namespace EHR_Admin
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-             //AddAdmin AA = new AddAdmin();
-               //   AA.Show();
+           
         }
 
         private void Hello_Paint(object sender, PaintEventArgs e)
@@ -196,5 +195,10 @@ namespace EHR_Admin
             toolTip1.SetToolTip(Add_Admin, "Add Admin");
         }
 
+        private void Add_Admin_Click(object sender, EventArgs e)
+        {
+            AddAdmin AA = new AddAdmin();
+               AA.Show();
+        }
     }
 }

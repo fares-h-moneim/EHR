@@ -84,28 +84,103 @@ namespace WindowsFormsApp1
             if (Kidney.Checked == true && Kidney.Enabled == true)
             {
                 DataTable dt = ctrl.GetOrgan_Donor(Kidney.Text, id);
-                ctrl.InsertOrganDonor(Kidney.Text.ToString(), id, 1);
+                int x = ctrl.InsertOrganDonor(Kidney.Text.ToString(), id, 1);
+                if(x!=0)
+                {
+                    DataTable dt1 = ctrl.GetWaiting();
+                    string pid = "";
+
+                    for (int i = 0; i < dt1.Rows.Count; i++)
+                    {
+                        if (Convert.ToString(dt1.Rows[i][0]) == "Kidney")
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Kidney");
+                            break;
+                        }
+                    }
+                }
                 
             }
             
             if (Intestine.Checked == true && Intestine.Enabled == true)
             {
-                ctrl.InsertOrganDonor(Intestine.Text.ToString(), id, 1);
-                
+              int x =  ctrl.InsertOrganDonor(Intestine.Text.ToString(), id, 1);
+                if (x != 0)
+                {
+                    DataTable dt1 = ctrl.GetWaiting();
+                    string pid = "";
+
+                    for (int i = 0; i < dt1.Rows.Count; i++)
+                    {
+                        if (Convert.ToString(dt1.Rows[i][0]) == "Part of Intestine")
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Part of Intestine");
+                            break;
+                        }
+                    }
+                }
+
             }
             if (Pancreas.Checked == true && Pancreas.Enabled == true)
             {
-                ctrl.InsertOrganDonor(Pancreas.Text.ToString(), id, 1);
+                int x = ctrl.InsertOrganDonor(Pancreas.Text.ToString(), id, 1);
+                if (x != 0)
+                {
+                    DataTable dt1 = ctrl.GetWaiting();
+                    string pid = "";
+
+                    for (int i = 0; i < dt1.Rows.Count; i++)
+                    {
+                        if (Convert.ToString(dt1.Rows[i][0]) == "Part of Pancreas")
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Part of Pancreas");
+                            break;
+                        }
+                    }
+                }
             }
             if (Liver.Checked == true && Liver.Enabled == true)
             {
-                ctrl.InsertOrganDonor(Liver.Text.ToString(), id, 1);
-                
+                int x = ctrl.InsertOrganDonor(Liver.Text.ToString(), id, 1);
+                if (x != 0)
+                {
+                    DataTable dt1 = ctrl.GetWaiting();
+                    string pid = "";
+
+                    for (int i = 0; i < dt1.Rows.Count; i++)
+                    {
+                        if (Convert.ToString(dt1.Rows[i][0]) == "Part of Liver")
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Part of Liver");
+                            break;
+                        }
+                    }
+                }
+
             }
             if (Lung.Checked == true && Lung.Enabled == true)
             {
-                ctrl.InsertOrganDonor(Lung.Text.ToString(), id, 1);
-                
+              int x =  ctrl.InsertOrganDonor(Lung.Text.ToString(), id, 1);
+                if (x != 0)
+                {
+                    DataTable dt1 = ctrl.GetWaiting();
+                    string pid = "";
+
+                    for (int i = 0; i < dt1.Rows.Count; i++)
+                    {
+                        if (Convert.ToString(dt1.Rows[i][0]) == "Lungs")
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Lungs");
+                            break;
+                        }
+                    }
+                }
+
             }
             MessageBox.Show("Thank you for your contribution");
             this.Close();

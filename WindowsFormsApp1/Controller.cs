@@ -219,7 +219,18 @@ namespace WindowsFormsApp1
             string query = "UPDATE Patient SET Organ_Donor_Upon_Death = 1 WHERE NationalID = '"+patientID+"';";
             return dbMan.ExecuteNonQuery(query);
         }
-        
+        public DataTable GetWaiting()
+        {
+            string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority desc"; //assuming 0 means status
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int UpdateStatus(string pid, string organ)
+        {
+            string query = "UPDATE Organ_Waiting_List SET Status = 1 WHERE Organ_Required = '" + organ + "' AND Patient_ID = '" + pid + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
         //public int DeleteSupplier(string snum)
         //{

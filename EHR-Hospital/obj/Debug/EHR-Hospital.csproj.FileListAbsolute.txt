@@ -60,3 +60,6 @@ E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Change_Pass.resources
 D:\CCEC Fall 22\Database Management\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Lab_Request.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Change_Pass.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organs.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.View_Pending_Requests.resources

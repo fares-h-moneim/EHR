@@ -32,10 +32,58 @@ namespace EHR_Hospital
             {
                 ctrl.DeleteFromOrganDonor(PatientID.Text);
                 ctrl.InsertOrganDonor("Kidney", PatientID.Text, 0);
-                ctrl.InsertOrganDonor("Liver", PatientID.Text, 0);
-                ctrl.InsertOrganDonor("Intestine", PatientID.Text, 0);
+                DataTable dt1 = ctrl.GetWaiting();
+                string pid = "";
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == "Kidney")
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Kidney");
+                        break;
+                    }
+                }
+                ctrl.InsertOrganDonor("Part of Liver", PatientID.Text, 0);
+
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == "Part of Liver")
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Part of Liver");
+                        break;
+                    }
+                }
+                ctrl.InsertOrganDonor("Part of Intestine", PatientID.Text, 0);
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == "Part of Intestine")
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Part of Intestine");
+                        break;
+                    }
+                }
                 ctrl.InsertOrganDonor("Lungs", PatientID.Text, 0);
-                ctrl.InsertOrganDonor("Pancrease", PatientID.Text, 0);
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == "Lungs")
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Lungs");
+                        break;
+                    }
+                }
+                ctrl.InsertOrganDonor("Part of Pancreas", PatientID.Text, 0);
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == "Part of Pancreas")
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Part of Pancreas");
+                        break;
+                    }
+                }
             }
         }
 

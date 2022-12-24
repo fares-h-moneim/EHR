@@ -51,7 +51,7 @@ namespace EHR_Hospital
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            Organs MyForm = new Organs();
+            Organs MyForm = new Organs(HospitalID);
             MyForm.ShowDialog();
         }
 

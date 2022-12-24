@@ -90,5 +90,10 @@ namespace EHR_Lab
         {
 
         }
+
+        private void kryptonComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,9 +12,11 @@ namespace EHR_Hospital
 {
     public partial class Organ_Request : Form
     {
+        int HospitalID;
         Controller ctrl = new Controller();
-        public Organ_Request()
+        public Organ_Request(int x)
         {
+            HospitalID = x;
             InitializeComponent();
         }
 
@@ -42,8 +44,21 @@ namespace EHR_Hospital
             {
                 prio = 2;
             }
-            else { prio = 1; }  
-            ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, prio);
+            else { prio = 1; }
+            string format = "yyyy-MM-dd hh:mm:ss";
+            ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, prio, HospitalID, 0, DateTime.Now.ToString(format));
+
+            DataTable dt1 = ctrl.GetDonate();
+            string pid = "";
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dt1.Rows[i][0]) == Organs.Text)
+                    {
+                        pid = dt1.Rows[i][1].ToString();
+                        ctrl.UpdateStatus(pid, "Kidney");
+                        break;
+                    }
+                }
         }
 
         private void PatientID_TextChanged(object sender, EventArgs e)

@@ -66,11 +66,11 @@ namespace EHR_Admin
                         }
                     }
                 }
-                /*else if(selector.Text == "Medications")
+                else if(selector.Text == "Medications")
                 {
                     if (!kryptonCheckBox1.Checked)
                     {
-                        DataTable dt = ctrl.GetMedicationsCount();
+                        DataTable dt = ctrl.GetMedicationCount();
 
                         if (dt != null)
                         {
@@ -83,7 +83,7 @@ namespace EHR_Admin
                     else
                     {
                         string format = "yyyy-MM-dd HH:mm:ss";
-                        DataTable dt = ctrl.GetMedicationsCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                        DataTable dt = ctrl.GetMedicationCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
                         if (dt != null)
                         {
                             foreach (DataRow i in dt.Rows)
@@ -92,7 +92,62 @@ namespace EHR_Admin
                             }
                         }
                     }
-                }*/
+                }
+                else if (selector.Text == "Lab Tests")
+                {
+                    if (!kryptonCheckBox1.Checked)
+                    {
+                        DataTable dt = ctrl.GetLabsCount();
+
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string format = "yyyy-MM-dd HH:mm:ss";
+                        DataTable dt = ctrl.GetLabsCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+
+                }
+                else
+                {
+                    if (!kryptonCheckBox1.Checked)
+                    {
+                        DataTable dt = ctrl.GetSurgeriesCount();
+
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string format = "yyyy-MM-dd HH:mm:ss";
+                        DataTable dt = ctrl.GetSurgeriesCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                        if (dt != null)
+                        {
+                            foreach (DataRow i in dt.Rows)
+                            {
+                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -113,6 +168,11 @@ namespace EHR_Admin
         private void kryptonComboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void chart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
