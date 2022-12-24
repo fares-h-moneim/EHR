@@ -30,5 +30,10 @@ namespace EHR_Hospital
             View_Pending_Requests view_Pending_Requests = new View_Pending_Requests();
             view_Pending_Requests.ShowDialog();
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
