@@ -22,6 +22,11 @@ namespace EHR_Admin
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            if(fname.Text=="" || kryptonTextBox1.Text=="" || kryptonTextBox2.Text=="" || kryptonTextBox3.Text == "")
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
             var bytes = new UTF8Encoding().GetBytes(kryptonTextBox3.Text);
             byte[] hashBytes;
             using (var algorithm = new System.Security.Cryptography.SHA512Managed())

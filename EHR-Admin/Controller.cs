@@ -150,6 +150,7 @@ namespace WindowsFormsApp1
             Parameters.Add("@Name", name);
             Parameters.Add("@Username", username);
             Parameters.Add("@Address", address);
+            Parameters.Add("@Password", password);
             Parameters.Add("@Phoneno", phoneno);
             return dbMan.ExecuteNonQuery(StoredProcedureNames, Parameters);
         }

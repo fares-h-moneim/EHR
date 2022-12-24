@@ -101,6 +101,11 @@ namespace EHR_Admin
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            if(H_Name.Text=="" || H_User.Text=="" || H_Pass.Text=="" || kryptonTextBox4.Text=="" || H_Street.Text=="" || kryptonTextBox8.Text=="" || kryptonTextBox10.Text=="" || kryptonTextBox9.Text == "")
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
             object[] address = {H_Street.Text, kryptonTextBox8.Text, kryptonTextBox10.Text, kryptonTextBox9.Text};
             string addressj = string.Join(", ", address);
             var bytes = new UTF8Encoding().GetBytes(H_Pass.Text);
@@ -118,6 +123,7 @@ namespace EHR_Admin
                 DataRowCollection dtr = dt.Rows;
                 if (x == 1)
                 {
+                    MessageBox.Show("Hospital inserted successfully");
                     H_Name.Text = "";
                     H_User.Text = "";
                     H_Pass.Text = "";
@@ -126,6 +132,11 @@ namespace EHR_Admin
                     kryptonTextBox8.Text = "";
                     kryptonTextBox10.Text = "";
                     kryptonTextBox9.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Insertion failed");
+                    return;
                 }
                 for (int i = 0; i < ch.Length; i++)
                 {
@@ -137,6 +148,7 @@ namespace EHR_Admin
                 int z = ctrl.InsertPharmacy(H_Name.Text, H_User.Text, savedPasswordHash, addressj, kryptonTextBox4.Text);
                 if (z == 1)
                 {
+                        MessageBox.Show("Pharmacy inserted successfully");
                         H_Name.Text = "";
                         H_User.Text = "";
                         H_Pass.Text = "";
@@ -145,6 +157,12 @@ namespace EHR_Admin
                         kryptonTextBox8.Text = "";
                         kryptonTextBox10.Text = "";
                         kryptonTextBox9.Text = "";
+                        
+                }
+                else
+                {
+                    MessageBox.Show("Insertion Failed");
+                    return;
                 }
             }
             if (Label_Name.Text == "Lab Name")
@@ -152,6 +170,7 @@ namespace EHR_Admin
                 int w = ctrl.InsertLaboratory(H_Name.Text, H_User.Text, savedPasswordHash, addressj, kryptonTextBox4.Text);
                 if (w == 1)
                 {
+                    MessageBox.Show("Laboratory inserted successfully");
                     H_Name.Text = "";
                     H_User.Text = "";
                     H_Pass.Text = "";
@@ -160,6 +179,12 @@ namespace EHR_Admin
                     kryptonTextBox8.Text = "";
                     kryptonTextBox10.Text = "";
                     kryptonTextBox9.Text = "";
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Insertion Failed");
+                    return;
                 }
             }
 
