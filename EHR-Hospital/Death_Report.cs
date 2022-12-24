@@ -25,6 +25,11 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            if(PatientID.Text=="" || kryptonTextBox1.Text=="" || kryptonTextBox2.Text == "")
+            {
+                MessageBox.Show("Please enter in all fields");
+                return;
+            }
             DataTable dt = null;
             dt = ctrl.getifDonor(PatientID.Text);
             if (dt != null)

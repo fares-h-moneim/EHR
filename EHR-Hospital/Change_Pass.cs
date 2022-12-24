@@ -31,6 +31,7 @@ namespace EHR_Hospital
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
                 ctrl.ChangePass(NationalID.Text, savedPasswordHash);
+                MessageBox.Show("Password changed successfully");
             }
             else
             {
@@ -42,6 +43,11 @@ namespace EHR_Hospital
         private void Change_Pass_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }

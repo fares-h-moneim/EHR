@@ -200,7 +200,7 @@ namespace WindowsFormsApp1
 
         public DataTable GetSurgeries(string datetime1, string datetime2, string id) //complex query
         {
-            string query = "SELECT Hospital.Name, Date_Time, Surgery_Report, Type_of_Surgery FROM Hospital, Surgery WHERE Surgery.Date_Time Between '" + datetime1 + "' AND '" + datetime2 + "' and Surgery.Hospital_ID=Hospital.Hospital_ID;";
+            string query = "SELECT Hospital.Name, Date_Time, Surgery_Report, Type_of_Surgery FROM Hospital, Surgery, Patient WHERE Surgery.Date_Time Between '" + datetime1 + "' AND '" + datetime2 + "' and Surgery.Hospital_ID=Hospital.Hospital_ID and Surgery.Patient_ID=Patient.NationalID and Surgery.Patient_ID='" + id + "';";
             return dbMan.ExecuteReader(query);
         }
 

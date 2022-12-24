@@ -92,7 +92,14 @@ namespace WindowsFormsApp1
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
-            DataTable patient = ctrl.GetPatient(user, pass);
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             DataRowCollection dataRow = patient.Rows;
 
             View_History myForm = new View_History(dataRow[0][0].ToString());
@@ -147,8 +154,15 @@ namespace WindowsFormsApp1
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
 
-            DataTable patient = ctrl.GetPatient(user, pass);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             DataRowCollection dataRow = patient.Rows;
 
             View_Prescriptions myForm = new View_Prescriptions(dataRow[0][0].ToString());
@@ -176,7 +190,14 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Organs.Text = "Apply for Organ Donation";
             Surgery.Text = "View Surgeries";
-            DataTable patient = ctrl.GetPatient(user, pass);
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             DataRowCollection dataRow = patient.Rows;
 
             AddFamilyMembers myForm = new AddFamilyMembers(dataRow[0][0].ToString());
@@ -224,8 +245,15 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Family.Text = "Add Family Members";
             Organs.Text = "Apply for Organ Donation";
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
 
-            DataTable patient = ctrl.GetPatient(user, pass);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             DataRowCollection dataRow = patient.Rows;
 
 
@@ -268,7 +296,14 @@ namespace WindowsFormsApp1
             Pharmacy.Text = "View Prescriptions";
             Family.Text = "Add Family Members";
             Surgery.Text = "View Surgeries";
-            DataTable patient = ctrl.GetPatient(user, pass);
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             DataRowCollection dataRow = patient.Rows;
 
             

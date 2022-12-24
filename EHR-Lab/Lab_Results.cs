@@ -79,11 +79,13 @@ namespace EHR_Lab
                     kryptonComboBox1.DataSource = dt;
                     kryptonComboBox1.DisplayMember = "Description";
                     kryptonComboBox1.ValueMember = "Description";
-
-                    DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
-                    kryptonComboBox2.DataSource = dt2;
-                    kryptonComboBox2.DisplayMember = "Date_Time";
-                    kryptonComboBox2.ValueMember = "ID";
+                    if (kryptonComboBox1.SelectedValue != null)
+                    {
+                        DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                        kryptonComboBox2.DataSource = dt2;
+                        kryptonComboBox2.DisplayMember = "Date_Time";
+                        kryptonComboBox2.ValueMember = "ID";
+                    }
                 }
             }
         }

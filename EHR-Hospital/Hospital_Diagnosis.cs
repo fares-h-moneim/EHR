@@ -37,6 +37,11 @@ namespace EHR_Hospital
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string format = "yyyy-MM-dd HH:mm:ss";
+            if(PatientID.Text=="" || Symptoms.Text=="" || Prescription.Text == "")
+            {
+                MessageBox.Show("Please insert in all fields");
+                return;
+            }
 
             if (Prescription.Text == "")
             {
@@ -50,7 +55,10 @@ namespace EHR_Hospital
                 
                 }
             int res = ctrl.InsertDiagnosis(HospitalID, PatientID.Text, DateTime.Now.ToString(format), comboBox2.Text, Symptoms.Text, PrescriptionID);
-
+            if(res == 1)
+            {
+                MessageBox.Show("Diagnosis inserted successfully");
+            }
             if (res == 0)
             {
                 MessageBox.Show("Error!");
@@ -127,6 +135,16 @@ namespace EHR_Hospital
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled=true;
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
