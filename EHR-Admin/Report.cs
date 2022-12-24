@@ -20,6 +20,7 @@ namespace EHR_Admin
             ctrl = new Controller();
             Start.Enabled = false;
             End.Enabled = false;
+            chart.Titles.Clear();
         }
 
         private void Report_Load(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace EHR_Admin
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            chart.Titles.Clear();
             chart.Titles.Add(selector.Text.ToString());
             foreach (var series in chart.Series)
             {

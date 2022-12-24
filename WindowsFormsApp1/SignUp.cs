@@ -395,7 +395,7 @@ namespace WindowsFormsApp1
                 check[9] = true;
             }
         }
-
+         
         private void Submit_Validating(object sender, CancelEventArgs e)
         {
 
@@ -404,38 +404,10 @@ namespace WindowsFormsApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            //hona yogad query
             bool submitvalid = true;
-            int count = 0;
             string gendere;
 
-            //foreach (char w in Chronic.Text.ToString()) { 
-            //    if(w == ',')
-            //    {
-            //        count++;
-            //    }
-            //}
-            //count++;
 
-            //string[] chronic = new string[count];
-            //count = 0;
-
-
-
-
-            //for (int i = 0; i < Chronic.Text.ToString().Length; i++)
-            //{
-            //    string ch = Chronic.Text.ToString();
-            //    string w = "";
-            //    while ((ch[i] >= 97 && ch[i] <= 122) || (ch[i] >= 65 && ch[i] <= 90) && (i < Chronic.Text.ToString().Length))
-            //    {
-            //        w += ch[i];
-            //        i++;
-            //    }
-
-            //    chronic[count] = w;
-            //    count++;
-            //}
 
             for (int i = 0; i < 10; i++)
             {
@@ -449,7 +421,6 @@ namespace WindowsFormsApp1
             else
             {
                 submiterror.SetError(Submit, "");
-                //hena aho add patient
                 DateTime now = DateTime.Now;
                 string Today = now.Year.ToString();
                 string B_Year = Birth_day.Value.Year.ToString();
@@ -477,10 +448,13 @@ namespace WindowsFormsApp1
                 {
                     int x = ctrl.InsertChronicDisease(ch[i], ID.Text.ToString());
                 }
-                Patient myForm = new Patient(Email.Text, savedPasswordHash);
-                this.Hide();
-                myForm.ShowDialog();
-                this.Close();
+                if (ij != 0)
+                {
+                    Patient myForm = new Patient(Email.Text, savedPasswordHash);
+                    this.Hide();
+                    myForm.ShowDialog();
+                    this.Close();
+                }
             }
         }
 

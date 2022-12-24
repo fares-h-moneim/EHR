@@ -21,8 +21,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
             user = email;
             pass = password;
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
             ctrl = new Controller();
-            DataTable patient = ctrl.GetPatient(user, pass);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
 
 
             if (patient != null)

@@ -29,3 +29,19 @@ C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pha
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CopyComplete
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.exe
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.pdb
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.exe.config
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.exe
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\bin\Debug\EHR - Pharmacy.pdb
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.AssemblyReference.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Change_Pass.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Form1.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Pharmacy.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Properties.Resources.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.View_Precriptions.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.GenerateResource.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.csproj.CopyComplete
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.exe
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.pdb

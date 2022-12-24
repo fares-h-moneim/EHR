@@ -44,5 +44,10 @@ namespace EHR_Admin
         {
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

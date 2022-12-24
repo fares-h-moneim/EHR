@@ -21,8 +21,8 @@ namespace EHR_Hospital
             ctrl = new Controller();
             DataTable dt = ctrl.getsurgeriestypes();
             comboBox2.DataSource = dt;
-            comboBox2.DisplayMember = "Surgery";
-            comboBox2.ValueMember = "Surgery";
+            comboBox2.DisplayMember = "Surgeries";
+            comboBox2.ValueMember = "Surgeries";
         }
 
         private void Surery_Request_Load(object sender, EventArgs e)

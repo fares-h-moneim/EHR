@@ -33,11 +33,11 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.Test1 = new EHR_Admin.Test();
+     
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.diagnosisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new EHR_Admin.DataSet1();
-            this.diagnosisTableAdapter = new EHR_Admin.DataSet1TableAdapters.DiagnosisTableAdapter();
+   
+           
             this.btnLoad = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.selector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
@@ -46,7 +46,7 @@
             this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+      
             ((System.ComponentModel.ISupportInitialize)(this.selector)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,16 +74,10 @@
             // diagnosisBindingSource
             // 
             this.diagnosisBindingSource.DataMember = "Diagnosis";
-            this.diagnosisBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+           
             // diagnosisTableAdapter
             // 
-            this.diagnosisTableAdapter.ClearBeforeFill = true;
+      
             // 
             // btnLoad
             // 
@@ -159,7 +153,7 @@
             this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+       
             ((System.ComponentModel.ISupportInitialize)(this.selector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,11 +161,11 @@
         }
 
         #endregion
-        private Test Test1;
+       
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
-        private DataSet1 dataSet1;
+     
         private System.Windows.Forms.BindingSource diagnosisBindingSource;
-        private DataSet1TableAdapters.DiagnosisTableAdapter diagnosisTableAdapter;
+   
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLoad;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox selector;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;

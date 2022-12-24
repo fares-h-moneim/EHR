@@ -27,7 +27,14 @@ namespace WindowsFormsApp1
         public EditInfo(string user, string pass, Patient form)
         {
             InitializeComponent();
-            DataTable patient = ctrl.GetPatient(user, pass);
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashBytes;
+            using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+            {
+                hashBytes = algorithm.ComputeHash(bytes);
+            }
+            string savedPasswordHash = Convert.ToBase64String(hashBytes);
+            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
             parent = form;
             password = pass;
             object sender = null;
