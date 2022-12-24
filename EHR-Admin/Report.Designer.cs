@@ -43,6 +43,7 @@
             this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.Start = new System.Windows.Forms.DateTimePicker();
             this.End = new System.Windows.Forms.DateTimePicker();
+            this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -56,14 +57,13 @@
             this.chart.DataSource = this.diagnosisBindingSource;
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(237, 295);
-            this.chart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart.Location = new System.Drawing.Point(178, 308);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Count";
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(879, 433);
+            this.chart.Size = new System.Drawing.Size(659, 352);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
             title1.Name = "Diagnosis";
@@ -87,10 +87,9 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(548, 825);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Location = new System.Drawing.Point(411, 670);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(228, 31);
+            this.btnLoad.Size = new System.Drawing.Size(171, 25);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Values.Text = "Load";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
@@ -103,51 +102,58 @@
             "Medications",
             "Lab Tests",
             "Surgeries"});
-            this.selector.Location = new System.Drawing.Point(523, 139);
-            this.selector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selector.Location = new System.Drawing.Point(389, 202);
             this.selector.Name = "selector";
-            this.selector.Size = new System.Drawing.Size(289, 25);
+            this.selector.Size = new System.Drawing.Size(217, 21);
             this.selector.TabIndex = 2;
             this.selector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonComboBox1_KeyPress);
             // 
             // kryptonCheckBox1
             // 
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(1007, 201);
-            this.kryptonCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonCheckBox1.Location = new System.Drawing.Point(752, 252);
             this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(135, 24);
+            this.kryptonCheckBox1.Size = new System.Drawing.Size(112, 20);
             this.kryptonCheckBox1.TabIndex = 3;
             this.kryptonCheckBox1.Values.Text = "Pick Date Range";
             this.kryptonCheckBox1.CheckedChanged += new System.EventHandler(this.kryptonCheckBox1_CheckedChanged);
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(336, 201);
-            this.Start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Start.Location = new System.Drawing.Point(249, 252);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(265, 22);
+            this.Start.Size = new System.Drawing.Size(200, 20);
             this.Start.TabIndex = 4;
             // 
             // End
             // 
-            this.End.Location = new System.Drawing.Point(679, 201);
-            this.End.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.End.Location = new System.Drawing.Point(506, 252);
             this.End.Name = "End";
-            this.End.Size = new System.Drawing.Size(265, 22);
+            this.End.Size = new System.Drawing.Size(200, 20);
             this.End.TabIndex = 5;
+            // 
+            // kryptonCheckBox2
+            // 
+            this.kryptonCheckBox2.Location = new System.Drawing.Point(752, 278);
+            this.kryptonCheckBox2.Name = "kryptonCheckBox2";
+            this.kryptonCheckBox2.Size = new System.Drawing.Size(169, 20);
+            this.kryptonCheckBox2.TabIndex = 6;
+            this.kryptonCheckBox2.Values.Text = "Split into Male and Female";
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.BackgroundImage = global::EHR_Admin.Properties.Resources.Statistics_1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.kryptonCheckBox2);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.kryptonCheckBox1);
             this.Controls.Add(this.selector);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.chart);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DoubleBuffered = true;
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
@@ -171,5 +177,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
         private System.Windows.Forms.DateTimePicker Start;
         private System.Windows.Forms.DateTimePicker End;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
     }
 }

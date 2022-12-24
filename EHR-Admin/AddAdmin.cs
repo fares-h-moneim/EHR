@@ -29,8 +29,20 @@ namespace EHR_Admin
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            ctrl.InsertAdmin(fname.Text, kryptonTextBox1.Text, kryptonTextBox2.Text, savedPasswordHash);
-            MessageBox.Show("Admin inserted successfully");
+            int x = ctrl.InsertAdmin(fname.Text, kryptonTextBox1.Text, kryptonTextBox2.Text, savedPasswordHash);
+            if (x == 0)
+            {
+                MessageBox.Show("Insertion Failed");
+            }
+            else
+            {
+                MessageBox.Show("Admin inserted successfully");
+            }
+        }
+
+        private void AddAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

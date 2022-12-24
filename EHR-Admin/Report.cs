@@ -29,6 +29,7 @@ namespace EHR_Admin
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            chart.Titles.Add(selector.Text.ToString());
             foreach (var series in chart.Series)
             {
                 series.Points.Clear();
