@@ -60,6 +60,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(PatientID.Text, Organs.Text);
+                            ctrl.DeleteDonor(pid, Organs.Text);
                             break;
                         }
                     }

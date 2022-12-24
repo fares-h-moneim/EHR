@@ -96,6 +96,7 @@ namespace WindowsFormsApp1
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Kidney");
+                            ctrl.DeleteDonor(id, "Kidney");
                             break;
                         }
                     }
@@ -117,6 +118,7 @@ namespace WindowsFormsApp1
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Intestine");
+                            ctrl.DeleteDonor(id, "Kidney");
                             break;
                         }
                     }
@@ -137,6 +139,7 @@ namespace WindowsFormsApp1
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Pancreas");
+                            ctrl.DeleteDonor(id, "Kidney");
                             break;
                         }
                     }
@@ -156,6 +159,7 @@ namespace WindowsFormsApp1
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Liver");
+                            ctrl.DeleteDonor(id, "Kidney");
                             break;
                         }
                     }
@@ -176,6 +180,7 @@ namespace WindowsFormsApp1
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Lungs");
+                            ctrl.DeleteDonor(id, "Kidney");
                             break;
                         }
                     }

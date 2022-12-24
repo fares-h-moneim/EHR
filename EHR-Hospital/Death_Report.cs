@@ -48,6 +48,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Kidney");
+                            ctrl.DeleteDonor(PatientID.Text, "Kidney");
                             break;
                         }
                     }
@@ -59,6 +60,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Liver");
+                            ctrl.DeleteDonor(PatientID.Text, "Part of Liver");
                             break;
                         }
                     }
@@ -69,6 +71,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Intestine");
+                            ctrl.DeleteDonor(PatientID.Text, "Part of Intestine");
                             break;
                         }
                     }
@@ -79,6 +82,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Lungs");
+                            ctrl.DeleteDonor(PatientID.Text, "Lungs");
                             break;
                         }
                     }
@@ -89,6 +93,7 @@ namespace EHR_Hospital
                         {
                             pid = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(pid, "Part of Pancreas");
+                            ctrl.DeleteDonor(PatientID.Text, "Part of Pancreas");
                             break;
                         }
                     }

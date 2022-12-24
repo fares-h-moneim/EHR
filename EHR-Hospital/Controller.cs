@@ -203,6 +203,11 @@ namespace EHR_Hospital
             return dbMan.ExecuteNonQuery(query);
         }
 
+        public int DeleteDonor(string pid, string organ)
+        {
+            string query = "DELETE FROM Organ_Donor WHERE Donor_ID = '" + pid + "' AND Organ_Type = '" + organ+"';";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
 
         //public int DeleteSupplier(string snum)
