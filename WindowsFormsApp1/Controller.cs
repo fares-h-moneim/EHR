@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
 
         }
 
-        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string age, string blood, string phone, string emerg)
+        public int UpdatePatient(string nationalid_prev, string nationalid, string fname, string lname, string username, string password, string gender, string blood, string phone, string emerg)
         {
             string StoredProcedureName = StoredProcedures.UpdatePatient;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -99,7 +99,6 @@ namespace WindowsFormsApp1
             Parameters.Add("@Gender", gender);
             Parameters.Add("@Blood", blood);
             Parameters.Add("@Emerg", emerg);
-            Parameters.Add("@Age", age);
             Parameters.Add("@NationalIDPREV", nationalid_prev);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 

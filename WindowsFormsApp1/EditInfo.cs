@@ -121,7 +121,14 @@ namespace WindowsFormsApp1
                     {
                         ctrl.InsertChronicDisease(disease, id);
                     }
-                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, password, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                    var bytes = new UTF8Encoding().GetBytes(password);
+                    byte[] hashBytes;
+                    using (var algorithm = new System.Security.Cryptography.SHA512Managed())
+                    {
+                        hashBytes = algorithm.ComputeHash(bytes);
+                    }
+                    string savedPasswordHash = Convert.ToBase64String(hashBytes);
+                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 }
                 else
                 {
@@ -137,7 +144,7 @@ namespace WindowsFormsApp1
                         hashBytes = algorithm.ComputeHash(bytes);
                     }
                     string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Age, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 }
                 submiterror.SetError(Submit, "");
                 if (Pass.Text == "")
@@ -353,9 +360,12 @@ namespace WindowsFormsApp1
             if (ID.Text.ToString().Length >= 16)
             {
                 if (!char.IsControl(e.KeyChar))
-                {
                     e.Handled = true;
-                }
+            }
+            else
+            {
+                if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+                    e.Handled = true;
             }
         }
 
