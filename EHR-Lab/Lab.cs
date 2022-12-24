@@ -54,10 +54,18 @@ namespace EHR_Lab
             if (PatientID.Text.ToString().Length >= 16)
             {
                 if (!char.IsControl(e.KeyChar))
-                {
                     e.Handled = true;
-                }
             }
+            else
+            {
+                if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+                    e.Handled = true;
+            }
+        }
+
+        private void PatientID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

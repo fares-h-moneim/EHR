@@ -61,3 +61,4 @@ C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.CoreCompi
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Lab\obj\Debug\EHR-Lab.csproj.CopyComplete
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Lab\obj\Debug\EHR-Lab.exe
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Lab\obj\Debug\EHR-Lab.pdb
+E:\Database\EHR\EHR-Lab\obj\Debug\WindowsFormsApp1.Change_Pass.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,13 @@ namespace EHR_Lab
             kryptonComboBox1.DataSource = dt;
             kryptonComboBox1.DisplayMember = "Description";
             kryptonComboBox1.ValueMember = "Description";
-
-            DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
-            kryptonComboBox2.DataSource = dt2;
-            kryptonComboBox2.DisplayMember = "Date_Time";
-            kryptonComboBox2.ValueMember = "ID";
+            if (kryptonComboBox1.SelectedValue != null)
+            {
+                DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                kryptonComboBox2.DataSource = dt2;
+                kryptonComboBox2.DisplayMember = "Date_Time";
+                kryptonComboBox2.ValueMember = "ID";
+            }
 
             kryptonTextBox1.ReadOnly = true;
         }
@@ -58,32 +61,42 @@ namespace EHR_Lab
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            int x = ctrl.InsertLabResult(Convert.ToInt32(kryptonComboBox2.SelectedValue), ConvertImageToBytes(pictureBox1.Image), idlab);
-            if(x == 0)
+            if (pictureBox1.Image == null || kryptonComboBox1.SelectedValue == null || kryptonComboBox2.SelectedValue == null)
             {
-                MessageBox.Show("Failed");
+                MessageBox.Show("Please fill all fields correctly");
             }
             else
             {
-                MessageBox.Show("Success");
-                DataTable dt = ctrl.SelectDescriptions(id);
-                kryptonComboBox1.DataSource = dt;
-                kryptonComboBox1.DisplayMember = "Description";
-                kryptonComboBox1.ValueMember = "Description";
+                int x = ctrl.InsertLabResult(Convert.ToInt32(kryptonComboBox2.SelectedValue), ConvertImageToBytes(pictureBox1.Image), idlab);
+                if (x == 0)
+                {
+                    MessageBox.Show("Failed");
+                }
+                else
+                {
+                    MessageBox.Show("Success");
+                    DataTable dt = ctrl.SelectDescriptions(id);
+                    kryptonComboBox1.DataSource = dt;
+                    kryptonComboBox1.DisplayMember = "Description";
+                    kryptonComboBox1.ValueMember = "Description";
 
-                DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
-                kryptonComboBox2.DataSource = dt2;
-                kryptonComboBox2.DisplayMember = "Date_Time";
-                kryptonComboBox2.ValueMember = "ID";
+                    DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                    kryptonComboBox2.DataSource = dt2;
+                    kryptonComboBox2.DisplayMember = "Date_Time";
+                    kryptonComboBox2.ValueMember = "ID";
+                }
             }
         }
 
         private void kryptonComboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
-            kryptonComboBox2.DataSource = dt2;
-            kryptonComboBox2.DisplayMember = "Date_Time";
-            kryptonComboBox2.ValueMember = "ID";
+            if (kryptonComboBox1.SelectedValue != null)
+            {
+                DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                kryptonComboBox2.DataSource = dt2;
+                kryptonComboBox2.DisplayMember = "Date_Time";
+                kryptonComboBox2.ValueMember = "ID";
+            }
         }
 
         private void Lab_Results_Load(object sender, EventArgs e)
@@ -94,6 +107,16 @@ namespace EHR_Lab
         private void kryptonComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonComboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void kryptonComboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

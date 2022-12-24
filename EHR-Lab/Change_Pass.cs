@@ -40,7 +40,11 @@ namespace WindowsFormsApp1
                     hashBytes = algorithm.ComputeHash(bytes);
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                ctrl.ChangePass(Name.Text, savedPasswordHash);
+                int x = ctrl.ChangePass(Name.Text, savedPasswordHash);
+                if(x != 0)
+                {
+                    MessageBox.Show("Password Changed Successfully");
+                }
             }
             else
             {

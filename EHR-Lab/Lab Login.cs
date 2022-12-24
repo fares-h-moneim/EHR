@@ -24,7 +24,7 @@ namespace EHR_Lab
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "kryptonTextBox1 (example@email.com)")
+            if (Email.Text == "Username")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -35,7 +35,7 @@ namespace EHR_Lab
         {
             if (Email.Text == "")
             {
-                Email.Text = "kryptonTextBox1 (example@email.com)";
+                Email.Text = "Username";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -58,9 +58,9 @@ namespace EHR_Lab
             }
         }
 
-        private void Password_Enter(object sender, EventArgs e)
+        private void Pass_Enter(object sender, EventArgs e)
         {
-            if (Password.Text == "kryptonTextBox2")
+            if (Password.Text == "Password")
             {
                 Password.Text = "";
                 Password.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -68,11 +68,11 @@ namespace EHR_Lab
             }
         }
 
-        private void Password_Leave(object sender, EventArgs e)
+        private void Pass_Leave(object sender, EventArgs e)
         {
             if (Password.Text == "")
             {
-                Password.Text = "kryptonTextBox2";
+                Password.Text = "Password";
                 Password.StateActive.Content.Color1 = System.Drawing.Color.Silver;
                 Password.PasswordChar = Email.PasswordChar;
             }
@@ -112,6 +112,12 @@ namespace EHR_Lab
             this.Hide();
             myForm.ShowDialog();
             this.Close();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Change_Pass myForm = new Change_Pass();
+            myForm.ShowDialog();
         }
     }
 }

@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
         }
         public DataTable getResults(/*int idl,*/ string id)
         {
-            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "';" /*"and Lab_ID='" + idl + "';"*/;
+            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "' and Lab_ID IS NULL;";
             return dbMan.ExecuteReader(query);
         }
         

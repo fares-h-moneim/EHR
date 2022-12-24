@@ -31,6 +31,7 @@
             this.Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Password = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Submit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // Email
@@ -43,7 +44,7 @@
             this.Email.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Email.StateNormal.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.TabIndex = 0;
-            this.Email.Text = "Email (example@email.com)";
+            this.Email.Text = "Username";
             this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
             this.Email.Enter += new System.EventHandler(this.Email_Enter);
             this.Email.Leave += new System.EventHandler(this.Email_Leave);
@@ -60,14 +61,14 @@
             this.Password.StateNormal.Content.Color1 = System.Drawing.Color.Silver;
             this.Password.TabIndex = 1;
             this.Password.Text = "Password";
-            this.Password.Enter += new System.EventHandler(this.Password_Enter);
-            this.Password.Leave += new System.EventHandler(this.Password_Leave);
+            this.Password.Enter += new System.EventHandler(this.Pass_Enter);
+            this.Password.Leave += new System.EventHandler(this.Pass_Leave);
             this.Password.Validating += new System.ComponentModel.CancelEventHandler(this.Password_Validating);
             // 
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(689, 417);
+            this.Submit.Location = new System.Drawing.Point(689, 408);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(157, 42);
             this.Submit.StateCommon.Back.Image = global::EHR_Lab.Properties.Resources.Login_Button;
@@ -103,12 +104,45 @@
             this.Submit.Values.Text = "";
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Location = new System.Drawing.Point(645, 456);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(271, 29);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.TabIndex = 20;
+            this.kryptonButton1.Values.Text = "Can\'t Remember Password? Change it Here!";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
             // Lab_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Lab.Properties.Resources.Labs_Sign_In;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
@@ -125,6 +159,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Email;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox Password;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Submit;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
 
