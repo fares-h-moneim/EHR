@@ -48,7 +48,6 @@
             this.kryptonComboBox1.Name = "kryptonComboBox1";
             this.kryptonComboBox1.Size = new System.Drawing.Size(213, 21);
             this.kryptonComboBox1.TabIndex = 0;
-            this.kryptonComboBox1.Text = "kryptonComboBox1";
             this.kryptonComboBox1.SelectedValueChanged += new System.EventHandler(this.kryptonComboBox1_SelectedValueChanged);
             // 
             // kryptonLabel1
@@ -66,7 +65,6 @@
             this.kryptonComboBox2.Name = "kryptonComboBox2";
             this.kryptonComboBox2.Size = new System.Drawing.Size(213, 21);
             this.kryptonComboBox2.TabIndex = 2;
-            this.kryptonComboBox2.Text = "kryptonComboBox2";
             // 
             // kryptonLabel2
             // 

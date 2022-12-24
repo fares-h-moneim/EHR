@@ -44,6 +44,8 @@ namespace WindowsFormsApp1
                     kryptonComboBox2.DisplayMember = "Date_Time";
                 }
             }
+            kryptonButton3.Enabled = false;
+            kryptonButton2.Enabled = false;
         }
 
         private void kryptonComboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -86,6 +88,15 @@ namespace WindowsFormsApp1
                 img = (byte[])image.Rows[0][4];
 
                 pictureBox1.Image = ConvertByteArrayToImage(img);
+
+                kryptonButton3.Enabled = true;
+                kryptonButton2.Enabled = true;
+            }
+
+            if(pictureBox1.Image == null)
+            {
+                kryptonButton3.Enabled = false;
+                kryptonButton2.Enabled = false;
             }
         }
 
