@@ -59,7 +59,7 @@ namespace EHR_Hospital
                         if (Convert.ToString(dt1.Rows[i][0]) == Organs.Text)
                         {
                             pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Kidney");
+                            ctrl.UpdateStatus(PatientID.Text, Organs.Text);
                             break;
                         }
                     }
