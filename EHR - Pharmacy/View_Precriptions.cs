@@ -54,5 +54,15 @@ namespace EHR___Pharmacy
             myForm.ShowDialog();
             this.Close();
         }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void View_Precriptions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,9 +26,12 @@ namespace EHR___Pharmacy
             if (PatientID.Text.ToString().Length >= 16)
             {
                 if (!char.IsControl(e.KeyChar))
-                {
                     e.Handled = true;
-                }
+            }
+            else
+            {
+                if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+                    e.Handled = true;
             }
         }
 
@@ -37,10 +41,18 @@ namespace EHR___Pharmacy
             dt = ctrl.RealPatient(PatientID.Text);
             if (dt != null)
             {
-                View_Precriptions myForm = new View_Precriptions(PatientID.Text, pharmaid);
-                this.Hide();
-                myForm.ShowDialog();
-                this.Close();
+                DataTable dt2 = ctrl.GetMedications(PatientID.Text);
+                if (dt2 != null)
+                {
+                    View_Precriptions myForm = new View_Precriptions(PatientID.Text, pharmaid);
+                    this.Hide();
+                    myForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Patient has no pending prescriptions");
+                }
             }
             else
             {

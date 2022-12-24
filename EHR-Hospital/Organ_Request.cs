@@ -45,20 +45,35 @@ namespace EHR_Hospital
                 prio = 2;
             }
             else { prio = 1; }
-            string format = "yyyy-MM-dd hh:mm:ss";
-            ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, prio, HospitalID, 0, DateTime.Now.ToString(format));
 
-            DataTable dt1 = ctrl.GetDonate();
-            string pid = "";
-                for (int i = 0; i < dt1.Rows.Count; i++)
+            if (Priority.SelectedIndex != -1 && Organs.SelectedIndex != -1 && PatientID.Text != "")
+            {
+                string format = "yyyy-MM-dd hh:mm:ss";
+                int x = ctrl.InsertOrganWaiting(Organs.Text, PatientID.Text, prio, HospitalID, 0, DateTime.Now.ToString(format));
+                if (x != 0)
                 {
-                    if (Convert.ToString(dt1.Rows[i][0]) == Organs.Text)
+                    DataTable dt1 = ctrl.GetDonate();
+                    string pid = "";
+                    for (int i = 0; i < dt1.Rows.Count; i++)
                     {
-                        pid = dt1.Rows[i][1].ToString();
-                        ctrl.UpdateStatus(pid, "Kidney");
-                        break;
+                        if (Convert.ToString(dt1.Rows[i][0]) == Organs.Text)
+                        {
+                            pid = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(pid, "Kidney");
+                            break;
+                        }
                     }
+                    MessageBox.Show("Success! Please Check Pending Requests to View Status");
                 }
+                else
+                {
+                    MessageBox.Show("Failed");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
         }
 
         private void PatientID_TextChanged(object sender, EventArgs e)
@@ -73,7 +88,7 @@ namespace EHR_Hospital
 
         private void Priority_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PatientID_KeyPress(object sender, KeyPressEventArgs e)
@@ -81,10 +96,23 @@ namespace EHR_Hospital
             if (PatientID.Text.ToString().Length >= 16)
             {
                 if (!char.IsControl(e.KeyChar))
-                {
                     e.Handled = true;
-                }
             }
+            else
+            {
+                if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+                    e.Handled = true;
+            }
+        }
+
+        private void Organs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void Priority_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

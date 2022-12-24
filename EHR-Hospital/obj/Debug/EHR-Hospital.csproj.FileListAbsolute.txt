@@ -86,3 +86,6 @@ C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.csproj.CopyComplete
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.exe
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Hospital\obj\Debug\EHR-Hospital.pdb
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Change_Pass.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.Organs.resources
+E:\Database\EHR\EHR-Hospital\obj\Debug\EHR_Hospital.View_Pending_Requests.resources

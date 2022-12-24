@@ -111,3 +111,4 @@ C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CoreC
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.csproj.CopyComplete
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.exe
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR-Admin.pdb
+E:\Database\EHR\EHR-Admin\obj\Debug\EHR_Admin.AddAdmin.resources

@@ -200,5 +200,13 @@ namespace EHR_Admin
             AddAdmin AA = new AddAdmin();
                AA.Show();
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            SignIn myForm = new SignIn();
+            this.Hide();
+            myForm.ShowDialog();
+            this.Close();
+        }
     }
 }

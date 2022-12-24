@@ -60,5 +60,10 @@ namespace EHR_Hospital
                 }
             }
         }
+
+        private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

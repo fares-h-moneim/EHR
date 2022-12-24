@@ -120,5 +120,11 @@ namespace EHR_Hospital
 
             }
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Change_Pass myForm = new Change_Pass();
+            myForm.ShowDialog();
+        }
     }
 }

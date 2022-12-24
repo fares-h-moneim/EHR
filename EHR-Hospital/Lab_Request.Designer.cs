@@ -38,28 +38,25 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(487, 124);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Location = new System.Drawing.Point(365, 101);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(121, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(98, 20);
             this.kryptonLabel1.TabIndex = 45;
             this.kryptonLabel1.Values.Text = "Test Description";
             // 
             // Label_Name
             // 
-            this.Label_Name.Location = new System.Drawing.Point(104, 124);
-            this.Label_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Label_Name.Location = new System.Drawing.Point(78, 101);
             this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(78, 24);
+            this.Label_Name.Size = new System.Drawing.Size(64, 20);
             this.Label_Name.TabIndex = 43;
             this.Label_Name.Values.Text = "Patient ID";
             // 
             // PatientID
             // 
-            this.PatientID.Location = new System.Drawing.Point(113, 156);
-            this.PatientID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PatientID.Location = new System.Drawing.Point(85, 127);
             this.PatientID.Name = "PatientID";
-            this.PatientID.Size = new System.Drawing.Size(340, 26);
+            this.PatientID.Size = new System.Drawing.Size(255, 22);
             this.PatientID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -68,10 +65,9 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(348, 335);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonButton1.Location = new System.Drawing.Point(261, 272);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(236, 55);
+            this.kryptonButton1.Size = new System.Drawing.Size(177, 45);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -120,10 +116,9 @@
             // Back
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(16, 15);
-            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Back.Location = new System.Drawing.Point(12, 12);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(51, 47);
+            this.Back.Size = new System.Drawing.Size(38, 38);
             this.Back.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Back;
             this.Back.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Back.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -161,20 +156,22 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(487, 156);
+            this.comboBox2.Location = new System.Drawing.Point(365, 127);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 24);
+            this.comboBox2.Size = new System.Drawing.Size(138, 21);
             this.comboBox2.TabIndex = 51;
             this.comboBox2.Text = "Choose Lab tests";
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
             // 
             // Lab_Request
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Lab_Request;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(939, 450);
+            this.ClientSize = new System.Drawing.Size(704, 366);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.kryptonButton1);
@@ -183,7 +180,6 @@
             this.Controls.Add(this.PatientID);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Lab_Request";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lab_Request";
