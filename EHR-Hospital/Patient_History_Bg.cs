@@ -109,9 +109,11 @@ namespace EHR_Hospital
         }
         private void kryptonDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 1&&Request.Text== "Lab Results"&&islab)
+            if (!(e.RowIndex >= dt.Rows.Count))
             {
-                 Image img = ConvertByteArrayToImage((byte[])dt.Rows[e.RowIndex][e.ColumnIndex]);
+                if (e.ColumnIndex == 1 && Request.Text == "Lab Results" && islab)
+                {
+                    Image img = ConvertByteArrayToImage((byte[])dt.Rows[e.RowIndex][e.ColumnIndex]);
                     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                     saveFileDialog1.Filter = "JPeg Image|.jpg|Bitmap Image|.bmp|Gif Image|*.gif";
                     saveFileDialog1.Title = "Save an Image File";
@@ -147,10 +149,11 @@ namespace EHR_Hospital
                         fs.Close();
                     }
 
-                
-                    
-                
-               
+
+
+
+
+                }
             }
         }
     }
