@@ -72,8 +72,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -112,8 +112,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -156,8 +156,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -196,8 +196,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -242,8 +242,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -282,8 +282,8 @@ namespace EHR_Admin
                             {
                                 foreach (DataRow i in all.Rows)
                                 {
-                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                    chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                 }
                             }
@@ -326,8 +326,8 @@ namespace EHR_Admin
                                 {
                                     foreach (DataRow i in all.Rows)
                                     {
-                                        chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                        chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                        chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                        chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                     }
                                 }
@@ -354,8 +354,8 @@ namespace EHR_Admin
                                 {
                                     foreach (DataRow i in all.Rows)
                                     {
-                                        chart.Series["Male"].Points.AddXY(i[0], i[1]);
-                                        chart.Series["Female"].Points.AddXY(i[0], i[2]);
+                                        chart.Series["Male"].Points.AddXY(i[0], i[2]);
+                                        chart.Series["Female"].Points.AddXY(i[0], i[1]);
 
                                     }
                                 }
