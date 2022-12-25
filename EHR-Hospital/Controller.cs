@@ -171,6 +171,12 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetLabsNotNull(string PatientID)
+        {
+            string query = "Select Date_Time, Test_Result FROM Lab_Results WHERE Patient_ID = '" + PatientID + "' and Lab_ID IS NOT NULL;";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable getifDonor(string patientID)
         {
             string query = "SELECT Organ_Donor_Upon_Death FROM Patient WHERE NationalID = '" + patientID + "'";

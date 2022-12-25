@@ -52,7 +52,7 @@ namespace EHR_Hospital
             else
             {
                 if (Request.Text != "")
-                    dt = ctrl.GetLabs(PatientID.Text);
+                    dt = ctrl.GetLabsNotNull(PatientID.Text);
                 islab = true;
             }
 
