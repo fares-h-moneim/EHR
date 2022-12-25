@@ -86,6 +86,8 @@ namespace EHR_Lab
                         kryptonComboBox2.DisplayMember = "Date_Time";
                         kryptonComboBox2.ValueMember = "ID";
                     }
+                    pictureBox1.Image = null;
+                    kryptonTextBox1.Text = "";
                 }
             }
         }
@@ -119,6 +121,11 @@ namespace EHR_Lab
         private void kryptonComboBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
