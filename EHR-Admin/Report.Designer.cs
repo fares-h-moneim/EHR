@@ -32,6 +32,8 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.diagnosisBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -41,6 +43,7 @@
             this.Start = new System.Windows.Forms.DateTimePicker();
             this.End = new System.Windows.Forms.DateTimePicker();
             this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.info = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selector)).BeginInit();
@@ -58,7 +61,15 @@
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Count";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Male";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Female";
             this.chart.Series.Add(series1);
+            this.chart.Series.Add(series2);
+            this.chart.Series.Add(series3);
             this.chart.Size = new System.Drawing.Size(761, 352);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
@@ -73,7 +84,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(411, 670);
+            this.btnLoad.Location = new System.Drawing.Point(410, 701);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(171, 25);
             this.btnLoad.TabIndex = 1;
@@ -125,6 +136,19 @@
             this.kryptonCheckBox2.TabIndex = 6;
             this.kryptonCheckBox2.Values.Text = "Split into Male and Female";
             // 
+            // info
+            // 
+            this.info.Location = new System.Drawing.Point(185, 662);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(6, 2);
+            this.info.StateCommon.ShortText.Color1 = System.Drawing.Color.Green;
+            this.info.StateCommon.ShortText.Color2 = System.Drawing.Color.Green;
+            this.info.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.info.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
+            this.info.TabIndex = 7;
+            this.info.Values.Text = "";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +156,7 @@
             this.BackgroundImage = global::EHR_Admin.Properties.Resources.Statistics_1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.kryptonCheckBox2);
             this.Controls.Add(this.End);
             this.Controls.Add(this.Start);
@@ -163,5 +188,6 @@
         private System.Windows.Forms.DateTimePicker Start;
         private System.Windows.Forms.DateTimePicker End;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel info;
     }
 }

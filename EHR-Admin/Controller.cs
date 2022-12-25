@@ -72,6 +72,65 @@ namespace EHR_Admin
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetDiagnosisCountAll()
+        {
+            string query = "SELECT Diseases, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Diagnosis, Diseases, Patient \r\nWHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID\r\nGROUP BY Diseases \r\nORDER BY count(*) DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabCountAll()
+        {
+            string query = "SELECT Lab_Tests, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Lab_Tests, Lab_Results, Patient\r\nWHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID\r\nGroup By Lab_Tests \r\nOrder by Count(*) desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesCountAll()
+        {
+            string query = "SELECT Surgeries, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Surguries, Surgery, Patient \r\nWHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID \r\nGROUP BY Surgeries \r\norder by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMedicationCountAll()
+        {
+            string query = "SELECT Trade_Name, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Drugs, Prescription, Medications, Patient, Diagnosis \r\nWHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID \r\nGroup By Trade_Name \r\nOrder by count(*) desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDiagnosisCountAllDate(string start, string end)
+        {
+            string query = "SELECT Diseases, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Diagnosis, Diseases, Patient \r\nWHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGROUP BY Diseases \r\nORDER BY count(*) DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabCountAllDate(string start, string end)
+        {
+            string query = "SELECT Lab_Tests, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Lab_Tests, Lab_Results, Patient\r\nWHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID AND Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGroup By Lab_Tests \r\nOrder by Count(*) desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesCountAllDate(string start, string end)
+        {
+            string query = "SELECT Surgeries, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Surguries, Surgery, Patient \r\nWHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID AND Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGROUP BY Surgeries \r\norder by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesMaleDate(string start, string end)
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery, Patient WHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID AND GENDER = 0 AND Date_Time BETWEEN '" + start + "' AND '" + end + "'  GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetSurgeriesFemaleDate(string start, string end)
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery, Patient WHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID AND GENDER = 1 AND Date_Time BETWEEN '" + start + "' AND '" + end + "'  GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMedicationCountAllDate(string start, string end)
+        {
+            string query = "SELECT Trade_Name, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Drugs, Prescription, Medications, Patient, Diagnosis \r\nWHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Prescription.Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGroup By Trade_Name \r\nOrder by count(*) desc";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetDiagnosisCountMaleDate(string start, string end)
         {
             string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases, Patient WHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Gender = 0 AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
