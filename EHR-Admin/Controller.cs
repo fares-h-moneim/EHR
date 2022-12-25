@@ -60,6 +60,30 @@ namespace WindowsFormsApp1
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetDiagnosisCountMale()
+        {
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases, Patient WHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Gender = 0 GROUP BY Diseases ORDER BY 2 DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDiagnosisCountFemale()
+        {
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases, Patient WHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Gender = 1 GROUP BY Diseases ORDER BY 2 DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDiagnosisCountMaleDate(string start, string end)
+        {
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases, Patient WHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Gender = 0 AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetDiagnosisCountFemaleDate(string start, string end)
+        {
+            string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases, Patient WHERE Diagnosis.Diagnosis = Diseases AND Patient_ID = NationalID AND Gender = 1 AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetDiagnosisCountBetween(string start, string end)
         {
             string query = "SELECT Diseases, count(*) FROM Diagnosis, Diseases WHERE Diagnosis.Diagnosis = Diseases AND Date_Time BETWEEN '" + start + "' AND '" + end + "' GROUP BY Diseases ORDER BY 2 DESC";
@@ -72,9 +96,32 @@ namespace WindowsFormsApp1
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetMedicationCountMale()
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications, Patient, Diagnosis WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Gender = 0 Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMedicationCountFemale()
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications, Patient, Diagnosis WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Gender = 1 Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetMedicationCountBetween(string start, string end)
         {
             string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Date_Time Between '"+start+"' AND '"+end+"'Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable GetMedicationMaleDate(string start, string end)
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications, Patient, Diagnosis WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Gender = 0 AND Prescription.Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Trade_Name Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetMedicationFemaleDate(string start, string end)
+        {
+            string query = "SELECT Trade_Name, Count(*) FROM Drugs, Prescription, Medications, Patient, Diagnosis WHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Gender = 1 AND Prescription.Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Trade_Name Order by 2 desc";
             return dbMan.ExecuteReader(query);
         }
 
@@ -84,15 +131,51 @@ namespace WindowsFormsApp1
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetLabMale()
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results, Patient WHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID AND Gender = 0 Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabFemale()
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results, Patient WHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID AND Gender = 1 Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetLabsCountBetween(string start, string end)
         {
             string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results WHERE Lab_Results.Description = Lab_Tests AND Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Lab_Tests Order by 2 desc";
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable GetLabMaleDate(string start, string end)
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results, Patient WHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID AND Gender = 0  AND Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLabFemaleDate(string start, string end)
+        {
+            string query = "SELECT Lab_Tests, Count(*) FROM Lab_Tests, Lab_Results, Patient WHERE Lab_Results.Description = Lab_Tests AND Patient_ID = NationalID AND Gender = 1  AND Date_Time BETWEEN '" + start + "' AND '" + end + "' Group By Lab_Tests Order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetSurgeriesCount()
         {
             string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery WHERE Surgery.Type_of_Surgery = Surgeries GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesMale()
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery, Patient WHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID AND GENDER = 0 GROUP BY Surgeries order by 2 desc";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetSurgeriesFemale()
+        {
+            string query = "SELECT Surgeries, count(*) FROM Surguries, Surgery, Patient WHERE Surgery.Type_of_Surgery = Surgeries AND Patient_ID = NationalID AND GENDER = 1 GROUP BY Surgeries order by 2 desc";
             return dbMan.ExecuteReader(query);
         }
 
