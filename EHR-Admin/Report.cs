@@ -13,6 +13,7 @@ namespace EHR_Admin
     public partial class Report : Form
     {
         Controller ctrl;
+        string format = "yyyy-MM-dd HH:mm:ss";
         public Report()
         {
             InitializeComponent();
@@ -20,6 +21,8 @@ namespace EHR_Admin
             Start.Enabled = false;
             End.Enabled = false;
             chart.Titles.Clear();
+            chart.Series.Add("Female");
+            chart.Series.Add("Male");
         }
 
         private void Report_Load(object sender, EventArgs e)
@@ -43,81 +46,224 @@ namespace EHR_Admin
             {
                 if(selector.Text == "Diagnosis")
                 {
-                    if (!kryptonCheckBox1.Checked)
+                    chart.Series["Count"].Enabled = true;
+                    if (!kryptonCheckBox1.Checked) //No Date
                     {
-                        DataTable dt = ctrl.GetDiagnosisCount();
-
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach(DataRow i in dt.Rows)
+                            DataTable dt = ctrl.GetDiagnosisCount();
+
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetDiagnosisCountMale();
+                            DataTable female = ctrl.GetDiagnosisCountFemale();
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if(female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
                     else
                     {
-                        string format = "yyyy-MM-dd HH:mm:ss";
-                        DataTable dt = ctrl.GetDiagnosisCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            
+                            DataTable dt = ctrl.GetDiagnosisCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetDiagnosisCountMaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            DataTable female = ctrl.GetDiagnosisCountFemaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
                 }
                 else if(selector.Text == "Medications")
                 {
-                    if (!kryptonCheckBox1.Checked)
+                    chart.Series["Count"].Enabled = true;
+                    if (!kryptonCheckBox1.Checked)//No Date
                     {
-                        DataTable dt = ctrl.GetMedicationCount();
-
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            DataTable dt = ctrl.GetMedicationCount();
+
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetMedicationCountMale();
+                            DataTable female = ctrl.GetMedicationCountFemale();
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
                     else
                     {
-                        string format = "yyyy-MM-dd HH:mm:ss";
-                        DataTable dt = ctrl.GetMedicationCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            string format = "yyyy-MM-dd HH:mm:ss";
+                            DataTable dt = ctrl.GetMedicationCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetMedicationMaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            DataTable female = ctrl.GetMedicationFemaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
+
                 }
                 else if (selector.Text == "Lab Tests")
                 {
+                    chart.Series["Count"].Enabled = true;
+
                     if (!kryptonCheckBox1.Checked)
                     {
-                        DataTable dt = ctrl.GetLabsCount();
-
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            DataTable dt = ctrl.GetLabsCount();
+
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetLabMale();
+                            DataTable female = ctrl.GetLabFemale();
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
                     else
                     {
-                        string format = "yyyy-MM-dd HH:mm:ss";
-                        DataTable dt = ctrl.GetLabsCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            string format = "yyyy-MM-dd HH:mm:ss";
+                            DataTable dt = ctrl.GetLabsCountBetween(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetLabMaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            DataTable female = ctrl.GetLabFemaleDate(Start.Value.ToString(format), End.Value.ToString(format));
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
                     }
@@ -127,15 +273,39 @@ namespace EHR_Admin
                 {
                     if (!kryptonCheckBox1.Checked)
                     {
-                        DataTable dt = ctrl.GetSurgeriesCount();
-
-                        if (dt != null)
+                        if (!kryptonCheckBox2.Checked)
                         {
-                            foreach (DataRow i in dt.Rows)
+                            DataTable dt = ctrl.GetSurgeriesCount();
+
+                            if (dt != null)
                             {
-                                chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                foreach (DataRow i in dt.Rows)
+                                {
+                                    chart.Series["Count"].Points.AddXY(i[0], i[1]);
+                                }
                             }
                         }
+                        else
+                        {
+                            chart.Series["Count"].Enabled = false;
+                            DataTable male = ctrl.GetSurgeriesMale();
+                            DataTable female = ctrl.GetSurgeriesFemale();
+                            if (male != null)
+                            {
+                                foreach (DataRow i in male.Rows)
+                                {
+                                    chart.Series["Male"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                            if (female != null)
+                            {
+                                foreach (DataRow i in female.Rows)
+                                {
+                                    chart.Series["Female"].Points.AddXY(i[0], i[1]);
+                                }
+                            }
+                        }
+
                     }
                     else
                     {
