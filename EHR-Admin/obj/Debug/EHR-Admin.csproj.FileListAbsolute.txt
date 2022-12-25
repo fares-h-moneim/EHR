@@ -131,3 +131,4 @@ D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\bin\Debug\CrystalDecisions.Rep
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\bin\Debug\stdole.dll
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR_Admin.AddAdmin.resources
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR_Admin.Report.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.ChangePass.resources

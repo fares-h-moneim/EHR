@@ -131,16 +131,17 @@ namespace EHR_Admin
                     kryptonTextBox8.Text = "";
                     kryptonTextBox10.Text = "";
                     kryptonTextBox9.Text = "";
+                    for (int i = 0; i < ch.Length; i++)
+                    {
+                        int y = ctrl.InsertPhonenumbers(ch[i], Convert.ToInt32(dtr[0][0]));
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Insertion failed");
                     return;
                 }
-                for (int i = 0; i < ch.Length; i++)
-                {
-                    int y = ctrl.InsertPhonenumbers(ch[i], Convert.ToInt32(dtr[0][0]));
-                }
+            
 
             }
             if (Label_Name.Text == "Pharmacy Name"){

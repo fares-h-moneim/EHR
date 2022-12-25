@@ -57,7 +57,7 @@ namespace EHR___Pharmacy
 
         public int ChangePass(string id, string pass)
         {
-            string query = "UPDATE Pharmacy SET Password = '" + pass + "' WHERE Name = '" + id + "' ;";
+            string query = "UPDATE Pharmacy SET Password = '" + pass + "' WHERE Username = '" + id + "' ;";
             return dbMan.ExecuteNonQuery(query);
         }
 

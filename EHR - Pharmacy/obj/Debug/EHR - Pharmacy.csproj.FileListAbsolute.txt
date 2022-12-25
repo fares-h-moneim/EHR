@@ -46,3 +46,4 @@ C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.cs
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.exe
 C:\Users\Mohamed\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR - Pharmacy.pdb
 E:\Database\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Change_Pass.resources
+C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR - Pharmacy\obj\Debug\EHR___Pharmacy.Change_Pass.resources
