@@ -48,7 +48,7 @@
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(400, 81);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(68, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(84, 24);
             this.kryptonLabel2.TabIndex = 22;
             this.kryptonLabel2.Values.Text = "Symptoms";
             // 
@@ -56,7 +56,7 @@
             // 
             this.Label_Name.Location = new System.Drawing.Point(92, 77);
             this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(64, 20);
+            this.Label_Name.Size = new System.Drawing.Size(78, 24);
             this.Label_Name.TabIndex = 20;
             this.Label_Name.Values.Text = "Patient ID";
             // 
@@ -64,7 +64,7 @@
             // 
             this.PatientID.Location = new System.Drawing.Point(92, 107);
             this.PatientID.Name = "PatientID";
-            this.PatientID.Size = new System.Drawing.Size(186, 22);
+            this.PatientID.Size = new System.Drawing.Size(186, 26);
             this.PatientID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -166,7 +166,7 @@
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(92, 165);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(63, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(78, 24);
             this.kryptonLabel3.TabIndex = 24;
             this.kryptonLabel3.Values.Text = "Diagnosis";
             // 
@@ -175,7 +175,7 @@
             this.Prescription.Location = new System.Drawing.Point(402, 186);
             this.Prescription.Name = "Prescription";
             this.Prescription.ReadOnly = true;
-            this.Prescription.Size = new System.Drawing.Size(350, 22);
+            this.Prescription.Size = new System.Drawing.Size(350, 26);
             this.Prescription.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Prescription.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Prescription.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -187,7 +187,7 @@
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(392, 156);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(75, 20);
+            this.kryptonLabel4.Size = new System.Drawing.Size(92, 24);
             this.kryptonLabel4.TabIndex = 25;
             this.kryptonLabel4.Values.Text = "Prescription";
             // 
@@ -195,7 +195,7 @@
             // 
             this.Symptoms.Location = new System.Drawing.Point(402, 107);
             this.Symptoms.Name = "Symptoms";
-            this.Symptoms.Size = new System.Drawing.Size(350, 22);
+            this.Symptoms.Size = new System.Drawing.Size(350, 26);
             this.Symptoms.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Symptoms.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Symptoms.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -206,7 +206,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(392, 246);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 21);
+            this.comboBox1.Size = new System.Drawing.Size(182, 24);
             this.comboBox1.TabIndex = 37;
             this.comboBox1.Text = "Choose Medication";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -216,7 +216,7 @@
             // 
             this.qty.Location = new System.Drawing.Point(598, 246);
             this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(187, 22);
+            this.qty.Size = new System.Drawing.Size(187, 26);
             this.qty.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.qty.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.qty.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -226,6 +226,7 @@
             this.qty.TabIndex = 38;
             this.qty.Text = "Insert Quantity";
             this.qty.Enter += new System.EventHandler(this.qty_Enter);
+            this.qty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.qty_KeyPress);
             this.qty.Leave += new System.EventHandler(this.qty_Leave);
             // 
             // kryptonButton2
@@ -283,7 +284,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(96, 206);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 21);
+            this.comboBox2.Size = new System.Drawing.Size(182, 24);
             this.comboBox2.TabIndex = 40;
             this.comboBox2.Text = "Choose Diagnosis";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);

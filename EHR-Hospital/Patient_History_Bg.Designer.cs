@@ -41,18 +41,22 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(61, 114);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(81, 140);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 51;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(594, 266);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(792, 327);
             this.kryptonDataGridView1.TabIndex = 0;
+            this.kryptonDataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellClick);
             this.kryptonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellContentClick);
             // 
             // Label_Name
             // 
-            this.Label_Name.Location = new System.Drawing.Point(74, 43);
+            this.Label_Name.Location = new System.Drawing.Point(99, 53);
+            this.Label_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Label_Name.Name = "Label_Name";
-            this.Label_Name.Size = new System.Drawing.Size(87, 23);
+            this.Label_Name.Size = new System.Drawing.Size(107, 28);
             this.Label_Name.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.Label_Name.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.Label_Name.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,9 +68,10 @@
             // 
             // PatientID
             // 
-            this.PatientID.Location = new System.Drawing.Point(74, 69);
+            this.PatientID.Location = new System.Drawing.Point(99, 85);
+            this.PatientID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PatientID.Name = "PatientID";
-            this.PatientID.Size = new System.Drawing.Size(186, 22);
+            this.PatientID.Size = new System.Drawing.Size(248, 26);
             this.PatientID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.PatientID.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -76,6 +81,7 @@
             // 
             // Request
             // 
+            this.Request.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Request.DropDownWidth = 153;
             this.Request.Items.AddRange(new object[] {
             "Chronic Disease",
@@ -84,18 +90,19 @@
             "Surgeries",
             "Lab Results",
             "Family Members"});
-            this.Request.Location = new System.Drawing.Point(293, 69);
+            this.Request.Location = new System.Drawing.Point(391, 85);
+            this.Request.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Request.Name = "Request";
-            this.Request.Size = new System.Drawing.Size(153, 21);
+            this.Request.Size = new System.Drawing.Size(204, 25);
             this.Request.TabIndex = 23;
-            this.Request.Text = "Request";
             this.Request.SelectedIndexChanged += new System.EventHandler(this.Request_SelectedIndexChanged);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(514, 53);
+            this.kryptonButton1.Location = new System.Drawing.Point(685, 65);
+            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(148, 38);
+            this.kryptonButton1.Size = new System.Drawing.Size(197, 47);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -144,9 +151,10 @@
             // Back
             // 
             this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Location = new System.Drawing.Point(16, 15);
+            this.Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(38, 38);
+            this.Back.Size = new System.Drawing.Size(51, 47);
             this.Back.StateCommon.Back.Image = global::EHR_Hospital.Properties.Resources.Back;
             this.Back.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Back.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -183,10 +191,10 @@
             // 
             // Patient_History_Bg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Patient_History_Bg;
-            this.ClientSize = new System.Drawing.Size(704, 405);
+            this.ClientSize = new System.Drawing.Size(994, 543);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.Request);
@@ -194,6 +202,7 @@
             this.Controls.Add(this.PatientID);
             this.Controls.Add(this.kryptonDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Patient_History_Bg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Patient_History_Bg";
