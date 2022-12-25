@@ -98,6 +98,11 @@ namespace EHR_Hospital
             string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority desc"; //assuming 0 means status
             return dbMan.ExecuteReader(query);
         }
+        public DataTable GetWaitingforhospital(int id)
+        {
+            string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 and Hospital_ID=" + id + " ORDER BY Priority desc"; //assuming 0 means status
+            return dbMan.ExecuteReader(query);
+        }
 
         public DataTable GetDonate()
         {

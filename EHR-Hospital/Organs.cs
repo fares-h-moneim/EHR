@@ -27,7 +27,7 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            View_Pending_Requests view_Pending_Requests = new View_Pending_Requests();
+            View_Pending_Requests view_Pending_Requests = new View_Pending_Requests(HospitalID);
             view_Pending_Requests.ShowDialog();
         }
 

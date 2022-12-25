@@ -35,26 +35,29 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(57, 89);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(76, 110);
+            this.kryptonDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidth = 51;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(577, 231);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(769, 284);
             this.kryptonDataGridView1.TabIndex = 54;
             this.kryptonDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellContentClick);
             // 
             // View_Pending_Requests
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Hospital.Properties.Resources.Organ_Request2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(690, 360);
+            this.ClientSize = new System.Drawing.Size(920, 443);
             this.Controls.Add(this.kryptonDataGridView1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "View_Pending_Requests";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.View_Pending_Requests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
