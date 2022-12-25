@@ -165,5 +165,13 @@ namespace EHR_Hospital
                 qty.StateActive.Content.Color1 = System.Drawing.Color.Black;
             }
         }
+
+        private void qty_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
