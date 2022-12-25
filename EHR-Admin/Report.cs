@@ -70,7 +70,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetDiagnosisCountAll();
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -110,7 +110,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetDiagnosisCountAllDate(Start.Value.ToString(format), End.Value.ToString(format));
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -154,7 +154,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetMedicationCountAll();
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -194,7 +194,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetMedicationCountAllDate(Start.Value.ToString(format), End.Value.ToString(format));
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -240,7 +240,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetLabCountAll();
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -324,7 +324,7 @@ namespace EHR_Admin
                                 DataTable all = ctrl.GetSurgeriesCountAll();
                                 if (all != null)
                                 {
-                                    foreach (DataRow i in male.Rows)
+                                    foreach (DataRow i in all.Rows)
                                     {
                                         chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                         chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -352,7 +352,7 @@ namespace EHR_Admin
                                 DataTable all = ctrl.GetSurgeriesCountAllDate(Start.Value.ToString(format), End.Value.ToString(format));
                                 if (all != null)
                                 {
-                                    foreach (DataRow i in male.Rows)
+                                    foreach (DataRow i in all.Rows)
                                     {
                                         chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                         chart.Series["Female"].Points.AddXY(i[0], i[2]);
