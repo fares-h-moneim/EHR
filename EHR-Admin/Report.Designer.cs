@@ -33,11 +33,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-     
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.diagnosisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-   
-           
             this.btnLoad = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.selector = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
@@ -46,7 +43,6 @@
             this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).BeginInit();
-      
             ((System.ComponentModel.ISupportInitialize)(this.selector)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +53,13 @@
             this.chart.DataSource = this.diagnosisBindingSource;
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(178, 308);
+            this.chart.Location = new System.Drawing.Point(126, 304);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Count";
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(659, 352);
+            this.chart.Size = new System.Drawing.Size(761, 352);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart1";
             title1.Name = "Diagnosis";
@@ -74,10 +70,6 @@
             // diagnosisBindingSource
             // 
             this.diagnosisBindingSource.DataMember = "Diagnosis";
-           
-            // diagnosisTableAdapter
-            // 
-      
             // 
             // btnLoad
             // 
@@ -153,7 +145,6 @@
             this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosisBindingSource)).EndInit();
-       
             ((System.ComponentModel.ISupportInitialize)(this.selector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

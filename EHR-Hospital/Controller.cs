@@ -26,7 +26,12 @@ namespace EHR_Hospital
         //    return dbMan.ExecuteNonQuery(query);
         //}
 
-        
+        public DataTable GetRelativesChronic(string id)
+        {
+            string query = "SELECT Patient.Fname, Patient.Lname, ChronicDiseases.Disease FROM Patient, ChronicDiseases WHERE Patient.NationalID IN (SELECT Relatives.Relative_ID From Relatives WHERE Relatives.Patient_ID = '" + id + "' AND Accepted = 1) AND ChronicDiseases.PatientID = Patient.NationalID";
+            return dbMan.ExecuteReader(query);
+        }
+
         public DataTable GetHospital(string username, string password)
         {
             string query = "SELECT * " +

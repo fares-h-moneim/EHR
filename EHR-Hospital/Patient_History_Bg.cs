@@ -37,6 +37,10 @@ namespace EHR_Hospital
             {
                 dt = ctrl.GetSurgeries(PatientID.Text);
             }
+            else if (Request.Text == "Family Members")
+            {
+                dt = ctrl.GetRelativesChronic(PatientID.Text);
+            }
             else
             {
                 dt = ctrl.GetLabs(PatientID.Text);
