@@ -280,7 +280,7 @@ namespace EHR_Admin
                             DataTable all = ctrl.GetLabCountAllDate(Start.Value.ToString(format), End.Value.ToString(format));
                             if (all != null)
                             {
-                                foreach (DataRow i in male.Rows)
+                                foreach (DataRow i in all.Rows)
                                 {
                                     chart.Series["Male"].Points.AddXY(i[0], i[1]);
                                     chart.Series["Female"].Points.AddXY(i[0], i[2]);
@@ -314,7 +314,7 @@ namespace EHR_Admin
                                 {
                                     chart.Series["Count"].Points.AddXY(i[0], i[1]);
                                 }
-                                info.Text = "The most operation done during this time period was " + dt.Rows[0][0] + "and it was operated " + dt.Rows[0][1] + "times";
+                                info.Text = "The most operation done during this time period was " + dt.Rows[0][0] + "and it was operated " + dt.Rows[0][1] + " times";
                             }
                             else
                             {
@@ -378,7 +378,7 @@ namespace EHR_Admin
                                     {
                                         chart.Series["Count"].Points.AddXY(i[0], i[1]);
                                     }
-                                    info.Text = "The most operation done was " + dt.Rows[0][0] + "and it was operated " + dt.Rows[0][1] + "times";
+                                    info.Text = "The most operation done was " + dt.Rows[0][0] + " and it was operated " + dt.Rows[0][1] + " times";
                                 }
                             }
                         }
