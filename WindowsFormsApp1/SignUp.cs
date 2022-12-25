@@ -450,7 +450,7 @@ namespace WindowsFormsApp1
                 }
                 if (ij != 0)
                 {
-                    Patient myForm = new Patient(Email.Text, savedPasswordHash);
+                    Patient myForm = new Patient(Email.Text, Pass.Text);
                     this.Hide();
                     myForm.ShowDialog();
                     this.Close();

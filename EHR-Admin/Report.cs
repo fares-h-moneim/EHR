@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace EHR_Admin
 {
@@ -32,6 +33,7 @@ namespace EHR_Admin
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            chart.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             chart.Titles.Clear();
             chart.Titles.Add(selector.Text.ToString());
             foreach (var series in chart.Series)
@@ -271,6 +273,7 @@ namespace EHR_Admin
                 }
                 else
                 {
+                    chart.Series["Count"].Enabled = true;
                     if (!kryptonCheckBox1.Checked)
                     {
                         if (!kryptonCheckBox2.Checked)

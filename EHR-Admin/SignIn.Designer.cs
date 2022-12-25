@@ -37,10 +37,9 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(837, 420);
-            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email.Location = new System.Drawing.Point(628, 341);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(400, 26);
+            this.Email.Size = new System.Drawing.Size(300, 22);
             this.Email.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -54,10 +53,9 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(837, 466);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Location = new System.Drawing.Point(628, 379);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(400, 26);
+            this.Password.Size = new System.Drawing.Size(300, 22);
             this.Password.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
             this.Password.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Password.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -71,10 +69,9 @@
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(919, 513);
-            this.Submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Submit.Location = new System.Drawing.Point(689, 412);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(209, 52);
+            this.Submit.Size = new System.Drawing.Size(157, 42);
             this.Submit.StateCommon.Back.Image = global::EHR_Admin.Properties.Resources.Login_Button;
             this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
@@ -111,10 +108,9 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(916, 615);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Location = new System.Drawing.Point(687, 500);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(216, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(174, 20);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
             this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
             this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.Red;
@@ -126,10 +122,9 @@
             // 
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton1.Location = new System.Drawing.Point(881, 574);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonButton1.Location = new System.Drawing.Point(661, 457);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(304, 33);
+            this.kryptonButton1.Size = new System.Drawing.Size(228, 27);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.White;
@@ -157,17 +152,16 @@
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EHR_Admin.Properties.Resources.Admin_SignIn;
-            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignIn";
             this.Text = "Admin Login";
             this.Load += new System.EventHandler(this.SignIn_Load);

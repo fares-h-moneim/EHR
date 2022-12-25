@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace EHR_Hospital
 {
@@ -81,11 +82,6 @@ namespace EHR_Hospital
 
         }
 
-        private void Diagnosis_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Prescription_TextChanged(object sender, EventArgs e)
         {
    
@@ -119,14 +115,7 @@ namespace EHR_Hospital
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            if (Prescription.Text.ToString() == "")
-            {
-                Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text + ", ";
-            }
-            else
-            {
-                Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text;
-            }
+            Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text + ", ";
             qnty[x] = Convert.ToInt32(qty.Text);
             meds[x] = comboBox1.Text;
             x++;
@@ -145,6 +134,28 @@ namespace EHR_Hospital
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void qty_Enter(object sender, EventArgs e)
+        {
+            if (qty.Text == "Insert Quantity")
+            {
+                qty.Text = "";
+                qty.StateActive.Content.Color1 = System.Drawing.Color.Black;
+            }
+        }
+
+        private void qty_Leave(object sender, EventArgs e)
+        {
+            if (qty.Text == "")
+            {
+                qty.Text = "Insert Quantity";
+                qty.StateActive.Content.Color1 = System.Drawing.Color.Silver;
+            }
+            else
+            {
+                qty.StateActive.Content.Color1 = System.Drawing.Color.Black;
+            }
         }
     }
 }
