@@ -31,9 +31,8 @@ namespace EHR_Lab
                 return;
             }
             Lab_Results myForm = new Lab_Results(id, PatientID.Text);
-            this.Hide();
+            // this.Hide();
             myForm.ShowDialog();
-            this.Close();
         }
 
         private void Lab_Load(object sender, EventArgs e)
