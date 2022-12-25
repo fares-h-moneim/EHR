@@ -58,6 +58,10 @@ namespace EHR_Hospital
 
             kryptonDataGridView1.DataSource = dt;
             kryptonDataGridView1.Refresh();
+            if (PatientID.Text.Length<=15)
+            {
+                MessageBox.Show("fill the patient id field correctly");
+            }
 
         }
 
@@ -107,7 +111,7 @@ namespace EHR_Hospital
         {
             if (e.ColumnIndex == 1&&Request.Text== "Lab Results"&&islab)
             {
-                    Image img = ConvertByteArrayToImage((byte[])dt.Rows[e.RowIndex][e.ColumnIndex]);
+                 Image img = ConvertByteArrayToImage((byte[])dt.Rows[e.RowIndex][e.ColumnIndex]);
                     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                     saveFileDialog1.Filter = "JPeg Image|.jpg|Bitmap Image|.bmp|Gif Image|*.gif";
                     saveFileDialog1.Title = "Save an Image File";
