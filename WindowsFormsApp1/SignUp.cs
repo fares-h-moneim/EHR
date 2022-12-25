@@ -446,7 +446,10 @@ namespace WindowsFormsApp1
                 string[] ch = Chronic.Text.Split(',');
                 for (int i = 0; i < ch.Length; i++)
                 {
-                    int x = ctrl.InsertChronicDisease(ch[i], ID.Text.ToString());
+                    if (ch[i] != "Chronic Diseases (Comma Separated)")
+                    {
+                        int x = ctrl.InsertChronicDisease(ch[i], ID.Text.ToString());
+                    }
                 }
                 if (ij != 0)
                 {
