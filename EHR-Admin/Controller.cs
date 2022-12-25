@@ -127,7 +127,7 @@ namespace EHR_Admin
 
         public DataTable GetMedicationCountAllDate(string start, string end)
         {
-            string query = "SELECT Trade_Name, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Drugs, Prescription, Medications, Patient, Diagnosis \r\nWHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGroup By Trade_Name \r\nOrder by count(*) desc";
+            string query = "SELECT Trade_Name, sum(CASE WHEN gender = 1 THEN 1 ELSE 0 END) as males,sum(CASE WHEN gender = 0 THEN 1 ELSE 0 END) as females\r\nFROM Drugs, Prescription, Medications, Patient, Diagnosis \r\nWHERE Prescription.Prescription_ID = Medications.Prescription_ID AND Medication = Trade_Name AND Patient_ID = NationalID AND Prescription.Prescription_ID = Diagnosis.Prescription_ID AND Prescription.Date_Time BETWEEN '" + start + "' AND '" + end + "'\r\nGroup By Trade_Name \r\nOrder by count(*) desc";
             return dbMan.ExecuteReader(query);
         }
 
