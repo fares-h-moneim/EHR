@@ -103,6 +103,26 @@ namespace EHR_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_Button {
+            get {
+                object obj = ResourceManager.GetObject("Cancel Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Change_Pass {
+            get {
+                object obj = ResourceManager.GetObject("Change_Pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap default_avatar {
             get {
                 object obj = ResourceManager.GetObject("default_avatar", resourceCulture);
@@ -176,6 +196,16 @@ namespace EHR_Admin.Properties {
         internal static System.Drawing.Bitmap Statistics_1_ {
             get {
                 object obj = ResourceManager.GetObject("Statistics(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SUBMIT {
+            get {
+                object obj = ResourceManager.GetObject("SUBMIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

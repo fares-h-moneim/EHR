@@ -127,7 +127,8 @@ namespace EHR_Admin
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            ChangePass myForm = new ChangePass();
+            myForm.ShowDialog();
         }
     }
 }

@@ -37,5 +37,10 @@ namespace EHR_Admin
                 MessageBox.Show("Password Does not Match");
             }
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

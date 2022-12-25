@@ -170,5 +170,14 @@
   <ItemGroup>
     <None Include="Resources\Logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUBMIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel Button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
