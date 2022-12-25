@@ -21,7 +21,7 @@ namespace EHR_Hospital
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if(pass1.Text == pass2.Text)
+            if(pass1.Text == pass2.Text&&pass1.Text!="")
             {
                 var bytes = new UTF8Encoding().GetBytes(pass1.Text);
                 byte[] hashBytes;
@@ -30,14 +30,21 @@ namespace EHR_Hospital
                     hashBytes = algorithm.ComputeHash(bytes);
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                ctrl.ChangePass(NationalID.Text, savedPasswordHash);
-                MessageBox.Show("Password changed successfully");
+                int i = ctrl.ChangePass(NationalID.Text, savedPasswordHash);
+                if (i != 0)
+                {
+                    MessageBox.Show("Password changed successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid username");
+                }
             }
             else
             {
                 MessageBox.Show("Password Does not Match");
             }
-        
+
         }
 
         private void Change_Pass_Load(object sender, EventArgs e)

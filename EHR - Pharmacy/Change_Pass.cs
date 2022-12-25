@@ -31,7 +31,7 @@ namespace EHR___Pharmacy
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (pass1.Text == pass2.Text)
+            if (pass1.Text == pass2.Text&&pass1.Text!="")
             {
                 var bytes = new UTF8Encoding().GetBytes(pass1.Text);
                 byte[] hashBytes;
@@ -40,7 +40,15 @@ namespace EHR___Pharmacy
                     hashBytes = algorithm.ComputeHash(bytes);
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                ctrl.ChangePass(Name.Text, savedPasswordHash);
+                int i = ctrl.ChangePass(Name.Text, savedPasswordHash);
+                if (i != 0)
+                {
+                    MessageBox.Show("Password changed successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid username");
+                }
             }
             else
             {

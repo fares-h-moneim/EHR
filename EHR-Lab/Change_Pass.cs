@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (pass1.Text == pass2.Text)
+            if (pass1.Text == pass2.Text&&pass1.Text!="")
             {
                 var bytes = new UTF8Encoding().GetBytes(pass1.Text);
                 byte[] hashBytes;
@@ -41,9 +41,13 @@ namespace WindowsFormsApp1
                 }
                 string savedPasswordHash = Convert.ToBase64String(hashBytes);
                 int x = ctrl.ChangePass(Name.Text, savedPasswordHash);
-                if(x != 0)
+                if (x != 0)
                 {
                     MessageBox.Show("Password Changed Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid User name");
                 }
             }
             else

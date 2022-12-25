@@ -133,3 +133,4 @@ D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR_Admin.AddAdmin.r
 D:\CCEC Fall 22\Database Management\EHR\EHR-Admin\obj\Debug\EHR_Admin.Report.resources
 C:\Users\Youssef Darwish\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.ChangePass.resources
 E:\Database\EHR\EHR-Admin\obj\Debug\EHR_Admin.ChangePass.resources
+C:\Users\Mohamed\Documents\GitHub\EHR\EHR-Admin\obj\Debug\EHR_Admin.ChangePass.resources
