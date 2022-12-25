@@ -27,6 +27,20 @@ namespace EHR_Hospital
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            if (PatientID.Text == "")
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
+            DataTable dead = ctrl.getpatient(PatientID.Text);
+            if (dead != null)
+            {
+                if (Convert.ToBoolean(dead.Rows[0][11]) == true)
+                {
+                    MessageBox.Show("Patient is already dead");
+                    return;
+                }
+            }
             int prio = 0;
             if(Priority.Text == "Extreme")
             {

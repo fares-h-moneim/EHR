@@ -42,7 +42,15 @@ namespace EHR_Hospital
                 MessageBox.Show("Please insert in all fields");
                 return;
             }
-
+            DataTable dead = ctrl.getpatient(PatientID.Text);
+            if(dead != null)
+            {
+                if (Convert.ToBoolean(dead.Rows[0][11]) == true)
+                {
+                    MessageBox.Show("Patient is already dead");
+                    return;
+                }
+            }
             if (Prescription.Text == "")
             {
                 PrescriptionID = -1;

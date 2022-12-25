@@ -41,6 +41,15 @@ namespace EHR_Hospital
             string format = "yyyy-MM-dd HH:mm:ss";
             if (PatientID.Text.ToString() != "" && comboBox2.SelectedValue != null && kryptonTextBox1.Text.ToString() != "")
             {
+                DataTable dead = ctrl.getpatient(PatientID.Text);
+                if (dead != null)
+                {
+                    if (Convert.ToBoolean(dead.Rows[0][11]) == true)
+                    {
+                        MessageBox.Show("Patient is already dead");
+                        return;
+                    }
+                }
                 int x = ctrl.InsertIntoSurgery(PatientID.Text, HospitalID, kryptonTextBox1.Text, kryptonDateTimePicker1.Value.ToString(format), comboBox2.Text);
 
                 if (x != 0)

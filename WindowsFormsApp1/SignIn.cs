@@ -38,6 +38,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Incorrect email or password");
                 return;
             }
+            if (Convert.ToBoolean(dt.Rows[0][11]) == true)
+            {
+                MessageBox.Show("Patient is dead. Cannot access account");
+                return;
+            }
             Patient myForm = new Patient(Email.Text, Pass.Text);
             this.Hide();
             myForm.ShowDialog();

@@ -30,6 +30,7 @@ namespace EHR_Hospital
                 MessageBox.Show("Please enter in all fields");
                 return;
             }
+            int wx = ctrl.Updatetodead(PatientID.Text);
             DataTable dt = null;
             dt = ctrl.getifDonor(PatientID.Text);
             if (dt != null)

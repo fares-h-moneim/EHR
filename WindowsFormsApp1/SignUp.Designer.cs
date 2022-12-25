@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             // First_Name
             // 
             this.First_Name.Location = new System.Drawing.Point(839, 193);
-            this.First_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.First_Name.Margin = new System.Windows.Forms.Padding(4);
             this.First_Name.Name = "First_Name";
             this.First_Name.Size = new System.Drawing.Size(180, 26);
             this.First_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
             // Last_Name
             // 
             this.Last_Name.Location = new System.Drawing.Point(1048, 191);
-            this.Last_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Last_Name.Margin = new System.Windows.Forms.Padding(4);
             this.Last_Name.Name = "Last_Name";
             this.Last_Name.Size = new System.Drawing.Size(185, 26);
             this.Last_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
             // ID
             // 
             this.ID.Location = new System.Drawing.Point(839, 270);
-            this.ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ID.Margin = new System.Windows.Forms.Padding(4);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(395, 26);
             this.ID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -143,17 +143,19 @@ namespace WindowsFormsApp1
             // 
             // Birth_day
             // 
+            this.Birth_day.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Birth_day.Location = new System.Drawing.Point(983, 350);
-            this.Birth_day.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Birth_day.Margin = new System.Windows.Forms.Padding(4);
             this.Birth_day.Name = "Birth_day";
             this.Birth_day.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
             this.Birth_day.Size = new System.Drawing.Size(100, 25);
             this.Birth_day.TabIndex = 5;
+            this.Birth_day.ValueChanged += new System.EventHandler(this.Birth_day_ValueChanged);
             // 
             // Phone
             // 
             this.Phone.Location = new System.Drawing.Point(839, 423);
-            this.Phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Phone.Margin = new System.Windows.Forms.Padding(4);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(395, 26);
             this.Phone.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -176,7 +178,7 @@ namespace WindowsFormsApp1
             // Emergency_Contact
             // 
             this.Emergency_Contact.Location = new System.Drawing.Point(839, 470);
-            this.Emergency_Contact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Emergency_Contact.Margin = new System.Windows.Forms.Padding(4);
             this.Emergency_Contact.Name = "Emergency_Contact";
             this.Emergency_Contact.Size = new System.Drawing.Size(395, 26);
             this.Emergency_Contact.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -199,7 +201,7 @@ namespace WindowsFormsApp1
             // Chronic
             // 
             this.Chronic.Location = new System.Drawing.Point(839, 548);
-            this.Chronic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Chronic.Margin = new System.Windows.Forms.Padding(4);
             this.Chronic.Name = "Chronic";
             this.Chronic.Size = new System.Drawing.Size(395, 26);
             this.Chronic.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -219,7 +221,7 @@ namespace WindowsFormsApp1
             // Email
             // 
             this.Email.Location = new System.Drawing.Point(839, 628);
-            this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(395, 26);
             this.Email.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -240,7 +242,7 @@ namespace WindowsFormsApp1
             // Pass
             // 
             this.Pass.Location = new System.Drawing.Point(839, 662);
-            this.Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pass.Margin = new System.Windows.Forms.Padding(4);
             this.Pass.Name = "Pass";
             this.Pass.Size = new System.Drawing.Size(395, 26);
             this.Pass.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -261,7 +263,7 @@ namespace WindowsFormsApp1
             // Pass2
             // 
             this.Pass2.Location = new System.Drawing.Point(839, 697);
-            this.Pass2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pass2.Margin = new System.Windows.Forms.Padding(4);
             this.Pass2.Name = "Pass2";
             this.Pass2.Size = new System.Drawing.Size(395, 26);
             this.Pass2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
@@ -283,7 +285,7 @@ namespace WindowsFormsApp1
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Submit.Location = new System.Drawing.Point(929, 738);
-            this.Submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Submit.Margin = new System.Windows.Forms.Padding(4);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(209, 52);
             this.Submit.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
@@ -337,7 +339,7 @@ namespace WindowsFormsApp1
             "Male",
             "Female"});
             this.Gender.Location = new System.Drawing.Point(839, 350);
-            this.Gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gender.Margin = new System.Windows.Forms.Padding(4);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(96, 25);
             this.Gender.TabIndex = 15;
@@ -354,7 +356,7 @@ namespace WindowsFormsApp1
             "AB",
             "O"});
             this.Blood_type.Location = new System.Drawing.Point(1120, 350);
-            this.Blood_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Blood_type.Margin = new System.Windows.Forms.Padding(4);
             this.Blood_type.Name = "Blood_type";
             this.Blood_type.Size = new System.Drawing.Size(113, 25);
             this.Blood_type.TabIndex = 16;
@@ -365,7 +367,7 @@ namespace WindowsFormsApp1
             // 
             this.kryptonComboBox2.DropDownWidth = 121;
             this.kryptonComboBox2.Location = new System.Drawing.Point(2075, 908);
-            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
             this.kryptonComboBox2.Size = new System.Drawing.Size(161, 25);
             this.kryptonComboBox2.TabIndex = 17;
@@ -459,7 +461,7 @@ namespace WindowsFormsApp1
             this.SignIn.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.SignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignIn.Location = new System.Drawing.Point(888, 793);
-            this.SignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignIn.Margin = new System.Windows.Forms.Padding(4);
             this.SignIn.Name = "SignIn";
             this.SignIn.Size = new System.Drawing.Size(304, 36);
             this.SignIn.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -517,7 +519,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.First_Name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Electronic Healthcare Records";

@@ -26,6 +26,20 @@ namespace EHR_Hospital
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string format = "yyyy-MM-dd HH:mm:ss";
+            if (PatientID.Text == "")
+            {
+                MessageBox.Show("Please fill all fields");
+                return;
+            }
+            DataTable dead = ctrl.getpatient(PatientID.Text);
+            if (dead != null)
+            {
+                if (Convert.ToBoolean(dead.Rows[0][11]) == true)
+                {
+                    MessageBox.Show("Patient is already dead");
+                    return;
+                }
+            }
             if (PatientID.Text != "" && comboBox2.Text != "")
             {
                 int res = ctrl.InsertLabTest(PatientID.Text, DateTime.Now.ToString(format), comboBox2.Text);

@@ -83,7 +83,11 @@ namespace EHR_Hospital
                 " Select @@IDENTITY AS [@@IDENTITY];";
             return dbMan.ExecuteReader(query);
         }
-
+        public int Updatetodead(string id)
+        {
+            string query = "UPDATE Patient Set DeadOrAlive=1 Where NationalID='" + id + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public DataTable GetWaiting()
         {
             string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority desc"; //assuming 0 means status
@@ -96,7 +100,11 @@ namespace EHR_Hospital
             return dbMan.ExecuteReader(query);
         }
 
-
+        public DataTable getpatient(string id)
+        {
+            string query = "SELECT * FROM Patient WHERE NationalID='" + id + "';";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable GetPrescriptionID(string Date)
         {
             string query = "Select Prescription_ID FROM Prescription WHERE Date_Time = '" + Date + "';";
