@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1;
 
 namespace EHR_Admin
 {
@@ -124,6 +123,11 @@ namespace EHR_Admin
                 kryptonLabel1.Text = "Invalid Username or Password";
             }
           */
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

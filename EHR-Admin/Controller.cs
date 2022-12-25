@@ -10,7 +10,7 @@ using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using System.Security.Cryptography;
 
-namespace WindowsFormsApp1
+namespace EHR_Admin
 {
     public class Controller
     {
@@ -214,6 +214,12 @@ namespace WindowsFormsApp1
             string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
+        public int ChangePass(string id, string pass)
+        {
+            string query = "UPDATE Admins SET Password = '" + pass + "' WHERE Username = '" + id + "' ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
 
         public int InsertHospital(string name,  string username, string password, string address)
         {

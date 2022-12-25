@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace EHR_Admin
 {
     public class DBManager
     {
