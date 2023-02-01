@@ -77,12 +77,14 @@ Hospital staff are first greeted with the sign in page where they can login to t
 <br>
 The hospital then can view all the different functionalities similar to the patient:
 <br>
-1. Issue Diagnosis
-2. View Patient History
-3. Request surgeries and Issue surgery reports
-4. Issue death reports
-5. Request lab tests
-6. Request organs and view previous requests
+<ol>
+<li> Issue Diagnosis</li>
+<li> View Patient History</li>
+<li> Request surgeries and Issue surgery reports</li>
+<li> Issue death reports</li>
+<li> Request lab tests</li>
+  <li> Request organs and view previous requests </li>
+</ol>
 <br>
 
 ### Pharmacy
