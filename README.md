@@ -1,5 +1,6 @@
 <div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Main.gif" alt="Hospital animated icon"></div>
 <h1 align="center">EHR</h1><br>
+
 ## Table of Contents
 
 * [Project Description](#Project-Description)
@@ -26,7 +27,7 @@ required medication and give them their medications.
 # Views
 
 ### Patient
-
+<br>
 <div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Sign%20UP.png" alt="Patient Sign Up" width="500px"></div>
 <br>
 Patient is first greeted with the sign up page where they can create their account.
@@ -66,35 +67,73 @@ Patient can view, download, and/or print all lab results.
 <br><div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Surgery Report.png" alt="Surgeries" width="500px"></div>
 <br>Patient can view all surgery reports for surgeries done within a certain time period.
 
-### Player 2 
+### Hospital
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Hospital/Login.png" alt="Hospital Sign In" width="500px"></div>
+<br>
+Hospital staff are first greeted with the sign in page where they can login to their account provided by an admin.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Hospital/Hospital.png" alt="Hospital Functionalities" width="500px"></div>
+<br>
+The hospital then can view all the different functionalities similar to the patient:
+<br>
+1. Issue Diagnosis
+2. View Patient History
+3. Request surgeries and Issue surgery reports
+4. Issue death reports
+5. Request lab tests
+6. Request organs and view previous requests
+<br>
 
-1. Open Hamachi and join the network.
-2. Enter credentials of the network created by player 1.
-3. If the circle next to the network is colored anything but green, check this [link](https://community.logmein.com/t5/Hamachi-Discussions/bd-p/Hamachi) for help in troubleshooting the issue.
-4. Copy Player 1's ipv4 address.
-5. Open "*DOSBox 0.74-3 Options.bat*".
-6. Replace the text hightlighted with the ipv4 address copied previously.
-7. Change the path highlighted at the end of the file to the path at which the project was downloaded.
-8. Run DOSBox and press enter until the game starts.
+### Pharmacy
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Pharmacy/Login.png" alt="Pharmacy Sign In" width="500px"></div>
+<br>
+Similar to Hospital staff, Pharmacy staff are first greeted with the sign in page where they can login to their account provided by an admin.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Pharmacy/Prescriptions.png" alt="Pharmacy Prescriptions" width="500px"></div>
+<br>
+They are then asked to enter the Patient ID and are able to view prescribed medicines to set patient and can give the patient the medicine.
+<br>
 
-<div align="center"><img src="/media/player2.gif" alt="Player 2 Steps" width="500px"></div>
+### Laboratories
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Laboratory/Login.png" alt="Lab Sign In" width="500px"></div>
+<br>
+Lab staff are first greeted with the sign in page where they can login to their account provided by an admin.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Laboratory/Lab Results Upload.png" alt="Lab results upload" width="500px"></div>
+<br>
+They are then asked to enter the Patient ID and are able to view tests requested to set patient by the hospital and can upload the test results.
+<br>
 
-# Gameplay
-
-### Game 1
-
-<div align="center"><img src="/media/gameplay1.gif" alt="Gameplay 1" width="700px"></div>
-
-### Game 2
-
-<div align="center"><img src="/media/gameplay2.gif" alt="Gameplay 2" width="700px"></div>
+### Admin
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Admin/Admin Login.png" alt="Admin Sign In" width="500px"></div>
+<br>
+Finally Admin is greeted by the login page as well.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Admin/Admin.png" alt="Admin Functionalities" width="500px"></div>
+<br>
+The admin then can view all the different functionalities similar to the patient:
+<br>
+1. Add Hospital/Lab/Pharmacy
+2. View Statistics
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Admin/Statistics.png" alt="Statistics" width="500px"></div>
+<br>
+Admins can view statistics about the diagnosis, surgeries, lab tests, etc... they can filter by date range and also filter by gender.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Admin/Statistics Males and Females.png" alt="Statistics Male and Female" width="500px"></div>
+<br>
 
 # Notes
 
-- In the rare event of a bug occuring, it may be caused by latency in connection so just reload the game.
+- The database was hosted using [Microsoft Azure Cloud Services](https://azure.microsoft.com/en-us).
+- The app is still under development there may be some minor bugs.
 
 # References
 
-Project Document: [MP_Project_DescriptionA_Fall_2022.pdf](https://github.com/MahmoudSamy1452/Assembly-chess-game/files/10551974/MP_Project_DescriptionA_Fall_2022.pdf)
+Project Document: [DB Project Document.pdf](https://drive.google.com/file/d/1lmzFnGF8QHNRYkah1Ftxwts9z9UBRyJ6/view)
 
 
