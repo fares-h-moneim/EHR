@@ -1,5 +1,5 @@
 <div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Main.gif" alt="Hospital animated icon"></div>
-### EHR
+<h1 align="center">EHR</h1><br>
 ## Table of Contents
 
 * [Project Description](#Project-Description)
