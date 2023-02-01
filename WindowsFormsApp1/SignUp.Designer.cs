@@ -78,17 +78,14 @@ namespace WindowsFormsApp1
             // 
             // First_Name
             // 
-            this.First_Name.Location = new System.Drawing.Point(839, 193);
-            this.First_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.First_Name.Location = new System.Drawing.Point(629, 157);
             this.First_Name.Name = "First_Name";
-            this.First_Name.Size = new System.Drawing.Size(180, 26);
+            this.First_Name.Size = new System.Drawing.Size(135, 22);
             this.First_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.First_Name.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.First_Name.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.First_Name.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.First_Name.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.First_Name.StateNormal.Border.Width = 2;
             this.First_Name.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.First_Name.TabIndex = 0;
@@ -99,17 +96,14 @@ namespace WindowsFormsApp1
             // 
             // Last_Name
             // 
-            this.Last_Name.Location = new System.Drawing.Point(1048, 191);
-            this.Last_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.Last_Name.Location = new System.Drawing.Point(786, 155);
             this.Last_Name.Name = "Last_Name";
-            this.Last_Name.Size = new System.Drawing.Size(185, 26);
+            this.Last_Name.Size = new System.Drawing.Size(139, 22);
             this.Last_Name.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Last_Name.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Last_Name.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Last_Name.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Last_Name.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Last_Name.StateNormal.Border.Width = 2;
             this.Last_Name.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Last_Name.TabIndex = 1;
@@ -120,17 +114,14 @@ namespace WindowsFormsApp1
             // 
             // ID
             // 
-            this.ID.Location = new System.Drawing.Point(839, 270);
-            this.ID.Margin = new System.Windows.Forms.Padding(4);
+            this.ID.Location = new System.Drawing.Point(629, 219);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(395, 26);
+            this.ID.Size = new System.Drawing.Size(296, 22);
             this.ID.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.ID.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.ID.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.ID.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.ID.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.ID.StateNormal.Border.Width = 2;
             this.ID.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.ID.TabIndex = 2;
@@ -144,27 +135,22 @@ namespace WindowsFormsApp1
             // Birth_day
             // 
             this.Birth_day.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Birth_day.Location = new System.Drawing.Point(983, 350);
-            this.Birth_day.Margin = new System.Windows.Forms.Padding(4);
+            this.Birth_day.Location = new System.Drawing.Point(737, 284);
             this.Birth_day.Name = "Birth_day";
-            this.Birth_day.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
-            this.Birth_day.Size = new System.Drawing.Size(100, 25);
+            this.Birth_day.Size = new System.Drawing.Size(75, 21);
             this.Birth_day.TabIndex = 5;
             this.Birth_day.ValueChanged += new System.EventHandler(this.Birth_day_ValueChanged);
             // 
             // Phone
             // 
-            this.Phone.Location = new System.Drawing.Point(839, 423);
-            this.Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.Phone.Location = new System.Drawing.Point(629, 344);
             this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(395, 26);
+            this.Phone.Size = new System.Drawing.Size(296, 22);
             this.Phone.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Phone.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Phone.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Phone.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Phone.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Phone.StateNormal.Border.Width = 2;
             this.Phone.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Phone.TabIndex = 7;
@@ -177,17 +163,14 @@ namespace WindowsFormsApp1
             // 
             // Emergency_Contact
             // 
-            this.Emergency_Contact.Location = new System.Drawing.Point(839, 470);
-            this.Emergency_Contact.Margin = new System.Windows.Forms.Padding(4);
+            this.Emergency_Contact.Location = new System.Drawing.Point(629, 382);
             this.Emergency_Contact.Name = "Emergency_Contact";
-            this.Emergency_Contact.Size = new System.Drawing.Size(395, 26);
+            this.Emergency_Contact.Size = new System.Drawing.Size(296, 22);
             this.Emergency_Contact.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Emergency_Contact.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Emergency_Contact.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Emergency_Contact.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Emergency_Contact.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Emergency_Contact.StateNormal.Border.Width = 2;
             this.Emergency_Contact.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Emergency_Contact.TabIndex = 8;
@@ -200,17 +183,14 @@ namespace WindowsFormsApp1
             // 
             // Chronic
             // 
-            this.Chronic.Location = new System.Drawing.Point(839, 548);
-            this.Chronic.Margin = new System.Windows.Forms.Padding(4);
+            this.Chronic.Location = new System.Drawing.Point(629, 445);
             this.Chronic.Name = "Chronic";
-            this.Chronic.Size = new System.Drawing.Size(395, 26);
+            this.Chronic.Size = new System.Drawing.Size(296, 22);
             this.Chronic.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Chronic.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Chronic.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Chronic.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Chronic.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Chronic.StateNormal.Border.Width = 2;
             this.Chronic.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Chronic.TabIndex = 9;
@@ -220,17 +200,14 @@ namespace WindowsFormsApp1
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(839, 628);
-            this.Email.Margin = new System.Windows.Forms.Padding(4);
+            this.Email.Location = new System.Drawing.Point(629, 510);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(395, 26);
+            this.Email.Size = new System.Drawing.Size(296, 22);
             this.Email.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Email.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Email.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Email.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Email.StateNormal.Border.Width = 2;
             this.Email.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Email.TabIndex = 10;
@@ -241,17 +218,14 @@ namespace WindowsFormsApp1
             // 
             // Pass
             // 
-            this.Pass.Location = new System.Drawing.Point(839, 662);
-            this.Pass.Margin = new System.Windows.Forms.Padding(4);
+            this.Pass.Location = new System.Drawing.Point(629, 538);
             this.Pass.Name = "Pass";
-            this.Pass.Size = new System.Drawing.Size(395, 26);
+            this.Pass.Size = new System.Drawing.Size(296, 22);
             this.Pass.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Pass.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Pass.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Pass.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Pass.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Pass.StateNormal.Border.Width = 2;
             this.Pass.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Pass.TabIndex = 12;
@@ -262,17 +236,14 @@ namespace WindowsFormsApp1
             // 
             // Pass2
             // 
-            this.Pass2.Location = new System.Drawing.Point(839, 697);
-            this.Pass2.Margin = new System.Windows.Forms.Padding(4);
+            this.Pass2.Location = new System.Drawing.Point(629, 566);
             this.Pass2.Name = "Pass2";
-            this.Pass2.Size = new System.Drawing.Size(395, 26);
+            this.Pass2.Size = new System.Drawing.Size(296, 22);
             this.Pass2.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.Pass2.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Pass2.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             this.Pass2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Pass2.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Pass2.StateNormal.Border.Width = 2;
             this.Pass2.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Pass2.TabIndex = 13;
@@ -284,47 +255,37 @@ namespace WindowsFormsApp1
             // Submit
             // 
             this.Submit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Submit.Location = new System.Drawing.Point(929, 738);
-            this.Submit.Margin = new System.Windows.Forms.Padding(4);
+            this.Submit.Location = new System.Drawing.Point(697, 600);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(209, 52);
+            this.Submit.Size = new System.Drawing.Size(157, 42);
             this.Submit.StateCommon.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.Submit.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
             this.Submit.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
-            this.Submit.StateCommon.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.Submit.StateCommon.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Submit.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Submit.StateDisabled.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StateDisabled.Border.Rounding = 25;
             this.Submit.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StateNormal.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.Submit.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Submit.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StateNormal.Border.Rounding = 25;
             this.Submit.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StatePressed.Back.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
-            this.Submit.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(136)))), ((int)(((byte)(207)))));
             this.Submit.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Submit.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StatePressed.Border.Rounding = 25;
             this.Submit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Submit.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Submit.StateTracking.Border.Rounding = 25;
             this.Submit.TabIndex = 14;
             this.Submit.Values.Image = global::WindowsFormsApp1.Properties.Resources.SUBMIT;
@@ -338,10 +299,9 @@ namespace WindowsFormsApp1
             this.Gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.Gender.Location = new System.Drawing.Point(839, 350);
-            this.Gender.Margin = new System.Windows.Forms.Padding(4);
+            this.Gender.Location = new System.Drawing.Point(629, 284);
             this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(96, 25);
+            this.Gender.Size = new System.Drawing.Size(72, 21);
             this.Gender.TabIndex = 15;
             this.Gender.Text = "Gender";
             this.Gender.SelectedIndexChanged += new System.EventHandler(this.Gender_SelectedIndexChanged);
@@ -355,10 +315,9 @@ namespace WindowsFormsApp1
             "B",
             "AB",
             "O"});
-            this.Blood_type.Location = new System.Drawing.Point(1120, 350);
-            this.Blood_type.Margin = new System.Windows.Forms.Padding(4);
+            this.Blood_type.Location = new System.Drawing.Point(840, 284);
             this.Blood_type.Name = "Blood_type";
-            this.Blood_type.Size = new System.Drawing.Size(113, 25);
+            this.Blood_type.Size = new System.Drawing.Size(85, 21);
             this.Blood_type.TabIndex = 16;
             this.Blood_type.Text = "Blood Type";
             this.Blood_type.Validated += new System.EventHandler(this.Blood_type_Validated);
@@ -366,10 +325,9 @@ namespace WindowsFormsApp1
             // kryptonComboBox2
             // 
             this.kryptonComboBox2.DropDownWidth = 121;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(2075, 908);
-            this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonComboBox2.Location = new System.Drawing.Point(1556, 738);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(161, 25);
+            this.kryptonComboBox2.Size = new System.Drawing.Size(121, 21);
             this.kryptonComboBox2.TabIndex = 17;
             this.kryptonComboBox2.Text = "kryptonComboBox2";
             // 
@@ -460,48 +418,41 @@ namespace WindowsFormsApp1
             // 
             this.SignIn.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
             this.SignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SignIn.Location = new System.Drawing.Point(888, 793);
-            this.SignIn.Margin = new System.Windows.Forms.Padding(4);
+            this.SignIn.Location = new System.Drawing.Point(666, 644);
             this.SignIn.Name = "SignIn";
-            this.SignIn.Size = new System.Drawing.Size(304, 36);
+            this.SignIn.Size = new System.Drawing.Size(228, 29);
             this.SignIn.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.SignIn.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.SignIn.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.SignIn.StateCommon.Border.Color2 = System.Drawing.Color.White;
             this.SignIn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.SignIn.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.SignIn.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.SignIn.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.StateNormal.Border.Color1 = System.Drawing.Color.White;
             this.SignIn.StateNormal.Border.Color2 = System.Drawing.Color.White;
             this.SignIn.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.SignIn.StateNormal.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.StatePressed.Back.Color1 = System.Drawing.Color.White;
             this.SignIn.StatePressed.Back.Color2 = System.Drawing.Color.White;
-            this.SignIn.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.StatePressed.Border.Color1 = System.Drawing.Color.White;
             this.SignIn.StatePressed.Border.Color2 = System.Drawing.Color.White;
             this.SignIn.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.SignIn.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.SignIn.TabIndex = 18;
             this.SignIn.Values.Text = "Already Have an Account? Sign In Here.";
             this.SignIn.Click += new System.EventHandler(this.SignIn_Click);
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1344, 897);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.SignIn);
             this.Controls.Add(this.kryptonComboBox2);
             this.Controls.Add(this.Blood_type);
@@ -519,7 +470,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.First_Name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Electronic Healthcare Records";
