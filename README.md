@@ -27,37 +27,44 @@ required medication and give them their medications.
 
 ### Patient
 
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Sign%20UP.png" alt="Patient Sign Up" width="500px"></div>
-
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Sign%20UP.png" alt="Patient Sign Up" width="500px"></div>
+<br>
 Patient is first greeted with the sign up page where they can create their account.
-
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Sign%20IN.png" alt="Patient Sign In" width="500px"></div>
-
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Sign%20IN.png" alt="Patient Sign In" width="500px"></div>
+<br>
 If they already have an accout they can sign in instead.
-
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Patient.png" alt="Patient" width="500px"></div>
-
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Patient.png" alt="Patient" width="500px"></div>
+<br>
 The patient then can view all the different functionalities:
 1. View Medical History
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Medical History.png" alt="Medical History" width="500px"></div>
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Medical History.png" alt="Medical History" width="500px"></div>
+<br>
 Patient can view all diagnosis within a certain date range.
+<br>
 2. View Lab Results
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Lab Results.png" alt="Lab Results" width="500px"></div>
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Lab Results.png" alt="Lab Results" width="500px"></div>
+<br>
 Patient can view, download, and/or print all lab results.
+<br>
 3. View Prescriptions
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Prescriptions.png" alt="Prescriptions" width="500px"></div>
-Patient can view all prescriptions prescribed within a certain time period.
+<br>
+<div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Prescriptions.png" alt="Prescriptions" width="500px"></div>
+<br>Patient can view all prescriptions prescribed within a certain time period.<br>
 4. Add Family Members
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Family.png" alt="Family" width="500px"></div>
-Patient can view family members, add family members, or view requests.
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Family Requests.png" alt="Family Requests" width="500px"></div>
-Here we can see a family member request where user can accept or reject the request.
-5. Apply for Organ Donations
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Organ Donation.png" alt="Organ Donations" width="500px"></div>
-Patient can apply to become an organ donor while alive or choose to donate his organs upon death.
-6. View Surgeries
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Surgery Report.png" alt="Surgeries" width="500px"></div>
-Patient can view all surgery reports for surgeries done within a certain time period.
+<br><div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Family.png" alt="Family" width="500px"></div>
+<br>Patient can view family members, add family members, or view requests.
+<br><div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Family Requests.png" alt="Family Requests" width="500px"></div>
+<br>Here we can see a family member request where user can accept or reject the request.
+<br>5. Apply for Organ Donations
+<br><div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Organ Donation.png" alt="Organ Donations" width="500px"></div>
+<br>Patient can apply to become an organ donor while alive or choose to donate his organs upon death.
+<br>6. View Surgeries
+<br><div align="left"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Patient/Surgery Report.png" alt="Surgeries" width="500px"></div>
+<br>Patient can view all surgery reports for surgeries done within a certain time period.
 
 ### Player 2 
 
