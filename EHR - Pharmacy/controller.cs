@@ -49,9 +49,9 @@ namespace EHR___Pharmacy
             return dbMan.ExecuteReader(StoredProcureNames, Parameters);
         }
 
-        public int MedicationsGiven(int PID, int Pharm)
+        public int MedicationsGiven(int PID, int Pharme)
         {
-            string query = "UPDATE Prescription SET Given_or_not = "+Pharm+" WHERE Prescription_ID = " + PID + ";";
+            string query = "UPDATE Prescription SET Given_or_not = "+Pharme+" WHERE Prescription_ID = " + PID + ";";
             return dbMan.ExecuteNonQuery(query);
         }
 
@@ -68,4 +68,3 @@ namespace EHR___Pharmacy
         }
     }
 }
-
