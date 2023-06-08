@@ -13,14 +13,14 @@ namespace WindowsFormsApp1
     public partial class Apply_Organ : Form
     {
         Controller ctrl;
-        string id;
+        string ID;
         
         public Apply_Organ(string idt)
         {
             InitializeComponent();
-            id = idt;
+            ID = idt;
             ctrl = new Controller();
-           DataTable dt = ctrl.GetOrgan_Donor_1(id);
+           DataTable dt = ctrl.GetOrgan_Donor_1(ID);
             if (dt == null)
             {
                 return;
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                     Kidney.Enabled = false;
                 }
             }
-            DataTable dt1 = ctrl.getpatientstatusupondeath(id);
+            DataTable dt1 = ctrl.getpatientstatusupondeath(ID);
             DataRowCollection dr2 = dt1.Rows;
             if(Convert.ToBoolean(dr2[0][0]) == true)
             {
@@ -78,25 +78,25 @@ namespace WindowsFormsApp1
 
             if (kryptonCheckBox6.Checked == true && kryptonCheckBox6.Enabled == true)
             {
-                ctrl.OrganDonorUponDeath(id);
+                ctrl.OrganDonorUponDeath(ID);
                 
             }
             if (Kidney.Checked == true && Kidney.Enabled == true)
             {
-                DataTable dt = ctrl.GetOrgan_Donor(Kidney.Text, id);
-                int x = ctrl.InsertOrganDonor(Kidney.Text.ToString(), id, 1);
+                DataTable dt = ctrl.GetOrgan_Donor(Kidney.Text, ID);
+                int x = ctrl.InsertOrganDonor(Kidney.Text.ToString(), ID, 1);
                 if(x!=0)
                 {
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
 
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Kidney")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Kidney");
-                            ctrl.DeleteDonor(id, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Kidney");
+                            ctrl.DeleteDonor(ID, "Kidney");
                             break;
                         }
                     }
@@ -106,19 +106,19 @@ namespace WindowsFormsApp1
             
             if (Intestine.Checked == true && Intestine.Enabled == true)
             {
-              int x =  ctrl.InsertOrganDonor(Intestine.Text.ToString(), id, 1);
+              int x =  ctrl.InsertOrganDonor(Intestine.Text.ToString(), ID, 1);
                 if (x != 0)
                 {
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
 
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Intestine")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Intestine");
-                            ctrl.DeleteDonor(id, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Intestine");
+                            ctrl.DeleteDonor(ID, "Kidney");
                             break;
                         }
                     }
@@ -127,19 +127,19 @@ namespace WindowsFormsApp1
             }
             if (Pancreas.Checked == true && Pancreas.Enabled == true)
             {
-                int x = ctrl.InsertOrganDonor(Pancreas.Text.ToString(), id, 1);
+                int x = ctrl.InsertOrganDonor(Pancreas.Text.ToString(), ID, 1);
                 if (x != 0)
                 {
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
 
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Pancreas")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Pancreas");
-                            ctrl.DeleteDonor(id, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Pancreas");
+                            ctrl.DeleteDonor(ID, "Kidney");
                             break;
                         }
                     }
@@ -147,19 +147,19 @@ namespace WindowsFormsApp1
             }
             if (Liver.Checked == true && Liver.Enabled == true)
             {
-                int x = ctrl.InsertOrganDonor(Liver.Text.ToString(), id, 1);
+                int x = ctrl.InsertOrganDonor(Liver.Text.ToString(), ID, 1);
                 if (x != 0)
                 {
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
 
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Liver")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Liver");
-                            ctrl.DeleteDonor(id, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Liver");
+                            ctrl.DeleteDonor(ID, "Kidney");
                             break;
                         }
                     }
@@ -168,19 +168,19 @@ namespace WindowsFormsApp1
             }
             if (Lung.Checked == true && Lung.Enabled == true)
             {
-              int x =  ctrl.InsertOrganDonor(Lung.Text.ToString(), id, 1);
+              int x =  ctrl.InsertOrganDonor(Lung.Text.ToString(), ID, 1);
                 if (x != 0)
                 {
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
 
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Lungs")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Lungs");
-                            ctrl.DeleteDonor(id, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Lungs");
+                            ctrl.DeleteDonor(ID, "Kidney");
                             break;
                         }
                     }

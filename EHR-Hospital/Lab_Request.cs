@@ -17,7 +17,7 @@ namespace EHR_Hospital
         {
             InitializeComponent();
             ctrl = new Controller();
-            DataTable dt = ctrl.getlabtests();
+            DataTable dt = ctrl.GetLabTests();
             comboBox2.DataSource = dt;
             comboBox2.DisplayMember = "Lab_Tests";
             comboBox2.ValueMember = "Lab_Tests";
@@ -31,7 +31,7 @@ namespace EHR_Hospital
                 MessageBox.Show("Please fill all fields");
                 return;
             }
-            DataTable dead = ctrl.getpatient(PatientID.Text);
+            DataTable dead = ctrl.GetPatient(PatientID.Text);
             if (dead != null)
             {
                 if (Convert.ToBoolean(dead.Rows[0][11]) == true)

@@ -15,22 +15,22 @@ namespace EHR_Lab
 {
     public partial class Lab_Results : Form
     {
-        string id;
+        string ID;
         int idlab;
         Controller ctrl;
         public Lab_Results(int idl, string idt)
         {
             InitializeComponent();
-            id = idt;
+            ID = idt;
             idlab = idl;
             ctrl = new Controller();
-            DataTable dt = ctrl.SelectDescriptions(id);
+            DataTable dt = ctrl.SelectDescriptions(ID);
             kryptonComboBox1.DataSource = dt;
             kryptonComboBox1.DisplayMember = "Description";
             kryptonComboBox1.ValueMember = "Description";
             if (kryptonComboBox1.SelectedValue != null)
             {
-                DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                DataTable dt2 = ctrl.SelectLabDates(ID, kryptonComboBox1.SelectedValue.ToString());
                 kryptonComboBox2.DataSource = dt2;
                 kryptonComboBox2.DisplayMember = "Date_Time";
                 kryptonComboBox2.ValueMember = "ID";
@@ -75,13 +75,13 @@ namespace EHR_Lab
                 else
                 {
                     MessageBox.Show("Success");
-                    DataTable dt = ctrl.SelectDescriptions(id);
+                    DataTable dt = ctrl.SelectDescriptions(ID);
                     kryptonComboBox1.DataSource = dt;
                     kryptonComboBox1.DisplayMember = "Description";
                     kryptonComboBox1.ValueMember = "Description";
                     if (kryptonComboBox1.SelectedValue != null)
                     {
-                        DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                        DataTable dt2 = ctrl.SelectLabDates(ID, kryptonComboBox1.SelectedValue.ToString());
                         kryptonComboBox2.DataSource = dt2;
                         kryptonComboBox2.DisplayMember = "Date_Time";
                         kryptonComboBox2.ValueMember = "ID";
@@ -96,7 +96,7 @@ namespace EHR_Lab
         {
             if (kryptonComboBox1.SelectedValue != null)
             {
-                DataTable dt2 = ctrl.SelectLabDates(id, kryptonComboBox1.SelectedValue.ToString());
+                DataTable dt2 = ctrl.SelectLabDates(ID, kryptonComboBox1.SelectedValue.ToString());
                 kryptonComboBox2.DataSource = dt2;
                 kryptonComboBox2.DisplayMember = "Date_Time";
                 kryptonComboBox2.ValueMember = "ID";

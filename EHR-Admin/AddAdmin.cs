@@ -21,7 +21,7 @@ namespace EHR_Admin
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if(fname.Text=="" || kryptonTextBox1.Text=="" || kryptonTextBox2.Text=="" || kryptonTextBox3.Text == "")
+            if(FirstName.Text=="" || kryptonTextBox1.Text=="" || kryptonTextBox2.Text=="" || kryptonTextBox3.Text == "")
             {
                 MessageBox.Show("Please fill all fields");
                 return;
@@ -33,7 +33,7 @@ namespace EHR_Admin
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            int x = ctrl.InsertAdmin(fname.Text, kryptonTextBox1.Text, kryptonTextBox2.Text, savedPasswordHash);
+            int x = ctrl.InsertAdmin(FirstName.Text, kryptonTextBox1.Text, kryptonTextBox2.Text, savedPasswordHash);
             if (x == 0)
             {
                 MessageBox.Show("Insertion Failed");

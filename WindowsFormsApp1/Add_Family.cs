@@ -14,21 +14,21 @@ namespace WindowsFormsApp1
     public partial class Add_Family : Form
     {
         Controller ctrl;
-        string id;
+        string ID;
         public Add_Family(string idt)
         {
             InitializeComponent();
             ctrl = new Controller();
-            id = idt;
+            ID = idt;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             //add family
-            DataTable Check = ctrl.CheckforReletiveRequest(id, Relative.Text);
+            DataTable Check = ctrl.CheckforReletiveRequest(ID, Relative.Text);
             if (Check == null)
             {
-                int res = ctrl.InsertRelative(id, Relative.Text);
+                int res = ctrl.InsertRelative(ID, Relative.Text);
 
                 if (res == 0)
                 {
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                ctrl.AcceptRelative(id, Relative.Text);
+                ctrl.AcceptRelative(ID, Relative.Text);
             }
         }
 

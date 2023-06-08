@@ -169,7 +169,7 @@ namespace WindowsFormsApp1
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "Email (example@email.com)")
+            if (Email.Text == "Email (example@Email.com)")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email (example@email.com)";
+                Email.Text = "Email (example@Email.com)";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -336,12 +336,12 @@ namespace WindowsFormsApp1
 
         private void Pass_Validated(object sender, EventArgs e)
         {
-            string password = Pass.Text;
-            if (!(password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit) && Pass.Text.Length > 8))
+            string Password = Pass.Text;
+            if (!(Password.Any(char.IsLower) && Password.Any(char.IsUpper) && Password.Any(char.IsDigit) && Pass.Text.Length > 8))
             {
 
                 check[6] = false;
-                passerror.SetError(Pass, "Make sure your password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
+                passerror.SetError(Pass, "Make sure your Password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
             }
             else
             {

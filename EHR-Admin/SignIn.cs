@@ -28,7 +28,7 @@ namespace EHR_Admin
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "Email (example@email.com)")
+            if (Email.Text == "Email (example@Email.com)")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -39,7 +39,7 @@ namespace EHR_Admin
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email (example@email.com)";
+                Email.Text = "Email (example@Email.com)";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else

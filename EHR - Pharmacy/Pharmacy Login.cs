@@ -91,7 +91,7 @@ namespace EHR___Pharmacy
             DataTable dt = ctrl.GetPharmacy(Email.Text, savedPasswordHash);
             if (dt == null)
             {
-                MessageBox.Show("Email or password inserted incorrectly");
+                MessageBox.Show("Email or Password inserted incorrectly");
                 return;
             }
             else

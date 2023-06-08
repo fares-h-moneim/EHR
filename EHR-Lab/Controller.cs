@@ -14,31 +14,22 @@ namespace WindowsFormsApp1
 {
     public class Controller
     {
-        DBManager dbMan;
+        DBManager DbMan;
         static string DB_Connection_String = @"Server=tcp:ehrcce25.database.windows.net,1433;Initial Catalog=EHR;Persist Security Info=False;User ID=EHR_Team6_Database;Password=3lo2Cce@da7i7a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        SqlConnection myConnection;
+        SqlConnection MyConnection;
         public Controller()
         {
-            dbMan = new DBManager();
-            myConnection = new SqlConnection(DB_Connection_String);
+            DbMan = new DBManager();
+            MyConnection = new SqlConnection(DB_Connection_String);
 
-            myConnection.Open();
+            MyConnection.Open();
         }
-
-        //public int InsertSupplier(string snum, string sname, string city, int status)
-        //{
-        //    string query = "INSERT INTO S (S#, Name, City, Status) " +
-        //                    "Values ('" + snum + "','" + sname + "','" + city + "'," + status + ");";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-
         public int InsertLabResult(int Lab_ResultID, byte[] Image, int labid)
         {
-            /*string query = "Update Lab_Results Set Lab_ID = '"+labid+"', Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
+            /*string Query = "Update Lab_Results Set Lab_ID = '"+labid+"', Test_Result = '" + Image + "' where ID = '" + Lab_ResultID + "';";
 
-            return dbMan.ExecuteNonQuery(query);*/
-            using (SqlCommand cmd = new SqlCommand("Update Lab_Results Set Lab_ID = @labid, Test_Result = @image where ID = @Lab_ResultID;", myConnection))
+            return DbMan.ExecuteNonQuery(Query);*/
+            using (SqlCommand cmd = new SqlCommand("Update Lab_Results Set Lab_ID = @labid, Test_Result = @image where ID = @Lab_ResultID;", MyConnection))
             {
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@labid", labid.ToString());
@@ -48,86 +39,62 @@ namespace WindowsFormsApp1
             }
         }
 
-        public DataTable SelectDescriptions(string id)
+        public DataTable SelectDescriptions(string ID)
         {
-            string query = "SELECT Distinct Description From Lab_Results where Patient_ID = '" + id + "' and Test_Result IS NULL;";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT Distinct Description From Lab_Results where Patient_ID = '" + ID + "' and Test_Result IS NULL;";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable SelectLabDates(string id, string desc)
+        public DataTable SelectLabDates(string ID, string Description)
         {
             string storedprocedurenames = StoredProcedures.SelectLabDates;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@patID", id);
-            Parameters.Add("@desc", desc);
-            return dbMan.ExecuteReader(storedprocedurenames, Parameters);
+            Parameters.Add("@patID", ID);
+            Parameters.Add("@Description", Description);
+            return DbMan.ExecuteReader(storedprocedurenames, Parameters);
         }
 
 
-        public DataTable GetLab(string user, string pass)
+        public DataTable GetLab(string Username, string Password)
         {
-            string query = "SELECT * FROM Laboratory WHERE Username='" + user + "' and Password='" + pass + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Laboratory WHERE Username='" + Username + "' and Password='" + Password + "';";
+            return DbMan.ExecuteReader(Query);
         }
-        public DataTable GetLaboratory(string email, string password)
+        public DataTable GetLaboratory(string Email, string Password)
         {
-            string query = "SELECT * " +
+            string Query = "SELECT * " +
                 "From Laboratory " +
-                "Where Username = '" + email + "' AND Password = '" + password + "';";
-            return dbMan.ExecuteReader(query);
+                "Where Username = '" + Email + "' AND Password = '" + Password + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int IDExist(string id)
+        public int IDExist(string ID)
         {
             string storedprocedurenames = StoredProcedures.IDEXIST;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@patID", id);
-            return (int)dbMan.ExecuteScalar(storedprocedurenames, Parameters);
+            Parameters.Add("@patID", ID);
+            return (int)DbMan.ExecuteScalar(storedprocedurenames, Parameters);
         }
-        public DataTable getResults(/*int idl,*/ string id)
+        public DataTable getResults(/*int idl,*/ string ID)
         {
-            string query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + id + "' and Lab_ID IS NULL;";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Lab_Results WHERE Patient_ID='" + ID + "' and Lab_ID IS NULL;";
+            return DbMan.ExecuteReader(Query);
         }
         
-        public int EmailExist(string email)
+        public int EmailExist(string Email)
         {
-            string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
-            return (int)dbMan.ExecuteScalar(query);
+            string Query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + Email + "';";
+            return (int)DbMan.ExecuteScalar(Query);
         }
 
-        public int ChangePass(string id, string pass)
+        public int ChangePass(string ID, string Password)
         {
-            string query = "UPDATE Laboratory SET Password = '" + pass + "' WHERE Name = '" + id + "' ;";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Laboratory SET Password = '" + Password + "' WHERE Name = '" + ID + "' ;";
+            return DbMan.ExecuteNonQuery(Query);
         }
-        //public int DeleteSupplier(string snum)
-        //{
-        //    string query = "DELETE FROM S WHERE S#='" + snum + "';";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-        //public int UpdateSupplier(string snum, string city)
-        //{
-        //    string query = "UPDATE S SET City='" + city + "' WHERE S#='" + snum + "';";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-        //public DataTable SelectAllSuppliers()
-        //{
-        //    string query = "SELECT * FROM S;";
-        //    return dbMan.ExecuteReader(query);
-        //}
-
-        //public int CountSuppliers()
-        //{
-        //    string query = "SELECT COUNT(S#) FROM S;";
-        //    return (int)dbMan.ExecuteScalar(query);
-        //}
-
         public void TerminateConnection()
         {
-            dbMan.CloseConnection();
+            DbMan.CloseConnection();
         }
     }
 }

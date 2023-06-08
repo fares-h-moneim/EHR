@@ -32,7 +32,7 @@ namespace EHR_Hospital
                 MessageBox.Show("Please fill all fields");
                 return;
             }
-            DataTable dead = ctrl.getpatient(PatientID.Text);
+            DataTable dead = ctrl.GetPatient(PatientID.Text);
             if (dead != null)
             {
                 if (Convert.ToBoolean(dead.Rows[0][11]) == true)
@@ -67,14 +67,14 @@ namespace EHR_Hospital
                 if (x != 0)
                 {
                     DataTable dt1 = ctrl.GetDonate();
-                    string pid = "";
+                    string PatientID = "";
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == Organs.Text)
                         {
-                            pid = dt1.Rows[i][1].ToString();
+                            PatientID = dt1.Rows[i][1].ToString();
                             ctrl.UpdateStatus(PatientID.Text, Organs.Text);
-                            ctrl.DeleteDonor(pid, Organs.Text);
+                            ctrl.DeleteDonor(PatientID, Organs.Text);
                             break;
                         }
                     }

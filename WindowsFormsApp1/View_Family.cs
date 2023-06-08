@@ -12,12 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class View_Family : Form
     {
-        string id;
+        string ID;
         Controller ctrl;
         public View_Family(string idt)
         {
             InitializeComponent();
-            id = idt;
+            ID = idt;
             ctrl = new Controller();
             DataTable dt = ctrl.GetRelatives(idt);
             none.Visible = false;

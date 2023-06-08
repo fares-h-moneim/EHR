@@ -13,24 +13,24 @@
     Example:
     
     ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <resheader Name="resmimetype">text/microsoft-resx</resheader>
+    <resheader Name="version">2.0</resheader>
+    <resheader Name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader Name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data Name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data Name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data Name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <data Name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
                 
     There are any number of "resheader" rows that contain simple 
-    name/value pairs.
+    Name/value pairs.
     
-    Each data row contains a name, and value. The row also contains a 
+    Each data row contains a Name, and value. The row also contains a 
     type or mimetype. Type corresponds to a .NET class that support 
     text/value conversion through the TypeConverter architecture. 
     Classes that don't support this are serialized and stored with the 
@@ -59,72 +59,72 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema ID="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:element Name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
+          <xsd:element Name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute Name="Name" use="required" type="xsd:string" />
+              <xsd:attribute Name="type" type="xsd:string" />
+              <xsd:attribute Name="mimetype" type="xsd:string" />
               <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="assembly">
+          <xsd:element Name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute Name="alias" type="xsd:string" />
+              <xsd:attribute Name="Name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="data">
+          <xsd:element Name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element Name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute Name="Name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute Name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute Name="mimetype" type="xsd:string" msdata:Ordinal="4" />
               <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="resheader">
+          <xsd:element Name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute Name="Name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
       </xsd:complexType>
     </xsd:element>
   </xsd:schema>
-  <resheader name="resmimetype">
+  <resheader Name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
-  <resheader name="version">
+  <resheader Name="version">
     <value>2.0</value>
   </resheader>
-  <resheader name="reader">
+  <resheader Name="reader">
     <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <resheader name="writer">
+  <resheader Name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="firstnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="firstnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata Name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <assembly alias="System.Drawing" Name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data Name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAMACAYAAAC6uhUNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAA/7JJREFUeF7svXe4JmlV7s3/33eCIgKSMyKSzUeRZECUHGckSJgBhhyaDCI5DswA
@@ -1199,7 +1199,7 @@
         NTBkupJ5SgCYUo/5t+Cy75N/S/yRIVNq4Ko7OouC3VRQ+En+Owx6RE8IKB2XLLcNfMETfhst+VhSPQY+
         6ecYyefCb28n8vQfEWUfwaf+pu56AKQefMKEN5v41InmAKCuqXqMqhsC4MKFCxcpD5J//I3F310Ee2Fh
         byxMyrqn/zKXSeP/H8G2kHkBUIqldgk6lpc2/FhpHy913ZRUJ6jNPkZv42uwOt9H8GvR8XTse0fqxBtl
-        R+swOb0IHr71ukAS4KuBt/jEs2bqcMh6NboiACYAYk3I1xzg2P/id/vp1z/7fCcofMc/KeHcc1ni52tv
+        R+swOb0IHr71ukAS4KuBt/jEs2bqcMh6NboiACYAYk3I1xzg2P/ID/vp1z/7fCcofMc/KeHcc1ni52tv
         jD94Fq6/8Sb45OHOvs9ns+25+/RygLLMN46f/NX3YGLfm3RywXuNPYugvr4eJk+cCH/8zW/gnjvugPT0
         dPO/iIY4WVUHXxTJn8UR5aUtdVHxJ2z5R+E3pZZ/VY+ZCFD1QRMyRLlOhCuU0CPSPuT6rv28BMDNfUeI
         xzSFziOnBsXf3haEX6MEH0sUfSoDGMnXsO1E5J/3AvDauPhzjPgT0k2BIxmiqwDgzaZeBQCHAGACgD2Z
@@ -4142,7 +4142,7 @@
         /bd8NuTbj/H/Pz/oQb9pmqZpmublvHv3/wMxwbcvEYfeoQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4166,7 +4166,7 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <data name="firstnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="firstnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4190,10 +4190,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="lastnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="lastnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
   </metadata>
-  <data name="lastnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="lastnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4217,10 +4217,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="iderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="iderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>273, 17</value>
   </metadata>
-  <data name="iderror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="iderror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4244,10 +4244,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="phoneerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="phoneerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>361, 17</value>
   </metadata>
-  <data name="phoneerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="phoneerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4271,10 +4271,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="emergencyerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="emergencyerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>474, 17</value>
   </metadata>
-  <data name="emergencyerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="emergencyerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4298,10 +4298,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="chronicerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="chronicerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>612, 17</value>
   </metadata>
-  <data name="chronicerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="chronicerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4325,10 +4325,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="emailerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="emailerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>730, 17</value>
   </metadata>
-  <data name="emailerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="emailerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4352,10 +4352,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="passerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="passerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>837, 17</value>
   </metadata>
-  <data name="passerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="passerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4379,10 +4379,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="pass2error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="pass2error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>939, 17</value>
   </metadata>
-  <data name="pass2error.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="pass2error.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4406,10 +4406,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="gendererror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="gendererror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1048, 17</value>
   </metadata>
-  <data name="gendererror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="gendererror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -4433,13 +4433,13 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="blooderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="blooderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 43</value>
   </metadata>
-  <metadata name="submiterror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="submiterror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 43</value>
   </metadata>
-  <data name="submiterror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="submiterror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//

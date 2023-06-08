@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid User name");
+                    MessageBox.Show("Please enter a valid User Name");
                 }
             }
             else

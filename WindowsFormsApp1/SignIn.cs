@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             DataTable dt = ctrl.GetPatient(Email.Text,savedPasswordHash);
             if(dt == null)
             {
-                MessageBox.Show("Incorrect email or password");
+                MessageBox.Show("Incorrect Email or Password");
                 return;
             }
             if (Convert.ToBoolean(dt.Rows[0][11]) == true)
@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "Email (example@email.com)")
+            if (Email.Text == "Email (example@Email.com)")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email (example@email.com)";
+                Email.Text = "Email (example@Email.com)";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else

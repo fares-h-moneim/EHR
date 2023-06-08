@@ -11,14 +11,14 @@ namespace EHR___Pharmacy
     public class DBManager
     {
         static string DB_Connection_String = @"Server=tcp:ehrcce25.database.windows.net,1433;Initial Catalog=EHR;Persist Security Info=False;User ID=EHR_Team6_Database;Password=3lo2Cce@da7i7a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        SqlConnection myConnection;
+        SqlConnection MyConnection;
 
         public DBManager()
         {
-            myConnection = new SqlConnection(DB_Connection_String);
+            MyConnection = new SqlConnection(DB_Connection_String);
             try
             {
-                myConnection.Open();
+                MyConnection.Open();
                 Console.WriteLine("The DB connection is opened successfully");
             }
             catch (Exception e)
@@ -28,26 +28,26 @@ namespace EHR___Pharmacy
             }
         }
 
-        public int ExecuteNonQuery(string query)
+        public int ExecuteNonQuery(string Query)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(Query, MyConnection);
                 return myCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                // this message should not appear to user in the final application
+                // this message should not appear to Username in the final application
                 MessageBox.Show(ex.Message);
                 return 0;
             }
         }
 
-        public DataTable ExecuteReader(string query)
+        public DataTable ExecuteReader(string Query)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(Query, MyConnection);
                 SqlDataReader reader = myCommand.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -64,36 +64,36 @@ namespace EHR___Pharmacy
             }
             catch (Exception ex)
             {
-                // this message should not appear to user in the final application
+                // this message should not appear to Username in the final application
                 MessageBox.Show(ex.Message);
                 return null;
             }
         }
 
-        public object ExecuteScalar(string query)
+        public object ExecuteScalar(string Query)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(Query, MyConnection);
                 return myCommand.ExecuteScalar();
             }
             catch (Exception ex)
             {
-                // this message should not appear to user in the final application
+                // this message should not appear to Username in the final application
                 MessageBox.Show(ex.Message);
                 return 0;
             }
         }
 
-        public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
+        public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> Parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, MyConnection);
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 
-                foreach (KeyValuePair<string, object> Param in parameters)
+                foreach (KeyValuePair<string, object> Param in Parameters)
                 {
                     myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
                 }
@@ -108,17 +108,17 @@ namespace EHR___Pharmacy
             }
         }
 
-        public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
+        public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> Parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, MyConnection);
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 
-                if (parameters != null)
+                if (Parameters != null)
                 {
-                    foreach (KeyValuePair<string, object> Param in parameters)
+                    foreach (KeyValuePair<string, object> Param in Parameters)
                     {
                         myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
                     }
@@ -146,17 +146,17 @@ namespace EHR___Pharmacy
             }
         }
 
-        public object ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
+        public object ExecuteScalar(string storedProcedureName, Dictionary<string, object> Parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, MyConnection);
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 
-                if (parameters != null)
+                if (Parameters != null)
                 {
-                    foreach (KeyValuePair<string, object> Param in parameters)
+                    foreach (KeyValuePair<string, object> Param in Parameters)
                     {
                         myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
                     }
@@ -176,7 +176,7 @@ namespace EHR___Pharmacy
         {
             try
             {
-                myConnection.Close();
+                MyConnection.Close();
             }
             catch (Exception e)
             {

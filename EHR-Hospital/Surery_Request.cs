@@ -20,7 +20,7 @@ namespace EHR_Hospital
             HospitalID = x;
             InitializeComponent();
             ctrl = new Controller();
-            DataTable dt = ctrl.getsurgeriestypes();
+            DataTable dt = ctrl.GetSurgeriesTypes();
             comboBox2.DataSource = dt;
             comboBox2.DisplayMember = "Surgeries";
             comboBox2.ValueMember = "Surgeries";
@@ -41,7 +41,7 @@ namespace EHR_Hospital
             string format = "yyyy-MM-dd HH:mm:ss";
             if (PatientID.Text.ToString() != "" && comboBox2.SelectedValue != null && kryptonTextBox1.Text.ToString() != "")
             {
-                DataTable dead = ctrl.getpatient(PatientID.Text);
+                DataTable dead = ctrl.GetPatient(PatientID.Text);
                 if (dead != null)
                 {
                     if (Convert.ToBoolean(dead.Rows[0][11]) == true)

@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -211,7 +211,7 @@ namespace WindowsFormsApp1
             this.Email.StateNormal.Border.Width = 2;
             this.Email.StateNormal.Content.Color1 = System.Drawing.Color.LightGray;
             this.Email.TabIndex = 10;
-            this.Email.Text = "Email (example@email.com)";
+            this.Email.Text = "Email (example@Email.com)";
             this.Email.Enter += new System.EventHandler(this.Email_Enter);
             this.Email.Leave += new System.EventHandler(this.Email_Leave);
             this.Email.Validated += new System.EventHandler(this.Email_Validated);

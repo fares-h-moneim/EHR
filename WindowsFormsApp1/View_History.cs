@@ -13,11 +13,11 @@ namespace WindowsFormsApp1
     public partial class View_History : Form
     {
         Controller ctrl;
-        string id;
+        string ID;
         public View_History(string idt)
         {
             InitializeComponent();
-            id = idt;
+            ID = idt;
             ctrl = new Controller();
         }
 
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string format = "yyyy-MM-dd";
-            DataTable dt = ctrl.viewmedicalhistory(kryptonDateTimePicker1.Value.ToString(format), kryptonDateTimePicker2.Value.ToString(format), id);
+            DataTable dt = ctrl.viewmedicalhistory(kryptonDateTimePicker1.Value.ToString(format), kryptonDateTimePicker2.Value.ToString(format), ID);
             kryptonDataGridView1.DataSource = dt;
         }
     }

@@ -12,13 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class AddFamilyMembers : Form
     {
-        string id;
+        string ID;
         Controller ctrl;
         public AddFamilyMembers(string idt)
         {
             InitializeComponent();
             ctrl = new Controller();
-            id = idt;
+            ID = idt;
         }
 
         private void AddFamilyMembers_Load(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
 
         private void View_Click(object sender, EventArgs e)
         {
-            View_Family myForm = new View_Family(id);
+            View_Family myForm = new View_Family(ID);
             myForm.ShowDialog();
         }
 
@@ -39,13 +39,13 @@ namespace WindowsFormsApp1
 
         private void Add_Click(object sender, EventArgs e)
         {
-            Add_Family myForm = new Add_Family(id);
+            Add_Family myForm = new Add_Family(ID);
             myForm.ShowDialog();
         }
 
         private void Req_Click(object sender, EventArgs e)
         {
-            Check_Family myForm = new Check_Family(id);
+            Check_Family myForm = new Check_Family(ID);
             myForm.ShowDialog();
         }
     }

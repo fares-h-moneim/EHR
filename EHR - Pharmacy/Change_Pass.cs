@@ -47,7 +47,7 @@ namespace EHR___Pharmacy
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid username");
+                    MessageBox.Show("Please enter a valid Username");
                 }
             }
             else

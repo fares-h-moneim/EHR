@@ -12,14 +12,14 @@ namespace WindowsFormsApp1
 {
     public partial class Check_Family : Form
     {
-        string id;
+        string ID;
         Controller ctrl;
         DataTable dt;
         public Check_Family(string idt)
         {
             InitializeComponent();
             ctrl = new Controller();
-            id = idt;
+            ID = idt;
 
             Name1.Visible = false;
             Name2.Visible = false;
@@ -164,7 +164,7 @@ namespace WindowsFormsApp1
 
         private void Accept1_Click(object sender, EventArgs e)
         {
-            ctrl.AcceptRelative(id, dt.Rows[0][4].ToString());
+            ctrl.AcceptRelative(ID, dt.Rows[0][4].ToString());
             Name1.Visible = false;
             Phone1.Visible = false;
             Accept1.Visible = false;
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
 
         private void Reject1_Click(object sender, EventArgs e)
         {
-            ctrl.RejectRelative(id, dt.Rows[0][4].ToString());
+            ctrl.RejectRelative(ID, dt.Rows[0][4].ToString());
             Name1.Visible = false;
             Phone1.Visible = false;
             Accept1.Visible = false;
@@ -182,7 +182,7 @@ namespace WindowsFormsApp1
 
         private void Accept2_Click(object sender, EventArgs e)
         {
-            ctrl.AcceptRelative(id, dt.Rows[1][4].ToString());
+            ctrl.AcceptRelative(ID, dt.Rows[1][4].ToString());
             Name2.Visible = false;
             Phone2.Visible = false;
             Accept2.Visible = false;
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
 
         private void Reject2_Click(object sender, EventArgs e)
         {
-            ctrl.RejectRelative(id, dt.Rows[1][4].ToString());
+            ctrl.RejectRelative(ID, dt.Rows[1][4].ToString());
             Name2.Visible = false;
             Phone2.Visible = false;
             Accept2.Visible = false;
@@ -200,7 +200,7 @@ namespace WindowsFormsApp1
 
         private void Accept3_Click(object sender, EventArgs e)
         {
-            ctrl.AcceptRelative(id, dt.Rows[2][4].ToString());
+            ctrl.AcceptRelative(ID, dt.Rows[2][4].ToString());
             Name3.Visible = false;
             Phone3.Visible = false;
             Accept3.Visible = false;
@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
 
         private void Reject3_Click(object sender, EventArgs e)
         {
-            ctrl.RejectRelative(id, dt.Rows[2][4].ToString());
+            ctrl.RejectRelative(ID, dt.Rows[2][4].ToString());
             Name3.Visible = false;
             Phone3.Visible = false;
             Accept3.Visible = false;
@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
 
         private void Accept4_Click(object sender, EventArgs e)
         {
-            ctrl.AcceptRelative(id, dt.Rows[3][4].ToString());
+            ctrl.AcceptRelative(ID, dt.Rows[3][4].ToString());
             Name4.Visible = false;
             Phone4.Visible = false;
             Accept4.Visible = false;
@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
 
         private void Reject4_Click(object sender, EventArgs e)
         {
-            ctrl.RejectRelative(id, dt.Rows[3][4].ToString());
+            ctrl.RejectRelative(ID, dt.Rows[3][4].ToString());
             Name4.Visible = false;
             Phone4.Visible = false;
             Accept4.Visible = false;

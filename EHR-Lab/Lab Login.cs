@@ -104,7 +104,7 @@ namespace EHR_Lab
             DataTable dt = ctrl.GetLaboratory(Email.Text, savedPasswordHash);
             if(dt == null)
             {
-                MessageBox.Show("username or password entered incorrectly");
+                MessageBox.Show("Username or Password entered incorrectly");
                 return;
             }
             DataRowCollection dt2 = dt.Rows;

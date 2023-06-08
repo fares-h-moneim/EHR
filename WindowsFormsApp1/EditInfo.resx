@@ -13,24 +13,24 @@
     Example:
     
     ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <resheader Name="resmimetype">text/microsoft-resx</resheader>
+    <resheader Name="version">2.0</resheader>
+    <resheader Name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader Name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data Name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data Name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data Name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <data Name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
                 
     There are any number of "resheader" rows that contain simple 
-    name/value pairs.
+    Name/value pairs.
     
-    Each data row contains a name, and value. The row also contains a 
+    Each data row contains a Name, and value. The row also contains a 
     type or mimetype. Type corresponds to a .NET class that support 
     text/value conversion through the TypeConverter architecture. 
     Classes that don't support this are serialized and stored with the 
@@ -59,518 +59,518 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema ID="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:element Name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
+          <xsd:element Name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute Name="Name" use="required" type="xsd:string" />
+              <xsd:attribute Name="type" type="xsd:string" />
+              <xsd:attribute Name="mimetype" type="xsd:string" />
               <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="assembly">
+          <xsd:element Name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute Name="alias" type="xsd:string" />
+              <xsd:attribute Name="Name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="data">
+          <xsd:element Name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element Name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute Name="Name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute Name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute Name="mimetype" type="xsd:string" msdata:Ordinal="4" />
               <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
-          <xsd:element name="resheader">
+          <xsd:element Name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute Name="Name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
       </xsd:complexType>
     </xsd:element>
   </xsd:schema>
-  <resheader name="resmimetype">
+  <resheader Name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
-  <resheader name="version">
+  <resheader Name="version">
     <value>2.0</value>
   </resheader>
-  <resheader name="reader">
+  <resheader Name="reader">
     <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <resheader name="writer">
+  <resheader Name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Submit.Location" type="System.Drawing.Point, System.Drawing">
+  <assembly alias="System.Drawing" Name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data Name="Submit.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 618</value>
   </data>
-  <data name="Submit.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Submit.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 42</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Submit.TabIndex" type="System.Int32, mscorlib">
+  <assembly alias="mscorlib" Name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data Name="Submit.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="Submit.Values.Text" xml:space="preserve">
+  <data Name="Submit.Values.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;Submit.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Submit.Name" xml:space="preserve">
     <value>Submit</value>
   </data>
-  <data name="&gt;&gt;Submit.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Submit.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Submit.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Submit.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Submit.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Submit.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="kryptonButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" Name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data Name="kryptonButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="kryptonButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="kryptonButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 618</value>
   </data>
-  <data name="kryptonButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="kryptonButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 42</value>
   </data>
-  <data name="kryptonButton1.TabIndex" type="System.Int32, mscorlib">
+  <data Name="kryptonButton1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="kryptonButton1.Values.Text" xml:space="preserve">
+  <data Name="kryptonButton1.Values.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;kryptonButton1.Name" xml:space="preserve">
+  <data Name="&gt;&gt;kryptonButton1.Name" xml:space="preserve">
     <value>kryptonButton1</value>
   </data>
-  <data name="&gt;&gt;kryptonButton1.Type" xml:space="preserve">
+  <data Name="&gt;&gt;kryptonButton1.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;kryptonButton1.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;kryptonButton1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;kryptonButton1.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;kryptonButton1.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="First_Name.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="First_Name.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 159</value>
   </data>
-  <data name="First_Name.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="First_Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 22</value>
   </data>
-  <data name="First_Name.TabIndex" type="System.Int32, mscorlib">
+  <data Name="First_Name.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="First_Name.Text" xml:space="preserve">
+  <data Name="First_Name.Text" xml:space="preserve">
     <value>First Name</value>
   </data>
-  <data name="&gt;&gt;First_Name.Name" xml:space="preserve">
+  <data Name="&gt;&gt;First_Name.Name" xml:space="preserve">
     <value>First_Name</value>
   </data>
-  <data name="&gt;&gt;First_Name.Type" xml:space="preserve">
+  <data Name="&gt;&gt;First_Name.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;First_Name.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;First_Name.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;First_Name.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;First_Name.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="Last_Name.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Last_Name.Location" type="System.Drawing.Point, System.Drawing">
     <value>261, 159</value>
   </data>
-  <data name="Last_Name.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Last_Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 22</value>
   </data>
-  <data name="Last_Name.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Last_Name.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="Last_Name.Text" xml:space="preserve">
+  <data Name="Last_Name.Text" xml:space="preserve">
     <value>Last Name</value>
   </data>
-  <data name="&gt;&gt;Last_Name.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Last_Name.Name" xml:space="preserve">
     <value>Last_Name</value>
   </data>
-  <data name="&gt;&gt;Last_Name.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Last_Name.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Last_Name.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Last_Name.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Last_Name.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Last_Name.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="ID.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="ID.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 221</value>
   </data>
-  <data name="ID.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="ID.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="ID.TabIndex" type="System.Int32, mscorlib">
+  <data Name="ID.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="ID.Text" xml:space="preserve">
+  <data Name="ID.Text" xml:space="preserve">
     <value>ID (16 Numbers)</value>
   </data>
-  <data name="&gt;&gt;ID.Name" xml:space="preserve">
+  <data Name="&gt;&gt;ID.Name" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="&gt;&gt;ID.Type" xml:space="preserve">
+  <data Name="&gt;&gt;ID.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;ID.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;ID.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ID.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;ID.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="Gender.Items" xml:space="preserve">
+  <data Name="Gender.Items" xml:space="preserve">
     <value>Male</value>
   </data>
-  <data name="Gender.Items1" xml:space="preserve">
+  <data Name="Gender.Items1" xml:space="preserve">
     <value>Female</value>
   </data>
-  <data name="Gender.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Gender.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 282</value>
   </data>
-  <data name="Gender.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Gender.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 21</value>
   </data>
-  <data name="Gender.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Gender.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="Gender.Text" xml:space="preserve">
+  <data Name="Gender.Text" xml:space="preserve">
     <value>Gender</value>
   </data>
-  <data name="&gt;&gt;Gender.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Gender.Name" xml:space="preserve">
     <value>Gender</value>
   </data>
-  <data name="&gt;&gt;Gender.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Gender.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Gender.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Gender.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Gender.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Gender.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Birth_day.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Birth_day.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 282</value>
   </data>
-  <data name="Birth_day.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Birth_day.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 21</value>
   </data>
-  <data name="Birth_day.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Birth_day.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="&gt;&gt;Birth_day.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Birth_day.Name" xml:space="preserve">
     <value>Birth_day</value>
   </data>
-  <data name="&gt;&gt;Birth_day.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Birth_day.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Birth_day.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Birth_day.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Birth_day.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Birth_day.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="Blood_type.Items" xml:space="preserve">
+  <data Name="Blood_type.Items" xml:space="preserve">
     <value>A</value>
   </data>
-  <data name="Blood_type.Items1" xml:space="preserve">
+  <data Name="Blood_type.Items1" xml:space="preserve">
     <value>B</value>
   </data>
-  <data name="Blood_type.Items2" xml:space="preserve">
+  <data Name="Blood_type.Items2" xml:space="preserve">
     <value>AB</value>
   </data>
-  <data name="Blood_type.Items3" xml:space="preserve">
+  <data Name="Blood_type.Items3" xml:space="preserve">
     <value>O</value>
   </data>
-  <data name="Blood_type.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Blood_type.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 282</value>
   </data>
-  <data name="Blood_type.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Blood_type.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 21</value>
   </data>
-  <data name="Blood_type.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Blood_type.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <data name="Blood_type.Text" xml:space="preserve">
+  <data Name="Blood_type.Text" xml:space="preserve">
     <value>Blood Type</value>
   </data>
-  <data name="&gt;&gt;Blood_type.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Blood_type.Name" xml:space="preserve">
     <value>Blood_type</value>
   </data>
-  <data name="&gt;&gt;Blood_type.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Blood_type.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Blood_type.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Blood_type.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Blood_type.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Blood_type.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Phone.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Phone.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 342</value>
   </data>
-  <data name="Phone.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Phone.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Phone.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Phone.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="Phone.Text" xml:space="preserve">
+  <data Name="Phone.Text" xml:space="preserve">
     <value>Phone Number (+20 XXX XXX XXXX)</value>
   </data>
-  <data name="&gt;&gt;Phone.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Phone.Name" xml:space="preserve">
     <value>Phone</value>
   </data>
-  <data name="&gt;&gt;Phone.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Phone.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Phone.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Phone.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Phone.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Phone.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="Emergency_Contact.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Emergency_Contact.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 381</value>
   </data>
-  <data name="Emergency_Contact.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Emergency_Contact.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Emergency_Contact.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Emergency_Contact.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="Emergency_Contact.Text" xml:space="preserve">
+  <data Name="Emergency_Contact.Text" xml:space="preserve">
     <value>Emergency Contact (+20 XXX XXX XXXX)</value>
   </data>
-  <data name="&gt;&gt;Emergency_Contact.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Emergency_Contact.Name" xml:space="preserve">
     <value>Emergency_Contact</value>
   </data>
-  <data name="&gt;&gt;Emergency_Contact.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Emergency_Contact.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Emergency_Contact.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Emergency_Contact.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Emergency_Contact.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Emergency_Contact.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="Chronic.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Chronic.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 442</value>
   </data>
-  <data name="Chronic.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Chronic.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Chronic.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Chronic.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="Chronic.Text" xml:space="preserve">
+  <data Name="Chronic.Text" xml:space="preserve">
     <value>Chronic Diseases (Comma Separated)</value>
   </data>
-  <data name="&gt;&gt;Chronic.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Chronic.Name" xml:space="preserve">
     <value>Chronic</value>
   </data>
-  <data name="&gt;&gt;Chronic.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Chronic.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Chronic.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Chronic.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Chronic.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Chronic.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="Email.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Email.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 508</value>
   </data>
-  <data name="Email.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Email.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Email.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Email.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="Email.Text" xml:space="preserve">
-    <value>Email (example@email.com)</value>
+  <data Name="Email.Text" xml:space="preserve">
+    <value>Email (example@Email.com)</value>
   </data>
-  <data name="&gt;&gt;Email.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Email.Name" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="&gt;&gt;Email.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Email.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Email.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Email.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Email.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Email.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Pass.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Pass.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 538</value>
   </data>
-  <data name="Pass.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Pass.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Pass.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Pass.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="Pass.Text" xml:space="preserve">
+  <data Name="Pass.Text" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="&gt;&gt;Pass.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Pass.Name" xml:space="preserve">
     <value>Pass</value>
   </data>
-  <data name="&gt;&gt;Pass.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Pass.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Pass.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Pass.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Pass.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Pass.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Pass2.Location" type="System.Drawing.Point, System.Drawing">
+  <data Name="Pass2.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 569</value>
   </data>
-  <data name="Pass2.Size" type="System.Drawing.Size, System.Drawing">
+  <data Name="Pass2.Size" type="System.Drawing.Size, System.Drawing">
     <value>296, 22</value>
   </data>
-  <data name="Pass2.TabIndex" type="System.Int32, mscorlib">
+  <data Name="Pass2.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="Pass2.Text" xml:space="preserve">
+  <data Name="Pass2.Text" xml:space="preserve">
     <value>Re-enter Password</value>
   </data>
-  <data name="&gt;&gt;Pass2.Name" xml:space="preserve">
+  <data Name="&gt;&gt;Pass2.Name" xml:space="preserve">
     <value>Pass2</value>
   </data>
-  <data name="&gt;&gt;Pass2.Type" xml:space="preserve">
+  <data Name="&gt;&gt;Pass2.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;Pass2.Parent" xml:space="preserve">
+  <data Name="&gt;&gt;Pass2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Pass2.ZOrder" xml:space="preserve">
+  <data Name="&gt;&gt;Pass2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="firstnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="firstnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata Name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata Name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data Name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data Name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>496, 729</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+  <data Name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;firstnameerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;firstnameerror.Name" xml:space="preserve">
     <value>firstnameerror</value>
   </data>
-  <data name="&gt;&gt;firstnameerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;firstnameerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lastnameerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;lastnameerror.Name" xml:space="preserve">
     <value>lastnameerror</value>
   </data>
-  <data name="&gt;&gt;lastnameerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;lastnameerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;submiterror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;submiterror.Name" xml:space="preserve">
     <value>submiterror</value>
   </data>
-  <data name="&gt;&gt;submiterror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;submiterror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;iderror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;iderror.Name" xml:space="preserve">
     <value>iderror</value>
   </data>
-  <data name="&gt;&gt;iderror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;iderror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;phoneerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;phoneerror.Name" xml:space="preserve">
     <value>phoneerror</value>
   </data>
-  <data name="&gt;&gt;phoneerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;phoneerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;emergencyerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;emergencyerror.Name" xml:space="preserve">
     <value>emergencyerror</value>
   </data>
-  <data name="&gt;&gt;emergencyerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;emergencyerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;chronicerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;chronicerror.Name" xml:space="preserve">
     <value>chronicerror</value>
   </data>
-  <data name="&gt;&gt;chronicerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;chronicerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;emailerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;emailerror.Name" xml:space="preserve">
     <value>emailerror</value>
   </data>
-  <data name="&gt;&gt;emailerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;emailerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;passerror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;passerror.Name" xml:space="preserve">
     <value>passerror</value>
   </data>
-  <data name="&gt;&gt;passerror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;passerror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pass2error.Name" xml:space="preserve">
+  <data Name="&gt;&gt;pass2error.Name" xml:space="preserve">
     <value>pass2error</value>
   </data>
-  <data name="&gt;&gt;pass2error.Type" xml:space="preserve">
+  <data Name="&gt;&gt;pass2error.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gendererror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;gendererror.Name" xml:space="preserve">
     <value>gendererror</value>
   </data>
-  <data name="&gt;&gt;gendererror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;gendererror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;blooderror.Name" xml:space="preserve">
+  <data Name="&gt;&gt;blooderror.Name" xml:space="preserve">
     <value>blooderror</value>
   </data>
-  <data name="&gt;&gt;blooderror.Type" xml:space="preserve">
+  <data Name="&gt;&gt;blooderror.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+  <data Name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditInfo</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+  <data Name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="firstnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="firstnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -594,10 +594,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="lastnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="lastnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 19</value>
   </metadata>
-  <data name="lastnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="lastnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -621,10 +621,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="submiterror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="submiterror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>278, 19</value>
   </metadata>
-  <data name="submiterror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="submiterror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -648,10 +648,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="iderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="iderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>393, 19</value>
   </metadata>
-  <data name="iderror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="iderror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -675,10 +675,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="phoneerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="phoneerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>481, 19</value>
   </metadata>
-  <data name="phoneerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="phoneerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -702,10 +702,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="emergencyerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="emergencyerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>594, 19</value>
   </metadata>
-  <data name="emergencyerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="emergencyerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -729,10 +729,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="chronicerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="chronicerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>732, 19</value>
   </metadata>
-  <data name="chronicerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="chronicerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -756,10 +756,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="emailerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="emailerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>850, 19</value>
   </metadata>
-  <data name="emailerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="emailerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -783,10 +783,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="passerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="passerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>957, 19</value>
   </metadata>
-  <data name="passerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="passerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -810,10 +810,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="pass2error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="pass2error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1059, 19</value>
   </metadata>
-  <data name="pass2error.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="pass2error.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -837,10 +837,10 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="gendererror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="gendererror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>186, 58</value>
   </metadata>
-  <data name="gendererror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data Name="gendererror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
         AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
@@ -864,7 +864,7 @@
         AADhhwAA//8AAA==
 </value>
   </data>
-  <metadata name="blooderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata Name="blooderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>43, 58</value>
   </metadata>
 </root>

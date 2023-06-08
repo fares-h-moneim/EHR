@@ -32,7 +32,7 @@ namespace EHR_Hospital
             }
             int wx = ctrl.Updatetodead(PatientID.Text);
             DataTable dt = null;
-            dt = ctrl.getifDonor(PatientID.Text);
+            dt = ctrl.GetIfDonor(PatientID.Text);
             if (dt != null)
             {
                 int x = Convert.ToInt32(dt.Rows[0][0]);
@@ -42,13 +42,13 @@ namespace EHR_Hospital
                     ctrl.DeleteFromOrganDonor(PatientID.Text);
                     ctrl.InsertOrganDonor("Kidney", PatientID.Text, 0);
                     DataTable dt1 = ctrl.GetWaiting();
-                    string pid = "";
+                    string PatientID = "";
                     for (int i = 0; i < dt1.Rows.Count; i++)
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Kidney")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Kidney");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Kidney");
                             ctrl.DeleteDonor(PatientID.Text, "Kidney");
                             break;
                         }
@@ -59,8 +59,8 @@ namespace EHR_Hospital
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Liver")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Liver");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Liver");
                             ctrl.DeleteDonor(PatientID.Text, "Part of Liver");
                             break;
                         }
@@ -70,8 +70,8 @@ namespace EHR_Hospital
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Intestine")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Intestine");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Intestine");
                             ctrl.DeleteDonor(PatientID.Text, "Part of Intestine");
                             break;
                         }
@@ -81,8 +81,8 @@ namespace EHR_Hospital
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Lungs")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Lungs");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Lungs");
                             ctrl.DeleteDonor(PatientID.Text, "Lungs");
                             break;
                         }
@@ -92,8 +92,8 @@ namespace EHR_Hospital
                     {
                         if (Convert.ToString(dt1.Rows[i][0]) == "Part of Pancreas")
                         {
-                            pid = dt1.Rows[i][1].ToString();
-                            ctrl.UpdateStatus(pid, "Part of Pancreas");
+                            PatientID = dt1.Rows[i][1].ToString();
+                            ctrl.UpdateStatus(PatientID, "Part of Pancreas");
                             ctrl.DeleteDonor(PatientID.Text, "Part of Pancreas");
                             break;
                         }

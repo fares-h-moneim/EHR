@@ -19,48 +19,46 @@ namespace WindowsFormsApp1
     {
         bool[] check = new bool[] { false, false, false, false, false, false, false, false};
         Controller ctrl = new Controller();
-        string user;
+        string Username;
         string prevemail;
-        string id;
-        string password;
+        string ID1;
+        string Password;
         Patient parent;
-        public EditInfo(string user, string pass, Patient form)
+        public EditInfo(string Username, string Password, Patient form)
         {
             InitializeComponent();
-            var bytes = new UTF8Encoding().GetBytes(pass);
+            var bytes = new UTF8Encoding().GetBytes(Password);
             byte[] hashBytes;
             using (var algorithm = new System.Security.Cryptography.SHA512Managed())
             {
                 hashBytes = algorithm.ComputeHash(bytes);
             }
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
-            DataTable patient = ctrl.GetPatient(user, savedPasswordHash);
+            DataTable patient = ctrl.GetPatient(Username, savedPasswordHash);
             parent = form;
-            password = pass;
+            Password = Password;
             object sender = null;
             EventArgs e = new EventArgs();
             if (patient != null)
             {
                 DataRowCollection dataRow = patient.Rows;
                 DataTable dt = ctrl.GetChronic(dataRow[0][0].ToString());
-                id = dataRow[0][0].ToString();
+                ID1 = dataRow[0][0].ToString();
                 First_Name.Text = dataRow[0][1].ToString();
                 Last_Name.Text = dataRow[0][2].ToString();
-                Email.Text = user;
-                this.prevemail = user;
+                Email.Text = Username;
+                this.prevemail = Username;
                 Pass.Text = "";
                 Pass2.Text = "";
-                ID.Text = dataRow[0][0].ToString();
-                this.user = dataRow[0][0].ToString();
+                ID1.Text = dataRow[0][0].ToString();
+                this.Username = dataRow[0][0].ToString();
                 string gender;
                 if (dataRow[0][6].ToString() == "0")
                 {
                     Gender.Text = "Male";
-                    gender = "Male";
                 }
                 else {
                     Gender.Text = "Female";
-                    gender = "Female";
                 }
                 Emergency_Contact.Text = dataRow[0][8].ToString();
                 Phone.Text = dataRow[0][5].ToString();
@@ -116,26 +114,26 @@ namespace WindowsFormsApp1
                 if (Pass.Text == "" && Pass2.Text == "")
                 {
 
-                    ctrl.DeleteChronic(id);
+                    ctrl.DeleteChronic(ID1);
                     foreach (string disease in ch)
                     {
-                        ctrl.InsertChronicDisease(disease, id);
+                        ctrl.InsertChronicDisease(disease, ID1);
                     }
-                    var bytes = new UTF8Encoding().GetBytes(password);
+                    var bytes = new UTF8Encoding().GetBytes(Password);
                     byte[] hashBytes;
                     using (var algorithm = new System.Security.Cryptography.SHA512Managed())
                     {
                         hashBytes = algorithm.ComputeHash(bytes);
                     }
                     string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                    int up = ctrl.UpdatePatient(Username, ID1, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, Gender.Text, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 }
                 else
                 {
-                    ctrl.DeleteChronic(id);
+                    ctrl.DeleteChronic(ID1);
                     foreach (string disease in ch)
                     {
-                        ctrl.InsertChronicDisease(disease, id);
+                        ctrl.InsertChronicDisease(disease, ID1);
                     }
                     var bytes = new UTF8Encoding().GetBytes(Pass.Text);
                     byte[] hashBytes;
@@ -144,12 +142,12 @@ namespace WindowsFormsApp1
                         hashBytes = algorithm.ComputeHash(bytes);
                     }
                     string savedPasswordHash = Convert.ToBase64String(hashBytes);
-                    int up = ctrl.UpdatePatient(user, ID.Text, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, gender, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
+                    int up = ctrl.UpdatePatient(Username, ID1, First_Name.Text, Last_Name.Text, Email.Text, savedPasswordHash, Gender.Text, Blood_type.Text, Phone.Text, Emergency_Contact.Text);
                 }
                 submiterror.SetError(Submit, "");
                 if (Pass.Text == "")
                 {
-                    Patient myForm = new Patient(Email.Text, password);
+                    Patient myForm = new Patient(Email.Text, Password);
                     this.Hide();
                     myForm.ShowDialog();
                     this.Close();
@@ -171,7 +169,7 @@ namespace WindowsFormsApp1
         {
             if (Pass.Text == "")
             {
-                Patient myForm = new Patient(Email.Text, password);
+                Patient myForm = new Patient(Email.Text, Password);
                 this.Hide();
                 myForm.ShowDialog();
                 this.Close();
@@ -216,22 +214,19 @@ namespace WindowsFormsApp1
 
         private void ID_Validating(object sender, CancelEventArgs e)
         {
-            if (ID.Text.Length != 16)
+            if (ID1.Length != 16)
             {
 
                 check[2] = false;
-                iderror.SetError(ID, "ID Must be 16 digits!");
             }
 
-            else if (ctrl.IDExist(ID.Text) != 0 && ID.Text != user)
+            else if (ctrl.IDExist(ID1) != 0 && ID1 != Username)
             {
                 check[2] = false;
-                iderror.SetError(ID, "ID Already exists");
             }
 
             else
             {
-                iderror.SetError(ID, "");
                 check[2] = true;
             }
         }
@@ -294,11 +289,11 @@ namespace WindowsFormsApp1
 
         private void Pass_Validated(object sender, EventArgs e)
         {
-            string password = Pass.Text;
-            if (!(password.Any(char.IsLower) && password.Any(char.IsUpper) && password.Any(char.IsDigit) && Pass.Text.Length > 8))
+            string Password = Pass.Text;
+            if (!(Password.Any(char.IsLower) && Password.Any(char.IsUpper) && Password.Any(char.IsDigit) && Pass.Text.Length > 8))
             {
 
-                passerror.SetError(Pass, "Make sure your password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
+                passerror.SetError(Pass, "Make sure your Password contains 1 Upper Letter, 1 Lower Letter, 1 Digit and More than 8 Characters Long");
             }
             else
             {
@@ -357,7 +352,7 @@ namespace WindowsFormsApp1
 
         private void ID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (ID.Text.ToString().Length >= 16)
+            if (ID1.Text.ToString().Length >= 16)
             {
                 if (!char.IsControl(e.KeyChar))
                     e.Handled = true;

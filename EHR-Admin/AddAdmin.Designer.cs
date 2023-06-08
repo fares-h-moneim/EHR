@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param Name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAdmin));
-            this.fname = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.FirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Label_Name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -41,16 +41,16 @@
             this.Back = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
-            // fname
+            // FirstName
             // 
-            this.fname.Location = new System.Drawing.Point(69, 127);
-            this.fname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(209, 22);
-            this.fname.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.fname.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.fname.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
-            this.fname.TabIndex = 20;
+            this.FirstName.Location = new System.Drawing.Point(69, 127);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(209, 22);
+            this.FirstName.StateActive.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.FirstName.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.FirstName.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom;
+            this.FirstName.TabIndex = 20;
             // 
             // Label_Name
             // 
@@ -59,7 +59,7 @@
             this.Label_Name.Name = "Label_Name";
             this.Label_Name.Size = new System.Drawing.Size(47, 20);
             this.Label_Name.TabIndex = 21;
-            this.Label_Name.Values.Text = "Fname";
+            this.Label_Name.Values.Text = "FirstName";
             // 
             // kryptonTextBox1
             // 
@@ -79,7 +79,7 @@
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(47, 20);
             this.kryptonLabel1.TabIndex = 23;
-            this.kryptonLabel1.Values.Text = "Lname";
+            this.kryptonLabel1.Values.Text = "LastName";
             // 
             // kryptonLabel2
             // 
@@ -228,7 +228,7 @@
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.Label_Name);
-            this.Controls.Add(this.fname);
+            this.Controls.Add(this.FirstName);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -243,7 +243,7 @@
 
         #endregion
 
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox fname;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox FirstName;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel Label_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;

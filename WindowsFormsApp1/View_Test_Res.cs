@@ -114,14 +114,14 @@ namespace WindowsFormsApp1
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            // Displays a SaveFileDialog so the user can save the Image
+            // Displays a SaveFileDialog so the Username can save the Image
             // assigned to Button2.
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "JPeg Image|.jpg|Bitmap Image|.bmp|Gif Image|*.gif";
             saveFileDialog1.Title = "Save an Image File";
             saveFileDialog1.ShowDialog();
 
-            // If the file name is not an empty string open it for saving.
+            // If the file Name is not an empty string open it for saving.
             if (saveFileDialog1.FileName != "")
             {
                 // Saves the Image via a FileStream created by the OpenFile method.

@@ -12,59 +12,59 @@ namespace EHR___Pharmacy
 {
     public class Controller
     {
-        DBManager dbMan;
+        DBManager DbMan;
 
         public Controller()
         {
-            dbMan = new DBManager();
+            DbMan = new DBManager();
         }
-        public DataTable GetPharmacy(string username, string password)
+        public DataTable GetPharmacy(string Username, string Password)
         {
             string StoredProcedureNames = StoredProcedures.GetPharmacy;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@Username", username);
-            Parameters.Add("@Password", password);
-            return dbMan.ExecuteReader(StoredProcedureNames, Parameters);
+            Parameters.Add("@Username", Username);
+            Parameters.Add("@Password", Password);
+            return DbMan.ExecuteReader(StoredProcedureNames, Parameters);
         }
 
-        public DataTable GetPharmacyID(string username)
+        public DataTable GetPharmacyID(string Username)
         {
-            string query = "SELECT Pharmacy_ID " +
+            string Query = "SELECT Pharmacy_ID " +
                 "From Pharmacy " +
-                "Where Username = '" + username + "';";
-            return dbMan.ExecuteReader(query);
+                "Where Username = '" + Username + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable RealPatient(string id)
+        public DataTable RealPatient(string ID)
         {
-            string query = "SELECT NationalID FROM Patient WHERE NationalID = '" + id + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT NationalID FROM Patient WHERE NationalID = '" + ID + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable GetMedications(string PatientID) //complex query
+        public DataTable GetMedications(string PatientID) //complex Query
         {
             string StoredProcureNames = StoredProcedures.GetMedications;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@PatientID", PatientID);
-            return dbMan.ExecuteReader(StoredProcureNames, Parameters);
+            return DbMan.ExecuteReader(StoredProcureNames, Parameters);
         }
 
-        public int MedicationsGiven(int PID, int Pharme)
+        public int MedicationsGiven(int PID, int Pharmacy)
         {
-            string query = "UPDATE Prescription SET Given_or_not = "+Pharme+" WHERE Prescription_ID = " + PID + ";";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Prescription SET Given_or_not = "+Pharmacy+" WHERE Prescription_ID = " + PID + ";";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public int ChangePass(string id, string pass)
+        public int ChangePass(string ID, string Password)
         {
-            string query = "UPDATE Pharmacy SET Password = '" + pass + "' WHERE Username = '" + id + "' ;";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Pharmacy SET Password = '" + Password + "' WHERE Username = '" + ID + "' ;";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
 
         public void TerminateConnection()
         {
-            dbMan.CloseConnection();
+            DbMan.CloseConnection();
         }
     }
 }

@@ -14,17 +14,17 @@ namespace EHR_Admin
     public partial class Admin : Form
     {
         Controller ctrl;
-        string user;
+        string Username;
         public Admin(string muser)
         {
             InitializeComponent();
-            user = muser;
+            Username = muser;
             ctrl = new Controller();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Hello.Text = "Hello " + user;
+            Hello.Text = "Hello " + Username;
             
         }
 
@@ -105,8 +105,8 @@ namespace EHR_Admin
                 MessageBox.Show("Please fill all fields");
                 return;
             }
-            object[] address = {H_Street.Text, kryptonTextBox8.Text, kryptonTextBox10.Text, kryptonTextBox9.Text};
-            string addressj = string.Join(", ", address);
+            object[] Address = {H_Street.Text, kryptonTextBox8.Text, kryptonTextBox10.Text, kryptonTextBox9.Text};
+            string addressj = string.Join(", ", Address);
             var bytes = new UTF8Encoding().GetBytes(H_Pass.Text);
             byte[] hashBytes;
             using (var algorithm = new System.Security.Cryptography.SHA512Managed())

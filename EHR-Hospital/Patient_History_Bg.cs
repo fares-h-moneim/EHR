@@ -60,7 +60,7 @@ namespace EHR_Hospital
             kryptonDataGridView1.Refresh();
             if (PatientID.Text.Length<=15)
             {
-                MessageBox.Show("fill the patient id field correctly");
+                MessageBox.Show("fill the patient ID field correctly");
             }
 
         }
@@ -119,7 +119,7 @@ namespace EHR_Hospital
                     saveFileDialog1.Title = "Save an Image File";
                     saveFileDialog1.ShowDialog();
 
-                    // If the file name is not an empty string open it for saving.
+                    // If the file Name is not an empty string open it for saving.
                     if (saveFileDialog1.FileName != "")
                     {
                         // Saves the Image via a FileStream created by the OpenFile method.

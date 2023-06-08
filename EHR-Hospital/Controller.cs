@@ -12,53 +12,45 @@ namespace EHR_Hospital
 {
     public class Controller
     {
-        DBManager dbMan;
+        DBManager DbMan;
 
         public Controller()
         {
-            dbMan = new DBManager();
+            DbMan = new DBManager();
+        }
+        public DataTable GetRelativesChronic(string ID)
+        {
+            string Query = "SELECT Patient.FirstName, Patient.LastName, ChronicDiseases.Disease FROM Patient, ChronicDiseases WHERE Patient.NationalID IN (SELECT Relatives.Relative_ID From Relatives WHERE Relatives.Patient_ID = '" + ID + "' AND Accepted = 1) AND ChronicDiseases.PatientID = Patient.NationalID";
+            return DbMan.ExecuteReader(Query);
         }
 
-        //public int InsertSupplier(string snum, string sname, string city, int status)
-        //{
-        //    string query = "INSERT INTO S (S#, Name, City, Status) " +
-        //                    "Values ('" + snum + "','" + sname + "','" + city + "'," + status + ");";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-        public DataTable GetRelativesChronic(string id)
+        public DataTable GetHospital(string Username, string Password)
         {
-            string query = "SELECT Patient.Fname, Patient.Lname, ChronicDiseases.Disease FROM Patient, ChronicDiseases WHERE Patient.NationalID IN (SELECT Relatives.Relative_ID From Relatives WHERE Relatives.Patient_ID = '" + id + "' AND Accepted = 1) AND ChronicDiseases.PatientID = Patient.NationalID";
-            return dbMan.ExecuteReader(query);
-        }
-
-        public DataTable GetHospital(string username, string password)
-        {
-            string query = "SELECT * " +
+            string Query = "SELECT * " +
                 "From Hospital " +
-                "Where Username = '" + username + "' and Password = '" + password + "';";
-            return dbMan.ExecuteReader(query);
+                "Where Username = '" + Username + "' and Password = '" + Password + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int InsertLabTest(string patient_id, string date, string description)
+        public int InsertLabTest(string PatientID, string Date, string Description)
         {
-            string query = "Insert into Lab_Results(Patient_ID, Date_Time, Description) values ('" + patient_id + "', '" +date+ "', '"+description+"')";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "Insert into Lab_Results(Patient_ID, Date_Time, Description) values ('" + PatientID + "', '" +Date+ "', '"+Description+"')";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public int IDExist(string id)
+        public int IDExist(string ID)
         {
-            string query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + id + "';";
-            return (int)dbMan.ExecuteScalar(query);
+            string Query = "SELECT COUNT(NationalID) FROM Patient WHERE NationalID = '" + ID + "';";
+            return (int)DbMan.ExecuteScalar(Query);
         }
 
-        public int EmailExist(string email)
+        public int EmailExist(string Email)
         {
-            string query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + email + "';";
-            return (int)dbMan.ExecuteScalar(query);
+            string Query = "SELECT COUNT(Email) FROM Patient WHERE Email = '" + Email + "';";
+            return (int)DbMan.ExecuteScalar(Query);
         }
 
-        public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID) //complex query
+        public int InsertDiagnosis(int HospitalID, string PatientID, string Date, string Diagnosis, string Symptoms, int Prescription_ID) //complex Query
         {
             string storedprocedurenames = StoredProcedures.InsertDiag;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -68,125 +60,125 @@ namespace EHR_Hospital
             Parameters.Add("@Diag", Diagnosis);
             Parameters.Add("@symp", Symptoms);
             Parameters.Add("@presID", Prescription_ID);
-            return dbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
+            return DbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
 
         }
-        public DataTable getlabtests()
+        public DataTable GetLabTests()
         {
-            string query = "SELECT * FROM Lab_Tests";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Lab_Tests";
+            return DbMan.ExecuteReader(Query);
         }
-        public DataTable getsurgeriestypes()
+        public DataTable GetSurgeriesTypes()
         {
-            string query = "SELECT * FROM Surguries";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Surguries";
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable InsertPrescription(string Date)
         {
-            string query = "INSERT INTO Prescription(Date_Time) VALUES ('" + Date + "')" +
+            string Query = "INSERT INTO Prescription(Date_Time) VALUES ('" + Date + "')" +
                 " Select @@IDENTITY AS [@@IDENTITY];";
-            return dbMan.ExecuteReader(query);
+            return DbMan.ExecuteReader(Query);
         }
-        public int Updatetodead(string id)
+        public int Updatetodead(string ID)
         {
-            string query = "UPDATE Patient Set DeadOrAlive=1 Where NationalID='" + id + "';";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Patient Set DeadOrAlive=1 Where NationalID='" + ID + "';";
+            return DbMan.ExecuteNonQuery(Query);
         }
         public DataTable GetWaiting()
         {
-            string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority desc"; //assuming 0 means status
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 ORDER BY Priority Description"; //assuming 0 means Status
+            return DbMan.ExecuteReader(Query);
         }
-        public DataTable GetWaitingforhospital(int id)
+        public DataTable GetWaitingforhospital(int ID)
         {
-            string query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 and Hospital_ID=" + id + " ORDER BY Priority desc"; //assuming 0 means status
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Organ_Waiting_List WHERE Status = 0 and Hospital_ID=" + ID + " ORDER BY Priority Description"; //assuming 0 means Status
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable GetDonate()
         {
-            string query = "SELECT * FROM Organ_Donor"; //assuming 0 means status
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Organ_Donor"; //assuming 0 means Status
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable getpatient(string id)
+        public DataTable GetPatient(string ID)
         {
-            string query = "SELECT * FROM Patient WHERE NationalID='" + id + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Patient WHERE NationalID='" + ID + "';";
+            return DbMan.ExecuteReader(Query);
         }
         public DataTable GetPrescriptionID(string Date)
         {
-            string query = "Select Prescription_ID FROM Prescription WHERE Date_Time = '" + Date + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Prescription_ID FROM Prescription WHERE Date_Time = '" + Date + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int InsertMedications(int PresID, string Medication, int qnty)
+        public int InsertMedications(int PresID, string Medication, int Quantity)
         {
-            string query = "Insert INTO Medications Values ("+PresID+",'"+Medication+"',"+qnty+");";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "Insert INTO Medications Values ("+PresID+",'"+Medication+"',"+Quantity+");";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public DataTable GetHospital(string username)
+        public DataTable GetHospital(string Username)
         {
-            string query = "SELECT Hospital_ID " +
+            string Query = "SELECT Hospital_ID " +
                 "From Hospital " +
-                "Where Username = '" + username + "';";
-            return dbMan.ExecuteReader(query);
+                "Where Username = '" + Username + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int InsertOrganWaiting(string organ, string patientid, int priority, int HospitalID, int status, string date)
+        public int InsertOrganWaiting(string Organ, string PatientID, int Priority, int HospitalID, int Status, string Date)
         {
-            string query = "INSERT INTO Organ_Waiting_List VALUES ('" + organ + "','" + patientid + "'," + priority + ", "+HospitalID+","+status+",'"+date+"');";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "INSERT INTO Organ_Waiting_List VALUES ('" + Organ + "','" + PatientID + "'," + Priority + ", "+HospitalID+","+Status+",'"+Date+"');";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
         public DataTable GetChronic(string PatientID)
         {
-            string query = "Select Disease FROM ChronicDiseases WHERE PatientID = '"+PatientID+"';";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Disease FROM ChronicDiseases WHERE PatientID = '"+PatientID+"';";
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable GetDiagnosis(string PatientID)
         {
-            string query = "Select Date_Time, Diagnosis, Symptoms FROM Diagnosis WHERE Patient_ID = '" + PatientID + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Date_Time, Diagnosis, Symptoms FROM Diagnosis WHERE Patient_ID = '" + PatientID + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable GetPrescriptions(string PatientID) //complex query
+        public DataTable GetPrescriptions(string PatientID) //complex Query
         {
-            string query = "Select Prescription.Date_Time, Medications.Medication, Prescription.Given_or_not FROM Prescription, Diagnosis, Medications WHERE Patient_ID = '" + PatientID + "' AND Diagnosis.Prescription_ID = Prescription.Prescription_ID AND Prescription.Prescription_ID = Medications.Prescription_ID;";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Prescription.Date_Time, Medications.Medication, Prescription.Given_or_not FROM Prescription, Diagnosis, Medications WHERE Patient_ID = '" + PatientID + "' AND Diagnosis.Prescription_ID = Prescription.Prescription_ID AND Prescription.Prescription_ID = Medications.Prescription_ID;";
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable GetSurgeries(string PatientID)
         {
-            string query = "Select Date_Time, Type_of_Surgery, Surgery_Report FROM Surgery WHERE Patient_ID = '" + PatientID + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Date_Time, Type_of_Surgery, Surgery_Report FROM Surgery WHERE Patient_ID = '" + PatientID + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable GetLabs(string PatientID)
         {
-            string query = "Select Date_Time, Test_Result FROM Lab_Results WHERE Patient_ID = '" + PatientID + "';";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Date_Time, Test_Result FROM Lab_Results WHERE Patient_ID = '" + PatientID + "';";
+            return DbMan.ExecuteReader(Query);
         }
 
         public DataTable GetLabsNotNull(string PatientID)
         {
-            string query = "Select Date_Time, Test_Result FROM Lab_Results WHERE Patient_ID = '" + PatientID + "' and Lab_ID IS NOT NULL;";
-            return dbMan.ExecuteReader(query);
+            string Query = "Select Date_Time, Test_Result FROM Lab_Results WHERE Patient_ID = '" + PatientID + "' and Lab_ID IS NOT NULL;";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public DataTable getifDonor(string patientID)
+        public DataTable GetIfDonor(string patientID)
         {
-            string query = "SELECT Organ_Donor_Upon_Death FROM Patient WHERE NationalID = '" + patientID + "'";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT Organ_Donor_Upon_Death FROM Patient WHERE NationalID = '" + patientID + "'";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int InsertOrganDonor(string organ, string pid, int status)
+        public int InsertOrganDonor(string Organ, string PatientID, int Status)
         {
-            string query = "INSERT INTO Organ_Donor VALUES ('" + organ + "','" + pid + "'," + status + ");";
-            return dbMan.ExecuteNonQuery(query); 
+            string Query = "INSERT INTO Organ_Donor VALUES ('" + Organ + "','" + PatientID + "'," + Status + ");";
+            return DbMan.ExecuteNonQuery(Query); 
         }
 
         public int DeleteFromOrganDonor(string patientID)
@@ -194,73 +186,47 @@ namespace EHR_Hospital
             string storedprocedurenames = StoredProcedures.DELETEORGAN;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@patID", patientID);
-            return dbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
+            return DbMan.ExecuteNonQuery(storedprocedurenames, Parameters);
         }
 
         public int InsertIntoSurgery(string PatientID, int HospitalID, string Report, string Date, string Type)
         {
-            string query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"','" + Date + "','" + Type + "');";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "INSERT INTO Surgery(Patient_ID, Hospital_ID, Surgery_Report, Date_Time, Type_of_Surgery) VALUES ('"+PatientID+"',"+HospitalID+",'"+Report+"','" + Date + "','" + Type + "');";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public DataTable getMedicationList()
+        public DataTable GetMedicationList()
         {
-            string query = "SELECT * FROM Drugs ORDER BY Trade_Name ASC";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Drugs ORDER BY Trade_Name ASC";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int ChangePass(string id, string pass)
+        public int ChangePass(string ID, string Password)
         {
-            string query = "UPDATE Hospital SET Password = '" + pass + "' WHERE Username = '" + id + "' ;";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Hospital SET Password = '" + Password + "' WHERE Username = '" + ID + "' ;";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public DataTable getdiseases()
+        public DataTable GetDiseases()
         {
-            string query = "SELECT * FROM Diseases";
-            return dbMan.ExecuteReader(query);
+            string Query = "SELECT * FROM Diseases";
+            return DbMan.ExecuteReader(Query);
         }
 
-        public int UpdateStatus(string pid, string organ)
+        public int UpdateStatus(string PatientID, string Organ)
         {
-            string query = "UPDATE Organ_Waiting_List SET Status = 1 WHERE Organ_Required = '" + organ + "' AND Patient_ID = '" + pid + "' AND Status = 0;";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "UPDATE Organ_Waiting_List SET Status = 1 WHERE Organ_Required = '" + Organ + "' AND Patient_ID = '" + PatientID + "' AND Status = 0;";
+            return DbMan.ExecuteNonQuery(Query);
         }
 
-        public int DeleteDonor(string pid, string organ)
+        public int DeleteDonor(string PatientID, string Organ)
         {
-            string query = "DELETE FROM Organ_Donor WHERE Donor_ID = '" + pid + "' AND Organ_Type = '" + organ+"';";
-            return dbMan.ExecuteNonQuery(query);
+            string Query = "DELETE FROM Organ_Donor WHERE Donor_ID = '" + PatientID + "' AND Organ_Type = '" + Organ+"';";
+            return DbMan.ExecuteNonQuery(Query);
         }
-
-
-        //public int DeleteSupplier(string snum)
-        //{
-        //    string query = "DELETE FROM S WHERE S#='" + snum + "';";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-        //public int UpdateSupplier(string snum, string city)
-        //{
-        //    string query = "UPDATE S SET City='" + city + "' WHERE S#='" + snum + "';";
-        //    return dbMan.ExecuteNonQuery(query);
-        //}
-
-        //public DataTable SelectAllSuppliers()
-        //{
-        //    string query = "SELECT * FROM S;";
-        //    return dbMan.ExecuteReader(query);
-        //}
-
-        //public int CountSuppliers()
-        //{
-        //    string query = "SELECT COUNT(S#) FROM S;";
-        //    return (int)dbMan.ExecuteScalar(query);
-        //}
-
         public void TerminateConnection()
         {
-            dbMan.CloseConnection();
+            DbMan.CloseConnection();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace EHR_Hospital
     {
         int HospitalID;
         int PrescriptionID;
-        int[] qnty = new int[20];
+        int[] Quantity = new int[20];
         string[] meds = new string[20];
         int x = 0;
         Controller ctrl = new Controller();
@@ -24,11 +24,11 @@ namespace EHR_Hospital
             InitializeComponent();
             HospitalID = x;
             DataTable dt = null;
-            dt = ctrl.getMedicationList();
+            dt = ctrl.GetMedicationList();
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember = "Trade_Name";
             comboBox1.ValueMember = "Trade_Name";
-            DataTable dt2 = ctrl.getdiseases();
+            DataTable dt2 = ctrl.GetDiseases();
             comboBox2.DataSource = dt2;
             comboBox2.DisplayMember = "Diseases";
             comboBox2.ValueMember = "Diseases";
@@ -43,7 +43,7 @@ namespace EHR_Hospital
                 MessageBox.Show("Please insert in all fields");
                 return;
             }
-            DataTable dead = ctrl.getpatient(PatientID.Text);
+            DataTable dead = ctrl.GetPatient(PatientID.Text);
             if(dead != null)
             {
                 if (Convert.ToBoolean(dead.Rows[0][11]) == true)
@@ -78,7 +78,7 @@ namespace EHR_Hospital
                 {
                     for (int i = 0; i < x; i++)
                     {
-                        ctrl.InsertMedications(PrescriptionID, meds[i], qnty[i]);
+                        ctrl.InsertMedications(PrescriptionID, meds[i], Quantity[i]);
                     }
                    
                 }
@@ -124,7 +124,7 @@ namespace EHR_Hospital
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             Prescription.Text = Prescription.Text + qty.Text + " " + comboBox1.Text + ", ";
-            qnty[x] = Convert.ToInt32(qty.Text);
+            Quantity[x] = Convert.ToInt32(qty.Text);
             meds[x] = comboBox1.Text;
             x++;
         }

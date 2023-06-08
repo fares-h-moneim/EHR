@@ -13,12 +13,12 @@ namespace EHR_Lab
 {
     public partial class Lab : Form
     {
-        int id;
+        int ID;
         Controller ctrl;
         public Lab(int idt)
         {
             InitializeComponent();
-            id = idt;
+            ID = idt;
             ctrl = new Controller();
         }
 
@@ -30,7 +30,7 @@ namespace EHR_Lab
                 MessageBox.Show("Patient has no test results history pending");
                 return;
             }
-            Lab_Results myForm = new Lab_Results(id, PatientID.Text);
+            Lab_Results myForm = new Lab_Results(ID, PatientID.Text);
             // this.Hide();
             myForm.ShowDialog();
         }

@@ -23,7 +23,7 @@ namespace EHR_Hospital
 
         private void Email_Enter(object sender, EventArgs e)
         {
-            if (Email.Text == "Email (example@email.com)")
+            if (Email.Text == "Email (example@Email.com)")
             {
                 Email.Text = "";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Black;
@@ -34,7 +34,7 @@ namespace EHR_Hospital
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email (example@email.com)";
+                Email.Text = "Email (example@Email.com)";
                 Email.StateActive.Content.Color1 = System.Drawing.Color.Silver;
             }
             else
@@ -108,7 +108,7 @@ namespace EHR_Hospital
             DataTable dt = ctrl.GetHospital(Email.Text, savedPasswordHash);
             if(dt == null)
             {
-                MessageBox.Show("Email or password inserted incorrectly");
+                MessageBox.Show("Email or Password inserted incorrectly");
                 return;
             }
             else
