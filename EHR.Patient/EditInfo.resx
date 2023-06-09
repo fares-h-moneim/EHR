@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader Name="resmimetype">text/microsoft-resx</resheader>
+    <resheader Name="version">2.0</resheader>
+    <resheader Name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader Name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data Name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data Name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data Name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data Name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    Name/value pairs.
+    
+    Each data row contains a Name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema ID="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element Name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element Name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute Name="Name" use="required" type="xsd:string" />
+              <xsd:attribute Name="type" type="xsd:string" />
+              <xsd:attribute Name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element Name="assembly">
+            <xsd:complexType>
+              <xsd:attribute Name="alias" type="xsd:string" />
+              <xsd:attribute Name="Name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element Name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element Name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute Name="Name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute Name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute Name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element Name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element Name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute Name="Name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader Name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader Name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader Name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader Name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" Name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data Name="Submit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 618</value>
+  </data>
+  <data Name="Submit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 42</value>
+  </data>
+  <assembly alias="mscorlib" Name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data Name="Submit.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data Name="Submit.Values.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data Name="&gt;&gt;Submit.Name" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data Name="&gt;&gt;Submit.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Submit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Submit.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" Name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data Name="kryptonButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data Name="kryptonButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 618</value>
+  </data>
+  <data Name="kryptonButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 42</value>
+  </data>
+  <data Name="kryptonButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data Name="kryptonButton1.Values.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data Name="&gt;&gt;kryptonButton1.Name" xml:space="preserve">
+    <value>kryptonButton1</value>
+  </data>
+  <data Name="&gt;&gt;kryptonButton1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;kryptonButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;kryptonButton1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data Name="First_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 159</value>
+  </data>
+  <data Name="First_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 22</value>
+  </data>
+  <data Name="First_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data Name="First_Name.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data Name="&gt;&gt;First_Name.Name" xml:space="preserve">
+    <value>First_Name</value>
+  </data>
+  <data Name="&gt;&gt;First_Name.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;First_Name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;First_Name.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data Name="Last_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 159</value>
+  </data>
+  <data Name="Last_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data Name="Last_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data Name="Last_Name.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data Name="&gt;&gt;Last_Name.Name" xml:space="preserve">
+    <value>Last_Name</value>
+  </data>
+  <data Name="&gt;&gt;Last_Name.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Last_Name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Last_Name.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data Name="ID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 221</value>
+  </data>
+  <data Name="ID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="ID.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data Name="ID.Text" xml:space="preserve">
+    <value>ID (16 Numbers)</value>
+  </data>
+  <data Name="&gt;&gt;ID.Name" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data Name="&gt;&gt;ID.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;ID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;ID.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data Name="Gender.Items" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data Name="Gender.Items1" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data Name="Gender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 282</value>
+  </data>
+  <data Name="Gender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data Name="Gender.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data Name="Gender.Text" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data Name="&gt;&gt;Gender.Name" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data Name="&gt;&gt;Gender.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Gender.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Gender.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data Name="Birth_day.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 282</value>
+  </data>
+  <data Name="Birth_day.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data Name="Birth_day.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data Name="&gt;&gt;Birth_day.Name" xml:space="preserve">
+    <value>Birth_day</value>
+  </data>
+  <data Name="&gt;&gt;Birth_day.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Birth_day.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Birth_day.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data Name="Blood_type.Items" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data Name="Blood_type.Items1" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data Name="Blood_type.Items2" xml:space="preserve">
+    <value>AB</value>
+  </data>
+  <data Name="Blood_type.Items3" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data Name="Blood_type.Location" type="System.Drawing.Point, System.Drawing">
+    <value>320, 282</value>
+  </data>
+  <data Name="Blood_type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 21</value>
+  </data>
+  <data Name="Blood_type.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data Name="Blood_type.Text" xml:space="preserve">
+    <value>Blood Type</value>
+  </data>
+  <data Name="&gt;&gt;Blood_type.Name" xml:space="preserve">
+    <value>Blood_type</value>
+  </data>
+  <data Name="&gt;&gt;Blood_type.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Blood_type.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Blood_type.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data Name="Phone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 342</value>
+  </data>
+  <data Name="Phone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Phone.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data Name="Phone.Text" xml:space="preserve">
+    <value>Phone Number (+20 XXX XXX XXXX)</value>
+  </data>
+  <data Name="&gt;&gt;Phone.Name" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data Name="&gt;&gt;Phone.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Phone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Phone.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data Name="Emergency_Contact.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 381</value>
+  </data>
+  <data Name="Emergency_Contact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Emergency_Contact.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data Name="Emergency_Contact.Text" xml:space="preserve">
+    <value>Emergency Contact (+20 XXX XXX XXXX)</value>
+  </data>
+  <data Name="&gt;&gt;Emergency_Contact.Name" xml:space="preserve">
+    <value>Emergency_Contact</value>
+  </data>
+  <data Name="&gt;&gt;Emergency_Contact.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Emergency_Contact.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Emergency_Contact.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data Name="Chronic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 442</value>
+  </data>
+  <data Name="Chronic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Chronic.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data Name="Chronic.Text" xml:space="preserve">
+    <value>Chronic Diseases (Comma Separated)</value>
+  </data>
+  <data Name="&gt;&gt;Chronic.Name" xml:space="preserve">
+    <value>Chronic</value>
+  </data>
+  <data Name="&gt;&gt;Chronic.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Chronic.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Chronic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data Name="Email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 508</value>
+  </data>
+  <data Name="Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Email.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data Name="Email.Text" xml:space="preserve">
+    <value>Email (example@Email.com)</value>
+  </data>
+  <data Name="&gt;&gt;Email.Name" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data Name="&gt;&gt;Email.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Email.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Email.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data Name="Pass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 538</value>
+  </data>
+  <data Name="Pass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Pass.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data Name="Pass.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data Name="&gt;&gt;Pass.Name" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data Name="&gt;&gt;Pass.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Pass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Pass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data Name="Pass2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 569</value>
+  </data>
+  <data Name="Pass2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 22</value>
+  </data>
+  <data Name="Pass2.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data Name="Pass2.Text" xml:space="preserve">
+    <value>Re-enter Password</value>
+  </data>
+  <data Name="&gt;&gt;Pass2.Name" xml:space="preserve">
+    <value>Pass2</value>
+  </data>
+  <data Name="&gt;&gt;Pass2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data Name="&gt;&gt;Pass2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data Name="&gt;&gt;Pass2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata Name="firstnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata Name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata Name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data Name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data Name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>496, 729</value>
+  </data>
+  <data Name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data Name="&gt;&gt;firstnameerror.Name" xml:space="preserve">
+    <value>firstnameerror</value>
+  </data>
+  <data Name="&gt;&gt;firstnameerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;lastnameerror.Name" xml:space="preserve">
+    <value>lastnameerror</value>
+  </data>
+  <data Name="&gt;&gt;lastnameerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;submiterror.Name" xml:space="preserve">
+    <value>submiterror</value>
+  </data>
+  <data Name="&gt;&gt;submiterror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;iderror.Name" xml:space="preserve">
+    <value>iderror</value>
+  </data>
+  <data Name="&gt;&gt;iderror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;phoneerror.Name" xml:space="preserve">
+    <value>phoneerror</value>
+  </data>
+  <data Name="&gt;&gt;phoneerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;emergencyerror.Name" xml:space="preserve">
+    <value>emergencyerror</value>
+  </data>
+  <data Name="&gt;&gt;emergencyerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;chronicerror.Name" xml:space="preserve">
+    <value>chronicerror</value>
+  </data>
+  <data Name="&gt;&gt;chronicerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;emailerror.Name" xml:space="preserve">
+    <value>emailerror</value>
+  </data>
+  <data Name="&gt;&gt;emailerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;passerror.Name" xml:space="preserve">
+    <value>passerror</value>
+  </data>
+  <data Name="&gt;&gt;passerror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;pass2error.Name" xml:space="preserve">
+    <value>pass2error</value>
+  </data>
+  <data Name="&gt;&gt;pass2error.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;gendererror.Name" xml:space="preserve">
+    <value>gendererror</value>
+  </data>
+  <data Name="&gt;&gt;gendererror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;blooderror.Name" xml:space="preserve">
+    <value>blooderror</value>
+  </data>
+  <data Name="&gt;&gt;blooderror.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditInfo</value>
+  </data>
+  <data Name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data Name="firstnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="lastnameerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>151, 19</value>
+  </metadata>
+  <data Name="lastnameerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="submiterror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>278, 19</value>
+  </metadata>
+  <data Name="submiterror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="iderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>393, 19</value>
+  </metadata>
+  <data Name="iderror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="phoneerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>481, 19</value>
+  </metadata>
+  <data Name="phoneerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="emergencyerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>594, 19</value>
+  </metadata>
+  <data Name="emergencyerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="chronicerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>732, 19</value>
+  </metadata>
+  <data Name="chronicerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="emailerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>850, 19</value>
+  </metadata>
+  <data Name="emailerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="passerror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>957, 19</value>
+  </metadata>
+  <data Name="passerror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="pass2error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1059, 19</value>
+  </metadata>
+  <data Name="pass2error.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="gendererror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>186, 58</value>
+  </metadata>
+  <data Name="gendererror.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMEeAADBHgAAAAAAAAAA
+        AAD///8A////AP///wBlZf4iYGD+qltb/rtUVP0i////AP///wAiIvxVGRn6uxQU9HcJCfAR////AP//
+        /wD///8A////AP///wBtbf5Vamr+7peY+v+Pj/j/XV3+d////wD///8APz/8zJiY+f97e+//FBT17gwM
+        8VX///8A////AP///wD///8AcXH+VY2O+P+ztf//rK3+/2Ji/u5eXv4RWFj9RHV18v+rrf//oqL8/1ZW
+        8/8XF/Yz////AP///wD///8A////AP///wBxcf6IkpP5/7W3//+Njfj/Y2P+Zl5e/pmUlPn/rK7//39/
+        8v8yMvx3////AP///wD///8A////AP///wD///8A////AHNz/ruXmPr/qav9/2ho/t2Ymfr/rrD//4yM
+        9/9RUf2Z////AP///wD///8A////AP///wD///8A////AP///wB2d/4Rc3P+7rGz//+pq/7/r7H//6Oj
+        /P9gYP7MW1v+Ef///wD///8A////AP///wCFh/+7goP//4CB//9+f/7Menz+u3d4/rulp/3/r7H//62v
+        //+kpv3/ZWX+zGBg/rtbW/7dVFT9/0hI/f87O/y7iIr/u7G0/v+/wf//srX+/6yu/f+rrP3/tLf//6+y
+        //+tr///sLL//6eo/f+hovz/qar9/6+x//+cnPv/Skr9u4qN/7uUl/3/hoj//4OF/+6Agv+7fX//zKut
+        /v+ws///r7H//6eo/v9ubv7Ma2v+u2Zm/t1iYv7/dXX4/1hY/buNkP8zi43/M////wD///8Ag4X/EYCC
+        /+61t///sLP//7K0//+oqv7/cXH+zG5u/hH///8A////AGNj/jNeXv4z////AP///wD///8A////AIaI
+        /7uho/3/t7r//3+A/+6ipP3/tLb//5iZ+/9zc/6Z////AP///wD///8A////AP///wD///8A////AIuO
+        /3egov7/vL7//6Wn/f+Cg/+Zf4D/maGj/P+ztf//k5T6/3Nz/mb///8A////AP///wD///8A////AJCT
+        /0Sbnv7/uLr//7y+//+Pk/3/hYf/IoKD/0SRk/z/tLb//6ut/v93eP7uc3P+M////wD///8A////AP//
+        /wCRlP9mmZ3+/62w//+ytf//io3/u////wD///8Ag4X/zK+y/v+foP3/enz+7nd4/lX///8A////AP//
+        /wD///8A////AJGU/zOQk/+7jpH//4yP/1X///8A////AIaI/2aDhf//gIL/u31//yL///8A////AP//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA4YcAAMGDAADAAwAA4AcAAPAPAADwDwAAAAAAAAAAAAAAAAAAMAwAAPAPAADgBwAAwAMAAMGD
+        AADhhwAA//8AAA==
+</value>
+  </data>
+  <metadata Name="blooderror.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>43, 58</value>
+  </metadata>
+</root>
