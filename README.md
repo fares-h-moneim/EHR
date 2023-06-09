@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR-Images-Display/Main.gif" alt="Hospital animated icon"></div>
+<div align="center"><img src="https://github.com/fares-h-moneim/EHR/blob/master/EHR.Images/Main.gif" alt="Hospital animated icon"></div>
 <h1 align="center">EHR</h1><br>
 
 ## Table of Contents
